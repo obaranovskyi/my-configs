@@ -112,20 +112,6 @@ include ~/my-configs/kitty/kitty.conf
 
 ---
 
-#### Taskwarrior
-
-To apply current configuration to `taskwarrior`, insert into your `~/.taskrc` file the following line of code:
-
-```
-include ~/my-configs/taskwarrior/themes/dark-256.theme
-```
-**Note** If there is no need in the color put into `~/taskrc` file this line:
-```
-color=off
-```
-
----
-
 #### Fonts setup
 To apply current fonts copy all fonts from `./fonts/*` and paste to `~/.local/share/fonts/` (for Mac). 
 
