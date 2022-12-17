@@ -129,7 +129,7 @@ Copy the file form `~/my-configs/xmonad/xmobarrc` to `/home/obaranovskyi/.config
 
 ---
 
-#### Full installation list
+#### Possible installation list
 
 [+] - required  
 [~] - would be great to have  
