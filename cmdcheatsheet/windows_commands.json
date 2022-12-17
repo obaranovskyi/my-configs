@@ -1,0 +1,12 @@
+[
+    {
+        "command": "cls",
+        "description": "Clear the terminal",
+        "id": 1
+    },
+    {
+        "command": "ipconfig",
+        "description": "Dispaly ip related details",
+        "id": 2
+    }
+]

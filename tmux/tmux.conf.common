@@ -1,0 +1,114 @@
+# change from `Ctrl-b` to `Ctrl-space`
+unbind-key C-b
+# set-option -g prefix C-space
+# bind-key C-Space send-prefix
+set-option -g prefix "C- "
+bind-key "C- " send-prefix
+
+set -g default-terminal "screen-256color"
+
+# Setting the delay between prefix and command 
+set -s escape-time 1
+
+# Set the vase index for windows to 1 instead of 0
+set -g base-index 1
+
+# Set the vase index for windows to 1 instead of 0
+setw -g pane-base-index 1
+
+# Increase the pane number show time
+set -g display-panes-time 4000
+
+# Splitting panes with \ and -
+# bind \\ split-window -h
+# bind - split-window -v
+# Split panes, and open in the same directory
+bind \\ split-window -h -c "#{pane_current_path}"
+bind - split-window -v -c "#{pane_current_path}"
+bind o split-window -v -c "#{pane_current_path}" -p 20
+
+# Swap panes:
+# Swap current pane with the left one prefix+P
+# Swap current pane with the right one prefix+N
+bind -r N swap-pane -D
+bind -r P swap-pane -U
+
+# Key binding to reload source file
+bind r source-file ~/.tmux.conf \; display "[tmux.conf] - RELOAD COMPLETE"
+ 
+# in order to to resize to right click `ctrl+b+H`
+bind -r H resize-pane -L
+bind -r J resize-pane -D
+bind -r K resize-pane -U
+bind -r L resize-pane -R
+
+set -g history-limit 20000
+set -g mouse on
+
+# Navigation
+bind h select-pane -L
+bind j select-pane -D
+bind k select-pane -U
+bind l select-pane -R
+
+
+# -------------------------------------------------
+# More Info on key binding updates: https://github.com/tmux/tmux/issues/592
+# Copy mode
+set-window-option -g mode-keys vi
+
+bind-key Escape copy-mode                             # go to copy mode `Prefix+Esc`
+bind-key -Tcopy-mode-vi 'Escape' send -X cancel       # exit copy mode; or hit q
+bind-key -Tcopy-mode-vi 'v' send -X begin-selection   # begin visual mode
+bind-key -Tcopy-mode-vi 'V' send -X select-line       # visual line
+bind-key -Tcopy-mode-vi 'r' send -X rectangle-toggle  # visual block `Prefix+r+v`
+bind-key -Tcopy-mode-vi 'y' send -X copy-selection    # yank
+bind-key -Tcopy-mode-vi 'p' send -X paste-buffer      # paste; default ]
+
+
+# -------------------------------------------------
+# Styles
+# set the status line colors
+set -g status-style fg=colour15,bg=colour32
+
+# set the color of the window list
+setw -g window-status-style fg=colour15,bg=colour32
+
+# tab styles
+setw -g window-status-format "#[fg=colour15] #[bg=colour239] #I #[bg=colour241]#[fg=colour15] #W "
+setw -g window-status-current-format "#[bg=colour125]#[fg=colour15] *#I #[fg=colour15,bold]#[bg=colour161] [#W] "
+
+# border style
+set -g pane-border-style fg=colour32
+set -g pane-active-border-style "bg=default fg=colour161"
+
+
+# -------------------------------------------------
+# Vim/Tmux Navigator
+# Smart pane switching with awareness of Vim splits.
+# See: https://github.com/christoomey/vim-tmux-navigator
+is_vim="ps -o state= -o comm= -t '#{pane_tty}' \
+    | grep -iqE '^[^TXZ ]+ +(\\S+\\/)?g?(view|n?vim?x?)(diff)?$'"
+bind-key -n 'C-h' if-shell "$is_vim" 'send-keys C-h'  'select-pane -L'
+bind-key -n 'C-j' if-shell "$is_vim" 'send-keys C-j'  'select-pane -D'
+bind-key -n 'C-k' if-shell "$is_vim" 'send-keys C-k'  'select-pane -U'
+bind-key -n 'C-l' if-shell "$is_vim" 'send-keys C-l'  'select-pane -R'
+tmux_version='$(tmux -V | sed -En "s/^tmux ([0-9]+(.[0-9]+)?).*/\1/p")'
+if-shell -b '[ "$(echo "$tmux_version < 3.0" | bc)" = 1 ]' \
+    "bind-key -n 'C-\\' if-shell \"$is_vim\" 'send-keys C-\\'  'select-pane -l'"
+if-shell -b '[ "$(echo "$tmux_version >= 3.0" | bc)" = 1 ]' \
+    "bind-key -n 'C-\\' if-shell \"$is_vim\" 'send-keys C-\\\\'  'select-pane -l'"
+
+bind-key -T copy-mode-vi 'C-h' select-pane -L
+bind-key -T copy-mode-vi 'C-j' select-pane -D
+bind-key -T copy-mode-vi 'C-k' select-pane -U
+bind-key -T copy-mode-vi 'C-l' select-pane -R
+bind-key -T copy-mode-vi 'C-\' select-pane -l
+
+
+# -------------------------------------------------
+# CURSOR FIX(In Alacritty) - cursor wasn't was transparent on the spaces in tmux
+# https://github.com/alacritty/alacritty/issues/1630#issuecomment-467360764
+set -g default-terminal "xterm-256color"
+set -ga terminal-overrides ",alacritty:Tc"
+set -ga terminal-overrides ',*:Ss=\E[%p1%d q:Se=\E[2 q'

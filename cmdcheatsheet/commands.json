@@ -1,0 +1,852 @@
+[
+    {
+        "command": "find . -iname \"*<filename>*\"",
+        "description": "Find file in the current location by regular expression and ignore case",
+        "id": 1
+    },
+    {
+        "command": "locate -i <filename>",
+        "description": "Find file with the name using ignore case",
+        "id": 2
+    },
+    {
+        "command": "alias ls=\"ls --color=auto\"",
+        "description": "Add the alias",
+        "id": 3
+    },
+    {
+        "command": "unalias ls",
+        "description": "Remove alias",
+        "id": 4
+    },
+    {
+        "command": "history | grep \"find\"",
+        "description": "Find command by text in the history",
+        "id": 5
+    },
+    {
+        "command": "open .",
+        "description": "Open current directory in the file explorer",
+        "id": 6
+    },
+    {
+        "command": "cat filename",
+        "description": "Show file content, CTRL+D to leave",
+        "id": 7
+    },
+    {
+        "command": "cat > filename",
+        "description": "Create file and add content, CTRL+D to leave",
+        "id": 8
+    },
+    {
+        "command": "cat >> filename",
+        "description": "Append content, CTRL+D to leave",
+        "id": 9
+    },
+    {
+        "command": "tail -F filename.log",
+        "description": "View file content in real time",
+        "id": 10
+    },
+    {
+        "command": "sudo cs",
+        "description": "Repeat last command with root user",
+        "id": 11
+    },
+    {
+        "command": "chmod +x script.sh",
+        "description": "Make script.sh executable",
+        "id": 12
+    },
+    {
+        "command": "grep \"<text>\" <filename>",
+        "description": "Search for <text> in the file <filename>",
+        "id": 13
+    },
+    {
+        "command": "ps aux | grep 'telegram|%cpu'",
+        "description": "Search for process by name (%cpu is here because we want to see the header)",
+        "id": 14
+    },
+    {
+        "command": "kill 480",
+        "description": "Kill process with PID 480",
+        "id": 15
+    },
+    {
+        "command": "kill -9 480",
+        "description": "Force kill process with PID 480",
+        "id": 16
+    },
+    {
+        "command": "uname -s",
+        "description": "Print system name",
+        "id": 17
+    },
+    {
+        "command": "ls -lh",
+        "description": "Show folder content with the sizes",
+        "id": 18
+    },
+    {
+        "command": "gzip file.txt",
+        "description": "Compress file.txt",
+        "id": 19
+    },
+    {
+        "command": "gzip -d file.txt.gz",
+        "description": "Decompress file.txt.gz",
+        "id": 20
+    },
+    {
+        "command": "tar cf <name>.tar test1.txt test2.txt",
+        "description": "Create archive with name <name>.tar and put there test1.txt, test2.txt",
+        "id": 21
+    },
+    {
+        "command": "tar tf <name>.tar",
+        "description": "Show content of <name>.tar archive",
+        "id": 22
+    },
+    {
+        "command": "tar xf <name>.tar",
+        "description": "Unarchive the archive <name>.tar",
+        "id": 23
+    },
+    {
+        "command": "zip -r <folder-name>",
+        "description": "Compress and archive the <folder-name>",
+        "id": 24
+    },
+    {
+        "command": "unzip <folder-name>.zip",
+        "description": "Decompress and unzip the <folder-name>.zip archive",
+        "id": 25
+    },
+    {
+        "command": "ip addr show",
+        "description": "Show ip mac and other infomation",
+        "id": 26
+    },
+    {
+        "command": "df -ah",
+        "description": "Show used memory",
+        "id": 27
+    },
+    {
+        "command": "service ssh status",
+        "description": "Show service status",
+        "id": 28
+    },
+    {
+        "command": "service ssh start",
+        "description": "Start service",
+        "id": 29
+    },
+    {
+        "command": "service ssh stop",
+        "description": "Stop service",
+        "id": 30
+    },
+    {
+        "command": "du -sh <folder-or-file-name>",
+        "description": "Show directory or file size",
+        "id": 31
+    },
+    {
+        "command": "grep -wi \"in\"",
+        "description": "Search for 'in' word but not as a part of another word and use for search ignore case",
+        "id": 32
+    },
+    {
+        "command": "grep -winr \"in\"",
+        "description": "Search for word 'in', with ignore case, line numbers, and recursively",
+        "id": 33
+    },
+    {
+        "command": "grep -wirl \"in\"",
+        "description": "Search for word 'in', with ignore case, recursively, and show file name instead of occurrence",
+        "id": 34
+    },
+    {
+        "command": "grep -P \"\\d{3}-\\d{3}-\\d{4}\" <filename>.txt",
+        "description": "Search for occurrence using the regex",
+        "id": 35
+    },
+    {
+        "command": "netstat -tulpn",
+        "description": "Show open ports (use sudo to show PID/Program name)",
+        "id": 36
+    },
+    {
+        "command": "find . -type d -iname vim",
+        "description": "Search for directory with name vim (-f to search for file)",
+        "id": 37
+    },
+    {
+        "command": "type ls",
+        "description": "Show alias or the place where is stored the shell function",
+        "id": 38
+    },
+    {
+        "command": "killall telegram",
+        "description": "Kill all processes named 'telegram'",
+        "id": 39
+    },
+    {
+        "command": "printenv, env",
+        "description": "Print environment variables",
+        "id": 40
+    },
+    {
+        "command": "find ./folder/other -iregex '.*text.*\\.pdf$'",
+        "description": "Find file or folder using the ignore case and regular expression",
+        "id": 41
+    },
+    {
+        "command": "ls -a | nl",
+        "description": "Add numbers to each line using 'nl' tool",
+        "id": 42
+    },
+    {
+        "command": "netstat -rn | grep -P \"default|UG\"",
+        "description": "Show router ip address",
+        "id": 43
+    },
+    {
+        "command": "ssh obaranovskyi@192.168.0.110",
+        "description": "Connect to remote PC using ssh",
+        "id": 44
+    },
+    {
+        "command": "sftp obaranovskyi@192.168.0.110",
+        "description": "Connect to remote PC using sftp.",
+        "id": 45
+    },
+    {
+        "command": "TZ=EST date",
+        "description": "Show date and time in the EST timezone",
+        "id": 46
+    },
+    {
+        "command": "ifconfig -a",
+        "description": "Show ip and mac addresses",
+        "id": 47
+    },
+    {
+        "command": "echo $USER",
+        "description": "Print current user",
+        "id": 48
+    },
+    {
+        "command": "shutdown -h now",
+        "description": "Shutdown the PC",
+        "id": 49
+    },
+    {
+        "command": "brew services list",
+        "description": "Show installed services with the statuses on OSX",
+        "id": 51
+    },
+    {
+        "command": "brew services start nginx",
+        "description": "Start service on OSX",
+        "id": 52
+    },
+    {
+        "command": "brew services stop nginx",
+        "description": "Stop service on OSX",
+        "id": 53
+    },
+    {
+        "command": "uname -a",
+        "description": "Print system details",
+        "id": 54
+    },
+    {
+        "command": "rename 's/hello/test/' *.pdf",
+        "description": "rename in files word 'hello' to 'test'",
+        "id": 55
+    },
+    {
+        "command": "rename 's/hello/test/' *.pdf -n",
+        "description": "print files that will be renamed later from 'hello' to 'test'",
+        "id": 56
+    },
+    {
+        "command": "fd -t d",
+        "description": "Show all folders",
+        "id": 57
+    },
+    {
+        "command": "fd -t f",
+        "description": "Show all files",
+        "id": 58
+    },
+    {
+        "command": "fd -t d -d 1",
+        "description": "Show all folder that are at 1 level",
+        "id": 59
+    },
+    {
+        "command": "fd --regex '.*(angular|react).*\\.pdf'",
+        "description": "Find all pdf files with words 'react' or 'angular' using regex",
+        "id": 60
+    },
+    {
+        "command": "curl cheat.sh",
+        "description": "Show how to use cheat.sh",
+        "id": 61
+    },
+    {
+        "command": "curl cheat.sh/ls",
+        "description": "Show the cheat list for the 'ls' command",
+        "id": 62
+    },
+    {
+        "command": "wikit RAM | xclip -selection clipboard",
+        "description": "Copy to clipboard the output from wiki",
+        "id": 63
+    },
+    {
+        "command": "xclip -selection clipboard -o",
+        "description": "Output from clipboard",
+        "id": 64
+    },
+    {
+        "command": "xclip -selection clipboard",
+        "description": "Copy to clipboard",
+        "id": 65
+    },
+    {
+        "command": "which ls",
+        "description": "Check whether command (ls) is installed",
+        "id": 66
+    },
+    {
+        "command": "open -a vlc *",
+        "description": "Open all files in directory in VLC app",
+        "id": 67
+    },
+    {
+        "command": "task add '<task-description>'",
+        "description": "Add task",
+        "id": 68
+    },
+    {
+        "command": "task 3 edit",
+        "description": "Edit task",
+        "id": 69
+    },
+    {
+        "command": "task",
+        "description": "Show list of tasks",
+        "id": 70
+    },
+    {
+        "command": "task 3 delete",
+        "description": "Delete task with id 3",
+        "id": 71
+    },
+    {
+        "command": "task 3 done",
+        "description": "Done task with id 3",
+        "id": 72
+    },
+    {
+        "command": "task summary",
+        "description": "Show task summary",
+        "id": 73
+    },
+    {
+        "command": "task calendar",
+        "description": "Show task schedules",
+        "id": 74
+    },
+    {
+        "command": "watch <command>",
+        "description": "Watching for <command>",
+        "id": 75
+    },
+    {
+        "command": "watch -n 5 <command>",
+        "description": "Watching for <command> with update interval in 5 seconds",
+        "id": 76
+    },
+    {
+        "command": "rename 's/from/to/' *.txt",
+        "description": "Rename all .txt files names from 'from' to 'to'",
+        "id": 77
+    },
+    {
+        "command": "tldr ls",
+        "description": "Get command examples for 'ls' command with explanation",
+        "id": 78
+    },
+    {
+        "command": "ls -l | wc -l",
+        "description": "Count lines. In this case the amount of files and directories",
+        "id": 79
+    },
+    {
+        "command": "!3132",
+        "description": "Populate terminal with command recorded in history, in current case command number is 3132",
+        "id": 80
+    },
+    {
+        "command": "!!",
+        "description": "Populate terminal with last ran command",
+        "id": 81
+    },
+    {
+        "command": "chmod u+x <filenae>",
+        "description": "Make file executable for user (u - user, g - group, o - other), (w - write, r - read, x - execute), (+ - add role, - - remove role)",
+        "id": 82
+    },
+    {
+        "command": "jobs",
+        "description": "Check running jobs (including in the background)",
+        "id": 83
+    },
+    {
+        "command": "fg %2",
+        "description": "Forground job with number 2",
+        "id": 84
+    },
+    {
+        "command": "sleep 700 &",
+        "description": "Run the command (in current case 'sleep') in background",
+        "id": 85
+    },
+    {
+        "command": "jobs -l",
+        "description": "Display jobs and includ PID",
+        "id": 86
+    },
+    {
+        "command": "jobs -r",
+        "description": "Display running jobs",
+        "id": 87
+    },
+    {
+        "command": "jobs -s",
+        "description": "Display stopped jobs",
+        "id": 88
+    },
+    {
+        "command": "tmux new -s name",
+        "description": "Create a new named session",
+        "id": 89
+    },
+    {
+        "command": "tmux kill-session -t name",
+        "description": "Kill a session by name",
+        "id": 90
+    },
+    {
+        "command": "tmux attach -t main-0",
+        "description": "Attach to session 'main-0'",
+        "id": 91
+    },
+    {
+        "command": "tmux ls",
+        "description": "List tmux sessions",
+        "id": 92
+    },
+    {
+        "command": "wikit 'disk partition' -b",
+        "description": "Open info in the default browser",
+        "id": 93
+    },
+    {
+        "command": "youtube 'linux dd'",
+        "description": "Open youtube in browser and search for 'linux dd'",
+        "id": 94
+    },
+    {
+        "command": "sudo systemctl start sshd",
+        "description": "Enable ssh server",
+        "id": 95
+    },
+    {
+        "command": "su",
+        "description": "Login as root",
+        "id": 96
+    },
+    {
+        "command": "reboot",
+        "description": "Restart PC",
+        "id": 97
+    },
+    {
+        "command": "nmcli device wifi list",
+        "description": "Show wifi list",
+        "id": 98
+    },
+    {
+        "command": "nmcli connection show",
+        "description": "Show connected wifi",
+        "id": 99
+    },
+    {
+        "command": "networkctl",
+        "description": "Query the status of network links",
+        "id": 100
+    },
+    {
+        "command": "systemctl start NetworManager",
+        "description": "start network manager service",
+        "id": 101
+    },
+    {
+        "command": "systemctl enable NetworManager",
+        "description": "Start network manager service when system starts",
+        "id": 102
+    },
+    {
+        "command": "nmcli device wifi connect SSID_or_BSSID password password",
+        "description": "Connect to wifi using NetworkManager",
+        "id": 103
+    },
+    {
+        "command": "lsscsi -s",
+        "description": "List the SCSI devices on your system",
+        "id": 104
+    },
+    {
+        "command": "pandoc -o output.docx -f markdown -t docx filename.md",
+        "description": "Convert markdown file to docx file",
+        "id": 105
+    },
+    {
+        "command": "lsof -i :8000",
+        "description": "Find process including PID details which runs on port 8000",
+        "id": 106
+    },
+    {
+        "command": "fd angular --extension pdf",
+        "description": "Find all files with word 'angular' and file extension pdf",
+        "id": 107
+    },
+    {
+        "command": "fd angular ~",
+        "description": "Search for file or directory that contains angular word in a particular folder",
+        "id": 108
+    },
+    {
+        "command": "git restore .",
+        "description": "Discard unstaged changed in git",
+        "id": 109
+    },
+    {
+        "command": "gdu",
+        "description": "Disk usage analyzer",
+        "id": 110
+    },
+    {
+        "command": "bat <filename>",
+        "description": "Display file with the syntax",
+        "id": 111
+    },
+    {
+        "command": "cmd | grep \"<word>\"",
+        "description": "Full word search in the store commands",
+        "id": 112
+    },
+    {
+        "command": "less -N \"<filename>\"",
+        "description": "Show file content including the line numbers",
+        "id": 113
+    },
+    {
+        "command": "gunzip file.txt.gz",
+        "description": "Decompress file.txt.gz",
+        "id": 114
+    },
+    {
+        "command": "pgrep <process_name>",
+        "description": "Search for a process id (PID) by process name",
+        "id": 115
+    },
+    {
+        "command": "pkill <process_name>",
+        "description": "Kill process by name",
+        "id": 116
+    },
+    {
+        "command": "wc, ls | wc -l",
+        "description": "Count files (if needed wc can count word, lines, characters and bytes",
+        "id": 117
+    },
+    {
+        "command": "whereis npm",
+        "description": "Find app location",
+        "id": 118
+    },
+    {
+        "command": "whoami",
+        "description": "Show user name",
+        "id": 119
+    },
+    {
+        "command": "networksetup -setairportnetwork en0 WIFI_SSID_I_WANT_TO_JOIN WIFI_PASSWORD",
+        "description": "Connect to specified wifi",
+        "id": 120
+    },
+    {
+        "command": "brew list",
+        "description": "Show installed packages",
+        "id": 121
+    },
+    {
+        "command": "brew list --cask",
+        "description": "Show installed packages with the cask",
+        "id": 122
+    },
+    {
+        "command": "brew info <app_name>",
+        "description": "Show app installation details",
+        "id": 123
+    },
+    {
+        "command": "which -a bash",
+        "description": "Show all located bash programs",
+        "id": 124
+    },
+    {
+        "command": "help",
+        "description": "My additional keybindings",
+        "id": 125
+    },
+    {
+        "command": "w",
+        "description": "Show logged-in users info",
+        "id": 126
+    },
+    {
+        "command": "nvm ls",
+        "description": "Show list of installed node versions",
+        "id": 127
+    },
+    {
+        "command": "nvm use 14.0.0",
+        "description": "Use node version 14.0.0",
+        "id": 128
+    },
+    {
+        "command": "brew search <app_name>",
+        "description": "Search the app by using brew command",
+        "id": 129
+    },
+    {
+        "command": "ip -4 a",
+        "description": "Swow only tcp/ip IPv4",
+        "id": 130
+    },
+    {
+        "command": "ip addr",
+        "description": "Show all network interfaces",
+        "id": 131
+    },
+    {
+        "command": "ip -6 a",
+        "description": "Show only tcp/ip IPv6",
+        "id": 132
+    },
+    {
+        "command": "gpg --list-keys",
+        "description": "Show the specified keys",
+        "id": 133
+    },
+    {
+        "command": "gpg --full-generate-key",
+        "description": "Generate the key",
+        "id": 134
+    },
+    {
+        "command": "gpg --list-secret-keys --keyid-format LONG",
+        "description": "Show gpg key",
+        "id": 135
+    },
+    {
+        "command": "pass",
+        "description": "show list of stored passwords",
+        "id": 136
+    },
+    {
+        "command": "pass init <gpg_key>",
+        "description": "Init password store",
+        "id": 137
+    },
+    {
+        "command": "gpg -d <gpg_key_name>",
+        "description": "Decrypt the gpg key by name, that is stored in ~/.password-store",
+        "id": 138
+    },
+    {
+        "command": "pass <web_site_name> | (pbcopy|xlip)",
+        "description": "Copy the password to the clipboard, for osx use pbcopy, and for linux xclip",
+        "id": 139
+    },
+    {
+        "command": "pbcopy < <file_name>",
+        "description": "Copy file content to clipboard on osx",
+        "id": 140
+    },
+    {
+        "command": "pbpaste",
+        "description": "Print the content of clipboard on osx",
+        "id": 141
+    },
+    {
+        "command": "pass insert <website_name>",
+        "description": "Store password for <website_name>",
+        "id": 142
+    },
+    {
+        "command": "trans :uk <word-to-translate>",
+        "description": "Translate <word-to-translate>",
+        "id": 143
+    },
+    {
+        "command": "trans :uk -b <word-to-translate>",
+        "description": "Short translate <word-to-translate>",
+        "id": 144
+    },
+    {
+        "command": "trans -shell en:uk",
+        "description": "Translate in interactive mode",
+        "id": 145
+    },
+    {
+        "command": "trans -shell -b en:uk",
+        "description": "Translate in interactive mode (short tranlation information)",
+        "id": 146
+    },
+    {
+        "command": "wikit tldr | trans :uk -b",
+        "description": "Check in wiki what is 'tldr' and translate it",
+        "id": 147
+    },
+    {
+        "command": "ls -d */",
+        "description": "Only list directories",
+        "id": 148
+    },
+    {
+        "command": "open <URL>",
+        "description": "Open url using the default browser",
+        "id": 149
+    },
+    {
+        "command": "trash-empty",
+        "description": "Empty the trash",
+        "id": 150
+    },
+    {
+        "command": "trash-list",
+        "description": "Show what's in trash",
+        "id": 151
+    },
+    {
+        "command": "trash-restore",
+        "description": "Restore a trashed file",
+        "id": 152
+    },
+    {
+        "command": "trash-rm",
+        "description": "Remove individual files from the trashcan",
+        "id": 153
+    },
+    {
+        "command": "trash-put",
+        "description": "Trash a file",
+        "id": 154
+    },
+    {
+        "command": "pass rm <website_name>",
+        "description": "Remove <webisite_name> password",
+        "id": 155
+    },
+    {
+        "command": "lsusb",
+        "description": "Show connected usb devices",
+        "id": 156
+    },
+    {
+        "command": "watch 'ls -l | wc -l'",
+        "description": "Watch complex command with the pipe",
+        "id": 157
+    },
+    {
+        "command": "getconf LONG_BIT",
+        "description": "Check whether system is 64 or 32 bits",
+        "id": 158
+    },
+    {
+        "command": "gpg -c <filename_to_encrypt>",
+        "description": "Encrypt file",
+        "id": 159
+    },
+    {
+        "command": "sed 1,2d <file_name>, ls | sed 1,2d",
+        "description": "Remove first two lines",
+        "id": 160
+    },
+    {
+        "command": "sed -i '' \"s/from/to/g\" <file_name>",
+        "description": "Replace 'from' with 'to' (here '' only for mac)",
+        "id": 161
+    },
+    {
+        "command": "pmset displaysleepnow",
+        "description": "Trun off Mac without putting computer to sleep",
+        "id": 162
+    },
+    {
+        "command": "caffeinate",
+        "description": "Prevent the system from sleeping (MacOS) as long as terminal is opened",
+        "id": 163
+    },
+    {
+        "command": "airport scan",
+        "description": "Display active wifi networks",
+        "id": 164
+    },
+    {
+        "command": "source ./.venv/bin/activate",
+        "description": "Activate venv environment",
+        "id": 165
+    },
+    {
+        "command": "pip show <package_name>",
+        "description": "Show package info",
+        "id": 166
+    },
+    {
+        "command": "python -m venv .venv",
+        "description": "Setup venv",
+        "id": 167
+    },
+    {
+        "command": "pip install -r requirements.txt",
+        "description": "Install packages from requirements.txt",
+        "id": 168
+    },
+    {
+        "command": "pip list",
+        "description": "Show installed packages",
+        "id": 169
+    },
+    {
+        "command": "python3 -m pip install -e git+https://github.com/obaranovskyi/cmdtaskmanager.git#egg=cmdtaskmanager",
+        "description": "Install python package from the git repository",
+        "id": 170
+    },
+    {
+        "command": "curl -s https://raw.githubusercontent.com/obaranovskyi/cmdenglishassist/main/install.sh | bash /dev/stdin",
+        "description": "Run remote bash script",
+        "id": 171
+    }
+]
