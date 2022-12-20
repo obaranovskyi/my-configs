@@ -76,7 +76,7 @@ setw -g window-status-style fg=colour15,bg=colour32
 
 # tab styles
 setw -g window-status-format "#[fg=colour15] #[bg=colour239] #I #[bg=colour241]#[fg=colour15] #W "
-setw -g window-status-current-format "#[bg=colour125]#[fg=colour15] *#I #[fg=colour15,bold]#[bg=colour161] [#W] "
+setw -g window-status-current-format "#[bg=colour125]#[fg=colour15] *#I #[fg=colour15,bold]#[bg=colour161] #W "
 
 # border style
 set -g pane-border-style fg=colour32

@@ -848,5 +848,15 @@
         "command": "curl -s https://raw.githubusercontent.com/obaranovskyi/cmdenglishassist/main/install.sh | bash /dev/stdin",
         "description": "Run remote bash script",
         "id": 171
+    },
+    {
+        "command": "pip freeze > requirements.txt",
+        "description": "Add all dependencies to requirements.txt file",
+        "id": 172
+    },
+    {
+        "command": "sudo chmod a+w english_assist.db",
+        "description": "Give write permissions to everyone",
+        "id": 173
     }
 ]
