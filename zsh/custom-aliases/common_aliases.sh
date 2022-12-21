@@ -13,7 +13,7 @@ alias lt='lsd --tree';
 
 alias eq='exit';
 alias config='z config && nvim'
-alias notes='z my-notes/README.md && nvim'
+alias notes='z my-notes && nvim README.md'
 alias v="nvim"
 alias trm="trash-put"
 
