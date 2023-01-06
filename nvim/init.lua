@@ -11,6 +11,7 @@ require "search"
 require "registers"
 
 -- Plugin configurations
+require "plugin-configs.markdown-preview"
 require "plugin-configs.markdown"
 require "plugin-configs.cmp"
 require "plugin-configs.highlightedyank"
