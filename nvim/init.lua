@@ -31,6 +31,7 @@ require "plugin-configs.toggleterm"
 require "plugin-configs.cheatsheet"
 require "plugin-configs.cokeline"
 require "plugin-configs.indent-blankline"
+require "plugin-configs.zen-mode"
 
 -- LSP
 require "lsp.init"
