@@ -265,3 +265,7 @@
 
 ## cheatsheet @Norm command
 [norm] box into text `` brackets                                                                                      | :norm ^i`jk^a`
+
+
+## cheatsheet @ZenMode
+[ZenMode] enter zen mode                                                                                              | <leader>zn
