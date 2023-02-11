@@ -141,6 +141,7 @@ APPS_TO_INSTALL=(
   pytz # cmdtaskmanager dependency
   wheel # for developing python libs
   twine # for developing python libs
+  genanki # anki support cmdenglishassist
 )
 
 for APP_TO_INSTALL in ${APPS_TO_INSTALL[*]}; do
