@@ -117,6 +117,8 @@
 ## cheatsheet @Surround
 [Surround] Surround in VISUAL_MODE                                                                                    | S{surround value}
 [Surround] Surround in NORMAL_MODE                                                                                    | ys{motion}
+[Surround] Surround in INSERT_MODE                                                                                    | <CTRL-s> or <CTRL-g>s
+[Surround] Surround in INSERT_MODE, add a new line + surround + indent                                                | <CTRL-s><CTRL-s> or <CTRL-g>S
 
 ## cheatsheet @UndoTree
 [UndoTree] Open undo tree                                                                                             | <Leader>u
