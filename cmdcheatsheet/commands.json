@@ -858,5 +858,10 @@
         "command": "sudo chmod a+w english_assist.db",
         "description": "Give write permissions to everyone",
         "id": 173
+    },
+    {
+        "command": "hk <command>",
+        "description": "Search for the command",
+        "id": 174
     }
 ]
