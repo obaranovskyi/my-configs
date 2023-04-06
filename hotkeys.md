@@ -136,4 +136,4 @@
 
 [mac] `Command+Shift+.` Show hidden files in the finder
 [mac] `Command+M` - Minimize program window
-[mac] `Command+H` - Hide program window
+[mac] `Command+H` - Hide program window (better then `Command+M` as can be reopened by `Command+Tab`)
