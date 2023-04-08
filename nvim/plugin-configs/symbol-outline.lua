@@ -2,7 +2,7 @@ require('symbols-outline').setup({
   highlight_hovered_item = false,
   position = 'left',
   width = 18,
-  autofold_depth = 1,
+  autofold_depth = 2,
   keymaps = {
     close = "<space>q"
   }
