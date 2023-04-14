@@ -30,6 +30,7 @@ vim.opt.signcolumn = "yes"                      -- always show the sign column, 
 vim.opt.completeopt = { "menuone", "noselect" } -- mostly just for cmp
 vim.opt.hidden = true                           -- Do not close buffers (better to use with bclose plugin)
 vim.opt.autoread = true                         -- If file will be changed it'll be auto reloaded
+vim.wo.fillchars='eob: '                        -- Hide ~ sign on the lines where is no text
 
 -- hidden characters
 vim.opt.encoding="utf-8"
@@ -45,3 +46,5 @@ vim.cmd [[
 
 -- float style (lsp)
 vim.opt.linebreak = true
+
+

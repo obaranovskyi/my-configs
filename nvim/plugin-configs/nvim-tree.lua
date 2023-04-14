@@ -49,6 +49,7 @@ nvim_tree.setup {
     full_name = false,
     highlight_opened_files = "none",
     root_folder_modifier = ":~",
+    root_folder_label = false,
     indent_markers = {
       enable = false,
       icons = {
@@ -180,8 +181,13 @@ nvim_tree.setup {
   },
 }
 
--- Info: Close the sourcetree when the last buffer is closed
+-- INFO: Close the sourcetree when the last buffer is closed
 vim.api.nvim_create_autocmd('BufEnter', {
     command = "if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif",
     nested = true,
 })
+
+-- INFO: Open nvim-tree on start
+vim.cmd [[
+  :NvimTreeToggle
+]]
