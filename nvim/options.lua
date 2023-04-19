@@ -8,7 +8,8 @@ vim.opt.encoding = "utf-8"
 vim.opt.hlsearch = true                         -- highlight all matches on previous search pattern
 vim.opt.incsearch = true                         -- highlight all matches on previous search pattern
 vim.opt.ignorecase = true                       -- ignore case in search patterns
-vim.opt.smartcase = true                        -- smart case
+vim.opt.smartcase = true                        -- smart case - perform a case insensitive search when you enter all lowercase characters
+                                                -- and perform case sensitive search when you enter one or more uppercase characters.
 vim.opt.mouse = "a"                             -- allow the mouse to be used in neovim
 vim.opt.wrap = false                            -- display lines as one long line
 vim.opt.updatetime = 300                        -- faster completion (4000ms default)
