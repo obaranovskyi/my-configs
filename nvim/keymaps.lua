@@ -70,8 +70,8 @@ keymap("n", "<leader>\\", "<C-w>v", opts)
 -- ------------------------------------------------
 -- Magic search - no need to escape (`\`) every character
 -- ------------------------------------------------
-keymap("n", "<leader>/", ":s/\\v<Right>", { noremap = true })
-keymap("x", "<leader>/", ":s/\\v<Right>", { noremap = true })
+keymap("n", "<leader>/", ":s/\\v", { noremap = true })
+keymap("x", "<leader>/", ":s/\\v", { noremap = true })
 
 -- When pipenv is on navigation requires this mappings
 keymap("n", "<C-h>", "<C-w>h", {})
