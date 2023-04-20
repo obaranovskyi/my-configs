@@ -54,7 +54,8 @@
 [Search/Replace] [Single file] Replace word under cursor or visually selected with confirmation                       | ; [VISUAL_MODE]
 [Search/Replace] [Multiple files] Replace word under cursor in every file from the quickfix list without confirmation | <Leader>rr [NORMAL_MODE]
 [Search/Replace] [Multiple files] Replace word under cursor in every file from the quickfix list with confirmation    | <Leader>rc [VISUAL_MODE],[NORMAL_MODE]
-[Search/Replace] Substitute motion (Subversive plugin alternative                                                     | x
+[Search/Replace] Substitute motion (Subversive plugin alternative)                                                    | x
+[Search/Replace] Magic substitute                                                                                     | <Leader>/ [VISUAL_MODE],[NORMAL_MODE]
 
 ## cheatsheet @Subversive
 [Subversive] Substitute from buffer                                                                                   | x{motion}
