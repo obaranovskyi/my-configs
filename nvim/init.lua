@@ -81,7 +81,7 @@ require "plugin-configs.emmet"
 require "keymaps"
 
 -- Commands
-require "commands.commands"
+require "distance-actions.commands"
 
 -- Abbreviations (to expand <C-]>)
 -- for now abbreviations doesn't work
