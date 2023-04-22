@@ -1,5 +1,5 @@
 function! s:RemoveRowAndJumpBack( ... ) abort
-  execute "normal ma"
+  execute "normal mz"
 
   let isRange = get(a:, 2, 0)
 
@@ -9,8 +9,8 @@ function! s:RemoveRowAndJumpBack( ... ) abort
     execute a:2 . a:1 . 'd'
   endif
 
-  execute "normal `a"
-  execute "delmarks a"
+  execute "normal `z"
+  execute "delmarks z"
 endfunction
 
 command! -nargs=+ PositiveRelativeRemoveRow call s:RemoveRowAndJumpBack(<f-args>, '+')

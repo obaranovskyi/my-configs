@@ -1,5 +1,5 @@
 function! s:MoveRowAndJumpBack( ... ) abort
-    execute "normal! ma"
+    execute "normal! mz"
 
     let isRange = get(a:, 2, 0)
 
@@ -9,8 +9,8 @@ function! s:MoveRowAndJumpBack( ... ) abort
         execute a:2 . a:1 . 'm.'
     endif
 
-    execute "normal! `a"
-    execute "delmarks a"
+    execute "normal! `z"
+    execute "delmarks z"
 endfunction
 
 command! -nargs=+ PositiveRelativeMoveRow call s:MoveRowAndJumpBack(<f-args>, '+')
