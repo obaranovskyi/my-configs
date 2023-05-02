@@ -31,6 +31,8 @@ vim.opt.signcolumn = "yes"                      -- always show the sign column, 
 vim.opt.completeopt = { "menuone", "noselect" } -- mostly just for cmp
 vim.opt.hidden = true                           -- Do not close buffers (better to use with bclose plugin)
 vim.opt.autoread = true                         -- If file will be changed it'll be auto reloaded
+-- vim.opt.statuscolumn = " %l %r "               -- double numbers (regular and relative)
+-- vim.opt.statuscolumn = "%l %r %s"            -- double numbers (regular and relative) and error (issue)
 
 -- Hide ~ sign on the lines where is no text ]]
 vim.cmd [[ set fillchars=fold:\ ,vert:\│,eob:\ ,msgsep:‾ ]]
@@ -49,5 +51,4 @@ vim.cmd [[
 
 -- float style (lsp)
 vim.opt.linebreak = true
-
 
