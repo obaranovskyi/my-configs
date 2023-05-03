@@ -120,6 +120,7 @@
 [Surround] Surround in NORMAL_MODE                                                                                    | ys{motion}
 [Surround] Surround in INSERT_MODE                                                                                    | <CTRL-s> or <CTRL-g>s
 [Surround] Surround in INSERT_MODE, add a new line + surround + indent                                                | <CTRL-s><CTRL-s> or <CTRL-g>S
+[Surround] Surround remove white space around the word                                                                | <leader>dw
 
 ## cheatsheet @UndoTree
 [UndoTree] Open undo tree                                                                                             | <Leader>u
