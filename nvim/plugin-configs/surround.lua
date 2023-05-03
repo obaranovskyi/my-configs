@@ -5,7 +5,7 @@ vim.cmd [[
 
   autocmd FileType markdown,octopress let b:surround_{char2nr('b')} = "**\r**"
 
-  nnoremap <leader>dw  F<space>dlf<space>dl
+  nnoremap ds<space>  F<space>dlf<space>dl
 ]]
 
 
