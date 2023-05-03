@@ -141,14 +141,21 @@ vim.cmd [[
 -- Ex command without jump
 -- ------------------------------------------------
 vim.cmd [[
-  nnoremap <leader>ta :call ExCommandActionWithoutJump('')<Left><Left>
-
-  function! ExCommandActionWithoutJump(command)
-    execute ":norm! ml"
-    execute ":" . a:command
-    execute ":norm! `l"
-    execute ":norm! :delm l"
+  function! ExCommandWithoutJump(command)
+    try
+      execute ":norm! ml"
+      execute ":" . a:command
+      execute ":norm! `l"
+      execute ":delm l"
+    catch /.*/
+      " Suppress the following errors:
+      "   - Line where was mark was removed
+      "   - Wrong range entered - No need to echo the error,
+      "     as there will be no effect
+    endtry
   endfunction
+
+  nnoremap <leader>ta :call ExCommandWithoutJump('')<Left><Left>
 ]]
 
 -- Note: To escape single quote : 'I''m John'

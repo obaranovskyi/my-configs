@@ -863,5 +863,10 @@
         "command": "hk <command>",
         "description": "Search for the command",
         "id": 174
+    },
+    {
+        "command": "hostname",
+        "description": "Display hostname",
+        "id": 175
     }
 ]
