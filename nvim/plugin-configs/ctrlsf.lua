@@ -15,6 +15,7 @@ vim.cmd [[
   "      \ "at": "start"
   "      \ }
   let g:ctrlsf_populate_qflist = 1
+  let g:ctrlsf_ignore_dir = 'dist'
   let g:ctrlsf_mapping = {
       \ "next": "n",
       \ "prev": "N",
