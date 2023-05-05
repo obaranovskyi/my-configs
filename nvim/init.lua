@@ -37,9 +37,6 @@ require "plugin-configs.zen-mode"
 -- LSP
 require "lsp.init"
 
--- SCSS colors
-require "plugin-configs.nvim-colorizer"
-
 -- Diagnostics
 require "plugin-configs.trouble"
 require "plugin-configs.symbol-outline"
