@@ -30,7 +30,7 @@ keymap("i", "jU",  "<Esc>gUiwea", opts)
 keymap("i", "<C-a>", "<Esc>I", opts)
 keymap("i", "<C-e>", "<Esc>A", opts)
 keymap("i", "<C-b>", "<Esc>bi", opts)
-keymap("i", "<C-w>", "<Esc>elli", opts)
+keymap("i", "<C-f>", "<Esc>elli", opts)
 keymap("i", "<C-d>", "<Esc>ldli", opts)
 
 keymap("n", "<leader><CR>", "r<CR><Esc>", opts)
