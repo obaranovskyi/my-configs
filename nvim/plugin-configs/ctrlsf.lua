@@ -15,7 +15,7 @@ vim.cmd [[
   "      \ "at": "start"
   "      \ }
   let g:ctrlsf_populate_qflist = 1
-  let g:ctrlsf_ignore_dir = 'dist'
+  let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
   let g:ctrlsf_mapping = {
       \ "next": "n",
       \ "prev": "N",
