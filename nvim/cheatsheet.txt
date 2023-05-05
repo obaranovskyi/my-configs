@@ -184,8 +184,8 @@
 [KeyMappings] Upper case the current word                                                                             | jU [INSERT_MODE]
 [KeyMappings] Go to end of the line                                                                                   | <C-e> [INSERT_MODE]
 [KeyMappings] Go to beginning of the line                                                                             | <C-a> [INSERT_MODE]
-[KeyMappings] Go one word forward                                                                                     | <C-f> [INSERT_MODE]
-[KeyMappings] Go one word back                                                                                        | <C-b> [INSERT_MODE]
+[KeyMappings] Go one word forward                                                                                     | <C-l> [INSERT_MODE]
+[KeyMappings] Go one word back                                                                                        | <C-h> [INSERT_MODE]
 [KeyMappings] Remove one character from the right side                                                                | <C-d> [INSERT_MODE]
 [KeyMappings] New line on instead of current character                                                                | <Leader><CR>
 [KeyMappings] Select all lines                                                                                        | ga
