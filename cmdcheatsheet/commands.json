@@ -868,5 +868,15 @@
         "command": "hostname",
         "description": "Display hostname",
         "id": 175
+    },
+    {
+        "command": "pip freeze | xargs pip uninstall -y && pip freeze > requirements.txt",
+        "description": "Uninstall all project dependencies",
+        "id": 176
+    },
+    {
+        "command": "cp -R <src-folder> <dest-folder>",
+        "description": "Full copy",
+        "id": 177
     }
 ]
