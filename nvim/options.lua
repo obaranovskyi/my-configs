@@ -14,13 +14,17 @@ vim.opt.mouse = "a"                             -- allow the mouse to be used in
 vim.opt.wrap = false                            -- display lines as one long line
 vim.opt.updatetime = 300                        -- faster completion (4000ms default)
 vim.opt.undofile = true                         -- enable persistent undo
--- vim.opt.smartindent = true                   -- make indenting smarter again (works wrong)
+
 vim.opt.scrolloff = 8                           -- is one of my fav
 vim.opt.sidescrolloff = 8
 vim.opt.swapfile = false                        -- creates a swapfile
+
 vim.opt.expandtab = true                        -- convert tabs to spaces
 vim.opt.shiftwidth = 2                          -- the number of spaces inserted for each indentation
 vim.opt.tabstop = 2                             -- insert 2 spaces for a tab
+vim.opt.softtabstop = 2
+vim.opt.smartindent = true                   -- make indenting smarter again (works wrong)
+
 vim.opt.number = true                           -- set numbered lines
 vim.opt.relativenumber = true                   -- set relative numbered lines
 vim.opt.termguicolors = true                    -- set term gui colors (most terminals support this)
@@ -51,4 +55,5 @@ vim.cmd [[
 
 -- float style (lsp)
 vim.opt.linebreak = true
+
 
