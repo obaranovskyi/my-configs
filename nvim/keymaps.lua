@@ -33,6 +33,10 @@ keymap("i", "<C-h>", "<Esc>bi", opts)
 keymap("i", "<C-l>", "<Esc>elli", opts)
 keymap("i", "<C-d>", "<Esc>ldli", opts)
 
+
+keymap("i", "j0", "<C-r>0", opts)
+keymap("i", "j8", "<Esc>\"*pa", opts)
+
 keymap("n", "<leader><CR>", "r<CR><Esc>", opts)
 
 keymap("n", "ga", "GVgg", opts)
