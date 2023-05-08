@@ -195,6 +195,8 @@
 [KeyMappings] Move visually selected lines above                                                                      | K
 [KeyMappings] Move visually selected lines below                                                                      | J
 [KeyMappings] Toggle relative numbers                                                                                 | <Leader>fn
+[KeyMappings] Indent right                                                                                            | >>
+[KeyMappings] Indent left                                                                                             | <<
 
 ## cheatsheet @LSP
 [LSP] Rename symbol                                                                                                   | <Leader>rn

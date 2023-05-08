@@ -1,4 +1,5 @@
 local opts = { noremap = true, silent = true }
+local opt_nr = { noremap = true }
 
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
@@ -184,27 +185,31 @@ vim.cmd [[
 -- ------------------------------------------------
 -- Marks mappings
 -- ------------------------------------------------
-vim.cmd [[
-  nnoremap 'a `A
-  nnoremap 's `S
-  nnoremap 'd `D
-  nnoremap 'f `F
-  nnoremap 'g `G
+keymap('n', "'a", '`A', opt_nr)
+keymap('n', "'s", '`S', opt_nr)
+keymap('n', "'d", '`D', opt_nr)
+keymap('n', "'f", '`F', opt_nr)
+keymap('n', "'g", '`G', opt_nr)
 
-  nnoremap ma mA
-  nnoremap ms mS
-  nnoremap md mD
-  nnoremap mf mF
-  nnoremap mg mG
+keymap('n', 'ma', 'mA', opt_nr)
+keymap('n', 'ms', 'mS', opt_nr)
+keymap('n', 'md', 'mD', opt_nr)
+keymap('n', 'mf', 'mF', opt_nr)
+keymap('n', 'mg', 'mG', opt_nr)
 
-  nnoremap g'a g`A
-  nnoremap g's g`S
-  nnoremap g'd g`D
-  nnoremap g'f g`F
-  nnoremap g'g g`G
-]]
+keymap('n', "g'a", 'g`A', opt_nr)
+keymap('n', "g's", 'g`S', opt_nr)
+keymap('n', "g'd", 'g`D', opt_nr)
+keymap('n', "g'f", 'g`F', opt_nr)
+keymap('n', "g'g", 'g`G', opt_nr)
 
 -- ------------------------------------------------
 -- File type mappings
 -- ------------------------------------------------
 keymap("n", "<leader>sb", ":set filetype=bash<CR>", opts)
+
+-- ------------------------------------------------
+-- Indent
+-- ------------------------------------------------
+keymap("n", ">", ">>", opts)
+keymap("n", "<", "<<", opts)
