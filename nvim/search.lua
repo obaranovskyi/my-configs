@@ -29,11 +29,6 @@ vim.cmd [[
   vnoremap <leader>ro "hy:%s/<C-r>h//g \| :noh<Left><Left><Left><Left><Left><Left><Left><Left><Left>
   nnoremap <leader>ro "hyiw:%s/<C-r>h//g \| :noh<Left><Left><Left><Left><Left><Left><Left><Left><Left>
 
-  " Global subtraction using quick fix list
-  nnoremap <Leader>rr yiw:cdo s/<C-r>"/<C-r>"/g \| update<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
-  nnoremap <Leader>rc yiw:cfdo %s/<C-r>"/<C-r>"/gc \| update<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
-  vnoremap <Leader>rc y:cfdo %s/<C-r>"/<C-r>"/gc \| update<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
-
   " NOTE: can be used with the `cgn` and `dgn`
   vnoremap <leader>rw /<C-r><C-w>
   nnoremap <leader>rw /<C-r><C-w>

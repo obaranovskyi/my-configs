@@ -41,6 +41,10 @@ require "lsp.init"
 require "plugin-configs.trouble"
 require "plugin-configs.symbol-outline"
 
+-- Quickfix list
+require "plugin-configs.vim-grepper"
+require "plugin-configs.vim-qf"
+
 -- Refactoring
 require "plugin-configs.camelsnek"
 

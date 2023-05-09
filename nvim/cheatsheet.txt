@@ -45,8 +45,8 @@
 [Telescope] Change colorscheme                                                                                        | <Leader>tc
 [Telescope] Open new file                                                                                             | <Leader>cn
 [Telescope/Window] Send selected to quickfix list (by tab)                                                            | <C-q>
+[Telescope/Window] Send to quickfix list                                                                              | <C-a>
 [Telescope/Window] Select in the window                                                                               | <Tab>
-[Telescope/Window] Send to quickfix list                                                                              | ... <LOOKING FOR A KEY> ...
 
 ## cheatsheet @Search/Replace
 [Search/Replace] [Single file] Replace word under cursor or visually selected with confirmation                       | <Leader>ra, <Leader>rs [VISUAL_MODE],[NORMAL_MODE]
@@ -76,15 +76,21 @@
 [Buffers] Open previous buffer                                                                                        | <S-h>
 
 ## cheatsheet @QuickfixList
-[QuickfixList] Open quickfix window                                                                                   | :copen
-[QuickfixList] Close quickfix window                                                                                  | :cclose, ccl
-[QuickfixList] Open next item                                                                                         | ge
+[QuickfixList] Open quickfix window                                                                                   | :copen, gx
+[QuickfixList] Close quickfix window                                                                                  | :cclose, gX
 [QuickfixList] Open previous item                                                                                     | gw
-[QuickfixList] Open the first item                                                                                    | gb
-[QuickfixList] Open the last item                                                                                     | gl
-[QuickfixList] Close the quickfix list                                                                                | gx
-[QuickfixList] Replace within quickfix list                                                                           | :cfdo s/foo/bar/g | udpate
+[QuickfixList] Open next item                                                                                         | ge
+[QuickfixList] Open the first item                                                                                    | gW
+[QuickfixList] Open the last item                                                                                     | gE
+[QuickfixList] Replace each line in the quickfix list                                                                 | gL
 
+# cheatsheet @VimGrepper
+[VimGrepper] Search and put the results into quickfix list                                                            | g;<motion> [NORMAL_MODE], [VISUAL_MODE]
+
+#cheatsheet @VimQf
+[VimQf] Remove line in quickfix list                                                                                  | gs [NORMAL_MODE], [VISUAL_MODE]
+[VimQf] Remove by criteria, value, or range                                                                           | :Reject <value|range(before Reject)|regex>
+[VimQf] Keep by criteria, value, or range                                                                             | :Reject <value|range(before Reject)|regex>
 
 ## cheatsheet @Comments
 [Comments] One line comment                                                                                           | gcc [NORMAL_MODE]

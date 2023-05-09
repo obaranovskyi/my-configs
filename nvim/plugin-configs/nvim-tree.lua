@@ -126,13 +126,6 @@ nvim_tree.setup {
     signcolumn = "yes",
 	  mappings = {
 	    custom_only = false,
-      -- this is deprecated
-	    --[[ list = { ]]
-	    --[[   { key = { "l", "<CR>", "o" }, cb = tree_cb "edit" }, ]]
-	    --[[   { key = "h", cb = tree_cb "close_node" }, ]]
-	    --[[   { key = "v", cb = tree_cb "vsplit" }, ]]
-	    --[[   { key = "X", cb = tree_cb "cut" }, ]]
-	    --[[ }, ]]
     },
   },
   renderer = {

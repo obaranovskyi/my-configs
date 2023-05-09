@@ -66,6 +66,9 @@ return packer.startup(function(use)
   use "akinsho/toggleterm.nvim"
   use "sudormrfbin/cheatsheet.nvim"
 
+  -- quickfix list
+  use 'romainl/vim-qf'        -- qflist manipulations
+  use 'mhinz/vim-grepper'     -- search
   -- Telescope
   use "nvim-telescope/telescope.nvim"
   use 'nvim-telescope/telescope-media-files.nvim'

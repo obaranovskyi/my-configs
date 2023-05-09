@@ -17,3 +17,9 @@ keymap("n", "<leader>e", "<cmd>lua require'telescope.builtin'.find_files(require
 --[[ keymap("n", "<leader>g", ":Telescope live_grep theme=dropdown<CR>", opts) ]]
 keymap("n", "<leader>ff", ":Telescope live_grep theme=ivy<CR>", opts)
 keymap("n", "<leader>fj", ":Telescope jumplist<CR>", opts)
+
+
+-- INFO: grep_string() fn helps to fin
+-- INFO: Now using vim-grepper for this goal
+-- keymap('n', 'g;', "<cmd>lua require'telescope.builtin'.grep_string()<cr>", opts)
+-- keymap('x', 'g;', "<cmd>lua require'telescope.builtin'.grep_string()<cr>", opts)

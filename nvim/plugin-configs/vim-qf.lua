@@ -1,0 +1,12 @@
+local opts = { noremap = true, silent = true }
+local opts_nr = { noremap = true }
+local keymap = vim.api.nvim_set_keymap
+
+keymap("n", "gs", ":.Reject<cr>", opts)
+keymap("x", "gs", ":Reject<cr>", opts)
+
+-- USAGE: 
+-- :Reject <value|range|regex> - to exclude 
+-- :Keep <value|range|regex> - to keep only 
+-- :Doline - cdo
+-- :Dofile - cfdo
