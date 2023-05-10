@@ -60,7 +60,6 @@ return packer.startup(function(use)
   use 'christoomey/vim-tmux-navigator'
   use 'airblade/vim-rooter'
   use 'unblevable/quick-scope'
-  use 'dyng/ctrlsf.vim'
   use 'chentoast/marks.nvim'
   use 'nvim-lualine/lualine.nvim'
   use "akinsho/toggleterm.nvim"
