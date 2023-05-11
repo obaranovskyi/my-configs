@@ -114,7 +114,7 @@ keymap("n", "ge", ":cnext<CR>", opts)
 keymap("n", "gW", ":cfirst<CR>", opts)
 keymap("n", "gE", ":clast<CR>", opts)
 keymap("n", "gx", ":copen<CR>", opts)
-keymap("n", "gX", ":cclose<CR>", opts)
+keymap("n", "gt", ":cclose<CR>", opts)
 keymap("n", "gL", ":cdo s///g | update<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>", opt_nr)
 
 -- ------------------------------------------------

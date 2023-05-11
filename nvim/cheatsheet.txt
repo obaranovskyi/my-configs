@@ -109,14 +109,6 @@
 ## cheatsheet @Emmet 
 [Emmet] Expand shortcut                                                                                               | j/
 
-## cheatsheet @CtrlSF
-[CtrlSF] Open search prompt                                                                                           | <C-f>f [NORMAL_MODE]
-[CtrlSF] Open search prompt and paste visually selected text                                                          | <C-f>f [VISUAL_MODE]
-[CtrlSF] Search for visually selected text                                                                            | <C-f>F [VISUAL_MODE]
-[CtrlSF] Toggle search window visibility                                                                              | <C-f>t, gt [INSERT_MODE], [NORMAL_MODE]
-[CtrlSF] Show the search window                                                                                       | <C-f>o
-[CtrlSF] In search window expand/collapse the code piece                                                              | <S-m>
-
 ## cheatsheet @DistanceActions
 [DistanceActions] Delete line n(5) - 5 is relative number above the cursor                                            | <Leader>dk5 <Leader>dk5 3
 [DistanceActions] Delete line n(3) - 3 is relative number below the cursor                                            | <Leader>dj5 <Leader>dj5 7
