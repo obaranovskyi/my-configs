@@ -86,6 +86,7 @@
 
 # cheatsheet @VimGrepper
 [VimGrepper] Search and put the results into quickfix list                                                            | g;<motion> [NORMAL_MODE], [VISUAL_MODE]
+[VimGrepper] Type and search (results will be put on quickfix list)                                                   | gh<motion> [NORMAL_MODE], [VISUAL_MODE]
 
 #cheatsheet @VimQf
 [VimQf] Remove line in quickfix list                                                                                  | gs [NORMAL_MODE], [VISUAL_MODE]
