@@ -17,3 +17,5 @@ vim.g.markdown_fenced_languages = {
   'typescript',
   'lua'
 }
+
+vim.g.mkdp_theme = 'light'
