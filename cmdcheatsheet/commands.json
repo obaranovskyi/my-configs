@@ -883,5 +883,10 @@
         "command": "hostname -I",
         "description": "Display ip address (Ubuntu)",
         "id": 178
+    },
+    {
+        "command": "hostname -I | awk '{print }'",
+        "description": "Display ip address on Ubuntu",
+        "id": 179
     }
 ]
