@@ -41,6 +41,10 @@
 [alacritty] `Cmd+n` - create new window
 
 
+[tmux] `tmux new-session -s mysession` - Create new session
+[tmux] `tmux kill-session -t mysession` - Kill session
+[tmux] `tmux ls` - List sessions
+[tmux] `tmux attach-session -t mysession` - List sessions
 [tmux] `<prefix> c` - Create new window
 [tmux] `<prefix> n` - Go to next window
 [tmux] `<prefix> p` - Go to previous window

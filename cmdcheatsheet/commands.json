@@ -888,5 +888,10 @@
         "command": "hostname -I | awk '{print }'",
         "description": "Display ip address on Ubuntu",
         "id": 179
+    },
+    {
+        "command": "bat package.json",
+        "description": "Show content with syntax highlight",
+        "id": 180
     }
 ]
