@@ -893,5 +893,10 @@
         "command": "bat package.json",
         "description": "Show content with syntax highlight",
         "id": 180
+    },
+    {
+        "command": "ps aux | grep nginx",
+        "description": "Check whether nginx process is running",
+        "id": 181
     }
 ]
