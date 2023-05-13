@@ -6,17 +6,16 @@ main_src='main/src'
 
 function cheatsheet() {
   local value=$(curl -s "${raw_url}/${repo_name}/${main_src}/$1.md")
-  value=$(echo $value | sed -e 's/404: Not Found//g')
 
-  if [ ! -z "$value" ]
-  then
+  if [[ ! $value == *"404: Not Found"* ]]; then
     if ! command -v bat &> /dev/null
     then
-      echo "$value"
+      more $value
     else
       echo "$value" | bat -l 'markdown' -n
     fi
   fi
+
 }
 
 function cheatsheet_list() {
