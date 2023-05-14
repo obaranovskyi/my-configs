@@ -74,6 +74,7 @@ return packer.startup(function(use)
 
   -- Themes and UI elements
   -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
+  use 'dracula/vim'
   use 'folke/tokyonight.nvim'
   use 'sainnhe/sonokai'
   use 'savq/melange'
