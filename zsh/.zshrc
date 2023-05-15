@@ -6,10 +6,9 @@ export ZSH="$HOME/.oh-my-zsh"
 # Themes
 # ZSH_THEME="robbyrussell"
 # ZSH_THEME="af-magic"
-# ZSH_THEME="theunraveler"
-# ZSH_THEME="kennethreitz"
-ZSH_THEME="half-life"
-# ZSH_THEME="theunraveler"
+# ZSH_THEME="half-life" # kitty main
+# ZSH_THEME="refined"
+ZSH_THEME="nicoulaj"
 
 
 # Configure autosuggestion plugin
