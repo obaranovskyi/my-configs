@@ -1,15 +1,25 @@
-habitica="https://habitica.com/"
+habitica="https://habitica.com"
 habitify="https://www.habitify.me/"
-chatgpt="https://chat.openai.com/"
-outlook="https://outlook.office365.com/mail/"
-monkeytype="https://monkeytype.com/"
+chatgpt="https://chat.openai.com"
+outlook="https://outlook.office365.com/mail"
+monkeytype="https://monkeytype.com"
 
-urls_to_open="$habitica $habitify $chatgpt $outlook $monkeytype"
+urls_to_open=(
+  $habitica
+  $habitify
+  $chatgpt
+  $outlook
+  $monkeytype
+)
 
-
-function fo() {
+function ffwt() {
+  # OSX
   if [[ $(uname -s) == "Darwin" ]]; then
-    open -a /Applications/Firefox.app -g urls_to_open
+    open -a Firefox 
+    for url in $urls_to_open
+    do
+      open -a Firefox $url
+    done
   fi
 
   if [[ $(uname -s) == "Linux" ]]; then
@@ -20,5 +30,5 @@ function fo() {
 
 browser-help() {
     echo "\n${COLOR_YELLOW}  Browser:";
-    echo "${COLOR_BLUE}  fo ${COLOR_GREEN}- open browser with predefined urls";
+    echo "${COLOR_BLUE}  ffwt - ${COLOR_GREEN}- open browser with predefined urls";
 }
