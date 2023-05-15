@@ -11,7 +11,7 @@ source $CUSTOM_ALIASES_DIR/create-project.sh;
 source $CUSTOM_ALIASES_DIR/cs.sh;
 source $CUSTOM_ALIASES_DIR/browser.sh;
 
-help() {
+syshelp() {
     common-help
     git-help
     python-help
