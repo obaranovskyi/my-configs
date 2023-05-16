@@ -5,10 +5,10 @@ export ZSH="$HOME/.oh-my-zsh"
 
 # Themes
 # ZSH_THEME="robbyrussell"
-# ZSH_THEME="af-magic"
+ZSH_THEME="af-magic"
 # ZSH_THEME="half-life" # kitty main
 # ZSH_THEME="refined"
-ZSH_THEME="nicoulaj"
+# ZSH_THEME="nicoulaj"
 
 
 # Configure autosuggestion plugin
