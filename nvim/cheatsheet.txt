@@ -33,6 +33,9 @@
 [NvimTree] Close folder in the file explorer                                                                          | <Left>
 [NvimTree] Toggle hidden files and folders                                                                            | I
 
+## cheatsheet @Filetype
+[Filetype] Set nginx file type                                                                                        | :filetype nginx
+
 ## cheatsheet @Telescope
 [Telescope] Find file without showing the file content                                                                | <Leader>e
 [Telescope] Find file                                                                                                 | <C-p>
