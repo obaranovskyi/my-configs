@@ -155,6 +155,11 @@
 [Spelunker] Toggle to enable or disable                                                                               | ZT
 [Spelunker] Toggle to enable or disable only the current buffer                                                       | Zt
 
+## cheatsheet @Autocomplete
+[Autocomplete] Line Autocomplete                                                                                      | <C-x><C-l> [INSERT_MODE]
+[Autocomplete] File Autocomplete                                                                                      | <C-x><C-f> [INSERT_MODE]
+[Autocomplete] Put first suggestion                                                                                   | <C-n><C-n> [INSERT_MODE]
+
 ## cheatsheet @CommandKeyMappings
 [CommandKeyMappings] Move cursor left                                                                                 | <C-h>
 [CommandKeyMappings] Move cursor right                                                                                | <C-l>
