@@ -1,10 +1,14 @@
+" INFO: Icons
+" to have icons clone this repo to ~/.vifm-icons directory
+" https://github.com/thimc/vifm_devicons
+source ~/.vifm-icons/vifm_devicons/favicons.vifm
 set vicmd=nvim
 
 " turn hybrid line numbers on
 set number relativenumber
 
-source ~/my-configs/vifm/themes/zenburn.vifm
-" source ~/my-configs/vifm/themes/palenight.vifm
+" source ~/my-configs/vifm/themes/zenburn.vifm
+source ~/my-configs/vifm/themes/palenight.vifm
 " source ~/my-configs/vifm/themes/solarized-dark.vifm
 
 " Not working <C-h>
