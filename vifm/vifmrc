@@ -1,18 +1,62 @@
-" INFO: Icons
-" to have icons clone this repo to ~/.vifm-icons directory
+" ----- Icons -----
+" To have icons clone this repo to ~/.vifm-icons directory
 " https://github.com/thimc/vifm_devicons
 source ~/.vifm-icons/vifm_devicons/favicons.vifm
-set vicmd=nvim
 
-" turn hybrid line numbers on
-set number relativenumber
+" ----- Configs -----
+set vicmd=nvim                                   " Use nvim as a file view manager
+set number relativenumber                        " turn hybrid line numbers on
+set history=100
+set trash
+set trashdir="~/.Trash"                          " Where to remove files
+set ignorecase
+set smartcase
+set nohlsearch
+set incsearch
+set statusline="  Hint: %z%= %A %10u:%-7g %15s %20d  "
 
-" source ~/my-configs/vifm/themes/zenburn.vifm
+
+
+" Navigate to specific folder using `mark`
+mark h ~
+mark n ~/obaranovskyi/repositories/github/my-notes         " hit 'n to navigate to notes
+mark c ~/my-configs                                        " hit 'c to navigate to configs
+
+command! diff vim --cmd ":colorscheme elflord" -d %f %F    " enter :diff (bad colors) 
+
+" Save location etc.
+set vifminfo=dhistory,savedirs,chistory,state,tui,shistory,
+    \phistory,fhistory,dirstack,registers,bookmarks,bmarks
+
+
+" ----- Themes -----
 source ~/my-configs/vifm/themes/palenight.vifm
+" source ~/my-configs/vifm/themes/zenburn.vifm
 " source ~/my-configs/vifm/themes/solarized-dark.vifm
 
-" Not working <C-h>
-" nnoremap <C-j> <C-w>j
-" nnoremap <C-k> <C-w>k
-" nnoremap <C-h> <C-w>h
-" nnoremap <C-l> <C-w>l
+
+" ----- Keymaps -----
+nnoremap <space>q :qa!<CR>
+" rename file
+nnoremap r cw
+" add directory
+nnoremap af :!touch<space>
+" add file
+nnoremap ad :!mkdir -p<space>
+" shell
+nnoremap s :!
+" display disk view (%d current directory)
+nnoremap <space>f :!gdu .<CR>
+
+
+" ERROR - This doesn't work on kitty
+" nmap <C-j> <C-w>j
+" nmap <C-k> <C-w>k
+" nmap <C-h> <C-w>h
+" nmap <C-l> <C-w>l
+"
+" ERROR - This doesn't work on kitty as well
+" nmap <C-j> :winc j<CR>
+" nmap <C-k> :winc k<CR>
+" nmap <C-h> :winc h<CR>
+" nmap <C-l> :winc l<CR>
