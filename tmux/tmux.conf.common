@@ -5,6 +5,7 @@ unbind-key C-b
 set-option -g prefix "C- "
 bind-key "C- " send-prefix
 
+# with other doesn't work `<prefix><Esc>` (vi mode)
 set -g default-terminal "screen-256color"
 
 # Setting the delay between prefix and command 
@@ -26,6 +27,7 @@ set -g display-panes-time 4000
 bind \\ split-window -h -c "#{pane_current_path}"
 bind - split-window -v -c "#{pane_current_path}"
 bind o split-window -v -c "#{pane_current_path}" -p 20
+bind f new-window -c "#{pane_current_path}" 'vifm . .'
 
 # Swap panes:
 # Swap current pane with the left one prefix+P

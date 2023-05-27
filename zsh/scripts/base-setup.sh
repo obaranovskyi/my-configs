@@ -143,6 +143,8 @@ APPS_TO_INSTALL=(
   twine # for developing python libs
   genanki # anki support cmdenglishassist
   markdown # anki support cmdenglishassist
+  pillow # kitty images preview
+  ranger-fm # kitty images preview
 )
 
 for APP_TO_INSTALL in ${APPS_TO_INSTALL[*]}; do
