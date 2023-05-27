@@ -28,6 +28,7 @@ bind \\ split-window -h -c "#{pane_current_path}"
 bind - split-window -v -c "#{pane_current_path}"
 bind o split-window -v -c "#{pane_current_path}" -p 20
 bind f new-window -c "#{pane_current_path}" 'vifm . .'
+bind i new-window -c "#{pane_current_path}" 'htop'
 
 # Swap panes:
 # Swap current pane with the left one prefix+P
