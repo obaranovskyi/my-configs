@@ -4,8 +4,8 @@ vim.opt.syntax = "enable"
 -- vim.cmd "colorscheme tokyonight-moon"
 -- vim.cmd "colorscheme catppuccin"
 -- vim.cmd "colorscheme catppuccin-macchiato"
--- -- vim.cmd "colorscheme sonokai"
-   -- 
+-- vim.cmd "colorscheme sonokai"
+
 -- vim.cmd('colorscheme dracula')
 
 -- vim.opt.termguicolors = true
