@@ -86,17 +86,14 @@ return packer.startup(function(use)
   use 'marko-cerovac/material.nvim'
 
   -- cmp plugins
-  use "hrsh7th/nvim-cmp" -- The completion plugin
   use "hrsh7th/cmp-buffer" -- buffer completions
   use "hrsh7th/cmp-path" -- path completions
   use "hrsh7th/cmp-cmdline" -- cmdline completions
-  use "saadparwaiz1/cmp_luasnip" -- snippet completions
   use "hrsh7th/cmp-nvim-lsp"
   use "hrsh7th/cmp-nvim-lua"
   use "machakann/vim-highlightedyank"
 
   -- snippets
-  use "L3MON4D3/LuaSnip" --snippet engine
   use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
 
   -- LSP
@@ -157,20 +154,37 @@ return packer.startup(function(use)
   -- Zen mode
   use 'folke/zen-mode.nvim'
 
-
   -- Snippets
-   use({
+  use({
     "L3MON4D3/LuaSnip",
     -- follow latest release.
     tag = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
     -- install jsregexp (optional!:).
     run = "make install_jsregexp"
   }) 
+  use ({
+  'hrsh7th/nvim-cmp',
+    config = function ()
+      require'cmp'.setup {
+      snippet = {
+        expand = function(args)
+          require'luasnip'.lsp_expand(args.body)
+        end
+      },
 
-  -- Automatically set up your configuration after cloning packer.nvim
-  -- Put this at the end after all plugins
-  if PACKER_BOOTSTRAP then
-    require("packer").sync()
-  end
-end)
+      sources = {
+        { name = 'luasnip' },
+        -- more sources
+      },
+    }
+    end
+  })
+  use({ 'saadparwaiz1/cmp_luasnip' })
+
+    -- Automatically set up your configuration after cloning packer.nvim
+    -- Put this at the end after all plugins
+    if PACKER_BOOTSTRAP then
+      require("packer").sync()
+    end
+  end)
 
