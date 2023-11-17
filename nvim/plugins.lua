@@ -48,7 +48,7 @@ return packer.startup(function(use)
   use "kyazdani42/nvim-web-devicons"
   use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
   use "numToStr/Comment.nvim" -- Easily comment stuff
-  use 'kyazdani42/nvim-tree.lua'
+  use 'nvim-tree/nvim-tree.lua'
   use "moll/vim-bbye"
   use 'simeji/winresizer'
   use 'tpope/vim-repeat'
@@ -81,7 +81,7 @@ return packer.startup(function(use)
   use 'morhetz/gruvbox'
   use 'joshdick/onedark.vim'
   use 'drewtempelmeyer/palenight.vim'
-  use 'noib3/nvim-cokeline'
+  use 'willothy/nvim-cokeline'
   use { "catppuccin/nvim", as = "catppuccin" }
   use 'marko-cerovac/material.nvim'
 
@@ -101,7 +101,7 @@ return packer.startup(function(use)
 
   -- LSP
   use "neovim/nvim-lspconfig" -- enable LSP
-  use "williamboman/nvim-lsp-installer" -- simple to use language server installer
+  -- use "williamboman/nvim-lsp-installer" -- simple to use language server installer
 
   -- Code assists
   use 'simrat39/symbols-outline.nvim'
@@ -152,10 +152,20 @@ return packer.startup(function(use)
   use 'michaeljsmith/vim-indent-object'
 
   -- Indent
-  use "lukas-reineke/indent-blankline.nvim"
+  --[[ use "lukas-reineke/indent-blankline.nvim" ]]
 
   -- Zen mode
   use 'folke/zen-mode.nvim'
+
+
+  -- Snippets
+   use({
+    "L3MON4D3/LuaSnip",
+    -- follow latest release.
+    tag = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+    -- install jsregexp (optional!:).
+    run = "make install_jsregexp"
+  }) 
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

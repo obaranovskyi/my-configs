@@ -1,7 +1,7 @@
-local get_hex = require("cokeline.utils").get_hex
-local active_bg_color = '#4c99e0'
-local inactive_bg_color = get_hex('Normal', 'bg')
-local bg_color = get_hex('ColorColumn', 'bg')
+-- local get_hex = require("cokeline.utils").get_hex
+-- local active_bg_color = '#4c99e0'
+-- local inactive_bg_color = get_hex('Normal', 'bg')
+-- local bg_color = get_hex('ColorColumn', 'bg')
 
 -- local start_icon = ''
 -- local end_icon = ''
