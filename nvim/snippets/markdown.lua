@@ -16,7 +16,7 @@ local snippets, autosnippets = {}, {}
 local group = vim.api.nvim_create_augroup("Markdown Snippets",  { clear = true })
 local file_pattern = "*.md"
 
-local variables = s(
+local mVariables = s(
   "mVariables",
   t({
     "<script id=\"markdown-variables\">",
@@ -28,24 +28,25 @@ local variables = s(
     "</script>"
   })
 )
-table.insert(snippets, variables)
+table.insert(snippets, mVariables)
 
-local mHeader1 = s(
-  "mHeader1", 
+local mTableOfContents = s(
+  "mTableOfContents", 
   fmt(
     [[ 
-      {{ html: '{content}', href: '{href}' }}, 
-      <h1 id="{href}" class="navigation-link">
+                {{ html: '{content}', href: '{href}' }}, 
+      <h{header} id="{href}" class="navigation-link">
         {content}
-      </h1>
+      </h{header}>
     ]],
     { 
+      header = i(1, "Header"),
       content = i(2, "Enter content..."),
-      href = i(1, "Enter href/id...")
+      href = i(3, "Enter href/id...")
     },
     { repeat_duplicates = true }
   )
 )
-table.insert(snippets, mHeader1)
+table.insert(snippets, mTableOfContents)
 
 return snippets, autosnippets

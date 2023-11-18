@@ -11,4 +11,3 @@ git add . &&
 git commit -a -m "$GIT_MESSAGE" &&
 git push
 echo "Pushed to remote. Message: $GIT_MESSAGE"
-

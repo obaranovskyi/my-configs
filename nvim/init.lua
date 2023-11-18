@@ -36,9 +36,6 @@ require "plugin-configs.cokeline"
 require "plugin-configs.zen-mode"
 require "plugin-configs.luasnip"
 
--- LSP
-require "lsp.init"
-
 -- Diagnostics
 require "plugin-configs.trouble"
 require "plugin-configs.symbol-outline"
@@ -97,11 +94,13 @@ require "abbreviations.abbreviations"
 require "system.source"
 
 -- Debugging
-require "dap.mason"
+-- initialized before
+-- require "dap.mason"
 require "dap.python"
 require "dap.bash"
 require "dap.dap-ui"
 require "dap.dap-virtual-text"
 require "dap.dap-keymaps"
 
-
+-- Mason lsp
+require "lsp.init"

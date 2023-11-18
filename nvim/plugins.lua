@@ -98,7 +98,12 @@ return packer.startup(function(use)
 
   -- LSP
   use "neovim/nvim-lspconfig" -- enable LSP
-  -- use "williamboman/nvim-lsp-installer" -- simple to use language server installer
+  use { "williamboman/mason.nvim" }
+  use { "williamboman/mason-lspconfig.nvim" }
+  use "jose-elias-alvarez/null-ls.nvim"
+  -- Installing at bottom
+  -- use "hrsh7th/nvim-cmp"
+  use "hrsh7th/cmp-nvim-lsp"
 
   -- Code assists
   use 'simrat39/symbols-outline.nvim'
@@ -140,7 +145,6 @@ return packer.startup(function(use)
   use 'rcarriga/nvim-dap-ui'
   use 'theHamsta/nvim-dap-virtual-text'
   use 'nvim-telescope/telescope-dap.nvim'
-  use { "williamboman/mason.nvim" }
 
   -- Emet
   use 'mattn/emmet-vim'
