@@ -119,4 +119,7 @@ vim.cmd [[ command! LspToggleAutoFormat execute 'lua ]]
 -- Toggle "format on save" once, to start with the format on.
 M.toggle_format_on_save()
 
+vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, { border = 'rounded' })
+vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = 'rounded' })
+
 return M

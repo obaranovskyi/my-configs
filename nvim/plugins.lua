@@ -158,14 +158,6 @@ return packer.startup(function(use)
   use 'folke/zen-mode.nvim'
 
   -- Snippets
-  -- use({
-  --   "L3MON4D3/LuaSnip",
-  --   -- follow latest release.
-  --   tag = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
-  --   -- install jsregexp (optional!:).
-  --   run = "make install_jsregexp"
-  -- })
-
   use "L3MON4D3/LuaSnip"
   use({
     'hrsh7th/nvim-cmp',
