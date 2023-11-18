@@ -96,13 +96,13 @@ end
 
 -- And finally, here we create a way to toggle format on save with the command "LspToggleAutoFormat" and after everything, we return the M object to use it in other files.
 function M.enable_format_on_save()
-  vim.cmd [[
-    augroup format_on_save
-        autocmd!
-        autocmd BufWritePre * lua vim.lsp.buf.format({ async = false })
-    augroup end
-    ]]
-  vim.notify "Enabled format on save"
+  -- vim.cmd [[
+  --   augroup format_on_save
+  --       autocmd!
+  --       autocmd BufWritePre * lua vim.lsp.buf.format({ async = false })
+  --   augroup end
+  --   ]]
+  -- vim.notify "Enabled format on save"
 end
 
 function M.disable_format_on_save()

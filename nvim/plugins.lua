@@ -39,11 +39,10 @@ packer.init {
 }
 
 return packer.startup(function(use)
-
   use "wbthomason/packer.nvim" -- Have packer manage itself
-  use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
-  use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
-  use {'iamcco/markdown-preview.nvim'}
+  use "nvim-lua/popup.nvim"    -- An implementation of the Popup API from vim in Neovim
+  use "nvim-lua/plenary.nvim"  -- Useful lua functions used ny lots of plugins
+  use { 'iamcco/markdown-preview.nvim' }
   use 'tpope/vim-markdown'
   use "kyazdani42/nvim-web-devicons"
   use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
@@ -66,8 +65,8 @@ return packer.startup(function(use)
   use "sudormrfbin/cheatsheet.nvim"
 
   -- quickfix list
-  use 'romainl/vim-qf'        -- qflist manipulations
-  use 'mhinz/vim-grepper'     -- search
+  use 'romainl/vim-qf'    -- qflist manipulations
+  use 'mhinz/vim-grepper' -- search
   -- Telescope
   use "nvim-telescope/telescope.nvim"
   use 'nvim-telescope/telescope-media-files.nvim'
@@ -86,8 +85,8 @@ return packer.startup(function(use)
   use 'marko-cerovac/material.nvim'
 
   -- cmp plugins
-  use "hrsh7th/cmp-buffer" -- buffer completions
-  use "hrsh7th/cmp-path" -- path completions
+  use "hrsh7th/cmp-buffer"  -- buffer completions
+  use "hrsh7th/cmp-path"    -- path completions
   use "hrsh7th/cmp-cmdline" -- cmdline completions
   use "hrsh7th/cmp-nvim-lsp"
   use "hrsh7th/cmp-nvim-lua"
@@ -159,36 +158,38 @@ return packer.startup(function(use)
   use 'folke/zen-mode.nvim'
 
   -- Snippets
-  use({
-    "L3MON4D3/LuaSnip",
-    -- follow latest release.
-    tag = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
-    -- install jsregexp (optional!:).
-    run = "make install_jsregexp"
-  }) 
-  use ({
-  'hrsh7th/nvim-cmp',
-    config = function ()
-      require'cmp'.setup {
-      snippet = {
-        expand = function(args)
-          require'luasnip'.lsp_expand(args.body)
-        end
-      },
+  -- use({
+  --   "L3MON4D3/LuaSnip",
+  --   -- follow latest release.
+  --   tag = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+  --   -- install jsregexp (optional!:).
+  --   run = "make install_jsregexp"
+  -- })
 
-      sources = {
-        { name = 'luasnip' },
-        -- more sources
-      },
-    }
+  use "L3MON4D3/LuaSnip"
+  use({
+    'hrsh7th/nvim-cmp',
+    config = function()
+      require 'cmp'.setup {
+        snippet = {
+          expand = function(args)
+            require 'luasnip'.lsp_expand(args.body)
+          end
+        },
+
+        sources = {
+          { name = 'luasnip' },
+          -- more sources
+        },
+      }
     end
   })
+
   use({ 'saadparwaiz1/cmp_luasnip' })
 
-    -- Automatically set up your configuration after cloning packer.nvim
-    -- Put this at the end after all plugins
-    if PACKER_BOOTSTRAP then
-      require("packer").sync()
-    end
-  end)
-
+  -- Automatically set up your configuration after cloning packer.nvim
+  -- Put this at the end after all plugins
+  if PACKER_BOOTSTRAP then
+    require("packer").sync()
+  end
+end)
