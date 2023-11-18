@@ -13,7 +13,7 @@ local rep = require("luasnip.extras").rep
 
 local snippets, autosnippets = {}, {}
 
-local group = vim.api.nvim_create_augroup("Markdown Snippets",  { clear = true })
+local group = vim.api.nvim_create_augroup("Markdown Snippets", { clear = true })
 local file_pattern = "*.md"
 
 local mVariables = s(
@@ -31,15 +31,15 @@ local mVariables = s(
 table.insert(snippets, mVariables)
 
 local mTableOfContents = s(
-  "mTableOfContents", 
+  "mTableOfContents",
   fmt(
-    [[ 
-                {{ html: '{content}', href: '{href}' }}, 
+    [[
+                {{ html: '{content}', href: '{href}' }},
       <h{header} id="{href}" class="navigation-link">
         {content}
       </h{header}>
     ]],
-    { 
+    {
       header = i(1, "Header"),
       content = i(2, "Enter content..."),
       href = i(3, "Enter href/id...")
@@ -48,5 +48,21 @@ local mTableOfContents = s(
   )
 )
 table.insert(snippets, mTableOfContents)
+
+local mCode = s(
+  "mCode",
+  fmt(
+    [[
+    ```{language}
+    {code}
+    ```
+    ]],
+    {
+      language = i(1, "language"),
+      code = i(2, "code")
+    }
+  )
+)
+table.insert(snippets, mCode)
 
 return snippets, autosnippets
