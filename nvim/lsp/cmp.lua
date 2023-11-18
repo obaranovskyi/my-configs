@@ -3,7 +3,6 @@ if not cmp_status_ok then
   return
 end
 
--- Basic mapping
 cmp.setup({
   snippet = {
     -- REQUIRED - you must specify a snippet engine
@@ -28,11 +27,9 @@ cmp.setup({
     ["<Right>"] = cmp.mapping.confirm({ select = true }),
   }),
 
-  -- Here we choose how the completion window will appear
   formatting = {
     fields = { "kind", "abbr", "menu" },
     format = function(entry, vim_item)
-      -- NOTE: order matters
       vim_item.menu = ({
         nvim_lsp = "[LSP]",
         buffer = "[Buffer]",
@@ -41,8 +38,6 @@ cmp.setup({
     end,
 
   },
-
-  -- Here is the place where we can choose our sources, if the cmp is already configured, we can just add it here.
   sources = {
     { name = "nvim_lsp" },
     { name = "buffer" },

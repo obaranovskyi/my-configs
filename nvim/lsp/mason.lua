@@ -35,7 +35,6 @@ local servers = {
   "bashls"
 }
 
--- Here we declare which settings to pass to the mason, and also ensure servers are installed. If not, they will be installed automatically.
 local settings = {
   ui = {
     border = "rounded",
@@ -55,7 +54,6 @@ mason_lspconfig.setup {
   automatic_installation = true,
 }
 
--- we'll need to call lspconfig to pass our server to the native neovim lspconfig.
 local lspconfig_status_ok, lspconfig = pcall(require, "lspconfig")
 if not lspconfig_status_ok then
   return
@@ -63,17 +61,13 @@ end
 
 local opts = {}
 
--- loop through the servers
 for _, server in pairs(servers) do
   opts = {
-    -- getting "on_attach" and capabilities from handlers
     on_attach = require("lsp.handlers").on_attach,
     capabilities = require("lsp.handlers").capabilities,
   }
 
-  -- get the server name
   server = vim.split(server, "@")[1]
 
-  -- pass them to lspconfig
   lspconfig[server].setup(opts)
 end

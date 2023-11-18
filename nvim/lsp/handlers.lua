@@ -3,7 +3,6 @@ local M = {}
 
 M.capabilities = vim.lsp.protocol.make_client_capabilities()
 
--- protected call to get the cmp
 local status_cmp_ok, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
 if not status_cmp_ok then
   return
@@ -12,10 +11,8 @@ end
 M.capabilities.textDocument.completion.completionItem.snippetSupport = true
 M.capabilities = cmp_nvim_lsp.default_capabilities(M.capabilities)
 
--- Here we declare the setup function and add the modifications in signs and extra configs, like virtual text, false update_in_insert, rounded borders for float windows, etc.
 M.setup = function()
   local signs = {
-    -- change the "?" to an icon that you like
     { name = "DiagnosticSignError", text = "?" },
     { name = "DiagnosticSignWarn",  text = "?" },
     { name = "DiagnosticSignHint",  text = "?" },
@@ -28,7 +25,6 @@ M.setup = function()
 
   local config = {
     virtual_text = true,
-    -- show signs
     signs = {
       active = signs,
     },
@@ -40,7 +36,6 @@ M.setup = function()
   vim.diagnostic.config(config)
 end
 
--- Here we set up keymaps. You can change them if you already have specifics for these functions, or just want to try another keymap.
 local function lsp_keymaps(bufnr)
   local opts = { noremap = true, silent = true }
 
@@ -61,13 +56,10 @@ local function lsp_keymaps(bufnr)
   keymap("gl", '<cmd>lua vim.diagnostic.open_float()<CR>')
   keymap("]d", '<cmd>lua vim.diagnostic.goto_next({ border = "rounded" })<CR>')
   --[[ keymap("<leader>q", "<cmd>lua vim.diagnostic.setloclist()<CR>") ]]
-  --[[ vim.cmd [[ command! Format execute 'lua vim.lsp.buf.formatting()' ]]
 
   vim.cmd([[ command! Format execute 'lua vim.lsp.buf.format()' ]])
 end
 
--- Here we let the LSP prioritize null-ls formatters. Why? Normally when we install a separate formatter or linter in null-ls we want to use just them.
--- if you don't prioritize any, neovim will ask you every time you format which one you want to use.
 local lsp_formatting = function(bufnr)
   vim.lsp.buf.format({
     filter = function(client)
@@ -79,7 +71,6 @@ end
 
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
--- this function will attach our previously set keymaps and our lsp_formatting function to every buffer.
 M.on_attach = function(client, bufnr)
   lsp_keymaps(bufnr)
   if client.supports_method("textDocument/formatting") then
@@ -94,7 +85,6 @@ M.on_attach = function(client, bufnr)
   end
 end
 
--- And finally, here we create a way to toggle format on save with the command "LspToggleAutoFormat" and after everything, we return the M object to use it in other files.
 function M.enable_format_on_save()
   -- vim.cmd [[
   --   augroup format_on_save
