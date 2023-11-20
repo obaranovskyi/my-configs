@@ -50,13 +50,19 @@ local mTableOfContents = s(
 table.insert(snippets, mTableOfContents)
 
 local mCode = s(
+  "mCode",
   fmt(
   [[
-  ```{code}
-
+  ```{language}
+  {code}
   ```
   ]],
-  { code = i(1, "Code")})
+  {
+    language = i(1, "Language"),
+    code = i(2, "Code")
+  })
 )
+
+table.insert(snippets, mCode)
 
 return snippets, autosnippets
