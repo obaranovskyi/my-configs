@@ -16,7 +16,6 @@ end, { silent = true })
 
 
 
-
 -- ISSUE FIX: always use tab to expand the text 
 -- https://www.reddit.com/r/neovim/comments/15ptyvb/nvim_cmp_super_tab_goes_crazy/
 local unlink_group = vim.api.nvim_create_augroup('UnlinkSnippet', { })
