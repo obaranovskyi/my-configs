@@ -65,4 +65,26 @@ local mCode = s(
 
 table.insert(snippets, mCode)
 
+
+local mWarning = s(
+  "mWarning",
+  fmt(
+    [[
+      <div class="warning">
+          <div class="warning-image">
+              <img src="../../assets/images/warning.svg" alt="">
+          </div>
+          <div class="warning-content">
+            {text}
+          </div>
+      </div>
+    ]],
+    {
+      text = i(1, "Enter text...")
+    }
+  )
+)
+
+table.insert(snippets, mWarning)
+
 return snippets, autosnippets
