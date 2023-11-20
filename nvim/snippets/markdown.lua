@@ -34,7 +34,7 @@ local mTableOfContents = s(
   "mTableOfContents",
   fmt(
     [[
-                {{ html: '{content}', href: '{href}' }},
+                  {{ html: '{content}', href: '{href}' }},
       <h{header} id="{href}" class="navigation-link">
         {content}
       </h{header}>
@@ -50,19 +50,13 @@ local mTableOfContents = s(
 table.insert(snippets, mTableOfContents)
 
 local mCode = s(
-  "mCode",
   fmt(
-    [[
-    ```{language}
-    {code}
-    ```
-    ]],
-    {
-      language = i(1, "language"),
-      code = i(2, "code")
-    }
-  )
+  [[
+  ```{code}
+
+  ```
+  ]],
+  { code = i(1, "Code")})
 )
-table.insert(snippets, mCode)
 
 return snippets, autosnippets
