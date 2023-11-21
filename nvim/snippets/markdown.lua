@@ -16,8 +16,8 @@ local snippets, autosnippets = {}, {}
 local group = vim.api.nvim_create_augroup("Markdown Snippets", { clear = true })
 local file_pattern = "*.md"
 
-local mVariables = s(
-  "mVariables",
+local blVariables = s(
+  "blVariables",
   t({
     "<script id=\"markdown-variables\">",
     "    window.currMarkdown = {",
@@ -28,10 +28,10 @@ local mVariables = s(
     "</script>"
   })
 )
-table.insert(snippets, mVariables)
+table.insert(snippets, blVariables)
 
-local mTableOfContents = s(
-  "mTableOfContents",
+local blHeader = s(
+  "blHeader",
   fmt(
     [[
                   {{ html: '{content}', href: '{href}' }},
@@ -47,7 +47,7 @@ local mTableOfContents = s(
     { repeat_duplicates = true }
   )
 )
-table.insert(snippets, mTableOfContents)
+table.insert(snippets, blHeader)
 
 local mCode = s(
   "mCode",
@@ -66,8 +66,8 @@ local mCode = s(
 table.insert(snippets, mCode)
 
 
-local mWarning = s(
-  "mWarning",
+local blWarning = s(
+  "blWarning",
   fmt(
     [[
       <div class="warning">
@@ -85,6 +85,6 @@ local mWarning = s(
   )
 )
 
-table.insert(snippets, mWarning)
+table.insert(snippets, blWarning)
 
 return snippets, autosnippets
