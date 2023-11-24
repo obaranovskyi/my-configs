@@ -49,23 +49,6 @@ local blHeader = s(
 )
 table.insert(snippets, blHeader)
 
-local mCode = s(
-  "mCode",
-  fmt(
-  [[
-  ```{language}
-  {code}
-  ```
-  ]],
-  {
-    language = i(1, "Language"),
-    code = i(2, "Code")
-  })
-)
-
-table.insert(snippets, mCode)
-
-
 local blWarning = s(
   "blWarning",
   fmt(
@@ -86,5 +69,49 @@ local blWarning = s(
 )
 
 table.insert(snippets, blWarning)
+
+local blImage = s(
+  "blImage",
+  fmt(
+    [[
+      <p>
+        <img class="dark" src="./markdowns/{image}" alt="">
+      </p>
+    ]],
+    { image = i(1, "Enter images path ...")}
+  )
+)
+
+table.insert(snippets, blImage)
+
+local blImageLightBorder = s(
+  "blImageLightBorder",
+  fmt(
+    [[
+      <p>
+        <img class="dark light-border" src="./markdowns/{image}" alt="">
+      </p>
+    ]],
+    { image = i(1, "Enter images path ...")}
+  )
+)
+
+table.insert(snippets, blImageLightBorder)
+
+local mCode = s(
+  "mCode",
+  fmt(
+  [[
+  ```{language}
+  {code}
+  ```
+  ]],
+  {
+    language = i(1, "Language"),
+    code = i(2, "Code")
+  })
+)
+
+table.insert(snippets, mCode)
 
 return snippets, autosnippets
