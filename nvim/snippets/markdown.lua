@@ -98,6 +98,19 @@ local blImageLightBorder = s(
 
 table.insert(snippets, blImageLightBorder)
 
+local blLink = s(
+  "blLink",
+  fmt(
+    '<a href="{url}" target="_blank">{text}</a>',
+    {
+      text = i(1, "Text"),
+      url = i(2, "Url")
+    }
+  )
+)
+
+table.insert(snippets, blLink)
+
 local mCode = s(
   "mCode",
   fmt(
