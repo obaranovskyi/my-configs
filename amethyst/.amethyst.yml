@@ -31,12 +31,8 @@ mouse-resizes-windows: true
 # true if windows smaller than a 500px square should be floating by default (default true)
 float-small-windows: false
 
-# floating-is-blacklist: true
-# floating:
-#   - kitty
-
 #----------------#
-# Hotkeys I use: #
+# Hotkeys I use: |
 #----------------#
  
 # mod1+j - focus next window
