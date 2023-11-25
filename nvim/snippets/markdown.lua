@@ -22,7 +22,6 @@ local blVariables = s(
     "<script id=\"markdown-variables\">",
     "    window.currMarkdown = {",
     "        tableOfContents: [",
-    "            { html: '', href: '' }",
     "        ]",
     "    }",
     "</script>"
@@ -49,6 +48,24 @@ local blHeader = s(
 )
 table.insert(snippets, blHeader)
 
+
+local blTocObj = s(
+  "blTocObj",
+  fmt(
+    [[
+                  {{ 
+                    html: '', 
+                    href: '' ,
+                    children: [
+                    ]
+                  }},
+    ]],
+    {},
+    { repeat_duplicates = true }
+  )
+)
+table.insert(snippets, blTocObj)
+
 local blWarning = s(
   "blWarning",
   fmt(
@@ -67,7 +84,6 @@ local blWarning = s(
     }
   )
 )
-
 table.insert(snippets, blWarning)
 
 local blImage = s(
@@ -81,7 +97,6 @@ local blImage = s(
     { image = i(1, "Enter images path ...")}
   )
 )
-
 table.insert(snippets, blImage)
 
 local blImageLightBorder = s(
@@ -95,7 +110,6 @@ local blImageLightBorder = s(
     { image = i(1, "Enter images path ...")}
   )
 )
-
 table.insert(snippets, blImageLightBorder)
 
 local blLink = s(
@@ -108,7 +122,6 @@ local blLink = s(
     }
   )
 )
-
 table.insert(snippets, blLink)
 
 local mCode = s(
@@ -124,7 +137,92 @@ local mCode = s(
     code = i(2, "Code")
   })
 )
-
 table.insert(snippets, mCode)
+
+
+-- INFO: To trigger this snippet
+-- 1. Select header(text)
+-- 2. Click `Tab`
+-- 3. You'll get into INSERT MODE, enter s
+-- 4. Then you'll see the suggestion, select it, and lick `Enter`
+local blHeaderSelection = s("blHeaderSelection", f(function(_, snip)
+    local function capitalizeWords(inputString)
+        return inputString:gsub("(%a)([%w_']*)", function(first, rest)
+            return first:upper() .. (rest or "")
+        end):gsub("(%s+)(%a)([%w_']*)", function(space, first, rest)
+            return space .. first:upper() .. (rest or "")
+        end)
+    end
+
+    local function count(base, pattern)
+        return select(2, string.gsub(base, pattern, ""))
+    end
+
+    local function trim(str)
+       return (str:gsub("^%s*(.-)%s*$", "%1"))
+    end
+
+    local function replaceBackticksWithTags(inputString, tag)
+        local resultString = string.gsub(inputString, "`(.-)`", "<" .. tag .. ">%1</" .. tag .. ">")
+        return resultString
+    end
+
+    local function removeCharacters(source, charactersToRemove)
+        local pattern = "[" .. charactersToRemove:gsub(".", "%%%0") .. "]"
+        local resultString = string.gsub(source, pattern, "")
+        return resultString
+    end
+
+    local function escapeHtml(inputString)
+        local htmlEntities = {
+            ["<"] = "&lt;",
+            [">"] = "&gt;"
+            -- Add more entities as needed
+        }
+
+        local escapedString = inputString:gsub("[<>]", function(match)
+            return htmlEntities[match]
+        end)
+
+        return escapedString
+    end
+
+
+    local res, env = {}, snip.env
+    local text = table.concat(env.LS_SELECT_RAW, "")
+    local headerType = count(text, '#')
+
+    text = trim(text:gsub("%#", ""))
+
+    --[[ local id = removeCharacters( ]]
+    --[[   capitalizeWords(text), ]]
+    --[[   "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~ " ]]
+    --[[ ) ]]
+    print('1', text)
+    local id = removeCharacters(text, "`")
+    print('2', id)
+    id = capitalizeWords(id)
+
+    print('3', id)
+    id = removeCharacters(id, "!\"#$%&'()*+,-.—/:;<=>?@[\\]^_`{|}~ ")
+
+    print('4', id)
+
+    text = escapeHtml(text)
+    text = replaceBackticksWithTags(text, 'code')
+
+    table.insert(res, "          { html: '" .. text .. "', href: '" .. id .. "' },")
+    table.insert(res, '<h' .. headerType .. ' id="' .. id .. '" class="navigation-link">')
+    table.insert(res, '  ' .. text)
+    table.insert(res, '</h' .. headerType .. '>')
+    table.insert(res, '')
+
+    return res
+  end, {}
+  )
+)
+table.insert(snippets, blHeaderSelection)
+
+
 
 return snippets, autosnippets

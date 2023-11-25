@@ -1,4 +1,23 @@
-# Focus the next window in the list going counter-clockwise.
+layouts:
+  - tall
+  - fullscreen
+  # - tall-right
+  - wide
+  # - two-pane
+  # - middle-wide
+  # - 3column-left
+  # - 3column-middle
+  # - 3column-right
+  # - 4column-left
+  # - 4column-right
+  - column
+  # - row
+  # - floating
+  # - widescreen-tall
+  # - widescreen-tall-right
+  # - bsp.
+  
+# Focus the next window in the list going counter-clockwiselayouts:
 focus-ccw:
   mod: mod1
   key: k

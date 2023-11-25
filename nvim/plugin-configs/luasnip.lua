@@ -14,6 +14,9 @@ end, { silent = true })
 
 
 
+-- INFO: Configure snippets in visual mode
+-- https://github.com/L3MON4D3/LuaSnip/blob/master/DOC.md#variables
+ls.config.setup({store_selection_keys="<Tab>"})
 
 
 -- ISSUE FIX: always use tab to expand the text 
