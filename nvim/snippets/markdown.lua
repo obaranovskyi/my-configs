@@ -1,3 +1,6 @@
+-- INFO: Documentation
+-- https://github.com/L3MON4D3/LuaSnip/blob/master/DOC.md#variables
+
 local ls = require("luasnip")
 local s = ls.s
 local i = ls.i
