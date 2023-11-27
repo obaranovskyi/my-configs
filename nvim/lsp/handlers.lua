@@ -1,4 +1,3 @@
--- First, we declare an empty object and put auto-complete features from nvim-cmp (we will set up cmp.lua later) in the LSP
 local M = {}
 
 M.capabilities = vim.lsp.protocol.make_client_capabilities()
