@@ -42,7 +42,7 @@ window-margins: true
 window-margin-size: 15
 
 # true if the windows underneath the mouse should become focused as the mouse moves (default false). Note that this is largely incompatible with mouse-follows-focus
-focus-follows-mouse: true
+focus-follows-mouse: false
 # true if dragging and dropping windows on to each other should swap their positions (default false).
 mouse-swaps-windows: true
 # true if changing the frame of a window with the mouse should update the layout to accommodate the change (default false). Note that not all layouts will be able to respond to the change.
