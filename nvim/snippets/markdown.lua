@@ -197,19 +197,10 @@ local blHeaderSelection = s("blHeaderSelection", f(function(_, snip)
 
     text = trim(text:gsub("%#", ""))
 
-    --[[ local id = removeCharacters( ]]
-    --[[   capitalizeWords(text), ]]
-    --[[   "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~ " ]]
-    --[[ ) ]]
-    print('1', text)
     local id = removeCharacters(text, "`")
-    print('2', id)
     id = capitalizeWords(id)
 
-    print('3', id)
     id = removeCharacters(id, "!\"#$%&'()*+,-.—/:;<=>?@[\\]^_`{|}~ ")
-
-    print('4', id)
 
     text = escapeHtml(text)
     text = replaceBackticksWithTags(text, 'code')
