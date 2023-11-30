@@ -127,6 +127,14 @@ local blLink = s(
 )
 table.insert(snippets, blLink)
 
+local blSplit = s(
+  "blSplit",
+  fmt(
+    '<div class="split"></div>',
+  {})
+)
+table.insert(snippets, blSplit)
+
 local mCode = s(
   "mCode",
   fmt(
