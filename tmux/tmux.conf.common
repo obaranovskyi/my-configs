@@ -27,8 +27,9 @@ set -g display-panes-time 4000
 bind \\ split-window -h -c "#{pane_current_path}"
 bind - split-window -v -c "#{pane_current_path}"
 bind o split-window -v -c "#{pane_current_path}" -p 20
-bind f new-window -c "#{pane_current_path}" 'vifm . .'
 bind i new-window -c "#{pane_current_path}" 'htop'
+bind f send-keys "ranger" C-m
+bind F new-window -c "#{pane_current_path}" 'ranger'
 
 # Swap panes:
 # Swap current pane with the left one prefix+P
