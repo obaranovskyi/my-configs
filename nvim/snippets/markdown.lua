@@ -135,6 +135,14 @@ local blSplit = s(
 )
 table.insert(snippets, blSplit)
 
+local blSplitNoHeight = s(
+  "blSplitNoHeight",
+  fmt(
+    '<div class="split no-height"></div>',
+  {})
+)
+table.insert(snippets, blSplitNoHeight)
+
 local mCode = s(
   "mCode",
   fmt(
