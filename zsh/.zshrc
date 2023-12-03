@@ -55,6 +55,7 @@ fi
 
 # Configure z plugin
 Z_FILE=$HOME/.z.sh
+_Z_SRC=$HOME/.z.sh # z-jumper ranger integration
 if [[ ! -f "$Z_FILE" ]]; then
     echo 'Downloading z plugin ...';
     curl https://raw.githubusercontent.com/rupa/z/master/z.sh --output ~/.z.sh;
