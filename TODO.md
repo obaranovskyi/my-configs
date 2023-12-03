@@ -6,3 +6,6 @@ Choose a session manager from these three plugins:
 
 Put somewhere symbols:
     - https://en.wikipedia.org/wiki/Arrow_(symbol)
+
+
+Configurations can be sync with `rsync` if there is no include from another file.
