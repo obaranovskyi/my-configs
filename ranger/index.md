@@ -30,4 +30,5 @@ z_loc = getenv("_Z_SRC") or '~/.z.sh'
 ```
 
 ## FZF Integration
+
 https://github.com/cjbassi/ranger-fzf
