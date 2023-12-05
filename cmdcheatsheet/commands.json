@@ -115,8 +115,8 @@
         "id": 23
     },
     {
-        "command": "zip -r <folder-name>",
-        "description": "Compress and archive the <folder-name>",
+        "command": "zip -r <archive-name>.zip <files-to-include>",
+        "description": "Compress and archive",
         "id": 24
     },
     {
