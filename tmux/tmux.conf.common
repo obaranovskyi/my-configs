@@ -55,6 +55,10 @@ bind j select-pane -D
 bind k select-pane -U
 bind l select-pane -R
 
+# Recalculate window index on window close
+# If you have 1,2,3,4 windows and you close 
+# window 3, window number 4 will change index to 3
+set -g renumber-windows on
 
 # -------------------------------------------------
 # More Info on key binding updates: https://github.com/tmux/tmux/issues/592
