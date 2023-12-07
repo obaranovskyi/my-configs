@@ -73,8 +73,9 @@ if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
 
+# INFO: Testing whether issue is still reproducible
 # Fix for tmux to work with the zsh - https://github.com/tmux/tmux/issues/597
-TERM=xterm-256color
+# TERM=xterm-256color
 
 # Ubuntu configs
 if [[ $(uname -s) == "Linux" ]]; then
