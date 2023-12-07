@@ -84,6 +84,7 @@ return packer.startup(function(use)
   use 'willothy/nvim-cokeline'
   use { "catppuccin/nvim", as = "catppuccin" }
   use 'marko-cerovac/material.nvim'
+  use 'rebelot/kanagawa.nvim'
 
   -- cmp plugins
   use "hrsh7th/cmp-buffer"  -- buffer completions

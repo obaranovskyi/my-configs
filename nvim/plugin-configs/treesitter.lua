@@ -27,7 +27,7 @@ configs.setup {
 -- INFO: Don't show the warning when press `o`
 -- PATCH: in order to address the message:
 -- vim.treesitter.query.get_query() is deprecated, use vim.treesitter.query.get() instead. :help deprecated
---   This feature will be removed in Nvim version 0.10
+-- This feature will be removed in Nvim version 0.10
 local orig_notify = vim.notify
 local filter_notify = function(text, level, opts)
   -- more specific to this case
