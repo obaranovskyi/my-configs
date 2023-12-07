@@ -19,7 +19,6 @@ nvim_tree.setup({
   reload_on_bufenter = false,
   respect_buf_cwd = false,
   on_attach = on_attach,
-  hijack_unnamed_buffer_when_opening = true,
   view = {
     side = "right",
     adaptive_size = true,
@@ -30,7 +29,6 @@ nvim_tree.setup({
     relativenumber = false,
     signcolumn = "yes"
   },
-  hijack_directories = { auto_open = true },
   renderer = {
 
     add_trailing = false,
@@ -275,11 +273,13 @@ vim.api.nvim_create_autocmd('BufEnter', {
     nested = true,
 })
 
--- INFO: Open nvim-tree on start
-vim.cmd [[
-  :NvimTreeToggle
-]]
+-- INFO: Open nvim-tree on start (doens't work)
+-- vim.cmd [[
+--   :NvimTreeToggle
+-- ]]
 
+-- auto-open after reading a file for the first time in the session
+-- https://github.com/nvim-tree/nvim-tree.lua/discussions/1517
 vim.api.nvim_create_autocmd({"BufNewFile", "BufReadPost"}, {
   callback = function(args)
     if vim.fn.expand "%:p" ~= "" then
