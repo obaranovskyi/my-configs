@@ -58,7 +58,12 @@ return packer.startup(function(use)
   use 'kamykn/spelunker.vim'
   use 'svermeulen/vim-yoink'
   use 'christoomey/vim-tmux-navigator'
-  use 'airblade/vim-rooter'
+
+  -- INFO: no need to switch to the inner git repository
+  -- as I'm using the gitsubmodules, and odn't want
+  -- to switch everytime back
+  -- use 'airblade/vim-rooter'
+
   use 'unblevable/quick-scope'
   use 'chentoast/marks.nvim'
   use 'nvim-lualine/lualine.nvim'
@@ -154,9 +159,6 @@ return packer.startup(function(use)
 
   -- Indent
   --[[ use "lukas-reineke/indent-blankline.nvim" ]]
-
-  -- Zen mode
-  use 'folke/zen-mode.nvim'
 
   -- Snippets
   use "L3MON4D3/LuaSnip"
