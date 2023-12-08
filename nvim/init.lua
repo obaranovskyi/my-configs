@@ -31,7 +31,6 @@ require "plugin-configs.lualine"
 require "plugin-configs.toggleterm"
 require "plugin-configs.cheatsheet"
 require "plugin-configs.cokeline"
---[[ require "plugin-configs.indent-blankline" ]]
 require "plugin-configs.luasnip"
 
 -- Diagnostics

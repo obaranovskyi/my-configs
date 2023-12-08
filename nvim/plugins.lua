@@ -112,7 +112,6 @@ return packer.startup(function(use)
   -- LSP
   use { "williamboman/mason.nvim" }
   use { "williamboman/mason-lspconfig.nvim" }
-  use "neovim/nvim-lspconfig"
 
   -- Code assists
   use 'simrat39/symbols-outline.nvim'
@@ -160,9 +159,6 @@ return packer.startup(function(use)
 
   -- Motions
   use 'michaeljsmith/vim-indent-object'
-
-  -- Indent
-  --[[ use "lukas-reineke/indent-blankline.nvim" ]]
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
