@@ -23,7 +23,7 @@ M.setup = function()
   end
 
   local config = {
-    virtual_text = true,
+    virtual_text = false, -- INFO: Display virtual text at the end of the line 
     signs = {
       active = signs,
     },
@@ -35,9 +35,8 @@ M.setup = function()
   vim.diagnostic.config(config)
 end
 
-local function lsp_keymaps(bufnr)
-  local opts = { noremap = true, silent = true }
 
+M.on_attach = function(_, bufnr)
   local function keymap(key, action)
     local opts = { noremap = true, silent = true }
     vim.api.nvim_buf_set_keymap(bufnr, "n", key, action, opts)
@@ -58,65 +57,6 @@ local function lsp_keymaps(bufnr)
 
   vim.cmd([[ command! Format execute 'lua vim.lsp.buf.format()' ]])
 end
-
-local lsp_formatting = function(bufnr)
-  vim.lsp.buf.format({
-    filter = function(client)
-      return client.name == "null-ls"
-    end,
-    bufnr = bufnr,
-  })
-end
-
-local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
-
-M.on_attach = function(client, bufnr)
-  lsp_keymaps(bufnr)
-  if client.supports_method("textDocument/formatting") then
-    vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
-    vim.api.nvim_create_autocmd("BufWritePre", {
-      group = augroup,
-      buffer = bufnr,
-      callback = function()
-        lsp_formatting(bufnr)
-      end,
-    })
-  end
-end
-
-function M.enable_format_on_save()
-  -- vim.cmd [[
-  --   augroup format_on_save
-  --       autocmd!
-  --       autocmd BufWritePre * lua vim.lsp.buf.format({ async = false })
-  --   augroup end
-  --   ]]
-  -- vim.notify "Enabled format on save"
-end
-
-function M.disable_format_on_save()
-  M.remove_augroup "format_on_save"
-  vim.notify "Disabled format on save"
-end
-
-function M.toggle_format_on_save()
-  if vim.fn.exists "#format_on_save#BufWritePre" == 0 then
-    M.enable_format_on_save()
-  else
-    M.disable_format_on_save()
-  end
-end
-
-function M.remove_augroup(name)
-  if vim.fn.exists("#" .. name) == 1 then
-    vim.cmd("au! " .. name)
-  end
-end
-
-vim.cmd [[ command! LspToggleAutoFormat execute 'lua ]]
-
--- Toggle "format on save" once, to start with the format on.
-M.toggle_format_on_save()
 
 vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, { border = 'rounded' })
 vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = 'rounded' })

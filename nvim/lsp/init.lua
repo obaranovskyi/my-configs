@@ -1,5 +1,3 @@
-
-require("lsp.masoninit")
+require("lsp.mason-init")
 require("lsp.handlers").setup()
--- require("lsp.null-ls") -- install first prettier
 require("lsp.cmp")

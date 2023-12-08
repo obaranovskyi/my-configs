@@ -92,23 +92,27 @@ return packer.startup(function(use)
   use 'rebelot/kanagawa.nvim'
 
   -- cmp plugins
-  use "hrsh7th/cmp-buffer"  -- buffer completions
-  use "hrsh7th/cmp-path"    -- path completions
-  use "hrsh7th/cmp-cmdline" -- cmdline completions
-  use "hrsh7th/cmp-nvim-lsp"
-  use "hrsh7th/cmp-nvim-lua"
+  use 'neovim/nvim-lspconfig'
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-path'
+  use 'hrsh7th/cmp-cmdline'
+  use 'hrsh7th/nvim-cmp'
+
+  -- Snippets
+  use "L3MON4D3/LuaSnip"
+  use({ 'saadparwaiz1/cmp_luasnip' })
+
+  -- Yank
   use "machakann/vim-highlightedyank"
 
   -- snippets
   use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
 
   -- LSP
-  use "neovim/nvim-lspconfig" -- enable LSP
   use { "williamboman/mason.nvim" }
   use { "williamboman/mason-lspconfig.nvim" }
-  use "jose-elias-alvarez/null-ls.nvim"
-  -- Installing at bottom
-  -- use "hrsh7th/nvim-cmp"
+  use "neovim/nvim-lspconfig"
 
   -- Code assists
   use 'simrat39/symbols-outline.nvim'
@@ -159,28 +163,6 @@ return packer.startup(function(use)
 
   -- Indent
   --[[ use "lukas-reineke/indent-blankline.nvim" ]]
-
-  -- Snippets
-  use "L3MON4D3/LuaSnip"
-  use({
-    'hrsh7th/nvim-cmp',
-    config = function()
-      require 'cmp'.setup {
-        snippet = {
-          expand = function(args)
-            require 'luasnip'.lsp_expand(args.body)
-          end
-        },
-
-        sources = {
-          { name = 'luasnip' },
-          -- more sources
-        },
-      }
-    end
-  })
-
-  use({ 'saadparwaiz1/cmp_luasnip' })
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
