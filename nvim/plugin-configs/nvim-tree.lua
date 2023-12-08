@@ -194,10 +194,10 @@ local function on_attach(bufnr)
   vim.keymap.set('n', '<C-t>', api.node.open.tab,                     opts('Open: New Tab'))
   vim.keymap.set('n', '<C-v>', api.node.open.vertical,                opts('Open: Vertical Split'))
   vim.keymap.set('n', '<C-x>', api.node.open.horizontal,              opts('Open: Horizontal Split'))
-  vim.keymap.set('n', 'h',  api.node.navigate.parent_close,        opts('Close Directory'))
+  vim.keymap.set('n', 'h',     api.node.navigate.parent_close,        opts('Close Directory'))
   vim.keymap.set('n', "<CR>",  api.node.open.edit,                    opts('Open'))
-  vim.keymap.set('n', "o",  api.node.open.edit,                    opts('Open'))
-  vim.keymap.set('n', "l",  api.node.open.edit,                    opts('Open'))
+  vim.keymap.set('n', "o",     api.node.open.edit,                    opts('Open'))
+  vim.keymap.set('n', "l",     api.node.open.edit,                    opts('Open'))
   vim.keymap.set('n', '<Tab>', api.node.open.preview,                 opts('Open Preview'))
   vim.keymap.set('n', '>',     api.node.navigate.sibling.next,        opts('Next Sibling'))
   vim.keymap.set('n', '<',     api.node.navigate.sibling.prev,        opts('Previous Sibling'))
@@ -267,25 +267,3 @@ local function on_attach(bufnr)
 end
 
 
--- INFO: Close the sourcetree when the last buffer is closed
-vim.api.nvim_create_autocmd('BufEnter', {
-    command = "if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif",
-    nested = true,
-})
-
--- INFO: Open nvim-tree on start (doens't work)
--- vim.cmd [[
---   :NvimTreeToggle
--- ]]
-
--- auto-open after reading a file for the first time in the session
--- https://github.com/nvim-tree/nvim-tree.lua/discussions/1517
-vim.api.nvim_create_autocmd({"BufNewFile", "BufReadPost"}, {
-  callback = function(args)
-    if vim.fn.expand "%:p" ~= "" then
-      vim.api.nvim_del_autocmd(args.id)
-      vim.cmd "noautocmd NvimTreeOpen"
-      vim.cmd "noautocmd wincmd p"
-    end
-  end,
-})
