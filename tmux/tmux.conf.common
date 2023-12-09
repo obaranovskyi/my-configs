@@ -20,16 +20,22 @@ setw -g pane-base-index 1
 # Increase the pane number show time
 set -g display-panes-time 4000
 
-# Splitting panes with \ and -
-# bind \\ split-window -h
-# bind - split-window -v
 # Split panes, and open in the same directory
 bind \\ split-window -h -c "#{pane_current_path}"
 bind - split-window -v -c "#{pane_current_path}"
 bind o split-window -v -c "#{pane_current_path}" -p 20
+
+# Htop integration 
 bind i new-window -c "#{pane_current_path}" 'htop'
+
+# Ranger integration
 bind f send-keys "ranger" C-m
 bind F new-window -c "#{pane_current_path}" 'ranger'
+
+# Swap windows with - prefix > or prefix < 
+# > or < can be pressed multiple times
+bind-key -r < swap-window -t -1 \; select-window -t -1
+bind-key -r > swap-window -t +1 \; select-window -t +1
 
 # Swap panes:
 # Swap current pane with the left one prefix+P
