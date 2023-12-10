@@ -32,9 +32,9 @@ bind i new-window -c "#{pane_current_path}" 'htop'
 bind v send-keys "nvim" C-m
 
 # Ranger integration
-bind f send-keys "ranger" C-m # Open ranger in an existing pane
 bind F new-window -c "#{pane_current_path}" 'ranger' # Open ranger in new window
-bind e split-window -v -c "#{pane_current_path}" 'ranger' # Open ranger in new pane below
+bind f split-window -v -c "#{pane_current_path}" 'ranger' # Open ranger in new pane below
+bind e send-keys "ranger" C-m # Open ranger in an existing pane
 
 # Swap windows with - prefix > or prefix < 
 # > or < can be pressed multiple times
