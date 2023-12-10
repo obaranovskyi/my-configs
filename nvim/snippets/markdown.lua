@@ -89,6 +89,27 @@ local blWarning = s(
 )
 table.insert(snippets, blWarning)
 
+
+local blNote = s(
+  "blNote",
+  fmt(
+    [[
+      <div class="note">
+          <div class="note-image">
+              <img src="../../assets/images/books.svg" alt="">
+          </div>
+          <div class="note-content">
+            {text}
+          </div>
+      </div>
+    ]],
+    {
+      text = i(1, "Enter text...")
+    }
+  )
+)
+table.insert(snippets, blNote)
+
 local blImage = s(
   "blImage",
   fmt(
