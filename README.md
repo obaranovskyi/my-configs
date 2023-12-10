@@ -42,7 +42,7 @@ require "init"
 To apply current configuration to tmux, insert into your `~/.tmux.conf` file the following line of code:
 
 ```bash
-source ~/my-configs/tmux/tmux.conf.common
+source ~/my-configs/tmux/tmux.conf
 ```
 
 ---
