@@ -28,6 +28,9 @@ bind o split-window -v -c "#{pane_current_path}" -p 20
 # Htop integration 
 bind i new-window -c "#{pane_current_path}" 'htop'
 
+# Nvim integration 
+bind v send-keys "nvim" C-m
+
 # Ranger integration
 bind f send-keys "ranger" C-m
 bind F new-window -c "#{pane_current_path}" 'ranger'

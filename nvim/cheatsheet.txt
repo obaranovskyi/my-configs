@@ -11,7 +11,7 @@
 [Window] Jump to the top                                                                                              | <C-k>
 [Window] Jump to the bottom                                                                                           | <C-j>
 [Window] Close window                                                                                                 | <Leader>q
-[Window] Close all windows                                                                                            | <Leader>ca
+[Window] Close all windows                                                                                            | <Leader>cz
 
 ## cheatsheet @ToggleTerm
 [ToggleTerm] Open floating terminal                                                                                   | <Leader>tt
