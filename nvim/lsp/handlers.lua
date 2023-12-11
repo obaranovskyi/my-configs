@@ -23,7 +23,11 @@ M.setup = function()
   end
 
   local config = {
-    virtual_text = false, -- INFO: Display virtual text at the end of the line 
+    --[[ virtual_text = true, -- INFO: Display virtual text at the end of the line  ]]
+    virtual_text = false,
+    check_current_line = true,
+    --  end of virtual text configuration
+
     signs = {
       active = signs,
     },
