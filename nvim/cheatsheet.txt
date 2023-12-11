@@ -266,6 +266,8 @@
 [Git(Diffview) Close Diffview mode                                                                                    | <leader>gdc
 [Git(Diffview) Show file history                                                                                      | <leader>gdh
 [Git(Diffview) Show change history of the selected source                                                             | <leader>gdh [VISUAL_MODE]
+[Git(Diffview) (treeview) Discard change                                                                              | x
+[Git(Diffview) (treeview) Stage                                                                                       | s
 
 ## cheatsheet @Transparent
 [Transparent] Make vim background transparent                                                                         | <leader>t;
