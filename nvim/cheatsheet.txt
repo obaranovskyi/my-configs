@@ -268,6 +268,9 @@
 [Git(Diffview) Show change history of the selected source                                                             | <leader>gdh [VISUAL_MODE]
 [Git(Diffview) (treeview) Discard change                                                                              | x
 [Git(Diffview) (treeview) Stage                                                                                       | s
+[Git(Diffview) (treeview) Close tree                                                                                  | <leader>b
+[Git(Diffview) (treeview) Next file with changes                                                                      | <Tab>
+[Git(Diffview) (treeview) Previous file with changes                                                                  | <S-Tab>
 [Git(Diffview) (on change) Undo change, if removed should be pressed below the removed                                | do
 [Git(Diffview) (on change) Unfold                                                                                     | zr
 [Git(Diffview) (on change) Fold                                                                                       | zm
