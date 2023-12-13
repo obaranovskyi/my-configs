@@ -5,12 +5,17 @@ end
 
 gitsigns.setup {
   signs = {
-      add          = { text = '▋' },   -- Solid vertical bar with space
-      change       = { text = '△' },   -- Triangle with space
-      delete       = { text = '✖' },   -- Multiplication sign with space
-      topdelete    = { text = '¯' },   -- Macron with space
-      changedelete = { text = '≈' },   -- Almost equal to with space
-      untracked    = { text = '⚠' },   -- Warning sign with space
+      add          = { text = '▋' },  -- Solid vertical bar
+      change       = { text = '▋' },  -- Solid vertical bar
+      delete       = { text = '_' },  -- Standard hyphen
+      topdelete    = { text = '¯' },  -- Macron
+      changedelete = { text = '≈' },  -- Almost equal to
+      untracked    = { text = '¦' },  -- Broken vertical bar
+      --[[ change       = { text = '△' },   -- Triangle with space ]]
+      --[[ delete       = { text = '✖' },   -- Multiplication sign with space ]]
+      --[[ topdelete    = { text = '¯' },   -- Macron with space ]]
+      --[[ changedelete = { text = '≈' },   -- Almost equal to with space ]]
+      --[[ untracked    = { text = '⚠' },   -- Warning sign with space ]]
   },
   -- signs = {
   --   add          = { hl = 'GitSignsAdd'   , text = '│', numhl='GitSignsAddNr'   , linehl='GitSignsAddLn'    },

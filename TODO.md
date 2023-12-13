@@ -1,4 +1,4 @@
-Choose a session manager from these three plugins:
+a session manager from these three plugins:
 - [auto-session](https://github.com/rmagatti/auto-session)
 - [persistence.nvim](https://github.com/folke/persistence.nvim)
 - [session-lens](https://github.com/rmagatti/session-lens)
