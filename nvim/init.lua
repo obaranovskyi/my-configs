@@ -103,5 +103,3 @@ require "dap.dap-keymaps"
 -- Mason lsp
 require "lsp.init"
 
--- Themes
-require "themes.kanagawa"
