@@ -87,3 +87,6 @@ if [[ $(uname -s) == "Linux" ]]; then
 fi
 
 source "$CUSTOM_CONFIG_DIR/scripts/colors.sh"
+
+# Mac setup borders for amethyst
+borders active_color=0xFFB30458 inactive_color=0xff494d64 width=10.0
