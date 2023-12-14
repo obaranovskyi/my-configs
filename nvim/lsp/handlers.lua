@@ -53,7 +53,7 @@ M.on_attach = function(_, bufnr)
   keymap("<C-e>", "<cmd>lua vim.lsp.buf.signature_help()<CR>")
   keymap("<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>")
   keymap("gr", "<cmd>lua vim.lsp.buf.references()<CR>")
-  --[[ keymap("<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>") ]]
+  keymap("<leader>R", "<cmd>lua vim.lsp.buf.code_action()<CR>")
   keymap("[d", '<cmd>lua vim.diagnostic.goto_prev({ border = "rounded" })<CR>')
   keymap("gl", '<cmd>lua vim.diagnostic.open_float()<CR>')
   keymap("]d", '<cmd>lua vim.diagnostic.goto_next({ border = "rounded" })<CR>')

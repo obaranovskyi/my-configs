@@ -1,7 +1,7 @@
 vim.opt.syntax = "enable"
 
 -- vim.cmd "colorscheme tokyonight"
--- vim.cmd "colorscheme tokyonight-moon"
+vim.cmd "colorscheme tokyonight-moon"
 -- vim.cmd "colorscheme catppuccin"
 -- vim.cmd "colorscheme catppuccin-macchiato"
 
@@ -23,4 +23,4 @@ vim.opt.syntax = "enable"
 
 
 -- Most used
-require "themes.kanagawa"
+-- require "themes.kanagawa"

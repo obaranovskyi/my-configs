@@ -68,7 +68,6 @@
 ## cheatsheet @Yoink
 [Yoink] Next register                                                                                                 | <Leader>o
 [Yoink] Previous register                                                                                             | <Leader>i
-[Yoink] Previous register                                                                                             | <Leader>i
 [Yoink] Display the current yank history                                                                              | :Yanks
 [Yoink] Delete history. This will reduce the history down to 1 entry taken from the default register                  | :ClearYanks
 
@@ -219,6 +218,7 @@
 [LSP] Show diagnostics (goto prev)                                                                                    | [d
 [LSP] Show line diagnostics                                                                                           | gl
 [LSP] Show diagnostics (goto next)                                                                                    | ]d
+[LSP] Run code action (imports, fixes, etc.)                                                                          | <Leader>R
 
 ## cheatsheet @Trouble
 [Trouble] Display global diagnostics                                                                                  | <Leader>tD

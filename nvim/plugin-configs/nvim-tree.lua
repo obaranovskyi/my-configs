@@ -113,9 +113,9 @@ nvim_tree.setup({
   on_attach = on_attach,
   view = {
     side = "right",
-    adaptive_size = true,
-    centralize_selection = false,
-    width = 50,
+    adaptive_size = false,
+    centralize_selection = true,
+    width = 35,
     preserve_window_proportions = false,
     number = false,
     relativenumber = false,
@@ -181,8 +181,8 @@ nvim_tree.setup({
     auto_open = true,
   },
   update_focused_file = {
-    enable = true,
-    update_cwd = true,
+    enable = false,
+    update_cwd = false,
     ignore_list = {},
   },
   system_open = {
