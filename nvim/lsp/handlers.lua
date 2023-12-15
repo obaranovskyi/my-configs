@@ -60,6 +60,11 @@ M.on_attach = function(_, bufnr)
   --[[ keymap("<leader>q", "<cmd>lua vim.diagnostic.setloclist()<CR>") ]]
 
   vim.cmd([[ command! Format execute 'lua vim.lsp.buf.format()' ]])
+
+
+  local opts = { noremap = true, silent = true }
+
+  vim.api.nvim_set_keymap("v","<leader>R", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
 end
 
 vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, { border = 'rounded' })
