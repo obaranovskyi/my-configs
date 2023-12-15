@@ -83,13 +83,14 @@ return packer.startup(function(use)
   use 'folke/tokyonight.nvim'
   use 'sainnhe/sonokai'
   use 'savq/melange'
-  use 'morhetz/gruvbox'
   use 'joshdick/onedark.vim'
   use 'drewtempelmeyer/palenight.vim'
-  use 'willothy/nvim-cokeline'
   use { "catppuccin/nvim", as = "catppuccin" }
   use 'marko-cerovac/material.nvim'
   use 'rebelot/kanagawa.nvim'
+
+  -- Bufferline
+  use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
 
   -- cmp plugins
   use 'neovim/nvim-lspconfig'

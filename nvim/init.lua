@@ -31,8 +31,11 @@ require "plugin-configs.marks"
 require "plugin-configs.lualine"
 require "plugin-configs.toggleterm"
 require "plugin-configs.cheatsheet"
-require "plugin-configs.cokeline"
 require "plugin-configs.luasnip"
+
+-- Bufferline
+-- require "plugin-configs.cokeline"
+require "plugin-configs.bufferline"
 
 -- Diagnostics
 require "plugin-configs.trouble"
