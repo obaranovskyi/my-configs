@@ -31,7 +31,9 @@
 [NvimTree] Collapse all                                                                                               | W
 [NvimTree] Open folder in the file explorer                                                                           | <Right>
 [NvimTree] Close folder in the file explorer                                                                          | <Left>
-[NvimTree] Toggle hidden files and folders                                                                            | I
+[NvimTree] Toggle hidden files and folders                                                                            | tg
+[NvimTree] Change root folder up                                                                                      | U
+[NvimTree] Change root folder down                                                                                    | I
 
 ## cheatsheet @Filetype
 [Filetype] Set nginx file type                                                                                        | :filetype nginx
