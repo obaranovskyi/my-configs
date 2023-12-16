@@ -106,3 +106,5 @@ require "dap.dap-keymaps"
 -- Mason lsp
 require "lsp.init"
 
+-- Vertical line
+require "plugin-configs.neo-column"

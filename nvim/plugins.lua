@@ -161,6 +161,9 @@ return packer.startup(function(use)
   -- Motions
   use 'michaeljsmith/vim-indent-object'
 
+  -- Vertical line
+  use "ecthelionvi/NeoColumn.nvim"
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
