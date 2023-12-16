@@ -115,7 +115,7 @@ local blImage = s(
   fmt(
     [[
       <p>
-        <img class="dark" src="./markdowns/{image}" alt="">
+        <img class="dark" src="./blog-markdowns/{image}" alt="">
       </p>
     ]],
     { image = i(1, "Enter images path ...")}
@@ -128,7 +128,7 @@ local blImageLightBorder = s(
   fmt(
     [[
       <p>
-        <img class="dark light-border" src="./markdowns/{image}" alt="">
+        <img class="dark light-border" src="./blog-markdowns/{image}" alt="">
       </p>
     ]],
     { image = i(1, "Enter images path ...")}
