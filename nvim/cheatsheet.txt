@@ -31,7 +31,8 @@
 [NvimTree] Collapse all                                                                                               | W
 [NvimTree] Open folder in the file explorer                                                                           | <Right>
 [NvimTree] Close folder in the file explorer                                                                          | <Left>
-[NvimTree] Toggle hidden files and folders                                                                            | tg
+[NvimTree] Toggle git hidden files and folders                                                                        | tg
+[NvimTree] Toggle hidden files and folders                                                                            | H
 [NvimTree] Change root folder up                                                                                      | U
 [NvimTree] Change root folder down                                                                                    | I
 
@@ -52,6 +53,8 @@
 [Telescope/Window] Send selected to quickfix list (by tab)                                                            | <C-q>
 [Telescope/Window] Send to quickfix list                                                                              | <C-a>
 [Telescope/Window] Select in the window                                                                               | <Tab>
+[Telescope/Diff] Compare current file with                                                                            | <Leader>sc
+[Telescope/Diff] Compare two files                                                                                    | <Leader>sC
 
 ## cheatsheet @Search/Replace
 [Search/Replace] [Single file] Replace word under cursor or visually selected with confirmation                       | <Leader>ra, <Leader>rs [VISUAL_MODE],[NORMAL_MODE]

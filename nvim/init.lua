@@ -48,12 +48,11 @@ require "plugin-configs.vim-qf"
 -- Refactoring
 require "plugin-configs.camelsnek"
 
--- Tags
-require "plugin-configs.telescope-ctags"
-
 -- Telescope
 require "telescope-setup"
 require "plugin-configs.telescope-config"
+require "plugin-configs.telescope-ctags"
+require "plugin-configs.telescope-diff"
 
 -- Treesitter
 require "plugin-configs.treesitter"

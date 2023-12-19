@@ -9,3 +9,13 @@ Put somewhere symbols:
 
 
 Configurations can be sync with `rsync` if there is no include from another file.
+
+# !IMPORTANT 
+- consider using `pushd` and `popd`
+- Add this to tutorial in bash:
+```
+if [[ $* == *--all* ]]; then 
+  echo build all
+fi
+```
+https://stackoverflow.com/questions/2875424/correct-way-to-check-for-a-command-line-flag-in-bash
