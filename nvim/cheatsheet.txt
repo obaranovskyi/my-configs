@@ -65,17 +65,6 @@
 [Search/Replace] Substitute motion (Subversive plugin alternative)                                                    | x
 [Search/Replace] Magic substitute                                                                                     | <Leader>/ [VISUAL_MODE],[NORMAL_MODE]
 
-## cheatsheet @Subversive
-[Subversive] Substitute from buffer                                                                                   | x{motion}
-[Subversive] Substitute entire line                                                                                   | xx{motion}
-[Subversive] Substitute range                                                                                         | <Leader>xx{motion}
-
-## cheatsheet @Yoink
-[Yoink] Next register                                                                                                 | <Leader>o
-[Yoink] Previous register                                                                                             | <Leader>i
-[Yoink] Display the current yank history                                                                              | :Yanks
-[Yoink] Delete history. This will reduce the history down to 1 entry taken from the default register                  | :ClearYanks
-
 ## cheatsheet @Buffers
 [Buffers] Close current buffer                                                                                        | gq
 [Buffers] Close all but this                                                                                          | go
@@ -92,7 +81,6 @@
 [QuickfixList] Replace each line in the quickfix list                                                                 | gL
 [QuickfixList] Switch to the older quickfix list search                                                               | :colder
 [QuickfixList] Switch to the newer quickfix list search                                                               | :cnewer
-
 
 # cheatsheet @VimGrepper
 [VimGrepper] Search and put the results into quickfix list                                                            | g;<motion> [NORMAL_MODE], [VISUAL_MODE]
@@ -307,3 +295,11 @@
 
 ## cheatsheet @ZenMode
 [ZenMode] enter zen mode                                                                                              | <leader>zn
+
+## cheatsheet @Yanky
+[Yanky] Next from copy list                                                                                           | gn
+[Yanky] Previous from copy list                                                                                       | gp
+[Yanky] Clear copy list                                                                                               | gm
+[Yanky] Open telescope with copy list                                                                                 | gf [VISUAL_MODE][NORMAL_MODE]
+[Yanky] Remove copy item in the telescope window                                                                      | d [NORMAL_MODE
+

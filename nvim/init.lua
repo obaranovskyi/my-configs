@@ -13,20 +13,14 @@ require "registers"
 -- Plugin configurations
 require "plugin-configs.markdown-preview"
 require "plugin-configs.markdown"
-require "plugin-configs.highlightedyank"
 require "plugin-configs.nvim-web-devicon"
 require "plugin-configs.winresizer"
 require "plugin-configs.surround"
 require "plugin-configs.visual-multi"
 require "plugin-configs.undotree"
 require "plugin-configs.spelunker"
--- I'm using the custom mappings
--- require "plugin-configs.subversive" -- using custom key mappings
-require "plugin-configs.yoink"
 require "plugin-configs.quickscope"
 require "plugin-configs.floaterm"
--- INFO: Now using vim-grepper
--- require "plugin-configs.ctrlsf"
 require "plugin-configs.marks"
 require "plugin-configs.lualine"
 require "plugin-configs.toggleterm"
@@ -34,7 +28,6 @@ require "plugin-configs.cheatsheet"
 require "plugin-configs.luasnip"
 
 -- Bufferline
--- require "plugin-configs.cokeline"
 require "plugin-configs.bufferline"
 
 -- Diagnostics
@@ -54,6 +47,9 @@ require "plugin-configs.telescope-config"
 require "plugin-configs.telescope-ctags"
 require "plugin-configs.telescope-diff"
 
+-- Yanks
+require "plugin-configs.yanky"
+
 -- Treesitter
 require "plugin-configs.treesitter"
 
@@ -72,9 +68,6 @@ require "plugin-configs.diffview"
 -- NvimTree
 require "plugin-configs.nvim-tree"
 
--- Sneak (I'm using Smalls instead)
--- require "plugin-configs.sneak"
-
 -- Smalls
 require "plugin-configs.smalls"
 
@@ -86,6 +79,7 @@ require "keymaps"
 -- Commands
 require "distance-actions.commands"
 
+-- TODO: To remove, as now I'm using UltiSnips
 -- Abbreviations (to expand <C-]>)
 -- for now abbreviations doesn't work
 require "abbreviations.abbreviations"
@@ -94,8 +88,6 @@ require "abbreviations.abbreviations"
 require "system.source"
 
 -- Debugging
--- initialized before
--- require "dap.mason"
 require "dap.python"
 require "dap.bash"
 require "dap.dap-ui"

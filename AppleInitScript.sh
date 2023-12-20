@@ -1,6 +1,6 @@
-#
-# This script starts on osx login.
-#
+####################################
+# This script starts on osx login. #
+####################################
 
 # Setup right Cmnd key on external keyboard
 hidutil property --set '{"UserKeyMapping":

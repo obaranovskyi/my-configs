@@ -71,7 +71,6 @@ local function on_attach(bufnr)
   vim.keymap.set('n', '<2-LeftMouse>',  api.node.open.edit,           opts('Open'))
   vim.keymap.set('n', 'I', api.tree.change_root_to_node, opts('CD'))
   vim.keymap.set('n', 'U', api.tree.change_root_to_parent, opts('CD'))
-  -- END_DEFAULT_ON_ATTACH
 
   -- You might tidy things by removing these along with their default mapping.
   vim.keymap.set('n', 'O', '', { buffer = bufnr })
@@ -82,7 +81,6 @@ local function on_attach(bufnr)
   vim.keymap.del('n', 'D', { buffer = bufnr })
   vim.keymap.set('n', 'E', '', { buffer = bufnr })
   vim.keymap.del('n', 'E', { buffer = bufnr })
-
 
   -- You will need to insert "your code goes here" for any mappings with a custom action_cb
   vim.keymap.set('n', 'A', api.tree.expand_all, opts('Expand All'))

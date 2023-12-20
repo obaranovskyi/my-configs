@@ -11,7 +11,7 @@ Put somewhere symbols:
 Configurations can be sync with `rsync` if there is no include from another file.
 
 # !IMPORTANT 
-- consider using `pushd` and `popd`
+- consider using `pushd` and `popd` it might be built in, need to check
 - Add this to tutorial in bash:
 ```
 if [[ $* == *--all* ]]; then 

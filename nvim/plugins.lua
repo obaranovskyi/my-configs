@@ -56,13 +56,7 @@ return packer.startup(function(use)
   use { 'mg979/vim-visual-multi', branch = 'master' }
   use 'mbbill/undotree'
   use 'kamykn/spelunker.vim'
-  use 'svermeulen/vim-yoink'
   use 'christoomey/vim-tmux-navigator'
-
-  -- INFO: no need to switch to the inner git repository
-  -- as I'm using the gitsubmodules, and odn't want
-  -- to switch everytime back
-  -- use 'airblade/vim-rooter'
 
   use 'unblevable/quick-scope'
   use 'chentoast/marks.nvim'
@@ -79,7 +73,6 @@ return packer.startup(function(use)
   use "jemag/telescope-diff.nvim"
 
   -- Themes and UI elements
-  -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
   use 'dracula/vim'
   use 'folke/tokyonight.nvim'
   use 'sainnhe/sonokai'
@@ -106,7 +99,7 @@ return packer.startup(function(use)
   use({ 'saadparwaiz1/cmp_luasnip' })
 
   -- Yank
-  use "machakann/vim-highlightedyank"
+  use "gbprod/yanky.nvim"
 
   -- snippets
   use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
@@ -146,7 +139,6 @@ return packer.startup(function(use)
   use 'vim-scripts/BufOnly.vim'
 
   -- Sneak
-  -- use 'justinmk/vim-sneak'
   use 't9md/vim-smalls'
 
   -- Debugging
