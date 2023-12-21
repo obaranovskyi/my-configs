@@ -222,6 +222,11 @@
 [Registers] Show registers a, s, d, f, g                                                                              | <Leader>re
 [Registers] Clear registers                                                                                           | <Leader>rd
 
+## cheatsheet @Tabs
+[Tabs] Next tab                                                                                                       | tn
+[Tabs] Previous tab                                                                                                   | tp
+[Tabs] Close tab                                                                                                      | tc
+
 ## cheatsheet @ExCommands
 [ExCommands] Do ex command without jumping around                                                                     | <Leader>ta
 [ExCommands] Do 'norm!' ex command without jumping around                                                             | <Leader>te

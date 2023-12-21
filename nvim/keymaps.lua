@@ -215,3 +215,11 @@ keymap("n", "<leader>sb", ":set filetype=bash<CR>", opts)
 -- ------------------------------------------------
 keymap("n", ">", ">>", opts)
 keymap("n", "<", "<<", opts)
+
+
+-- ------------------------------------------------
+-- Tabs
+-- ------------------------------------------------
+keymap("n", "tn", ":tabnext<cr>", opts)
+keymap("n", "tp", ":tabprevious<cr>", opts)
+keymap("n", "tc", ":tabclose<cr>", opts)
