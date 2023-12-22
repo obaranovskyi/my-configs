@@ -138,8 +138,11 @@ return packer.startup(function(use)
   use 'rbgrouleff/bclose.vim'
   use 'vim-scripts/BufOnly.vim'
 
-  -- Sneak
+  -- Smalls
   use 't9md/vim-smalls'
+
+  -- Scroll
+  use "petertriho/nvim-scrollbar"
 
   -- Debugging
   use 'mfussenegger/nvim-dap'

@@ -71,6 +71,8 @@ require "plugin-configs.nvim-tree"
 -- Smalls
 require "plugin-configs.smalls"
 
+require "plugin-configs.scrollbar"
+
 -- Emmet
 require "plugin-configs.emmet"
 
