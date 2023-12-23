@@ -144,6 +144,9 @@ return packer.startup(function(use)
   -- Scroll
   use "petertriho/nvim-scrollbar"
 
+  -- Highlight search
+  use {'kevinhwang91/nvim-hlslens'}
+
   -- Debugging
   use 'mfussenegger/nvim-dap'
   use 'mfussenegger/nvim-dap-python'

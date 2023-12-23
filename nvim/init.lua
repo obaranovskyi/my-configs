@@ -72,6 +72,7 @@ require "plugin-configs.nvim-tree"
 require "plugin-configs.smalls"
 
 require "plugin-configs.scrollbar"
+require "plugin-configs.hlslens"
 
 -- Emmet
 require "plugin-configs.emmet"

@@ -57,11 +57,12 @@
 [Telescope/Diff] Compare two files                                                                                    | <Leader>sC
 
 ## cheatsheet @Search/Replace
-[Search/Replace] [Single file] Replace word under cursor or visually selected with confirmation                       | <Leader>ra, <Leader>rs [VISUAL_MODE],[NORMAL_MODE]
-[Search/Replace] [Single file] Replace word under cursor or visually selected without confirmation                    | <Leader>ro [VISUAL_MODE],[NORMAL_MODE]
-[Search/Replace] [Single file] Replace word under cursor or visually selected with confirmation                       | ; [VISUAL_MODE]
-[Search/Replace] [Multiple files] Replace word under cursor in every file from the quickfix list without confirmation | <Leader>rr [NORMAL_MODE]
-[Search/Replace] [Multiple files] Replace word under cursor in every file from the quickfix list with confirmation    | <Leader>rc [VISUAL_MODE],[NORMAL_MODE]
+[Search/Reaplce] Replace word under the cursor with confirmation (W object)                                           | <Leader>F [NORMAL_MODE]
+[Search/Reaplce] Replace word under the cursor without confirmation (W object)                                        | <Leader>T [NORMAL_MODE]
+[Search/Reaplce] Replace word under the cursor with confirmation (w object)                                           | <Leader>f [NORMAL_MODE]
+[Search/Reaplce] Replace word under the cursor without confirmation (w object)                                        | <Leader>t [NORMAL_MODE]
+[Search/Reaplce] Replace selected occurrence with confirmation                                                        | <Leader>f [VISUAL_MODE]
+[Search/Reaplce] Replace selected occurrence without confirmation                                                     | <Leader>t [VISUAL_MODE]
 [Search/Replace] Substitute motion (Subversive plugin alternative)                                                    | x
 [Search/Replace] Magic substitute                                                                                     | <Leader>/ [VISUAL_MODE],[NORMAL_MODE]
 
@@ -302,8 +303,8 @@
 [ZenMode] enter zen mode                                                                                              | <leader>zn
 
 ## cheatsheet @Yanky
-[Yanky] Next from copy list                                                                                           | gn
-[Yanky] Previous from copy list                                                                                       | gp
+[Yanky] Next from copy list                                                                                           | gk
+[Yanky] Previous from copy list                                                                                       | gj
 [Yanky] Clear copy list                                                                                               | gm
 [Yanky] Open telescope with copy list                                                                                 | gf [VISUAL_MODE][NORMAL_MODE]
 [Yanky] Remove copy item in the telescope window                                                                      | d [NORMAL_MODE

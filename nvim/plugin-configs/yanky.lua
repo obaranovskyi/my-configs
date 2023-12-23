@@ -42,8 +42,8 @@ vim.keymap.set({"n","x"}, "P", "<Plug>(YankyPutBefore)")
 -- vim.keymap.set({"n","x"}, "gp", "<Plug>(YankyGPutAfter)")
 -- vim.keymap.set({"n","x"}, "gP", "<Plug>(YankyGPutBefore)")
 
-vim.keymap.set("n", "gp", "<Plug>(YankyPreviousEntry)")
-vim.keymap.set("n", "gn", "<Plug>(YankyNextEntry)")
+vim.keymap.set("n", "gj", "<Plug>(YankyPreviousEntry)")
+vim.keymap.set("n", "gk", "<Plug>(YankyNextEntry)")
 vim.keymap.set("n", "gm", ":YankyClearHistory<CR>", { silent = true})
 
 vim.keymap.set({"n", "v"}, "gf", telescope.extensions.yank_history.yank_history)
