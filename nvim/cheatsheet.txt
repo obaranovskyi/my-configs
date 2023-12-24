@@ -309,3 +309,6 @@
 [Yanky] Open telescope with copy list                                                                                 | gf [VISUAL_MODE][NORMAL_MODE]
 [Yanky] Remove copy item in the telescope window                                                                      | d [NORMAL_MODE
 
+## cheatsheet @IndentObject
+[IndentObject] All in curly brackets                                                                                  | ii
+[IndentObject] All in curly brackets including brackets as well                                                       | aI
