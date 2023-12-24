@@ -54,7 +54,6 @@ return packer.startup(function(use)
   use 'tpope/vim-repeat'
   use 'tpope/vim-surround'
   use { 'mg979/vim-visual-multi', branch = 'master' }
-  use 'mbbill/undotree'
   use 'kamykn/spelunker.vim'
   use 'christoomey/vim-tmux-navigator'
 
@@ -64,9 +63,10 @@ return packer.startup(function(use)
   use "akinsho/toggleterm.nvim"
   use "sudormrfbin/cheatsheet.nvim"
 
-  -- quickfix list
+  -- Quickfix list
   use 'romainl/vim-qf'    -- qflist manipulations
   use 'mhinz/vim-grepper' -- search
+
   -- Telescope
   use "nvim-telescope/telescope.nvim"
   use 'nvim-telescope/telescope-media-files.nvim'
@@ -82,6 +82,14 @@ return packer.startup(function(use)
   use { "catppuccin/nvim", as = "catppuccin" }
   use 'marko-cerovac/material.nvim'
   use 'rebelot/kanagawa.nvim'
+
+  -- Undotree
+  use {
+    "jiaoshijie/undotree",
+    requires = {
+      "nvim-lua/plenary.nvim",
+    },
+  }
 
   -- Bufferline
   use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
