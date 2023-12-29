@@ -898,5 +898,10 @@
         "command": "ps aux | grep nginx",
         "description": "Check whether nginx process is running",
         "id": 181
+    },
+    {
+        "command": "netstat -vanp tcp | grep '5432\\|pid'",
+        "description": "Get process by port (5432)",
+        "id": 182
     }
 ]

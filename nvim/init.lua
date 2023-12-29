@@ -53,6 +53,9 @@ require "plugin-configs.yanky"
 -- Treesitter
 require "plugin-configs.treesitter"
 
+-- Formatter
+require "plugin-configs.conform"
+
 -- Autopairs
 require "plugin-configs.autopairs"
 
