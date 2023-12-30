@@ -11,7 +11,11 @@ Put somewhere symbols:
 Configurations can be sync with `rsync` if there is no include from another file.
 
 # !IMPORTANT 
-- consider using `pushd` and `popd` it might be built in, need to check 
+- Add modules to lua cheatsheet
+- Add rsync to bash cheatsheet
+- Add find to bash cheatsheet
+- Add file commands to bash cheatsheet
+- Add folder commands to bash cheatsheet
 - Add this to tutorial in bash:
 ```
 if [[ $* == *--all* ]]; then 

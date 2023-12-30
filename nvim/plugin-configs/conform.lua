@@ -15,7 +15,7 @@ conform.setup({
   -- },
 })
 
--- :LSPInstall on the file you want to add language server 
+-- :LSPInstall on the file you want to add language server
 -- For instance: json ("biome")
 
 vim.api.nvim_create_user_command("Format", function(args)
