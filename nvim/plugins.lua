@@ -151,6 +151,8 @@ return packer.startup(function(use)
 
   -- Smalls
   use 't9md/vim-smalls'
+  -- The most interesting plugin
+  -- use 'ggandor/leap.nvim'
 
   -- Scroll
   use "petertriho/nvim-scrollbar"

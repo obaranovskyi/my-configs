@@ -73,6 +73,7 @@ require "plugin-configs.nvim-tree"
 
 -- Smalls
 require "plugin-configs.smalls"
+-- require "plugin-configs.leap"
 
 require "plugin-configs.scrollbar"
 require "plugin-configs.hlslens"
