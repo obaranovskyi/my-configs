@@ -58,5 +58,5 @@ vim.opt.linebreak = true
 
 
 vim.cmd [[
-autocmd BufNewFile,BufRead * if expand('%:t') !~ '\.' | set syntax=bash | endif
+  autocmd BufNewFile,BufRead * if expand('%:t') !~ '\.' | set syntax=bash | endif
 ]]

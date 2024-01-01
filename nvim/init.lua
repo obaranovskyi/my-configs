@@ -86,11 +86,6 @@ require "keymaps"
 -- Commands
 require "distance-actions.commands"
 
--- TODO: To remove, as now I'm using UltiSnips
--- Abbreviations (to expand <C-]>)
--- for now abbreviations doesn't work
-require "abbreviations.abbreviations"
-
 -- System
 require "system.source"
 
