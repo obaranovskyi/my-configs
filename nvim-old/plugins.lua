@@ -46,7 +46,7 @@ return packer.startup(function(use)
   use { 'iamcco/markdown-preview.nvim' }
   use 'tpope/vim-markdown'
   use "kyazdani42/nvim-web-devicons"
-  use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
+  use "windwp/nvim-autopairs" -- to be updated after cmp!!!
   use "numToStr/Comment.nvim" -- Easily comment stuff
   use 'nvim-tree/nvim-tree.lua'
   use "moll/vim-bbye"
@@ -72,7 +72,7 @@ return packer.startup(function(use)
   use 'nvim-telescope/telescope-media-files.nvim'
   use "jemag/telescope-diff.nvim"
 
-  -- Themes and UI elements
+  -- Themes and UI elements (later)
   use 'dracula/vim'
   use 'folke/tokyonight.nvim'
   use 'sainnhe/sonokai'

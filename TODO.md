@@ -11,7 +11,9 @@ Put somewhere symbols:
 Configurations can be sync with `rsync` if there is no include from another file.
 
 # !IMPORTANT 
+- Add `conform` key mappings
 - Investigate SketchyBar
+- Move to Lazy.nvim
 - Consider using 'kevinhwang91/nvim-ufo' nvim plugin for folding
 - Add modules to lua cheatsheet
 - Add rsync to bash cheatsheet

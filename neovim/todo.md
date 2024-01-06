@@ -1,0 +1,4 @@
+- fix markdown preview
+- update treesitter languages
+- update bufferline
+- configure python debugger
