@@ -1,2 +1,3 @@
 - Update treesitter languages
 - Configure python debugger
+- Configure diffview
