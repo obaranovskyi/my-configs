@@ -1,4 +1,2 @@
-- fix markdown preview
-- update treesitter languages
-- configure python debugger
--- Consider using different plugin than lualine
+- Update treesitter languages
+- Configure python debugger
