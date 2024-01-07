@@ -71,6 +71,7 @@ return {
 
           ["[g"] = "prev_git_modified",
           ["]g"] = "next_git_modified",
+          ["f"] = "filter_on_submit",
           ["<C-x>"] = "clear_filter",
 
           ["<tab>"] = function(state) -- INFO: Open file without losing sidebar focus

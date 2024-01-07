@@ -8,6 +8,8 @@
 [Neotree] Set root                                                                                                    | .
 [Neotree] Set root one folder up                                                                                      | U
 [Neotree] Fuzzy finder                                                                                                | /
+[Neotree] Filter on submit                                                                                            | f
+[Neotree] Clear filter on submit                                                                                      | <C-x>
 [Neotree] Open file                                                                                                   | o, l, <CR>
 [Neotree] Close folder                                                                                                | h
 [Neotree] Preview window                                                                                              | P
