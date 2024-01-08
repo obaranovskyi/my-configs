@@ -43,10 +43,16 @@ vim.cmd [[ set fillchars=fold:\ ,vert:\│,eob:\ ,msgsep:‾ ]]
 
 -- hidden characters
 vim.opt.encoding="utf-8"
---[[ vim.opt.list = true ]]
---[[ vim.opt.listchars="tab:>.,trail:~,extends:>,precedes:<,space:." ]]
+
+-- INFO: Diffview styles:
+-- vim.opt.fillchars:append { diff = "╱" }
+vim.opt.fillchars:append { diff = " " }
+
+
+-- vim.opt.list = true
+-- vim.opt.listchars="tab:>.,trail:~,extends:>,precedes:<,space:."
 --example
---[[ vim.opt.listchars="eol:~,tab:>.,trail:~,extends:>,precedes:<,space:_" ]]
+-- vim.opt.listchars="eol:~,tab:>.,trail:~,extends:>,precedes:<,space:_"
 
 -- color programming languages in the markdown
 vim.cmd [[
@@ -56,7 +62,7 @@ vim.cmd [[
 -- float style (lsp)
 vim.opt.linebreak = true
 
-
+-- INFO: If file unknown type set it to bash
 vim.cmd [[
   autocmd BufNewFile,BufRead * if expand('%:t') !~ '\.' | set syntax=bash | endif
 ]]
