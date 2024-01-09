@@ -1,3 +1,4 @@
+- Investigate vim-fugitive
 - Update treesitter languages
 - Configure python debugger
 - Configure neovim nui.nvim modals

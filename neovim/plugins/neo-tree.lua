@@ -123,28 +123,30 @@ return {
     local opts = { noremap = true, silent = true }
     local keymap = vim.api.nvim_set_keymap
 
+    -- TODO: Under construction has issues with git and diff view
     -- INFO: Auto open file in tree when it's opened not from the tree
-    function neotree_auto_focus_in_tree()
-      function tablelength(T)
-        local count = 0
-        for _ in pairs(T) do count = count + 1 end
-        return count
-      end
+    -- function neotree_auto_focus_in_tree()
+    --   function tablelength(T)
+    --     local count = 0
+    --     for _ in pairs(T) do count = count + 1 end
+    --     return count
+    --   end
 
-      -- INFO: Don't run this command if there are more than 3 windows
-      local wimAmount = tablelength(vim.api.nvim_tabpage_list_wins(0))
-      if wimAmount < 3 then
-        vim.cmd(':Neotree reveal')
-        vim.cmd('wincmd h')
-      end
-    end
+    --   -- INFO: Don't run this command if there are more than 3 windows
+    --   local wimAmount = tablelength(vim.api.nvim_tabpage_list_wins(0))
+    --   if wimAmount < 3 then
+    --     vim.cmd(':Neotree reveal')
+    --     vim.cmd('wincmd h')
+    --   end
+    -- end
 
-    local neoTreeAutoOpen = vim.api.nvim_create_augroup("NeoTreeAutoOpen", { clear = true })
-    -- To just open and not jump use 'BufRead'
-    vim.api.nvim_create_autocmd("BufWinEnter", {
-      command = 'lua neotree_auto_focus_in_tree()',
-      group = neoTreeAutoOpen
-    })
+    -- local neoTreeAutoOpen = vim.api.nvim_create_augroup("NeoTreeAutoOpen", { clear = true })
+    -- -- To just open and not jump use 'BufRead'
+    -- vim.api.nvim_create_autocmd("BufWinEnter", {
+    --   command = 'lua neotree_auto_focus_in_tree()',
+    --   group = neoTreeAutoOpen
+    -- })
+    -- TODO: end
 
     function neotree_open_file()
       vim.cmd('wincmd l')
