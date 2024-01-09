@@ -11,9 +11,9 @@ Put somewhere symbols:
 Configurations can be sync with `rsync` if there is no include from another file.
 
 # !IMPORTANT 
-- Add `conform` key mappings
+- Investigate tmux-pomodoro-plus (https://github.com/olimorris/tmux-pomodoro-plus)
+- Investigate thyme (https://github.com/hughbien/thyme)
 - Investigate SketchyBar
-- Move to Lazy.nvim
 - Consider using 'kevinhwang91/nvim-ufo' nvim plugin for folding
 - Add modules to lua cheatsheet
 - Add rsync to bash cheatsheet
@@ -21,6 +21,7 @@ Configurations can be sync with `rsync` if there is no include from another file
 - Add file commands to bash cheatsheet
 - Add folder commands to bash cheatsheet
 - Add this to tutorial in bash:
+- Rust course (https://www.youtube.com/watch?v=BpPEoZW5IiY)
 ```
 if [[ $* == *--all* ]]; then 
   echo build all
