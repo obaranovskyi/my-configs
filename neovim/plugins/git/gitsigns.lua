@@ -5,26 +5,13 @@ return {
 
     gitsigns.setup {
       signs = {
-        add          = { text = '▋' }, -- Solid vertical bar
-        change       = { text = '▋' }, -- Solid vertical bar
-        delete       = { text = '_' }, -- Standard hyphen
-        topdelete    = { text = '¯' }, -- Macron
-        changedelete = { text = '≈' }, -- Almost equal to
-        untracked    = { text = '¦' }, -- Broken vertical bar
-        --[[ change       = { text = '△' },   -- Triangle with space ]]
-        --[[ delete       = { text = '✖' },   -- Multiplication sign with space ]]
-        --[[ topdelete    = { text = '¯' },   -- Macron with space ]]
-        --[[ changedelete = { text = '≈' },   -- Almost equal to with space ]]
-        --[[ untracked    = { text = '⚠' },   -- Warning sign with space ]]
+        add          = { text = '▋' },
+        change       = { text = '▋' },
+        delete       = { text = '_' },
+        topdelete    = { text = '¯' },
+        changedelete = { text = '≈' },
+        untracked    = { text = '¦' },
       },
-      -- signs = {
-      --   add          = { hl = 'GitSignsAdd'   , text = '│', numhl='GitSignsAddNr'   , linehl='GitSignsAddLn'    },
-      --   change       = { hl = 'GitSignsChange', text = '│', numhl='GitSignsChangeNr', linehl='GitSignsChangeLn' },
-      --   delete       = { hl = 'GitSignsDelete', text = '_', numhl='GitSignsDeleteNr', linehl='GitSignsDeleteLn' },
-      --   topdelete    = { hl = 'GitSignsDelete', text = '‾', numhl='GitSignsDeleteNr', linehl='GitSignsDeleteLn' },
-      --   changedelete = { hl = 'GitSignsChange', text = '~', numhl='GitSignsChangeNr', linehl='GitSignsChangeLn' },
-      --   untracked    = { hl = 'GitSignsAdd'   , text = '┆', numhl='GitSignsAddNr'   , linehl='GitSignsAddLn'    },
-      -- },
       signcolumn = true, -- Toggle with `:Gitsigns toggle_signs`
       numhl = false,   -- Toggle with `:Gitsigns toggle_numhl`
       linehl = false,  -- Toggle with `:Gitsigns toggle_linehl`
