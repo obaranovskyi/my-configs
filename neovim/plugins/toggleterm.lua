@@ -12,7 +12,7 @@ return {
       start_in_insert = true,
       insert_mappings = false,
       persist_size = true,
-      direction = "float",
+      direction = "horizontal", -- 'vertical' | 'horizontal' | 'tab' | 'float',
       close_on_exit = true,
       shell = vim.o.shell,
       float_opts = {
