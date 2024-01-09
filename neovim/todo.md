@@ -1,3 +1,4 @@
 - Update treesitter languages
 - Configure python debugger
-- Configure diffview
+- Configure neovim nui.nvim modals
+- Configure diffview merge tools

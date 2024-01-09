@@ -220,6 +220,7 @@ keymap("n", "<", "<<", opts)
 -- ------------------------------------------------
 -- Tabs
 -- ------------------------------------------------
-keymap("n", "tn", ":tabnext<cr>", opts)
-keymap("n", "tp", ":tabprevious<cr>", opts)
-keymap("n", "tc", ":tabclose<cr>", opts)
+keymap("n", "<leader>ic", ":tabnew<cr>", opts)
+keymap("n", "<leader>in", ":tabnext<cr>", opts)
+keymap("n", "<leader>ip", ":tabprevious<cr>", opts)
+keymap("n", "<leader>id", ":tabclose<cr>", opts)

@@ -235,9 +235,10 @@
 [Registers] Clear registers                                                                                           | <Leader>rd
 
 ## cheatsheet @Tabs
-[Tabs] Next tab                                                                                                       | tn
-[Tabs] Previous tab                                                                                                   | tp
-[Tabs] Close tab                                                                                                      | tc
+[Tabs] New tab                                                                                                        | <leader>ic
+[Tabs] Next tab                                                                                                       | <leader>in
+[Tabs] Previous tab                                                                                                   | <leader>ip
+[Tabs] Close tab                                                                                                      | <leader>id
 
 ## cheatsheet @ExCommands
 [ExCommands] Do ex command without jumping around                                                                     | <Leader>ta
@@ -274,8 +275,8 @@
 [Git(NeoGit)] Show changes                                                                                            | <leader>gn
 [Git(Diffview) Show changes per file                                                                                  | <leader>gdo
 [Git(Diffview) Close Diffview mode                                                                                    | <leader>gdc
-[Git(Diffview) Show file history                                                                                      | <leader>gdh
-[Git(Diffview) Show change history of the selected source                                                             | <leader>gdh [VISUAL_MODE]
+[Git(Diffview) Show file history                                                                                      | <leader>gdf
+[Git(Diffview) Show change history of the selected source                                                             | <leader>gdf [VISUAL_MODE]
 [Git(Diffview) (treeview) Discard change                                                                              | x
 [Git(Diffview) (treeview) Stage                                                                                       | s
 [Git(Diffview) (treeview) Close tree                                                                                  | <leader>b
