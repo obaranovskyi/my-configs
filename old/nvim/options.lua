@@ -15,8 +15,8 @@ vim.opt.wrap = false                            -- display lines as one long lin
 vim.opt.updatetime = 300                        -- faster completion (4000ms default)
 vim.opt.undofile = true                         -- enable persistent undo
 
-vim.opt.scrolloff = 8                           -- is one of my fav
-vim.opt.sidescrolloff = 8
+vim.opt.scrolloff = 30                           -- is one of my fav
+vim.opt.sidescrolloff = 30
 vim.opt.swapfile = false                        -- creates a swapfile
 
 vim.opt.expandtab = true                        -- convert tabs to spaces

@@ -296,6 +296,7 @@
 [CamelSnek] Transform to kebab case                                                                                   | <leader>cS [VISUAL_MODE][NORMAL_MODE]
 [CamelSnek] Transform to camel case                                                                                   | <leader>cc [VISUAL_MODE][NORMAL_MODE]
 [CamelSnek] Transform to pascal case                                                                                  | <leader>cp [VISUAL_MODE][NORMAL_MODE]
+[CamelSnek] Transform to upper case                                                                                  | <leader>cu [VISUAL_MODE][NORMAL_MODE]
 
 ## cheatsheet @SymbolsOutline
 [SymbolsOutline] Toggle symbols                                                                                       | <leader>fw

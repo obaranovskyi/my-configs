@@ -8,10 +8,12 @@ return {
     keymap("v", "<leader>cS", ":Kebab<CR>", opts)
     keymap("v", "<leader>cc", ":CamelB<CR>", opts)
     keymap("v", "<leader>cp", ":Camel<CR>", opts)
+    keymap("v", "<leader>cu", ":Screm<CR>", opts)
 
     keymap("n", "<leader>cs", ":Snek<CR>", opts)
     keymap("n", "<leader>cS", ":Kebab<CR>", opts)
     keymap("n", "<leader>cc", ":CamelB<CR>", opts)
     keymap("n", "<leader>cp", ":Camel<CR>", opts)
+    keymap("n", "<leader>cu", ":Screm<CR>", opts)
   end
 }
