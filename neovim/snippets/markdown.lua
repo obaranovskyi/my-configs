@@ -180,6 +180,22 @@ local mCode = s(
 table.insert(snippets, mCode)
 
 
+local blNoNumbers = s(
+  "blNoNumbers",
+  fmt([[
+
+    <div class="bl-no-line-numbers">
+
+    ```
+
+    ```
+
+    </div>
+  ]], {})
+)
+table.insert(snippets, blNoNumbers)
+
+
 -- INFO: To trigger this snippet
 -- 1. Select header(text)
 -- 2. Click `Tab`
