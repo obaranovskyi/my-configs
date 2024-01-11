@@ -183,7 +183,6 @@ table.insert(snippets, mCode)
 local blNoNumbers = s(
   "blNoNumbers",
   fmt([[
-
     <div class="bl-no-line-numbers">
 
     ```
