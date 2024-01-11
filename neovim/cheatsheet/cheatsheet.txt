@@ -272,11 +272,13 @@
 [System] Source main configuration                                                                                    | <leader>ts
 
 ## cheatsheet @Git
-[Git(NeoGit)] Show changes                                                                                            | <leader>gn
-[Git(Diffview) Show changes per file                                                                                  | <leader>gdo
-[Git(Diffview) Close Diffview mode                                                                                    | <leader>gdc
-[Git(Diffview) Show file history                                                                                      | <leader>gdf
-[Git(Diffview) Show change history of the selected source                                                             | <leader>gdf [VISUAL_MODE]
+[Git(NeoGit)] Show changes                                                                                            | <leader>gg
+[Git(Gitsigns)] Show difference                                                                                       | <leader>gs
+[Git(Gitsigns)] Blame                                                                                                 | <leader>gb
+[Git(Diffview) Show changes per file                                                                                  | <leader>gd
+[Git(Diffview) Close Diffview mode                                                                                    | <leader>ge
+[Git(Diffview) Show file history                                                                                      | <leader>gh
+[Git(Diffview) Show change history of the selected source                                                             | <leader>gh [VISUAL_MODE]
 [Git(Diffview) (treeview) Discard change                                                                              | x
 [Git(Diffview) (treeview) Stage                                                                                       | s
 [Git(Diffview) (treeview) Close tree                                                                                  | <leader>b
@@ -285,8 +287,6 @@
 [Git(Diffview) (on change) Undo change, if removed should be pressed below the removed                                | do
 [Git(Diffview) (on change) Unfold                                                                                     | zr
 [Git(Diffview) (on change) Fold                                                                                       | zm
-[Git(Gitsigns)] Show difference                                                                                       | <leader>gdd
-[Git(Gitsigns)] Blame                                                                                                 | <leader>gdb
 
 ## cheatsheet @Transparent
 [Transparent] Make vim background transparent                                                                         | <leader>t;

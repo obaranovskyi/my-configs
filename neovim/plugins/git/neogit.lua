@@ -17,6 +17,6 @@ return {
     local opts = { noremap = true, silent = true }
     local keymap = vim.api.nvim_set_keymap
 
-    keymap("n", "<leader>gn", ":Neogit<CR>", opts)
+    keymap("n", "<leader>gg", ":Neogit<CR>", opts)
   end
 }

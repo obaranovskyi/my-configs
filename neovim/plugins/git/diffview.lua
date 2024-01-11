@@ -6,10 +6,10 @@ return {
     local opts = { noremap = true, silent = true }
     local keymap = vim.api.nvim_set_keymap
 
-    keymap("n", "<leader>gdo", ":DiffviewOpen<CR>", opts)
-    keymap("n", "<leader>gdc", ":DiffviewClose<CR>", opts)
-    keymap("n", "<leader>gdf", ":DiffviewFileHistory %<CR>", opts)
-    keymap("v", "<leader>gdf", ":DiffviewFileHistory <CR>", opts)
+    keymap("n", "<leader>gd", ":DiffviewOpen<CR>", opts)
+    keymap("n", "<leader>ge", ":DiffviewClose<CR>", opts) -- or <leader>id to close buffer
+    keymap("n", "<leader>gh", ":DiffviewFileHistory %<CR>", opts)
+    keymap("v", "<leader>gh", ":DiffviewFileHistory <CR>", opts)
   end
 }
 

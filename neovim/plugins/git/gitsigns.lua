@@ -50,7 +50,7 @@ return {
     local opts = { noremap = true, silent = true }
     local keymap = vim.api.nvim_set_keymap
 
-    keymap('n', '<leader>gdd', ':Gitsigns diffthis<CR>', opts)
-    keymap('n', '<leader>gdb', ':Gitsigns blame_line<CR>', opts)
+    keymap('n', '<leader>gs', ':Gitsigns diffthis<CR>', opts)
+    keymap('n', '<leader>gb', ':Gitsigns blame_line<CR>', opts)
   end
 }
