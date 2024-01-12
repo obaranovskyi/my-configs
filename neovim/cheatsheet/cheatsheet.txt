@@ -60,8 +60,6 @@
 [Telescope] Find text                                                                                                 | <Leader>ff
 [Telescope] Find bookmarks                                                                                            | <Leader>fb
 [Telescope] Show ctags (methods, functions, classes etc)                                                              | <Leader>fe
-[Telescope] Save session                                                                                              | <Leader>ss
-[Telescope] Open last session                                                                                         | <Leader>sl
 [Telescope] Open jump list                                                                                            | <Leader>fj
 [Telescope] Change colorscheme                                                                                        | <Leader>tc
 [Telescope] Open new file                                                                                             | <Leader>cn
