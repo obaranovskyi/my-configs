@@ -49,7 +49,7 @@ keymap("n", "<leader><Esc>", ':let @/ = ""<CR>', opts)
 -- ------------------------------------------------
 keymap("n", "<leader>w", ":wa<CR>", opts)
 keymap("n", "<leader>q", ":q<CR>", opts)
-keymap("n", "<leader>cz", ":qa<CR>", opts)
+keymap("n", "<leader>cz", ":qa!<CR>", opts)
 keymap("n", "<leader>;", "gf", opts)
 
 -- ------------------------------------------------
