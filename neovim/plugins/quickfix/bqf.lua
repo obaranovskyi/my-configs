@@ -9,8 +9,3 @@ return {
     keymap('n', '<leader>ga', ":BqfToggle<CR>", opts)
   end
 }
-
--- Investigate this two plugins:
--- - https://github.com/folke/noice.nvim
--- - https://github.com/VonHeikemen/fine-cmdline.nvim?tab=readme-ov-file
--- - https://github.com/VonHeikemen/searchbox.nvim
