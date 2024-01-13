@@ -95,8 +95,8 @@
 [Buffers] Open previous buffer                                                                                        | <S-h>
 
 ## cheatsheet @QuickfixList
-[QuickfixList] Open quickfix window                                                                                   | :copen, gx
-[QuickfixList] Close quickfix window                                                                                  | :cclose, gX
+[QuickfixList] Open quickfix window                                                                                   | gx
+[QuickfixList] Close quickfix window                                                                                  | gX
 [QuickfixList] Open previous item                                                                                     | gw
 [QuickfixList] Open next item                                                                                         | ge
 [QuickfixList] Open the first item                                                                                    | gW
