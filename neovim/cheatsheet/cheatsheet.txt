@@ -333,3 +333,7 @@
 ## cheatsheet @IndentObject
 [IndentObject] All in curly brackets                                                                                  | ii
 [IndentObject] All in curly brackets including brackets as well                                                       | aI
+
+## cheatsheet @Hardtimes
+[Hardtimes] Enable hardtime plugin                                                                                    | :Hardtime enable
+[Hardtimes] Disable hardtime plugin                                                                                   | :Hardtime disable
