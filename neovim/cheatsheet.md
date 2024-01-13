@@ -15,3 +15,30 @@ nvim_do_autocmd — Do one autocmd.
 nvim_get_autocmds — Get autocmds that match the requirements.
 
 autocmd - https://www.youtube.com/watch?v=HR1dKKrOmDs
+
+#### Keymap
+```lua
+local opts = { noremap = true, silent = true }
+local opt_nr = { noremap = true }
+
+-- Shorten function name
+local keymap = vim.api.nvim_set_keymap
+```
+
+or
+
+```lua
+vim.keymap.set({"n","x"}, "p", "<Plug>(YankyPutAfter)")
+```
+
+#### Autocmd
+```lua
+function neotree_open_file()
+  vim.cmd('wincmd l')
+  vim.cmd('wincmd l')
+  vim.cmd('call feedkeys("/")')
+end
+
+keymap('n', '<leader>o', '<cmd>lua neotree_open_file()<cr>', opts)
+```
+

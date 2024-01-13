@@ -2,6 +2,15 @@
 [Cheatsheet] Copy cheatsheet from the local repository                                                                | <Leader>>
 [Cheatsheet] Show cheatsheet list                                                                                     | <Leader>?
 
+## cheatsheet @Spectre
+[@Spectre] Toggle spectre                                                                                             | <Leader>rr [INSERT_MODE], [VISUAL_MODE]
+[@Spectre] Open spectre with word config                                                                              | <Leader>rw
+[@Spectre] Search within the current file                                                                             | <Leader>rp
+[@Spectre] Change view                                                                                                | <leader>v
+[@Spectre] Replace all                                                                                                | <leader>R
+[@Spectre] Replace item with cursor on it                                                                             | <leader>rc
+[@Spectre] Remove from replace list                                                                                   | dd
+
 ## cheatsheet @Neotree
 [Neotree] Open tree                                                                                                   | <C-n>
 [Neotree] Search and open file from the tree                                                                          | <leader>o

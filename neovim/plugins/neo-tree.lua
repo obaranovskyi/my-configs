@@ -154,7 +154,7 @@ return {
       vim.cmd('call feedkeys("/")')
     end
 
-    keymap('n', '<leader>o', '<cmd>lua neotree_open_file()<cr>', opts)
+    keymap('n', '<leader>o', ':Neotree<CR>:lua neotree_open_file()<cr>', opts)
 
     keymap('n', '<C-n>', ":Neotree toggle<CR>", opts)
 
