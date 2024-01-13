@@ -92,7 +92,8 @@
 [QuickfixList] Open next item                                                                                         | ge
 [QuickfixList] Open the first item                                                                                    | gW
 [QuickfixList] Open the last item                                                                                     | gE
-[QuickfixList] Replace each line in the quickfix list                                                                 | gL
+[QuickfixList] Replace each line in the quickfix list                                                                 | gl
+[QuickfixList] Replace each line in the quickfix list with confirmation                                               | gL
 [QuickfixList] Switch to the older quickfix list search                                                               | :colder
 [QuickfixList] Switch to the newer quickfix list search                                                               | :cnewer
 

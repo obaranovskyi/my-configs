@@ -24,3 +24,4 @@ vim.cmd [[
   nnoremap & :&&<CR>:w<CR>
   xnoremap & :&&<CR>:w<CR>
 ]]
+

@@ -115,7 +115,9 @@ keymap("n", "gW", ":cfirst<CR>", opts)
 keymap("n", "gE", ":clast<CR>", opts)
 keymap("n", "gx", ":copen<CR>", opts)
 keymap("n", "gt", ":cclose<CR>", opts)
-keymap("n", "gL", ":cdo s///g | update<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>", opt_nr)
+
+keymap("n", "gl", ':cdo s///g | update' .. string.rep('<Left>', 12), opt_nr)
+keymap("n", "gL", ':cdo s///gc | update' .. string.rep('<Left>', 13), opt_nr)
 
 -- ------------------------------------------------
 -- Command line mode navigation mappings
