@@ -38,7 +38,7 @@ return {
           ["U"] = "navigate_up",
           ["<esc>"] = "cancel", -- close preview or floating neo-tree window
           ["S"] = "open_split",
-          ["s"] = "open_vsplit",
+          ["v"] = "open_vsplit",
           ["P"] = { "toggle_preview", config = { use_float = true, use_image_nvim = true } },
           ["I"] = "focus_preview",
           ["H"] = "toggle_hidden",

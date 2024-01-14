@@ -1,4 +1,4 @@
-## cheatsheet @Cheatsheet        
+# cheatsheet @Cheatsheet        
 [Cheatsheet] Copy cheatsheet from the local repository                                                                | <Leader>>
 [Cheatsheet] Show cheatsheet list                                                                                     | <Leader>?
 
@@ -25,7 +25,8 @@
 [Neotree] Focus preview window                                                                                        | I
 [Neotree] Close preview floating window                                                                               | <Esc>
 [Neotree] Horizontal split                                                                                            | S
-[Neotree] Vertical split                                                                                              | s
+[Neotree] Vertical split                                                                                              | v
+[Neotree] Select multiple files for the action                                                                        | V
 [Neotree] Open with window picker                                                                                     | w
 [Neotree] Toggle hiddent files                                                                                        | H
 [Neotree] Open in new tab                                                                                             | t
@@ -337,3 +338,6 @@
 ## cheatsheet @Hardtimes
 [Hardtimes] Enable hardtime plugin                                                                                    | :Hardtime enable
 [Hardtimes] Disable hardtime plugin                                                                                   | :Hardtime disable
+
+## cheatsheet @Leap
+[Leap] Jump motion                                                                                                     | s
