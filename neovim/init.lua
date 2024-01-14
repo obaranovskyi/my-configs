@@ -26,7 +26,6 @@ require("lazy").setup({
   'savq/melange',
   'joshdick/onedark.vim',
   'drewtempelmeyer/palenight.vim',
-  { "catppuccin/nvim", name = "catppuccin" },
   'marko-cerovac/material.nvim',
 
   { import = "plugins" },

@@ -2,8 +2,11 @@ return {
   'nvim-lualine/lualine.nvim',
   config = function()
     require('lualine').setup {
+      transparent_background = true,
       options = {
         icons_enabled = true,
+        theme = 'tokyonight',
+        -- theme = 'catppuccin',
         -- theme = 'palenight',
         -- theme = 'horizon',
         -- theme = 'dracula',
