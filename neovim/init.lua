@@ -36,6 +36,7 @@ require("lazy").setup({
   { import = "plugins.code.lsp" },
   { import = "plugins.git" },
   { import = "plugins.quickfix" },
+  { import = "plugins.navigation" },
 }, {
   install = {
     colorscheme = { "nightfly" },
