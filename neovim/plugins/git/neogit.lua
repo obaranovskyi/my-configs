@@ -10,7 +10,8 @@ return {
       disable_commit_configuration = true,
       enhanced_diff_hl = true,
       integrations = {
-        diffview = true
+        diffview = true,
+         telescope = true,
       }
     })
 
