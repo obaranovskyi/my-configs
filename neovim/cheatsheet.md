@@ -42,3 +42,21 @@ end
 keymap('n', '<leader>o', '<cmd>lua neotree_open_file()<cr>', opts)
 ```
 
+## Spectre plugin regex examples
+```
+SEARCH
+\[([FB]{1}E)\]
+REPLACE:
+[is \1]
+
+planning.tasks.md
+
+
+┌──────────────────────────────────────────────────────
+ planning.tasks.md:1:1:
+│  [is FE][Finance] Add page with general elements
+│  [is BE][Finance] Prepare general API request ???
+│  [is FE][Finance] Principal balances grid
+│  [is BE][Finance] Principal balances grid data
+└──────────────────────────────────────────────────────
+```
