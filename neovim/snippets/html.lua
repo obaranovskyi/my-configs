@@ -19,38 +19,12 @@ local snippets, autosnippets = {}, {}
 local group = vim.api.nvim_create_augroup("Markdown Snippets", { clear = true })
 local file_pattern = "*.md"
 
-local rxjsDestroyDeclaration = s(
-  "rxjsDestroyDeclaration",
-  fmt(
-    [[
-      private readonly destroySubj = new Subject<void>();
-      private destroy$ = this.destroySubj.asObservable();
-    ]],
-    {}
-  )
-)
-table.insert(snippets, rxjsDestroyDeclaration)
-
-local rxjsOnDestroy = s(
-  "rxjsOnDestroy",
-  fmt(
-    [[
-      ngOnDestroy(): void {{
-        this.destroySubj.next();
-        this.destroySubj.complete();
-      }}
-    ]],
-    {}
-  )
-)
-table.insert(snippets, rxjsOnDestroy)
-
 
 local underConstruction = s(
   "underConstruction",
   fmt(
     [[
-      // TODO: Under construction
+      <!-- TODO: Under construction -->
     ]],
     {}
   )

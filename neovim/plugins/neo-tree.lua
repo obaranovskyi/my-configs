@@ -123,6 +123,7 @@ return {
     local opts = { noremap = true, silent = true }
     local keymap = vim.api.nvim_set_keymap
 
+    -- INFO: Sometimes it's just stops working
     function neotree_auto_focus_in_tree()
       local buffer_name = vim.api.nvim_buf_get_name(0)
       local do_not_open = false
@@ -169,6 +170,6 @@ return {
     keymap('n', '<leader>n', ":Neotree reveal<CR>", opts)
 
     -- INFO: Open tree on start
-    vim.cmd [[ :Neotree<CR> ]]
+    -- vim.cmd [[ :Neotree<CR> ]]
   end
 }

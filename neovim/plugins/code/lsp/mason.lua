@@ -1,6 +1,6 @@
 return {
   'williamboman/mason.nvim',
-  dependencies = { 
+  dependencies = {
     'williamboman/mason-lspconfig.nvim',
     'neovim/nvim-lspconfig'
   },
@@ -77,7 +77,7 @@ return {
 
       local opts = { noremap = true, silent = true }
 
-      vim.api.nvim_set_keymap("v","<leader>R", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
+      vim.api.nvim_set_keymap("v", "<leader>R", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
     end
 
     vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, { border = 'rounded' })
@@ -89,7 +89,7 @@ return {
       "cssmodules_ls",
       "emmet_ls",
       "html",
-      "lua_ls",
+      -- "lua_ls",
       "jedi_language_server",
       "bashls"
     }
@@ -111,5 +111,16 @@ return {
 
       lspconfig[server].setup(opts)
     end
+
+    -- INFO: Neodev configuration
+    lspconfig.lua_ls.setup({
+      settings = {
+        Lua = {
+          completion = {
+            callSnippet = "Replace"
+          }
+        }
+      }
+    })
   end
 }

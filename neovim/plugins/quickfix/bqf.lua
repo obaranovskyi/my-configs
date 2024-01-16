@@ -2,7 +2,7 @@ return {
   'kevinhwang91/nvim-bqf',
   config = function()
     require('bqf').setup({
-      auto_enable = true
+      auto_enable = false
     })
     local opts = { noremap = true, silent = true }
     local keymap = vim.api.nvim_set_keymap
