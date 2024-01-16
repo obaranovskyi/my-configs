@@ -163,13 +163,10 @@ return {
     end
 
     keymap('n', '<leader>o', ':Neotree<CR>:lua neotree_open_file()<cr>', opts)
-
     keymap('n', '<C-n>', ":Neotree toggle<CR>", opts)
-
-    -- INFO: Manually focus current buffer file in the tree
     keymap('n', '<leader>n', ":Neotree reveal<CR>", opts)
 
     -- INFO: Open tree on start
-    -- vim.cmd [[ :Neotree<CR> ]]
+    vim.cmd [[ :Neotree<CR> ]]
   end
 }
