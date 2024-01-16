@@ -8,7 +8,21 @@ return {
   },
   config = function()
     require("neo-tree").setup({
+      filesystem = {
+        components = {
+          -- INFO: root folder name
+          name = function(config, node, state)
+            local components = require('neo-tree.sources.common.components')
+            local name = components.name(config, node, state)
+            if node:get_depth() == 1 then
+              name.text = vim.fs.basename(vim.loop.cwd() or '')
+            end
+            return name
+          end,
+        },
+      },
       use_default_mappings = false,
+
       buffers = {
         follow_current_file = {
           enabled = true,
@@ -89,6 +103,7 @@ return {
         },
       },
       commands = {
+        -- INFO: Open two files in diffview
         diff_files = function(state)
           local node = state.tree:get_node()
           local log = require("neo-tree.log")
