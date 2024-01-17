@@ -34,7 +34,7 @@ return {
       vim.keymap.set('n', '>', api.node.navigate.sibling.next, opts('Next Sibling'))
       vim.keymap.set('n', '<', api.node.navigate.sibling.prev, opts('Previous Sibling'))
       vim.keymap.set('n', '.', api.node.run.cmd, opts('Run Command'))
-      vim.keymap.set('n', '-', api.tree.change_root_to_parent, opts('Up'))
+      vim.keymap.set('n', 'U', api.tree.change_root_to_parent, opts('Up'))
       vim.keymap.set('n', 'a', api.fs.create, opts('Create'))
       vim.keymap.set('n', 'bmv', api.marks.bulk.move, opts('Move Bookmarked'))
       vim.keymap.set('n', 'B', api.tree.toggle_no_buffer_filter, opts('Toggle No Buffer'))
@@ -72,7 +72,7 @@ return {
       vim.keymap.set('n', 'y', api.fs.copy.filename, opts('Copy Name'))
       vim.keymap.set('n', 'Y', api.fs.copy.relative_path, opts('Copy Relative Path'))
       vim.keymap.set('n', '<2-LeftMouse>', api.node.open.edit, opts('Open'))
-      vim.keymap.set('n', 'I', api.tree.change_root_to_node, opts('CD'))
+      vim.keymap.set('n', '.', api.tree.change_root_to_node, opts('CD'))
       vim.keymap.set('n', 'U', api.tree.change_root_to_parent, opts('CD'))
 
       -- You might tidy things by removing these along with their default mapping.
