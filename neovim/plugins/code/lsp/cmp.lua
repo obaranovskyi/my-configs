@@ -13,31 +13,48 @@ return {
 
     local luasnip = require('luasnip')
 
+    local kind_icons = {
+      Text = "",
+      Method = "m",
+      Function = "󰊕",
+      Constructor = "",
+      Field = "",
+      Variable = "",
+      Class = "",
+      Interface = "",
+      Module = "",
+      Property = " ",
+      Unit = "",
+      Value = "󰎠",
+      Enum = "",
+      Keyword = "󰌋",
+      Snippet = "",
+      Color = "󰏘",
+      File = "󰈙",
+      Reference = "",
+      Folder = "󰉋",
+      EnumMember = "",
+      Constant = "󰏿",
+      Struct = "",
+      Event = "",
+      Operator = "󰆕",
+      TypeParameter = " ",
+    }
+
+    local borderstyle = {
+      border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+      winhighlight = "Normal:CmpPmenu,CursorLine:PmenuSel,Search:None",
+    }
+
     -- local check_backspace = function()
     --   local col = vim.fn.col "." - 1
     --   return col == 0 or vim.fn.getline("."):sub(col, col):match "%s"
     -- end
 
-    local source_mapping = {
-      buffer = "[Buf]",
-      nvim_lsp = "[LSP]",
-      nvim_lua = "[API]",
-      cmp_tabnine = "[T9]",
-      copilot = "[CO]",
-      path = "[Path]",
-      tmux = "[TX]",
-      vsnip = "[VSNiP]",
-      luasnip = "[LSNiP]",
-    }
-
     cmp.setup({
       snippet = {
-        -- REQUIRED - you must specify a snippet engine
         expand = function(args)
-          -- vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
           require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
-          -- require('snippy').expand_snippet(args.body) -- For `snippy` users.
-          -- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
         end,
       },
 
@@ -45,6 +62,10 @@ return {
         completion = cmp.config.window.bordered(),
         documentation = cmp.config.window.bordered(),
       },
+      -- window = {
+      --   completion = borderstyle,
+      --   documentation = borderstyle,
+      -- },
 
       mapping = cmp.mapping.preset.insert({
         ["<C-p>"] = cmp.mapping.select_prev_item(),
@@ -69,10 +90,10 @@ return {
             luasnip.expand()
           elseif luasnip.expand_or_jumpable() then
             luasnip.expand_or_jump()
-          -- I was fixing the issue with check_backspace
-          -- Right now works without it 
-          --[[ elseif check_backspace() then ]]
-          --[[   fallback() ]]
+            -- I was fixing the issue with check_backspace
+            -- Right now works without it
+            --[[ elseif check_backspace() then ]]
+            --[[   fallback() ]]
           else
             fallback()
           end
@@ -97,6 +118,7 @@ return {
       sources = cmp.config.sources({
         { name = 'nvim_lsp' },
         { name = 'luasnip' }, -- For luasnip users.
+        { name = 'path' }, -- For luasnip users.
       }, {
         { name = 'buffer' },
       }),
@@ -115,6 +137,7 @@ return {
             vsnip = "[VSNiP]",
             luasnip = "[LSNiP]",
           })[entry.source.name]
+          vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
           return vim_item
         end,
 

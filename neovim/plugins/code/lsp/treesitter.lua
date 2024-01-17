@@ -15,7 +15,9 @@ return {
         "javascript",
         "typescript",
         "bash",
-        "html"
+        "html",
+        "css",
+        "scss"
       },
       sync_install = false,
       highlight = { enable = true },
