@@ -3,7 +3,7 @@ return {
   dependencies = {
     "williamboman/mason-lspconfig.nvim",
     "neovim/nvim-lspconfig",
-    "lunarmodules/Penlight"
+    "lunarmodules/Penlight",
   },
   config = function()
     local mason = require("mason")
@@ -54,8 +54,8 @@ return {
     vim.diagnostic.config(config)
 
     on_attach = function(_, bufnr)
+      local opts = { noremap = true, silent = true }
       local function keymap(key, action)
-        local opts = { noremap = true, silent = true }
         vim.api.nvim_buf_set_keymap(bufnr, "n", key, action, opts)
       end
 
@@ -67,20 +67,21 @@ return {
       keymap("<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>")
       keymap("gr", "<cmd>lua vim.lsp.buf.references()<CR>")
       keymap("<leader>fk", "<cmd>lua vim.lsp.buf.code_action()<CR>")
+      vim.api.nvim_buf_set_keymap(bufnr, "v", "<leader>fk", '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
 
-      function lsp_import_action(action)
-        if string.find(action.title, "Add import") then
-          print('inside')
-          return action
-        end
-      end
-      keymap("<leader>ii", "<cmd>lua vim.lsp.buf.code_action({ filter = lsp_import_action, apply = true, })<CR>")
+      -- function lsp_import_action(action)
+      --   if string.find(action.title, "Add import") then
+      --     print('inside')
+      --     return action
+      --   end
+      -- end
+      -- keymap("<leader>ii", "<cmd>lua vim.lsp.buf.code_action({ filter = lsp_import_action, apply = true, })<CR>")
 
       -- TODO: Under construction
-      function lsp_import_all()
-
-      end
-      keymap("<leader>iI", "<cmd>lua lsp_import_all()<CR>")
+      -- function lsp_import_all()
+      --
+      -- end
+      -- keymap("<leader>iI", "<cmd>lua lsp_import_all()<CR>")
 
       keymap("[d", '<cmd>lua vim.diagnostic.goto_prev({ border = "rounded" })<CR>')
       keymap("<leader> ", '<cmd>lua vim.diagnostic.open_float({ border = "rounded" })<CR>')
@@ -99,6 +100,10 @@ return {
         vim.lsp.with(vim.lsp.handlers.signature_help, { border = "rounded" })
 
     local mason_lspconfig = require("mason-lspconfig")
+
+    -- INFO: Whenever you want to add a LSP server:
+    -- 1. it should be installed first, more details here: https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
+    -- 2. added to the list below
     local servers = {
       "tsserver",
       "cssmodules_ls",
@@ -107,6 +112,9 @@ return {
       "lua_ls",
       "jedi_language_server",
       "bashls",
+      "marksman", -- don't do TSInstall markdown no highlight
+      "angularls",
+      "typos_lsp",
     }
 
     mason_lspconfig.setup({
@@ -126,16 +134,5 @@ return {
 
       lspconfig[server].setup(opts)
     end
-
-    -- INFO: Neodev configuration
-    -- lspconfig.lua_ls.setup({
-    -- 	settings = {
-    -- 		Lua = {
-    -- 			completion = {
-    -- 				callSnippet = "Replace",
-    -- 			},
-    -- 		},
-    -- 	},
-    -- })
   end,
 }
