@@ -125,14 +125,14 @@ return {
     local lspconfig = require("lspconfig")
 
     for _, server in pairs(servers) do
-      local opts = {
+      local options = {
         on_attach = on_attach,
         capabilities = capabilities,
       }
 
       server = vim.split(server, "@")[1]
 
-      lspconfig[server].setup(opts)
+      lspconfig[server].setup(options)
     end
   end,
 }
