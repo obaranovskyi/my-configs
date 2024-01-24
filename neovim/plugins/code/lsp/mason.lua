@@ -25,6 +25,10 @@ return {
     local cmp_nvim_lsp = require("cmp_nvim_lsp")
 
     capabilities.textDocument.completion.completionItem.snippetSupport = true
+    capabilities.textDocument.foldingRange = {
+      dynamicRegistration = false,
+      lineFoldingOnly = true,
+    }
     capabilities = cmp_nvim_lsp.default_capabilities(capabilities)
 
     local signs = {

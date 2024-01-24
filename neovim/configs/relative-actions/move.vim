@@ -13,10 +13,10 @@ function! s:MoveRowAndJumpBack( ... ) abort
     execute "delmarks z"
 endfunction
 
-command! -nargs=+ PositiveRelativeMoveRow call s:MoveRowAndJumpBack(<f-args>, '+')
-command! -nargs=+ NegativeRelativeMoveRow call s:MoveRowAndJumpBack(<f-args>, '-')
+command! -nargs=+ MoveBottomToTop call s:MoveRowAndJumpBack(<f-args>, '+')
+command! -nargs=+ MoveTopToBottom call s:MoveRowAndJumpBack(<f-args>, '-')
 
-nnoremap <leader>mj :PositiveRelativeMoveRow 
-nnoremap <leader>mk :NegativeRelativeMoveRow 
+nnoremap <leader>m[ :MoveTopToBottom 
+nnoremap <leader>m] :MoveBottomToTop 
 
 

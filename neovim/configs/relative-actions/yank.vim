@@ -13,8 +13,8 @@ function! s:YankRowAndJumpBack( ... ) abort
   execute "delmarks z"
 endfunction
 
-command! -nargs=+ PositiveRelativeYankRow call s:YankRowAndJumpBack(<f-args>, '+')
-command! -nargs=+ NegativeRelativeYankRow call s:YankRowAndJumpBack(<f-args>, '-')
+command! -nargs=+ YankTop call s:YankRowAndJumpBack(<f-args>, '-')
+command! -nargs=+ YankBottom call s:YankRowAndJumpBack(<f-args>, '+')
 
-nnoremap <leader>cj :PositiveRelativeYankRow 
-nnoremap <leader>ck :NegativeRelativeYankRow 
+nnoremap <leader>c[ :YankTop 
+nnoremap <leader>c] :YankBottom 

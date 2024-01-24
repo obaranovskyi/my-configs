@@ -125,13 +125,13 @@
 ## cheatsheet @Emmet 
 [Emmet] Expand shortcut                                                                                               | j/
 
-## cheatsheet @DistanceActions
-[DistanceActions] Delete line n(5) - 5 is relative number above the cursor                                            | <Leader>dk5 <Leader>dk5 3
-[DistanceActions] Delete line n(3) - 3 is relative number below the cursor                                            | <Leader>dj5 <Leader>dj5 7
-[DistanceActions] Copy line n(5) - 5 is relative number above the cursor                                              | <Leader>ck5 <Leader>ck5 3
-[DistanceActions] Copy line n(3) - 3 is relative number below the cursor                                              | <Leader>cj5 <Leader>cj5 3
-[DistanceActions] Move line n(5) - 5 is relative number above the cursor                                              | <Leader>mk5 <Leader>mk5 3
-[DistanceActions] Move line n(3) - 3 is relative number below the cursor                                              | <Leader>mj5 <Leader>mj5 3
+## cheatsheet @RelativeActions
+[RelativeActions] Delete line n(5) - 5 is relative number above the cursor                                            | <Leader>d[5 <Leader>d[5 3
+[RelativeActions] Delete line n(3) - 3 is relative number below the cursor                                            | <Leader>d]5 <Leader>d]5 7
+[RelativeActions] Copy line n(5) - 5 is relative number above the cursor                                              | <Leader>c[5 <Leader>c[5 3
+[RelativeActions] Copy line n(3) - 3 is relative number below the cursor                                              | <Leader>c]5 <Leader>c]5 3
+[RelativeActions] Move line n(5) - 5 is relative number above the cursor                                              | <Leader>m[5 <Leader>m[5 3
+[RelativeActions] Move line n(3) - 3 is relative number below the cursor                                              | <Leader>m]5 <Leader>m]5 3
 
 ## cheatsheet @Surround
 [Surround] Surround in VISUAL_MODE                                                                                    | S{surround value}
