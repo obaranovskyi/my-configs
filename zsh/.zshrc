@@ -98,6 +98,6 @@ source "$CUSTOM_CONFIG_DIR/scripts/colors.sh"
 # borders active_color=0xFFB30458 inactive_color=0xff494d64 width=10.0
 
 # Add nvm into PATH:
-NVM_V18_PATH="/Users/obaranovskyi/.nvm/versions/node/v18.13.0/bin"
+NVM_V18_PATH="/Users/obaranovskyi/.nvm/versions/node/v18.17.0/bin"
 
 export PATH="${NVM_V18_PATH}:$PATH"
