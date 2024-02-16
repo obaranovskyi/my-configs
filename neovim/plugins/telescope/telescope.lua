@@ -116,7 +116,7 @@ return {
     -- CONF: Show with file content as a dropdown
     --[[ keymap("n", "<leader>e", ":Telescope find_files theme=dropdown<CR>", opts) ]]
     -- CONF: Show without file content
-    keymap("n", "<leader>e", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false, hidden = false }))<cr>", opts)
+    keymap("n", "<leader>e", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false, hidden = false, cwd = '.' }))<cr>", opts)
 
     -- Show with particular theme
     --[[ keymap("n", "<leader>g", ":Telescope live_grep theme=dropdown<CR>", opts) ]]

@@ -1,3 +1,6 @@
+-- TODO: Add files like in termina test.{ts,css,html}
+-- TODO: Diff two files
+-- TODO: Multi movement with v
 return {
   'nvim-tree/nvim-tree.lua',
   config = function()
@@ -64,7 +67,7 @@ return {
       vim.keymap.set('n', 'q', api.tree.close, opts('Close'))
       vim.keymap.set('n', 'r', api.fs.rename, opts('Rename'))
       vim.keymap.set('n', 'R', api.tree.reload, opts('Refresh'))
-      vim.keymap.set('n', 's', api.node.run.system, opts('Run System'))
+      -- vim.keymap.set('n', 's', api.node.run.system, opts('Run System'))
       vim.keymap.set('n', 'S', api.tree.search_node, opts('Search'))
       vim.keymap.set('n', 'U', api.tree.toggle_custom_filter, opts('Toggle Hidden'))
       vim.keymap.set('n', 'W', api.tree.collapse_all, opts('Collapse'))
@@ -72,7 +75,15 @@ return {
       vim.keymap.set('n', 'y', api.fs.copy.filename, opts('Copy Name'))
       vim.keymap.set('n', 'Y', api.fs.copy.relative_path, opts('Copy Relative Path'))
       vim.keymap.set('n', '<2-LeftMouse>', api.node.open.edit, opts('Open'))
-      vim.keymap.set('n', '.', api.tree.change_root_to_node, opts('CD'))
+      vim.keymap.set('n', '.', function()
+        api.tree.change_root_to_node()
+
+        -- INFO: Line above doesn't change the root folder
+        -- this is workaround
+        local node = api.tree.get_node_under_cursor()
+        local currPath = node.parent.absolute_path;
+        vim.cmd(':cd ' .. currPath)
+      end, opts('CD'))
       vim.keymap.set('n', 'U', api.tree.change_root_to_parent, opts('CD'))
 
       -- You might tidy things by removing these along with their default mapping.
@@ -112,6 +123,7 @@ return {
       update_cwd = true,
       reload_on_bufenter = false,
       respect_buf_cwd = false,
+      sync_root_with_cwd = true,
       on_attach = on_attach,
       view = {
         side = "right",
@@ -124,16 +136,15 @@ return {
         signcolumn = "yes"
       },
       renderer = {
-
         add_trailing = false,
         group_empty = false,
-        highlight_git = false,
+        highlight_git = true,
         full_name = false,
         highlight_opened_files = "all",
         root_folder_modifier = ":~",
-        root_folder_label = false,
+        root_folder_label = true,
         indent_markers = {
-          enable = false,
+          enable = true,
           icons = {
             corner = "└ ",
             edge = "│ ",
@@ -202,7 +213,7 @@ return {
         },
       },
       filters = {
-        dotfiles = false,
+        dotfiles = true,
         custom = {},
         exclude = {},
       },
@@ -218,7 +229,7 @@ return {
         use_system_clipboard = true,
         change_dir = {
           enable = true,
-          global = false,
+          global = true,
           restrict_above_cwd = false,
         },
         expand_all = {
@@ -228,7 +239,7 @@ return {
           quit_on_open = false,
           resize_window = true,
           window_picker = {
-            enable = false,
+            enable = true,
             chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890",
             exclude = {
               filetype = { "notify", "packer", "qf", "diff", "fugitive", "fugitiveblame" },
@@ -246,7 +257,7 @@ return {
       },
       live_filter = {
         prefix = "[FILTER]: ",
-        always_show_folders = true,
+        -- always_show_folders = true,
       },
       log = {
         enable = false,

@@ -23,6 +23,9 @@ return {
       },
       use_default_mappings = false,
 
+      enable_opened_markers = false,
+      enable_modified_markers = false,
+
       buffers = {
         follow_current_file = {
           enabled = true,
