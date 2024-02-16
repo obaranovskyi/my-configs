@@ -1,22 +1,38 @@
-## cheatsheet @NvimTree
-[NvimTree] Open source tree explorer                                                                                  | <C-n>
-[NvimTree] Add new file                                                                                               | a
-[NvimTree] Rename the file                                                                                            | r
-[NvimTree] Delete the file                                                                                            | d
-[NvimTree] Cut the file                                                                                               | x
-[NvimTree] Copy the file                                                                                              | c
-[NvimTree] Paste the file                                                                                             | p
-[NvimTree] Turn on live filter                                                                                        | f
-[NvimTree] Open in vertical window                                                                                    | v
-[NvimTree] Turn off live filter                                                                                       | F
-[NvimTree] Refresh the source tree                                                                                    | R
-[NvimTree] Collapse all                                                                                               | W
-[NvimTree] Open folder in the file explorer                                                                           | <Right>
-[NvimTree] Close folder in the file explorer                                                                          | <Left>
-[NvimTree] Toggle git hidden files and folders                                                                        | tg
-[NvimTree] Toggle hidden files and folders                                                                            | H
-[NvimTree] Change root folder up                                                                                      | U
-[NvimTree] Change root folder down                                                                                    | I
+## cheatsheet @Neotree
+[Neotree] Open tree                                                                                                   | <C-n>
+[Neotree] Search and open file from the tree                                                                          | <leader>o
+[Neotree] Set root                                                                                                    | .
+[Neotree] Set root one folder up                                                                                      | U
+[Neotree] Fuzzy finder                                                                                                | /
+[Neotree] Filter on submit                                                                                            | f
+[Neotree] Clear filter on submit                                                                                      | <C-x>
+[Neotree] Open file                                                                                                   | o, l, <CR>
+[Neotree] Close folder                                                                                                | h
+[Neotree] Preview window                                                                                              | P
+[Neotree] Focus preview window                                                                                        | I
+[Neotree] Close preview floating window                                                                               | <Esc>
+[Neotree] Horizontal split                                                                                            | S
+[Neotree] Vertical split                                                                                              | v
+[Neotree] Select multiple files for the action                                                                        | V
+[Neotree] Open with window picker                                                                                     | w
+[Neotree] Toggle hiddent files                                                                                        | H
+[Neotree] Open in new tab                                                                                             | t
+[Neotree] Close all nodes                                                                                             | z
+[Neotree] Open all nodes                                                                                              | Z
+[Neotree] Add file/directory (works with expansion)                                                                   | a
+[Neotree] Add directory                                                                                               | A
+[Neotree] Delete                                                                                                      | d
+[Neotree] Rename                                                                                                      | r
+[Neotree] Copy file to clipboard                                                                                      | c
+[Neotree] Cut to clipboard                                                                                            | x
+[Neotree] Pase from clipbard                                                                                          | p
+[Neotree] Move                                                                                                        | m
+[Neotree] Close window                                                                                                | q
+[Neotree] Refresh                                                                                                     | R
+[Neotree] Show file details                                                                                           | i
+[Neotree] Diff files                                                                                                  | D
+[Neotree] Open file without losing file tree focus                                                                    | <Tab>
+[Neotree] Manually reveal current file in tree                                                                        | <leader>n
 
 ## cheatsheet @Sneak
 [Sneak] Search down                                                                                                   | s
