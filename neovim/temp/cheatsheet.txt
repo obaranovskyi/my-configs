@@ -15,7 +15,7 @@
 [Neotree] Vertical split                                                                                              | v
 [Neotree] Select multiple files for the action                                                                        | V
 [Neotree] Open with window picker                                                                                     | w
-[Neotree] Toggle hiddent files                                                                                        | H
+[Neotree] Toggle hidden files                                                                                        | H
 [Neotree] Open in new tab                                                                                             | t
 [Neotree] Close all nodes                                                                                             | z
 [Neotree] Open all nodes                                                                                              | Z
@@ -25,7 +25,7 @@
 [Neotree] Rename                                                                                                      | r
 [Neotree] Copy file to clipboard                                                                                      | c
 [Neotree] Cut to clipboard                                                                                            | x
-[Neotree] Pase from clipbard                                                                                          | p
+[Neotree] Paste from clipbard                                                                                          | p
 [Neotree] Move                                                                                                        | m
 [Neotree] Close window                                                                                                | q
 [Neotree] Refresh                                                                                                     | R
