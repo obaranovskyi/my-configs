@@ -108,8 +108,6 @@ return {
       vim.keymap.set('n', 'Z', api.node.run.system, opts('Run System'))
     end
 
-
-
     nvim_tree = require('nvim-tree')
     nvim_tree.setup({
       auto_reload_on_write = true,
@@ -257,7 +255,7 @@ return {
       },
       live_filter = {
         prefix = "[FILTER]: ",
-        -- always_show_folders = true,
+        always_show_folders = true,
       },
       log = {
         enable = false,
