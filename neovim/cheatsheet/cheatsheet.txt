@@ -26,8 +26,7 @@
 [NvimTree] Collapse all                                                                                               | W
 [NvimTree] Open folder in the file explorer                                                                           | <Right>
 [NvimTree] Close folder in the file explorer                                                                          | <Left>
-[NvimTree] Toggle git hidden files and folders                                                                        | tg
-[NvimTree] Toggle hidden files and folders                                                                            | H
+[NvimTree] Toggle hidden files, folders and git ignore files                                                          | H
 [NvimTree] Change root folder up                                                                                      | U
 [NvimTree] Change root folder down                                                                                    | .
 
