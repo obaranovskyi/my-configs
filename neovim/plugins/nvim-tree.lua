@@ -39,7 +39,6 @@ return {
       vim.keymap.set('n', '>', api.node.navigate.sibling.next, opts('Next Sibling'))
       vim.keymap.set('n', '<', api.node.navigate.sibling.prev, opts('Previous Sibling'))
       vim.keymap.set('n', '.', api.node.run.cmd, opts('Run Command'))
-      vim.keymap.set('n', 'U', api.tree.change_root_to_parent, opts('Up'))
       vim.keymap.set('n', 'a', api.fs.create, opts('Create'))
       vim.keymap.set('n', 'bmv', api.marks.bulk.move, opts('Move Bookmarked'))
       vim.keymap.set('n', 'B', api.tree.toggle_no_buffer_filter, opts('Toggle No Buffer'))
@@ -61,6 +60,7 @@ return {
         api.tree.toggle_gitignore_filter()
         api.tree.toggle_hidden_filter()
       end, opts('Toggle Dotfiles'))
+
       -- vim.keymap.set('n', 'tg', api.tree.toggle_gitignore_filter, opts('Toggle Git Ignore'))
       vim.keymap.set('n', 'J', api.node.navigate.sibling.last, opts('Last Sibling'))
       vim.keymap.set('n', 'K', api.node.navigate.sibling.first, opts('First Sibling'))
@@ -80,6 +80,16 @@ return {
       vim.keymap.set('n', 'y', api.fs.copy.filename, opts('Copy Name'))
       vim.keymap.set('n', 'Y', api.fs.copy.relative_path, opts('Copy Relative Path'))
       vim.keymap.set('n', '<2-LeftMouse>', api.node.open.edit, opts('Open'))
+      vim.keymap.set('n', 'U', function()
+        api.tree.change_root_to_parent();
+
+        -- INFO: Line above doesn't change the root folder
+        -- this is workaround
+        local node = api.tree.get_node_under_cursor()
+        local currPath = node.parent.absolute_path;
+        vim.cmd(':cd ' .. currPath)
+      end
+      , opts('Up'))
       vim.keymap.set('n', '.', function()
         api.tree.change_root_to_node()
 
