@@ -4,6 +4,8 @@
 return {
   'nvim-tree/nvim-tree.lua',
   config = function()
+    local HEIGHT_RATIO = 0.8  -- You can change this
+    local WIDTH_RATIO = 0.5   -- You can change this too
     -- disable netrw at the very start of your init.lua
     vim.g.loaded_netrw = 1
     vim.g.loaded_netrwPlugin = 1
@@ -55,8 +57,11 @@ return {
       vim.keymap.set('n', 'f', api.live_filter.start, opts('Filter'))
       vim.keymap.set('n', 'g?', api.tree.toggle_help, opts('Help'))
       vim.keymap.set('n', 'gy', api.fs.copy.absolute_path, opts('Copy Absolute Path'))
-      vim.keymap.set('n', 'H', api.tree.toggle_hidden_filter, opts('Toggle Dotfiles'))
-      vim.keymap.set('n', 'tg', api.tree.toggle_gitignore_filter, opts('Toggle Git Ignore'))
+      vim.keymap.set('n', 'H', function()
+        api.tree.toggle_gitignore_filter()
+        api.tree.toggle_hidden_filter()
+      end, opts('Toggle Dotfiles'))
+      -- vim.keymap.set('n', 'tg', api.tree.toggle_gitignore_filter, opts('Toggle Git Ignore'))
       vim.keymap.set('n', 'J', api.node.navigate.sibling.last, opts('Last Sibling'))
       vim.keymap.set('n', 'K', api.node.navigate.sibling.first, opts('First Sibling'))
       vim.keymap.set('n', 'm', api.marks.toggle, opts('Toggle Bookmark'))
@@ -67,7 +72,7 @@ return {
       vim.keymap.set('n', 'q', api.tree.close, opts('Close'))
       vim.keymap.set('n', 'r', api.fs.rename, opts('Rename'))
       vim.keymap.set('n', 'R', api.tree.reload, opts('Refresh'))
-      -- vim.keymap.set('n', 's', api.node.run.system, opts('Run System'))
+      -- vim.keymap.set('n', 's', '', opts('Run System'))
       vim.keymap.set('n', 'S', api.tree.search_node, opts('Search'))
       vim.keymap.set('n', 'U', api.tree.toggle_custom_filter, opts('Toggle Hidden'))
       vim.keymap.set('n', 'W', api.tree.collapse_all, opts('Collapse'))
@@ -131,7 +136,33 @@ return {
         preserve_window_proportions = false,
         number = false,
         relativenumber = false,
-        signcolumn = "yes"
+        signcolumn = "yes",
+        -- float = {
+        --   enable = true,
+        --   quit_on_focus_loss = true,
+        --   open_win_config = function()
+        --     local screen_w = vim.opt.columns:get()
+        --     local screen_h = vim.opt.lines:get() - vim.opt.cmdheight:get()
+        --     local window_w = screen_w * WIDTH_RATIO
+        --     local window_h = screen_h * HEIGHT_RATIO
+        --     local window_w_int = math.floor(window_w)
+        --     local window_h_int = math.floor(window_h)
+        --     local center_x = (screen_w - window_w) / 2
+        --     local center_y = ((vim.opt.lines:get() - window_h) / 2)
+        --         - vim.opt.cmdheight:get()
+        --     return {
+        --       border = 'rounded',
+        --       relative = 'editor',
+        --       row = center_y,
+        --       col = center_x,
+        --       width = window_w_int,
+        --       height = window_h_int,
+        --     }
+        --   end,
+        -- },
+        -- width = function()
+        --   return math.floor(vim.opt.columns:get() * WIDTH_RATIO)
+        -- end,
       },
       renderer = {
         add_trailing = false,
@@ -272,6 +303,9 @@ return {
       },
     })
 
+    local opts = { noremap = true, silent = true }
+    -- local keymap = vim.api.nvim_set_keymap
+    vim.api.nvim_set_keymap('n', '<leader>o', ":NvimTreeToggle<CR>", opts);
 
     local config_status_ok, nvim_tree_config = pcall(require, "nvim-tree.config")
     if not config_status_ok then
@@ -279,5 +313,6 @@ return {
     end
 
     local tree_cb = nvim_tree_config.nvim_tree_callback
+
   end
 }
