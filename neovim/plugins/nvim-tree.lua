@@ -1,4 +1,4 @@
--- TODO: Add files like in termina test.{ts,css,html}
+-- TODO: Add files like in terminal test.{ts,css,html}
 -- TODO: Diff two files
 -- TODO: Multi movement with v
 return {
@@ -12,7 +12,6 @@ return {
 
     -- set termguicolors to enable highlight groups
     vim.opt.termguicolors = true
-
 
     -- More info about `on_attach` and mappings here:
     -- https://github.com/nvim-tree/nvim-tree.lua/wiki/Migrating-To-on_attach
@@ -181,7 +180,9 @@ return {
         full_name = false,
         highlight_opened_files = "all",
         root_folder_modifier = ":~",
-        root_folder_label = true,
+        root_folder_label = function(path)
+          return vim.fn.fnamemodify(path, ":t")
+        end,
         indent_markers = {
           enable = true,
           icons = {
@@ -296,7 +297,7 @@ return {
       },
       live_filter = {
         prefix = "[FILTER]: ",
-        always_show_folders = true,
+        always_show_folders = false,
       },
       log = {
         enable = false,
@@ -321,8 +322,6 @@ return {
     if not config_status_ok then
       return
     end
-
-    local tree_cb = nvim_tree_config.nvim_tree_callback
 
   end
 }
