@@ -29,6 +29,8 @@
 [NvimTree] Toggle hidden files, folders and git ignore files                                                          | H
 [NvimTree] Change root folder up                                                                                      | U
 [NvimTree] Change root folder down                                                                                    | .
+[NvimTree] Add files form the terminal (cursor should on the folder node)                                             | N
+[NvimTree] Add directories from the terminal (cursor should on the folder node)                                       | M
 
 ## cheatsheet @Window
 [Window] Resize                                                                                                       | <Leader>a {h,j,k,l}

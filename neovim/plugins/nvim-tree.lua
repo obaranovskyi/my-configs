@@ -19,7 +19,12 @@ return {
       local api = require('nvim-tree.api')
 
       local function opts(desc)
-        return { desc = 'nvim-tree: ' .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
+        return {
+          desc = 'nvim-tree: ' .. desc,
+          buffer = bufnr, noremap = true,
+          silent = true,
+          nowait = true
+        }
       end
 
       -- BEGIN_DEFAULT_ON_ATTACH
@@ -78,6 +83,20 @@ return {
       vim.keymap.set('n', 'x', api.fs.cut, opts('Cut'))
       vim.keymap.set('n', 'y', api.fs.copy.filename, opts('Copy Name'))
       vim.keymap.set('n', 'Y', api.fs.copy.relative_path, opts('Copy Relative Path'))
+
+      -- INFO: Add files from the terminal
+      vim.keymap.set('n', 'N', function()
+        local node = api.tree.get_node_under_cursor()
+        local curr_path = node.absolute_path;
+        return ':!touch ' .. curr_path .. '/';
+      end, { expr = true })
+      -- INFO: Add directories from the terminal
+      vim.keymap.set('n', 'M', function()
+        local node = api.tree.get_node_under_cursor()
+        local curr_path = node.absolute_path;
+        return ':!mkdir -p ' .. curr_path .. '/';
+      end, { expr = true })
+
       vim.keymap.set('n', '<2-LeftMouse>', api.node.open.edit, opts('Open'))
       vim.keymap.set('n', 'U', function()
         api.tree.change_root_to_parent();
@@ -85,8 +104,8 @@ return {
         -- INFO: Line above doesn't change the root folder
         -- this is workaround
         local node = api.tree.get_node_under_cursor()
-        local currPath = node.parent.absolute_path;
-        vim.cmd(':cd ' .. currPath)
+        local curr_path = node.parent.absolute_path;
+        vim.cmd(':cd ' .. curr_path)
       end
       , opts('Up'))
       vim.keymap.set('n', '.', function()
@@ -95,8 +114,8 @@ return {
         -- INFO: Line above doesn't change the root folder
         -- this is workaround
         local node = api.tree.get_node_under_cursor()
-        local currPath = node.parent.absolute_path;
-        vim.cmd(':cd ' .. currPath)
+        local curr_path = node.parent.absolute_path;
+        vim.cmd(':cd ' .. curr_path)
       end, opts('CD'))
       vim.keymap.set('n', 'U', api.tree.change_root_to_parent, opts('CD'))
 
