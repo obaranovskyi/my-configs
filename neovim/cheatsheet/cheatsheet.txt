@@ -11,6 +11,9 @@
 [@Spectre] Replace item with cursor on it                                                                             | <leader>rc
 [@Spectre] Remove from replace list                                                                                   | dd
 
+## cheatsheet @Conform
+[@Conform] format code                                                                                                | <leader>fd 
+
 ## cheatsheet @NvimTree
 [NvimTree] Open source tree explorer                                                                                  | <C-n>
 [NvimTree] Add new file                                                                                               | a
