@@ -7,15 +7,17 @@ return {
       formatters_by_ft = {
         lua = { "stylua" },
         python = { "isort", "black" },
-        javascript = { { "prettierd", "prettier" } },
+        javascript = { "prettier" },
         typescript = { "prettier" },
         json = { "biome" },
       },
-      -- format_on_save = {
-      --   -- I recommend these options. See :help conform.format for details.
-      --   lsp_fallback = true,
-      --   timeout_ms = 500,
-      -- },
+
+      format_after_save = function(bufnr)
+        if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
+          return
+        end
+        return { lsp_fallback = true }
+      end,
     })
 
     -- :LSPInstall on the file you want to add language server
