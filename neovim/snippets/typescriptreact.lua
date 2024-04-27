@@ -25,7 +25,9 @@ local Component = s(
 		[[
     const {componentName} = () => {{
       return (
-        {content}
+        <>
+          {content}
+        </>
       );
     }}
 
@@ -39,5 +41,21 @@ local Component = s(
 	)
 )
 table.insert(snippets, Component)
+
+local Props = s(
+	"Props",
+	fmt(
+		[[
+    type Props = {{
+      {content}
+    }}
+    ]],
+		{
+			content = i(1, "Component content..."),
+		},
+		{ repeat_duplicates = true }
+	)
+)
+table.insert(snippets, Props)
 
 return snippets, autosnippets
