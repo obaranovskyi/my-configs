@@ -24,13 +24,16 @@ local Component = s(
 	fmt(
 		[[
     const {componentName} = () => {{
-
+      return (
+        {content}
+      );
     }}
 
     export default {componentName};
     ]],
 		{
 			componentName = i(1, "Component Name..."),
+			content = i(2, "Component content..."),
 		},
 		{ repeat_duplicates = true }
 	)
