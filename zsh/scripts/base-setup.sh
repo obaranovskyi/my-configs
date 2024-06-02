@@ -133,7 +133,6 @@ APPS_TO_INSTALL=(
   speedtest-cli
   rich # cmdcheatsheet, cmdtaskmanager dependency
   pipenv
-  pytube
   moviepy
   scrapetube
   setuptools
