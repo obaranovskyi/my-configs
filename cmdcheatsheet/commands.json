@@ -903,5 +903,15 @@
         "command": "netstat -vanp tcp | grep '5432\\|pid'",
         "description": "Get process by port (5432)",
         "id": 182
+    },
+    {
+        "command": "security find-generic-password -wa \"ob_home_05\" | pbcopy",
+        "description": "Get wifi password",
+        "id": 183
+    },
+    {
+        "command": "say \"Something to say\"",
+        "description": "Say some phrase",
+        "id": 184
     }
 ]
