@@ -913,5 +913,10 @@
         "command": "say \"Something to say\"",
         "description": "Say some phrase",
         "id": 184
+    },
+    {
+        "command": "sudo systemctl start ssh",
+        "description": "Start ssh client on Linux",
+        "id": 185
     }
 ]
