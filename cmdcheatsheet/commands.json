@@ -918,5 +918,10 @@
         "command": "sudo systemctl start ssh",
         "description": "Start ssh client on Linux",
         "id": 185
+    },
+    {
+        "command": "uname -p",
+        "description": "Print processor/chip/cpu architecture",
+        "id": 186
     }
 ]
