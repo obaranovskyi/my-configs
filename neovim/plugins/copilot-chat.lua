@@ -49,7 +49,6 @@ return {
 			})
 
 			local opts = { noremap = true, silent = false }
-			local keymap = vim.api.nvim_set_keymap
 			vim.keymap.set({ "n", "v" }, "<leader>cc", ':lua require("CopilotChat").toggle()<CR>', opts)
 		end,
 	},
