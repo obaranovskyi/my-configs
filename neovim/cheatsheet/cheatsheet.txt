@@ -291,7 +291,7 @@
 ## cheatsheet @CamelSnek
 [CamelSnek] Transform to snake case                                                                                   | <leader>cs [VISUAL_MODE][NORMAL_MODE]
 [CamelSnek] Transform to kebab case                                                                                   | <leader>cS [VISUAL_MODE][NORMAL_MODE]
-[CamelSnek] Transform to camel case                                                                                   | <leader>cc [VISUAL_MODE][NORMAL_MODE]
+[CamelSnek] Transform to camel case                                                                                   | <leader>cC [VISUAL_MODE][NORMAL_MODE]
 [CamelSnek] Transform to pascal case                                                                                  | <leader>cp [VISUAL_MODE][NORMAL_MODE]
 [CamelSnek] Transform to upper case                                                                                  | <leader>cu [VISUAL_MODE][NORMAL_MODE]
 
@@ -329,3 +329,7 @@
 
 ## cheatsheet @Leap
 [Leap] Jump motion                                                                                                     | s
+
+
+## cheatsheet @Copilot (Chat)
+[Copilot (Chat)] Open chat                                                                                            | <leader>cc
