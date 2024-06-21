@@ -12,7 +12,7 @@ return {
 			window = {
 				-- layout = "float",
 			},
-			auto_insert_mode = true,
+			show_help = false,
 			mappings = {
 				complete = {
 					detail = "Use @<Tab> or /<Tab> for options.",
@@ -51,6 +51,15 @@ return {
 
 		vim.keymap.set({ "n", "v" }, "<leader>cc", function()
 			chat.toggle()
+		end, { silent = true })
+
+		vim.keymap.set({ "v" }, "<leader>ca", function()
+			chat.ask("Explain how it works.", {
+				selection = require("CopilotChat.select").visual,
+				window = {
+					layout = "float",
+				},
+			})
 		end, { silent = true })
 
 		chat.setup(config)
