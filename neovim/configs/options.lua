@@ -65,8 +65,3 @@ vim.opt.linebreak = true
 vim.cmd([[
   autocmd BufNewFile,BufRead * if expand('%:t') !~ '\.' | set syntax=bash | endif
 ]])
-
--- INFO: IF lua file set syntax to lua (for some reason without this it's not working)
-vim.cmd([[
-  autocmd BufNewFile,BufRead *.lua set syntax=lua
-]])

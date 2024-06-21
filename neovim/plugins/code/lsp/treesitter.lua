@@ -20,9 +20,7 @@ return {
 			},
 			sync_install = false,
 			indent = { enable = true },
-			-- TODO: This causes issues with syntax highlighting
-			-- highlight = { enable = true },
+			highlight = { enable = true },
 		})
-		require("nvim-treesitter.install").compilers = { "clang" }
 	end,
 }

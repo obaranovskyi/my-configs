@@ -15,42 +15,42 @@ return {
 			auto_insert_mode = true,
 			mappings = {
 				complete = {
-					-- detail = "Use @<Tab> or /<Tab> for options.",
+					detail = "Use @<Tab> or /<Tab> for options.",
 					insert = "", -- If i set this hotkey <Tab> will work as expected
 				},
 				close = {
-					-- 	normal = "q",
-					-- 	insert = "<C-c>",
+					normal = "q",
+					insert = "<C-c>",
 				},
-				-- reset = {
-				-- 	normal = "<C-R>",
-				-- 	insert = "<C-R>",
-				-- },
-				-- submit_prompt = {
-				-- 	normal = "<CR>",
-				-- 	insert = "<CR>",
-				-- },
-				-- accept_diff = {
-				-- 	normal = "<C-y>",
-				-- 	insert = "<C-y>",
-				-- },
-				-- yank_diff = {
-				-- 	normal = "gy",
-				-- },
-				-- show_diff = {
-				-- 	normal = "gd",
-				-- },
-				-- show_system_prompt = {
-				-- 	normal = "gp",
-				-- },
-				-- show_user_selection = {
-				-- 	normal = "gs",
-				-- },
+				reset = {
+					normal = "<C-R>",
+					insert = "<C-R>",
+				},
+				submit_prompt = {
+					normal = "<CR>",
+					insert = "<CR>",
+				},
+				accept_diff = {
+					normal = "<C-y>",
+					insert = "<C-y>",
+				},
+				yank_diff = {
+					normal = "gy",
+				},
+				show_diff = {
+					normal = "gd",
+				},
+				show_system_prompt = {
+					normal = "gp",
+				},
+				show_user_selection = {
+					normal = "gs",
+				},
 			},
 		}
 
 		vim.keymap.set({ "n", "v" }, "<leader>cc", function()
-			chat.open()
+			chat.toggle()
 		end, { silent = true })
 
 		chat.setup(config)
