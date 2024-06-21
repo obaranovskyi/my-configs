@@ -4,19 +4,23 @@
     "command": "workbench.action.files.saveAll"
   },
   {
-    "key": "ctrl+shift+h",
+    "key": "ctrl+n",
+    "command": "workbench.view.explorer"
+  },
+  {
+    "key": "ctrl+h",
     "command": "workbench.action.navigateLeft"
   },
   {
-    "key": "ctrl+shift+l",
+    "key": "ctrl+l",
     "command": "workbench.action.navigateRight"
   },
   {
-    "key": "ctrl+shift+k",
+    "key": "ctrl+k",
     "command": "workbench.action.navigateUp"
   },
   {
-    "key": "ctrl+shift+j",
+    "key": "ctrl+j",
     "command": "workbench.action.navigateDown"
   },
   {
@@ -47,18 +51,55 @@
     "command": "workbench.action.toggleSidebarVisibility"
   },
   {
-    "key": "cmd+b",
+    "key": "ctrl+b",
     "command": "workbench.action.toggleSidebarVisibility"
   },
   {
-    "key": "ctrl+n",
-    "command": "explorer.newFile",
-    "when": "explorerViewletFocus"
+    "key": "ctrl+g",
+    "command": "github.copilot.ghpr.applySuggestion"
+
   },
   {
-    "key": "ctrl+shift+n",
-    "command": "explorer.newFolder",
-    "when": "explorerViewletFocus"
+    "key": "ctrl+j",
+    "command": "selectNextSuggestion"
   },
+  {
+    "key": "ctrl+k",
+    "command": "selectPrevSuggestion"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "workbench.action.quickOpenNavigateNext",
+    "when": "inQuickOpen"
+  },
+  {
+      "key": "ctrl+k",
+      "command": "workbench.action.quickOpenNavigatePrevious",
+      "when": "inQuickOpen"
+  },
+  {
+      "key": "ctrl+shift+j",
+      "command": "workbench.action.terminal.focus",
+  },
+  {
+    "key": "ctrl+k",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "terminalFocus"
+  },
+  // tree actions
+  {
+    "key": "a",
+    "command": "explorer.newFile",
+    "when": "explorerViewletFocus && !inputFocus"
+  },
+  {
+    "key": "d",
+    "command": "deleteFile",
+    "when": "explorerViewletFocus && !inputFocus"
+  },
+  {
+    "key": "r",
+    "command": "renameFile",
+    "when": "explorerViewletFocus && !inputFocus"
+  }
 ]
-
