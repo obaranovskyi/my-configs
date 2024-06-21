@@ -23,5 +23,6 @@ return {
 			-- TODO: This causes issues with syntax highlighting
 			-- highlight = { enable = true },
 		})
+		require("nvim-treesitter.install").compilers = { "clang" }
 	end,
 }

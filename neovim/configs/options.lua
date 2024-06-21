@@ -55,7 +55,7 @@ vim.opt.fillchars:append({ diff = " " })
 
 -- color programming languages in the markdown
 vim.cmd([[
-  let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'javascript', 'typescript', 'vim', 'css', 'c', 'c++', 'goland']
+  let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'javascript', 'typescript', 'vim', 'css', 'c']
 ]])
 
 -- float style (lsp)
@@ -64,4 +64,9 @@ vim.opt.linebreak = true
 -- INFO: If file unknown type set it to bash
 vim.cmd([[
   autocmd BufNewFile,BufRead * if expand('%:t') !~ '\.' | set syntax=bash | endif
+]])
+
+-- INFO: IF lua file set syntax to lua (for some reason without this it's not working)
+vim.cmd([[
+  autocmd BufNewFile,BufRead *.lua set syntax=lua
 ]])
