@@ -53,6 +53,13 @@ return {
 			chat.toggle()
 		end, { silent = true })
 
+		vim.keymap.set({ "n", "v" }, "<leader>co", function()
+			local actions = require("CopilotChat.actions")
+			actions.pick(actions.prompt_actions({
+				selection = require("CopilotChat.select").visual,
+			}))
+		end, { silent = true })
+
 		vim.keymap.set({ "v" }, "<leader>ca", function()
 			chat.ask("Explain how it works.", {
 				selection = require("CopilotChat.select").visual,
