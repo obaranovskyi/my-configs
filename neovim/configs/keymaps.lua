@@ -223,3 +223,8 @@ keymap("n", "<leader>ic", ":tabnew<cr>", opts)
 keymap("n", "<leader>in", ":tabnext<cr>", opts)
 keymap("n", "<leader>ip", ":tabprevious<cr>", opts)
 keymap("n", "<leader>id", ":tabclose<cr>", opts)
+
+-- ------------------------------------------------
+-- Default keymaps for typing in insert mode
+-- ------------------------------------------------
+keymap("i", "<M-BS>", "<C-w>", opts)
