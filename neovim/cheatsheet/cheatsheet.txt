@@ -46,9 +46,6 @@
 [Window] Close window                                                                                                 | <Leader>q
 [Window] Close all windows                                                                                            | <Leader>cz
 
-## cheatsheet @ToggleTerm
-[ToggleTerm] Open floating terminal                                                                                   | <Leader>tt
-
 ## cheatsheet @Filetype
 [Filetype] Set nginx file type                                                                                        | :filetype nginx
 
@@ -227,6 +224,7 @@
 [Lspsaga] Code action                                                                                                 |  <leader>fg [NORMAL_MODE], [VISUAL_MODE]
 [Lspsaga] Find usages                                                                                                 |  <leader>fa
 [Lspsaga] Peek definition                                                                                             |  <leader>fi [NORMAL_MODE], [VISUAL_MODE]
+[Lspsaga] Open terminal window                                                                                        |  <leader>tt [NORMAL_MODE], [VISUAL_MODE]
 
 ## cheatsheet @Trouble
 [Trouble] Display global diagnostics                                                                                  | <Leader>tD

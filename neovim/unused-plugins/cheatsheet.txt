@@ -4,3 +4,7 @@
 [SymbolsOutline] Fold all symbols                                                                                     | W
 [SymbolsOutline] Unfold all symbols                                                                                   | E
 
+## cheatsheet @ToggleTerm
+[ToggleTerm] Open floating terminal                                                                                   | <Leader>tt
+
+
