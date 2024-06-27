@@ -1,5 +1,6 @@
 -- INFO: I need to investigate this plugin he has many features
 -- more here: https://nvimdev.github.io/lspsaga/
+-- default config: https://github.dev/nvimdev/lspsaga.nvim
 return {
 	"nvimdev/lspsaga.nvim",
 	dependencies = {
@@ -10,6 +11,13 @@ return {
 		require("lspsaga").setup({
 			ui = {
 				code_action = "",
+			},
+			outline = {
+				win_position = "right",
+				win_width = 30,
+				keys = {
+					jump = "<CR>",
+				},
 			},
 		})
 

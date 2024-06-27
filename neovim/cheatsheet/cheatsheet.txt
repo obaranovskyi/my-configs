@@ -222,12 +222,10 @@
 [LSP] Show diagnostics (goto next)                                                                                    | ]d
 [LSP] Run code action (imports, fixes, etc.)                                                                          | <Leader>R
 
-
 ## cheatsheet @Lspsaga
 [Lspsaga] Toggle outline                                                                                              |  <leader>fw
 [Lspsaga] Code action                                                                                                 |  <leader>fg [NORMAL_MODE], [VISUAL_MODE]
 [Lspsaga] Find usages                                                                                                 |  <leader>fa
-
 
 ## cheatsheet @Trouble
 [Trouble] Display global diagnostics                                                                                  | <Leader>tD
