@@ -17,6 +17,7 @@ return {
 				"mason",
 				"sagafinder",
 				"sagaoutline",
+				"copilot-chat",
 			},
 		})
 	end,

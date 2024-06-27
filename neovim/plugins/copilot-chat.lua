@@ -53,6 +53,7 @@ return {
 
 		vim.keymap.set({ "n", "v" }, "<leader>cc", function()
 			chat.toggle()
+			vim.cmd("startinsert")
 		end, { silent = true })
 
 		vim.keymap.set({ "n", "v" }, "<leader>co", function()
