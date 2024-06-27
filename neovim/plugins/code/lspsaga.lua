@@ -19,6 +19,11 @@ return {
 					jump = "<CR>",
 				},
 			},
+			finder = {
+				keys = {
+					toggle_or_open = "<CR>",
+				},
+			},
 		})
 
 		vim.keymap.set("n", "<leader>fw", ":Lspsaga outline<CR>", { noremap = true, silent = true })
