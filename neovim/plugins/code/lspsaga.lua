@@ -24,5 +24,6 @@ return {
 		vim.keymap.set("n", "<leader>fw", ":Lspsaga outline<CR>", { noremap = true, silent = true })
 		vim.keymap.set("n", "<leader>fa", ":Lspsaga finder<CR>", { noremap = true, silent = true })
 		vim.keymap.set({ "n", "v" }, "<leader>fg", ":Lspsaga code_action<CR>", { noremap = true, silent = true })
+		vim.keymap.set({ "n", "v" }, "<leader>fi", ":Lspsaga peek_definition<CR>", { noremap = true, silent = true })
 	end,
 }

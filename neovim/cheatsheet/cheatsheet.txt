@@ -226,6 +226,7 @@
 [Lspsaga] Toggle outline                                                                                              |  <leader>fw
 [Lspsaga] Code action                                                                                                 |  <leader>fg [NORMAL_MODE], [VISUAL_MODE]
 [Lspsaga] Find usages                                                                                                 |  <leader>fa
+[Lspsaga] Peek definition                                                                                             |  <leader>fi [NORMAL_MODE], [VISUAL_MODE]
 
 ## cheatsheet @Trouble
 [Trouble] Display global diagnostics                                                                                  | <Leader>tD

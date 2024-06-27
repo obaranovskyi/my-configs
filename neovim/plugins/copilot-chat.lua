@@ -10,7 +10,9 @@ return {
 		local config = {
 			debug = false,
 			window = {
-				-- layout = "float",
+				layout = "float",
+				width = 0.8,
+				height = 0.8,
 			},
 			show_help = false,
 			mappings = {
