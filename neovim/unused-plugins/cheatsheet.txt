@@ -1,0 +1,6 @@
+## cheatsheet @SymbolsOutline
+[SymbolsOutline] Toggle symbols                                                                                       | <leader>fw
+[SymbolsOutline] Toggle the current symbol preview                                                                    | K
+[SymbolsOutline] Fold all symbols                                                                                     | W
+[SymbolsOutline] Unfold all symbols                                                                                   | E
+

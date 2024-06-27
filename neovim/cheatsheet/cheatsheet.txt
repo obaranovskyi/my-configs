@@ -222,6 +222,13 @@
 [LSP] Show diagnostics (goto next)                                                                                    | ]d
 [LSP] Run code action (imports, fixes, etc.)                                                                          | <Leader>R
 
+
+## cheatsheet @Lspsaga
+[Lspsaga] Toggle outline                                                                                              |  <leader>fw
+[Lspsaga] Code action                                                                                                 |  <leader>fg [NORMAL_MODE], [VISUAL_MODE]
+[Lspsaga] Find usages                                                                                                 |  <leader>fa
+
+
 ## cheatsheet @Trouble
 [Trouble] Display global diagnostics                                                                                  | <Leader>tD
 [Trouble] Display diagnostics                                                                                         | <Leader>td
@@ -295,15 +302,8 @@
 [CamelSnek] Transform to pascal case                                                                                  | <leader>cp [VISUAL_MODE][NORMAL_MODE]
 [CamelSnek] Transform to upper case                                                                                  | <leader>cu [VISUAL_MODE][NORMAL_MODE]
 
-## cheatsheet @SymbolsOutline
-[SymbolsOutline] Toggle symbols                                                                                       | <leader>fw
-[SymbolsOutline] Toggle the current symbol preview                                                                    | K
-[SymbolsOutline] Fold all symbols                                                                                     | W
-[SymbolsOutline] Unfold all symbols                                                                                   | E
-
 ## cheatsheet @Filetype
 [Filetype] Set current buffer file type to bash                                                                       | <leader>sb
-
 
 ## cheatsheet @Norm command
 [norm] box into text `` brackets                                                                                      | :norm ^i`jk^a`
