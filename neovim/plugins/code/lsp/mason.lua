@@ -108,10 +108,13 @@ return {
 		-- INFO: Whenever you want to add a LSP server:
 		-- 1. it should be installed first, more details here: https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 		-- 2. added to the list below
+		-- 3. Sometimes you have to install the language server manually, for example: `npm install -g typescript-language-server`
+		-- or by using brew
 		local servers = {
 			"tsserver",
 			"cssmodules_ls",
 			"emmet_ls",
+			"pyright",
 			"html",
 			"lua_ls",
 			"jedi_language_server",
