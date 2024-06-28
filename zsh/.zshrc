@@ -83,6 +83,13 @@ fi
 # Fix for tmux to work with the zsh - https://github.com/tmux/tmux/issues/597
 # TERM=xterm-256color
 
+# OSX
+if [[ $(uname -s) == "Darwin" ]]; then
+  # my current version
+  export PATH="/opt/homebrew/opt/python@3.12/libexec/bin:$PATH"
+  alias python3=/opt/homebrew/bin/python3
+fi
+
 # Ubuntu configs
 if [[ $(uname -s) == "Linux" ]]; then
 	alias python=python3.10
@@ -91,6 +98,8 @@ if [[ $(uname -s) == "Linux" ]]; then
   # but you have to install qt5ct
   export QT_QPA_PLATFORMTHEME="qt5ct"
 fi
+
+
 
 source "$CUSTOM_CONFIG_DIR/scripts/colors.sh"
 
