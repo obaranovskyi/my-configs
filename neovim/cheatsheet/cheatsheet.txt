@@ -329,6 +329,9 @@
 
 
 ## cheatsheet @Copilot (Chat)
+[Copilot] Previous suggestion                                                                                         | <C-p> [INSERT_MODE]
+[Copilot] Next suggestion                                                                                             | <C-n> [INSERT_MODE]
+[Copilot] Pick next word from the suggestion                                                                          | <C-l> [INSERT_MODE]
 [Copilot (Chat)] Open chat                                                                                            | <leader>cc
 [Copilot (Chat)] Explain what this does?                                                                              | <leader>ca
 [Copilot (Chat)] Display copilot actions                                                                              | <leader>co
