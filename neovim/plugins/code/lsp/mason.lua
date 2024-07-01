@@ -117,7 +117,6 @@ return {
 			"pyright",
 			"html",
 			"lua_ls",
-			"jedi_language_server",
 			"bashls",
 			"marksman", -- don't do TSInstall markdown no highlight
 			"angularls",
