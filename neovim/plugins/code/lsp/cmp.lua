@@ -58,15 +58,15 @@ return {
 				end,
 			},
 
+			completion = {
+				autocomplete = {
+					enable = false,
+				},
+			},
 			window = {
 				completion = cmp.config.window.bordered(),
 				documentation = cmp.config.window.bordered(),
 			},
-			-- window = {
-			--   completion = borderstyle,
-			--   documentation = borderstyle,
-			-- },
-
 			mapping = cmp.mapping.preset.insert({
 				["<C-p>"] = cmp.mapping.select_prev_item(),
 				["<C-k>"] = cmp.mapping.select_prev_item(),
@@ -74,7 +74,7 @@ return {
 				["<C-j>"] = cmp.mapping.select_next_item(),
 				["<C-u>"] = cmp.mapping(cmp.mapping.scroll_docs(-1), { "i", "c" }),
 				["<C-d>"] = cmp.mapping(cmp.mapping.scroll_docs(1), { "i", "c" }),
-				["<C-Space>"] = cmp.mapping.complete(),
+				["<C-Space>"] = cmp.mapping.complete(), -- This doesn't work with C-Space it works with C-Space-Space
 				["<C-e>"] = cmp.mapping.abort(),
 				["<C-y>"] = cmp.config.disable, -- Specify `cmp.config.disable` if you want to remove the default `<C-y>` mapping.
 				["<C-c>"] = cmp.mapping({

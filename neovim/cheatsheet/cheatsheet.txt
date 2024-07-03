@@ -335,3 +335,8 @@
 [Copilot (Chat)] Open chat                                                                                            | <leader>cc
 [Copilot (Chat)] Explain what this does?                                                                              | <leader>ca
 [Copilot (Chat)] Display copilot actions                                                                              | <leader>co
+
+## cheatsheet @ChatGPT
+[ChatGPT] Open chat                                                                                                   | <leader>cg
+[ChatGPT] Close ChatGPT window                                                                                       | <C-c>
+[ChatGPT] Navigate between the windows                                                                               | <Tab>

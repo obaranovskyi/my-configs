@@ -8,9 +8,6 @@ return {
 		vim.keymap.set({ "n", "v" }, "<leader>cg", function()
 			vim.cmd("ChatGPT")
 		end, { silent = true })
-		vim.keymap.set({ "n", "v" }, "<leader>cr", function()
-			vim.cmd("ChatGPTRun explain_code")
-		end, { silent = true })
 	end,
 	dependencies = {
 		"MunifTanjim/nui.nvim",
