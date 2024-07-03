@@ -18,6 +18,7 @@ return {
 				"sagafinder",
 				"sagaoutline",
 				"copilot-chat",
+				"markdown", -- this is needed to disable navigation in chatgpt markdown content
 			},
 		})
 	end,
