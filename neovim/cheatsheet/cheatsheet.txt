@@ -335,6 +335,8 @@
 [Copilot (Chat)] Open chat                                                                                            | <leader>cc
 [Copilot (Chat)] Explain what this does?                                                                              | <leader>ca
 [Copilot (Chat)] Display copilot actions                                                                              | <leader>co
+[Copilot (Chat)] Provide grammar check with explanations                                                              | <leader>cm
+[Copilot (Chat)] Rephrase current selection                                                                           | <leader>cv
 
 ## cheatsheet @ChatGPT
 [ChatGPT] Open chat                                                                                                   | <leader>cg

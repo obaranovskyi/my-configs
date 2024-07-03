@@ -72,6 +72,33 @@ return {
 			})
 		end, { silent = true })
 
+		vim.keymap.set({ "v" }, "<leader>cm", function()
+			local prompt = [[
+      Please check if it's grammatically correct to say this way.
+      If it's incorrect, rephrase it and provide me with the grammatically correct version.
+      Also, include an explanation of where I made a mistake and how to fix this mistake.
+      ]]
+			chat.ask(prompt, {
+				selection = require("CopilotChat.select").visual,
+				window = {
+					layout = "float",
+				},
+			})
+		end, { silent = true })
+
+		vim.keymap.set({ "v" }, "<leader>cv", function()
+			local prompt = [[
+      Provide me with a few options for rephrasing.
+      If there are grammar mistakes, correct them with an explanation.
+      ]]
+			chat.ask(prompt, {
+				selection = require("CopilotChat.select").visual,
+				window = {
+					layout = "float",
+				},
+			})
+		end, { silent = true })
+
 		chat.setup(config)
 	end,
 }
