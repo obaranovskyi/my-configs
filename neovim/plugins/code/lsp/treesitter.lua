@@ -17,6 +17,7 @@ return {
 				"html",
 				"css",
 				"scss",
+				"tsx",
 			},
 			sync_install = false,
 			indent = { enable = true },
