@@ -218,6 +218,7 @@
 [LSP] Show line diagnostics                                                                                           | gl
 [LSP] Show diagnostics (goto next)                                                                                    | ]d
 [LSP] Run code action (imports, fixes, etc.)                                                                          | <Leader>R
+[LSP] Show suggestion window                                                                                          | <Leader>+Space+Space
 
 ## cheatsheet @Lspsaga
 [Lspsaga] Toggle outline                                                                                              |  <leader>fw
@@ -292,13 +293,6 @@
 ## cheatsheet @Transparent
 [Transparent] Make vim background transparent                                                                         | <leader>t;
 
-## cheatsheet @CamelSnek
-[CamelSnek] Transform to snake case                                                                                   | <leader>cs [VISUAL_MODE][NORMAL_MODE]
-[CamelSnek] Transform to kebab case                                                                                   | <leader>cS [VISUAL_MODE][NORMAL_MODE]
-[CamelSnek] Transform to camel case                                                                                   | <leader>cC [VISUAL_MODE][NORMAL_MODE]
-[CamelSnek] Transform to pascal case                                                                                  | <leader>cp [VISUAL_MODE][NORMAL_MODE]
-[CamelSnek] Transform to upper case                                                                                  | <leader>cu [VISUAL_MODE][NORMAL_MODE]
-
 ## cheatsheet @Filetype
 [Filetype] Set current buffer file type to bash                                                                       | <leader>sb
 
@@ -332,13 +326,19 @@
 [Copilot] Previous suggestion                                                                                         | <C-p> [INSERT_MODE]
 [Copilot] Next suggestion                                                                                             | <C-n> [INSERT_MODE]
 [Copilot] Pick next word from the suggestion                                                                          | <C-l> [INSERT_MODE]
-[Copilot (Chat)] Open chat                                                                                            | <leader>cc
-[Copilot (Chat)] Explain what this does?                                                                              | <leader>ca
-[Copilot (Chat)] Display copilot actions                                                                              | <leader>co
-[Copilot (Chat)] Provide grammar check with explanations                                                              | <leader>cm
-[Copilot (Chat)] Rephrase current selection                                                                           | <leader>cv
+[Copilot (Chat)] Open chat                                                                                            | <leader>cc [NORMAL_MODE], [VISUAL_MODE]
+[Copilot (Chat)] [CODE] Explain what this does?                                                                       | <leader>ca [VISUAL_MODE]
+[Copilot (Chat)] [CODE] Display copilot actions                                                                       | <leader>co [NORMAL_MODE], [VISUAL_MODE]
+[Copilot (Chat)] [CODE] Point out the best practices                                                                  | <leader>cb [VISUAL_MODE]
+[Copilot (Chat)] [CODE] Suggest how to fix this error                                                                 | <leader>cb [VISUAL_MODE]
+[Copilot (Chat)] [EN] Provide grammar check with explanations                                                         | <leader>cm [VISUAL_MODE]
+[Copilot (Chat)] [EN] Rephrase current selection                                                                      | <leader>cv [VISUAL_MODE]
+[Copilot (Chat)] [EN] Translate selection to Ukrainian                                                                | <leader>cu [VISUAL_MODE]
+[Copilot (Chat)] [EN] Suggest synonyms for the highlighted word                                                       | <leader>cs [VISUAL_MODE]
+[Copilot (Chat)] [EN] Provide a dialogue on [specific topic]                                                          | <leader>cd [VISUAL_MODE]
+[Copilot (Chat)] [EN] Provide a sentence improvement                                                                  | <leader>ci [VISUAL_MODE]
 
 ## cheatsheet @ChatGPT
 [ChatGPT] Open chat                                                                                                   | <leader>cg
-[ChatGPT] Close ChatGPT window                                                                                       | <C-c>
-[ChatGPT] Navigate between the windows                                                                               | <Tab>
+[ChatGPT] Close ChatGPT window                                                                                        | <C-c>
+[ChatGPT] Navigate between the windows                                                                                | <Tab>

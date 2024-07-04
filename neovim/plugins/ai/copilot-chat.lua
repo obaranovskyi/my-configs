@@ -51,6 +51,17 @@ return {
 			},
 		}
 
+		function setKeymapWithPrompt(modes, keymap, prompt)
+			vim.keymap.set(modes, keymap, function()
+				chat.ask(prompt, {
+					selection = require("CopilotChat.select").visual,
+					window = {
+						layout = "float",
+					},
+				})
+			end, { silent = true })
+		end
+
 		vim.keymap.set({ "n", "v" }, "<leader>cc", function()
 			chat.toggle()
 			vim.cmd("startinsert")
@@ -63,42 +74,63 @@ return {
 			}))
 		end, { silent = true })
 
-		vim.keymap.set({ "v" }, "<leader>ca", function()
-			chat.ask("Explain how it works.", {
-				selection = require("CopilotChat.select").visual,
-				window = {
-					layout = "float",
-				},
-			})
-		end, { silent = true })
+		setKeymapWithPrompt({ "v" }, "<leader>ca", "Explain how it works.")
 
-		vim.keymap.set({ "v" }, "<leader>cm", function()
-			local prompt = [[
+		setKeymapWithPrompt(
+			{ "v" },
+			"<leader>cm",
+			[[
       Please check if it's grammatically correct to say this way.
       If it's incorrect, rephrase it and provide me with the grammatically correct version.
       Also, include an explanation of where I made a mistake and how to fix this mistake.
       ]]
-			chat.ask(prompt, {
-				selection = require("CopilotChat.select").visual,
-				window = {
-					layout = "float",
-				},
-			})
-		end, { silent = true })
+		)
 
-		vim.keymap.set({ "v" }, "<leader>cv", function()
-			local prompt = [[
+		setKeymapWithPrompt(
+			{ "v" },
+			"<leader>cv",
+			[[
       Provide me with a few options for rephrasing.
       If there are grammar mistakes, correct them with an explanation.
       ]]
-			chat.ask(prompt, {
-				selection = require("CopilotChat.select").visual,
-				window = {
-					layout = "float",
-				},
-			})
-		end, { silent = true })
+		)
+
+		setKeymapWithPrompt({ "v" }, "<leader>cu", "Translate this to Ukrainian. Provide only the translation.")
+
+		setKeymapWithPrompt(
+			{ "v" },
+			"<leader>cb",
+			"Review this code and point out any best practices that I may have missed."
+		)
+
+		setKeymapWithPrompt(
+			{ "v" },
+			"<leader>cs",
+			"Suggest synonyms for the highlighted word and explain the differences in usage."
+		)
+
+		setKeymapWithPrompt({ "v" }, "<leader>ci", "Suggest ways to improve the writing style of this text.")
+
+		setKeymapWithPrompt(
+			{ "v" },
+			"<leader>ct",
+			"Explain this technical concept in simple English suitable for a beginner."
+		)
+
+		setKeymapWithPrompt(
+			{ "v" },
+			"<leader>ce",
+			"Translate this error message into plain English and suggest how to fix it."
+		)
 
 		chat.setup(config)
+
+		-- INFO: Customize the chat window
+		vim.api.nvim_create_autocmd("BufEnter", {
+			pattern = "copilot-*",
+			callback = function()
+				vim.opt_local.relativenumber = true
+			end,
+		})
 	end,
 }

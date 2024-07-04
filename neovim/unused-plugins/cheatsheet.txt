@@ -1,10 +1,25 @@
+# I'm using lspsaga and it provides own symbols outline
+
 ## cheatsheet @SymbolsOutline
 [SymbolsOutline] Toggle symbols                                                                                       | <leader>fw
 [SymbolsOutline] Toggle the current symbol preview                                                                    | K
 [SymbolsOutline] Fold all symbols                                                                                     | W
 [SymbolsOutline] Unfold all symbols                                                                                   | E
 
+
+# I'm using lspsaga and it provides own terminal
+
 ## cheatsheet @ToggleTerm
 [ToggleTerm] Open floating terminal                                                                                   | <Leader>tt
 
+
+# I don't use this often but, and I want to assign all this 
+# hotkeys to copilot
+
+## cheatsheet @CamelSnek
+[CamelSnek] Transform to snake case                                                                                   | <leader>cs [VISUAL_MODE][NORMAL_MODE]
+[CamelSnek] Transform to kebab case                                                                                   | <leader>cS [VISUAL_MODE][NORMAL_MODE]
+[CamelSnek] Transform to camel case                                                                                   | <leader>cC [VISUAL_MODE][NORMAL_MODE]
+[CamelSnek] Transform to pascal case                                                                                  | <leader>cp [VISUAL_MODE][NORMAL_MODE]
+[CamelSnek] Transform to upper case                                                                                  | <leader>cu [VISUAL_MODE][NORMAL_MODE]
 
