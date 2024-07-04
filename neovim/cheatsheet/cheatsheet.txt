@@ -324,7 +324,6 @@
 ## cheatsheet @MarkdownPreview
 [MarkdownPreview] Open markdown preview                                                                               | <leader>sm
 
-
 ## cheatsheet @Copilot (Chat)
 [Copilot] Previous suggestion                                                                                         | <C-p> [INSERT_MODE]
 [Copilot] Next suggestion                                                                                             | <C-n> [INSERT_MODE]
