@@ -227,11 +227,6 @@
 [Lspsaga] Peek definition                                                                                             |  <leader>fi [NORMAL_MODE], [VISUAL_MODE]
 [Lspsaga] Open terminal window                                                                                        |  <leader>tt [NORMAL_MODE], [VISUAL_MODE]
 
-## cheatsheet @Trouble
-[Trouble] Display global diagnostics                                                                                  | <Leader>tD
-[Trouble] Display diagnostics                                                                                         | <Leader>td
-[Trouble] Display all references                                                                                      | <Leader>tr
-
 ## cheatsheet @Registers
 [Registers] Show registers a, s, d, f, g                                                                              | <Leader>re
 [Registers] Clear registers                                                                                           | <Leader>rd

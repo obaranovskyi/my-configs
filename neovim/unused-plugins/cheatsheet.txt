@@ -23,3 +23,11 @@
 [CamelSnek] Transform to pascal case                                                                                  | <leader>cp [VISUAL_MODE][NORMAL_MODE]
 [CamelSnek] Transform to upper case                                                                                  | <leader>cu [VISUAL_MODE][NORMAL_MODE]
 
+
+
+# It doesn't covers the whole project and the diagnostics for the file I have
+## cheatsheet @Trouble
+[Trouble] Display global diagnostics                                                                                  | <Leader>tD
+[Trouble] Display diagnostics                                                                                         | <Leader>td
+[Trouble] Display all references                                                                                      | <Leader>tr
+
