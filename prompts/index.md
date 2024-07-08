@@ -26,6 +26,8 @@ Under each word, provide three example sentences like this:
 - to be mad (at someone) - злитись (на когось)
   - They didn't do what he said, so he was very mad at them.
 
+Next, provide me with a story that includes all given words. 
+
 The answer should be in markdown format, so that I can copy the whole answer in one click.
 
 Today, I'd like to write a story on the following topic: [Topic]
