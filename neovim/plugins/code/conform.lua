@@ -10,6 +10,7 @@ return {
 				javascript = { "prettier" },
 				typescript = { "prettier" },
 				typescriptreact = { "prettier" },
+				tsx = { "prettier" },
 				json = { "prettier" },
 				markdown = { "mdformat" },
 			},
@@ -18,6 +19,8 @@ return {
 			-- VSCode uses prettier 2.8.8 version
 			-- To install it using mason:
 			-- `MasonInstall prettier@2.8.8`
+			-- NOTE: If you update all mason packages, you will get the latest version of prettier
+			-- you'll need to reinstall the version you want again after the update
 			format_on_save = function(bufnr)
 				if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
 					return
