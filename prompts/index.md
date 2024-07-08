@@ -36,14 +36,16 @@ ______________________________________________________________________
 ### ETP-2: Explain the meaning of the following word/phrase and provide examples.
 
 ```markdown
-I'm learning English as I'm not a native speaker.
-I want to learn new words and phrases to expand my vocabulary. 
+I'm learning English because I'm not a native speaker.
+I want to learn new words and phrases to expand my vocabulary.
 
 I want to get the response in the following way:
 
-The first is the explanation of the meaning. 
-- If the word should be used with `be,` mention it.
-- If adjectives or prepositions are commonly used with it, please mention them.
+- Ukrainian translation
+- Explanation of the meaning
+- If the word should be used with "be," mention it.
+- If adjectives or prepositions are commonly used with it,
+  please mention them and add three examples for each common usage.
 - Provide all possible usages with at least three examples after the explanation.
 - The answer should be in markdown format so I can copy the whole answer in one click.
 
