@@ -228,3 +228,8 @@ keymap("n", "<leader>id", ":tabclose<cr>", opts)
 -- Default keymaps for typing in insert mode
 -- ------------------------------------------------
 keymap("i", "<M-BS>", "<C-w>", opts)
+
+-- ------------------------------------------------
+-- AI related mappings
+-- ------------------------------------------------
+keymap("n", "<leader>op", ":e ~/my-configs/prompts/index.md<CR>", opts)
