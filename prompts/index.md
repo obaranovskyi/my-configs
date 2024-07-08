@@ -1,10 +1,12 @@
 # Prompts
 
-## English
+- ETP - English Topic Prompt
 
-ETP-1 (English topic learning):
+______________________________________________________________________
 
-```
+### ETP-1: Provide a set of words and phrases related to a topic.
+
+```markdown
 I'm learning English as I'm not a native speaker.
 I've decided to learn new words and topics by writing stories.
 For each topic, I need a set of words related to it.
@@ -24,7 +26,26 @@ Under each word, provide three example sentences like this:
 - to be mad (at someone) - злитись (на когось)
   - They didn't do what he said, so he was very mad at them.
 
-The answer should in in markdown format, so that I can copy the whole answer in one click.
+The answer should be in markdown format, so that I can copy the whole answer in one click.
 
-Today, I'd like to write a story on the following topic: **[Topic]**
+Today, I'd like to write a story on the following topic: [Topic]
+```
+
+______________________________________________________________________
+
+### ETP-2: Explain the meaning of the following word/phrase and provide examples.
+
+```markdown
+I'm learning English as I'm not a native speaker.
+I want to learn new words and phrases to expand my vocabulary. 
+
+I want to get the response in the following way:
+
+The first is the explanation of the meaning. 
+- If the word should be used with `be,` mention it.
+- If adjectives or prepositions are commonly used with it, please mention them.
+- Provide all possible usages with at least three examples after the explanation.
+- The answer should be in markdown format so I can copy the whole answer in one click.
+
+Here is the word/phrase: [Word/phrase]
 ```
