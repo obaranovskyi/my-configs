@@ -82,6 +82,7 @@ return {
 			[[
       Please check if it's grammatically correct to say this way.
       If it's incorrect, rephrase it and provide me with the grammatically correct version.
+      The correction version should be highlighted so it would be easier to find it immediately.
       Also, include an explanation of where I made a mistake and how to fix this mistake.
       ]]
 		)
