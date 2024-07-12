@@ -12,7 +12,8 @@ return {
 				typescriptreact = { "prettier" },
 				tsx = { "prettier" },
 				json = { "prettier" },
-				markdown = { "mdformat" },
+				-- markdown = { "mdformat" },
+				markdown = { "prettierd" },
 			},
 
 			-- Auto format

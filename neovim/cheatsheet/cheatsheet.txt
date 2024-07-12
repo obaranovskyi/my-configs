@@ -319,6 +319,9 @@
 ## cheatsheet @MarkdownPreview
 [MarkdownPreview] Open markdown preview                                                                               | <leader>sm
 
+## cheatsheet @MarkdownFollowMdLinks
+[MarkdownFollowMdLinks] Open link                                                                                     | <CR>
+
 ## cheatsheet @CodeRunner
 [CodeRunner] Run Code                                                                                                 | <leader>ra
 [CodeRunner] Close "Run Code" terminal windows                                                                        | <leader>rs
