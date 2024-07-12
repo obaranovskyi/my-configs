@@ -110,3 +110,6 @@ source "$CUSTOM_CONFIG_DIR/scripts/colors.sh"
 NVM_V18_PATH="/Users/obaranovskyi/.nvm/versions/node/v18.17.0/bin"
 
 export PATH="${NVM_V18_PATH}:$PATH"
+
+# Images in kitty (This might be removed if images are still shown)
+# export DYLD_LIBRARY_PATH="$(brew --prefix)/lib:$DYLD_LIBRARY_PATH"
