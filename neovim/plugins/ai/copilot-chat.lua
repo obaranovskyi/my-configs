@@ -74,6 +74,25 @@ return {
 			}))
 		end, { silent = true })
 
+		vim.keymap.set({ "n" }, "<leader>cx", function()
+			chat.toggle()
+			local article_prompt = [[
+      I have one blog, and I'm writing a new article.
+      I need you to answer my question in a way that I can use it within my article.
+      It shouldn't be copied from somewhere and shouldn't violate someone's rights.
+      It should be new content that can be used in my article.
+      My question is:
+      ]]
+			local lines = {}
+			for line in article_prompt:gmatch("([^\n]*)\n?") do
+				table.insert(lines, line)
+			end
+
+			local row, col = unpack(vim.api.nvim_win_get_cursor(0))
+			vim.api.nvim_buf_set_text(0, row - 1, col, row - 1, col, lines)
+			vim.cmd("startinsert")
+		end)
+
 		setKeymapWithPrompt({ "v" }, "<leader>ca", "Explain how it works.")
 
 		setKeymapWithPrompt(

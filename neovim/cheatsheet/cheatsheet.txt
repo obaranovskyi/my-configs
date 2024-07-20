@@ -341,6 +341,7 @@
 [Copilot (Chat)] [EN] Suggest synonyms for the highlighted word                                                       | <leader>cs [VISUAL_MODE]
 [Copilot (Chat)] [EN] Provide a dialogue on [specific topic]                                                          | <leader>cd [VISUAL_MODE]
 [Copilot (Chat)] [EN] Provide a sentence improvement                                                                  | <leader>ci [VISUAL_MODE]
+[Copilot (Chat)] [Blog] Blog question                                                                                 | <leader>cx [NORMAL_MODE]
 
 ## cheatsheet @ChatGPT
 [ChatGPT] Open chat                                                                                                   | <leader>cg
