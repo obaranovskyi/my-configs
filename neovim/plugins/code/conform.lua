@@ -16,6 +16,12 @@ return {
 				markdown = { "prettierd" },
 			},
 
+			formatters = {
+				typescriptreact = {
+					inherit = true, -- if there is a .prettierrc.json in the root the rules in that file will have higher priority
+				},
+			},
+
 			-- Auto format
 			-- VSCode uses prettier 2.8.8 version
 			-- To install it using mason:

@@ -20,42 +20,41 @@ local group = vim.api.nvim_create_augroup("Markdown Snippets", { clear = true })
 local file_pattern = "*.md"
 
 local blVariables = s(
-  "blVariables",
-  t({
-    "<script id=\"markdown-variables\">",
-    "    window.currMarkdown = {",
-    "        tableOfContents: [",
-    "        ]",
-    "    }",
-    "</script>"
-  })
+	"blVariables",
+	t({
+		'<script id="markdown-variables">',
+		"    window.currMarkdown = {",
+		"        tableOfContents: [",
+		"        ]",
+		"    }",
+		"</script>",
+	})
 )
 table.insert(snippets, blVariables)
 
 local blHeader = s(
-  "blHeader",
-  fmt(
-    [[
+	"blHeader",
+	fmt(
+		[[
                   {{ html: '{content}', href: '{href}' }},
       <h{header} id="{href}" class="navigation-link">
         {content}
       </h{header}>
     ]],
-    {
-      header = i(1, "Header"),
-      content = i(2, "Enter content..."),
-      href = i(3, "Enter href/id...")
-    },
-    { repeat_duplicates = true }
-  )
+		{
+			header = i(1, "Header"),
+			content = i(2, "Enter content..."),
+			href = i(3, "Enter href/id..."),
+		},
+		{ repeat_duplicates = true }
+	)
 )
 table.insert(snippets, blHeader)
 
-
 local blTocObj = s(
-  "blTocObj",
-  fmt(
-    [[
+	"blTocObj",
+	fmt(
+		[[
                   {{ 
                     html: '', 
                     href: '' ,
@@ -63,16 +62,16 @@ local blTocObj = s(
                     ]
                   }},
     ]],
-    {},
-    { repeat_duplicates = true }
-  )
+		{},
+		{ repeat_duplicates = true }
+	)
 )
 table.insert(snippets, blTocObj)
 
 local blWarning = s(
-  "blWarning",
-  fmt(
-    [[
+	"blWarning",
+	fmt(
+		[[
       <div class="warning">
           <div class="warning-image">
               <img src="../../assets/images/warning.svg" alt="">
@@ -82,18 +81,17 @@ local blWarning = s(
           </div>
       </div>
     ]],
-    {
-      text = i(1, "Enter text...")
-    }
-  )
+		{
+			text = i(1, "Enter text..."),
+		}
+	)
 )
 table.insert(snippets, blWarning)
 
-
 local blNote = s(
-  "blNote",
-  fmt(
-    [[
+	"blNote",
+	fmt(
+		[[
       <div class="note">
           <div class="note-image">
               <img src="../../assets/images/books.svg" alt="">
@@ -103,86 +101,74 @@ local blNote = s(
           </div>
       </div>
     ]],
-    {
-      text = i(1, "Enter text...")
-    }
-  )
+		{
+			text = i(1, "Enter text..."),
+		}
+	)
 )
 table.insert(snippets, blNote)
 
 local blImage = s(
-  "blImage",
-  fmt(
-    [[
+	"blImage",
+	fmt(
+		[[
       <p>
         <img class="dark" src="./blog-markdowns/{image}" alt="">
       </p>
     ]],
-    { image = i(1, "Enter images path ...")}
-  )
+		{ image = i(1, "Enter images path ...") }
+	)
 )
 table.insert(snippets, blImage)
 
 local blImageLightBorder = s(
-  "blImageLightBorder",
-  fmt(
-    [[
+	"blImageLightBorder",
+	fmt(
+		[[
       <p>
         <img class="dark light-border" src="./blog-markdowns/{image}" alt="">
       </p>
     ]],
-    { image = i(1, "Enter images path ...")}
-  )
+		{ image = i(1, "Enter images path ...") }
+	)
 )
 table.insert(snippets, blImageLightBorder)
 
 local blLink = s(
-  "blLink",
-  fmt(
-    '<a href="{url}" target="_blank">{text}</a>',
-    {
-      text = i(1, "Text"),
-      url = i(2, "Url")
-    }
-  )
+	"blLink",
+	fmt('<a href="{url}" target="_blank">{text}</a>', {
+		text = i(1, "Text"),
+		url = i(2, "Url"),
+	})
 )
 table.insert(snippets, blLink)
 
-local blSplit = s(
-  "blSplit",
-  fmt(
-    '<div class="split"></div>',
-  {})
-)
+local blSplit = s("blSplit", fmt('<div class="split"></div>', {}))
 table.insert(snippets, blSplit)
 
-local blSplitNoHeight = s(
-  "blSplitNoHeight",
-  fmt(
-    '<div class="split no-height"></div>',
-  {})
-)
+local blSplitNoHeight = s("blSplitNoHeight", fmt('<div class="split no-height"></div>', {}))
 table.insert(snippets, blSplitNoHeight)
 
 local mCode = s(
-  "mCode",
-  fmt(
-  [[
+	"mCode",
+	fmt(
+		[[
   ```{language}
   {code}
   ```
   ]],
-  {
-    language = i(1, "Language"),
-    code = i(2, "Code")
-  })
+		{
+			language = i(1, "Language"),
+			code = i(2, "Code"),
+		}
+	)
 )
 table.insert(snippets, mCode)
 
-
 local blNoNumbers = s(
-  "blNoNumbers",
-  fmt([[
+	"blNoNumbers",
+	fmt(
+		[[
     <div class="bl-no-line-numbers">
 
     ```
@@ -190,85 +176,86 @@ local blNoNumbers = s(
     ```
 
     </div>
-  ]], {})
+  ]],
+		{}
+	)
 )
 table.insert(snippets, blNoNumbers)
-
 
 -- INFO: To trigger this snippet
 -- 1. Select header(text)
 -- 2. Click `Tab`
 -- 3. You'll get into INSERT MODE, enter s
 -- 4. Then you'll see the suggestion, select it, and lick `Enter`
-local blHeaderSelection = s("blHeaderSelection", f(function(_, snip)
-    local function capitalizeWords(inputString)
-        return inputString:gsub("(%a)([%w_']*)", function(first, rest)
-            return first:upper() .. (rest or "")
-        end):gsub("(%s+)(%a)([%w_']*)", function(space, first, rest)
-            return space .. first:upper() .. (rest or "")
-        end)
-    end
+local blHeaderSelection = s(
+	"blHeaderSelection",
+	f(function(_, snip)
+		local function capitalizeWords(inputString)
+			return inputString
+				:gsub("(%a)([%w_']*)", function(first, rest)
+					return first:upper() .. (rest or "")
+				end)
+				:gsub("(%s+)(%a)([%w_']*)", function(space, first, rest)
+					return space .. first:upper() .. (rest or "")
+				end)
+		end
 
-    local function count(base, pattern)
-        return select(2, string.gsub(base, pattern, ""))
-    end
+		local function count(base, pattern)
+			return select(2, string.gsub(base, pattern, ""))
+		end
 
-    local function trim(str)
-       return (str:gsub("^%s*(.-)%s*$", "%1"))
-    end
+		local function trim(str)
+			return (str:gsub("^%s*(.-)%s*$", "%1"))
+		end
 
-    local function replaceBackticksWithTags(inputString, tag)
-        local resultString = string.gsub(inputString, "`(.-)`", "<" .. tag .. ">%1</" .. tag .. ">")
-        return resultString
-    end
+		local function replaceBackticksWithTags(inputString, tag)
+			local resultString = string.gsub(inputString, "`(.-)`", "<" .. tag .. ">%1</" .. tag .. ">")
+			return resultString
+		end
 
-    local function removeCharacters(source, charactersToRemove)
-        local pattern = "[" .. charactersToRemove:gsub(".", "%%%0") .. "]"
-        local resultString = string.gsub(source, pattern, "")
-        return resultString
-    end
+		local function removeCharacters(source, charactersToRemove)
+			local pattern = "[" .. charactersToRemove:gsub(".", "%%%0") .. "]"
+			local resultString = string.gsub(source, pattern, "")
+			return resultString
+		end
 
-    local function escapeHtml(inputString)
-        local htmlEntities = {
-            ["<"] = "&lt;",
-            [">"] = "&gt;"
-            -- Add more entities as needed
-        }
+		local function escapeHtml(inputString)
+			local htmlEntities = {
+				["<"] = "&lt;",
+				[">"] = "&gt;",
+				-- Add more entities as needed
+			}
 
-        local escapedString = inputString:gsub("[<>]", function(match)
-            return htmlEntities[match]
-        end)
+			local escapedString = inputString:gsub("[<>]", function(match)
+				return htmlEntities[match]
+			end)
 
-        return escapedString
-    end
+			return escapedString
+		end
 
+		local res, env = {}, snip.env
+		local text = table.concat(env.LS_SELECT_RAW, "")
+		local headerType = count(text, "#")
 
-    local res, env = {}, snip.env
-    local text = table.concat(env.LS_SELECT_RAW, "")
-    local headerType = count(text, '#')
+		text = trim(text:gsub("%#", ""))
 
-    text = trim(text:gsub("%#", ""))
+		local id = removeCharacters(text, "`")
+		id = capitalizeWords(id)
 
-    local id = removeCharacters(text, "`")
-    id = capitalizeWords(id)
+		id = removeCharacters(id, "!\"#$%&'()*+,-.—/:;<=>?@[\\]^_`{|}~ ")
 
-    id = removeCharacters(id, "!\"#$%&'()*+,-.—/:;<=>?@[\\]^_`{|}~ ")
+		text = escapeHtml(text)
+		text = replaceBackticksWithTags(text, "code")
 
-    text = escapeHtml(text)
-    text = replaceBackticksWithTags(text, 'code')
+		table.insert(res, '          { "html": "' .. text .. '", "href": "' .. id .. '" },')
+		table.insert(res, "<h" .. headerType .. ' id="' .. id .. '" class="navigation-link">')
+		table.insert(res, "  " .. text)
+		table.insert(res, "</h" .. headerType .. ">")
+		table.insert(res, "")
 
-    table.insert(res, "          { html: '" .. text .. "', href: '" .. id .. "' },")
-    table.insert(res, '<h' .. headerType .. ' id="' .. id .. '" class="navigation-link">')
-    table.insert(res, '  ' .. text)
-    table.insert(res, '</h' .. headerType .. '>')
-    table.insert(res, '')
-
-    return res
-  end, {}
-  )
+		return res
+	end, {})
 )
 table.insert(snippets, blHeaderSelection)
-
-
 
 return snippets, autosnippets

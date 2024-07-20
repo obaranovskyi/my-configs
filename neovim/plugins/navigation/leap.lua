@@ -9,8 +9,7 @@ return {
 				-- jump through all the windows
 				target_windows = require("leap.user").get_focusable_windows(),
 				opts = {
-					-- Don't jump to the first match
-					safe_labels = {},
+					safe_labels = {}, -- Don't jump to the first match
 				},
 			})
 		end)
@@ -18,7 +17,7 @@ return {
 		vim.api.nvim_create_autocmd("ColorScheme", {
 			callback = function()
 				vim.api.nvim_set_hl(0, "LeapBackdrop", { link = "Comment" })
-				vim.api.nvim_set_hl(0, "LeapLabelPrimary", {
+				vim.api.nvim_set_hl(0, "LeapLabel", {
 					bg = "gold",
 					fg = "black",
 					bold = false,
