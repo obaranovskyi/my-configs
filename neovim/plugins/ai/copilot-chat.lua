@@ -74,10 +74,10 @@ return {
 			}))
 		end, { silent = true })
 
-		vim.keymap.set({ "n" }, "<leader>cx", function()
+		vim.keymap.set({ "n", "v" }, "<leader>cx", function()
 			chat.toggle()
 			local article_prompt = [[
-      I have one blog, and I'm writing a new article.
+      I have my own blog, and I'm writing a new article.
       I need you to answer my question in a way that I can use it within my article.
       It shouldn't be copied from somewhere and shouldn't violate someone's rights.
       It should be new content that can be used in my article.

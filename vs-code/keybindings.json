@@ -57,7 +57,10 @@
   {
     "key": "ctrl+g",
     "command": "github.copilot.ghpr.applySuggestion"
-
+  },
+  {
+    "key": "shift+k",
+    "command": "editor.action.showHover"
   },
   {
     "key": "ctrl+j",
@@ -73,18 +76,23 @@
     "when": "inQuickOpen"
   },
   {
-      "key": "ctrl+k",
-      "command": "workbench.action.quickOpenNavigatePrevious",
-      "when": "inQuickOpen"
-  },
-  {
-      "key": "ctrl+shift+j",
-      "command": "workbench.action.terminal.focus",
-  },
-  {
     "key": "ctrl+k",
+    "command": "workbench.action.quickOpenNavigatePrevious",
+    "when": "inQuickOpen"
+  },
+  {
+    "key": "ctrl+shift+j",
+    "command": "workbench.action.terminal.focus"
+  },
+  {
+    "key": "ctrl+shift+k",
     "command": "workbench.action.focusActiveEditorGroup",
     "when": "terminalFocus"
+  },
+  {
+    "key": "alt+backspace",
+    "command": "deleteWordLeft",
+    "when": "textInputFocus"
   },
   // tree actions
   {
@@ -98,8 +106,18 @@
     "when": "explorerViewletFocus && !inputFocus"
   },
   {
+    "key": "enter",
+    "command": "filesExplorer.openFilePreserveFocus",
+    "when": "explorerViewletFocus"
+  },
+  {
     "key": "r",
     "command": "renameFile",
     "when": "explorerViewletFocus && !inputFocus"
+  },
+  {
+    "key": "space e",
+    "command": "workbench.action.quickOpen",
+    "when": "!editorTextFocus && explorerViewletFocus && !inputFocus"
   }
 ]
