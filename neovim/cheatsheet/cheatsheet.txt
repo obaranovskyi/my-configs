@@ -14,6 +14,20 @@
 ## cheatsheet @Conform
 [@Conform] format code                                                                                                | <leader>fd 
 
+## cheatsheet @Oil
+[@Oil] Open oil                                                                                                      | <leader>oo
+[@Oil] Help                                                                                                          | g?, ?
+[@Oil] Select                                                                                                        | <CR>
+[@Oil] Open the entry in a vertiacal split                                                                           | <C-s>
+[@Oil] Open the entry in a horizontal split                                                                          | <C-h>
+[@Oil] Open the entry in a new tab                                                                                   | <C-t>
+[@Oil] Toggle hidden                                                                                                 | g., .
+[@Oil] Preview                                                                                                       | <C-p>
+[@Oil] Close                                                                                                         | <C-c>, q
+[@Oil] Refresh                                                                                                       | <C-l>
+[@Oil] Go folder up                                                                                                  | <S-u>, -
+[@Oil] Open current working directory                                                                                | _
+
 ## cheatsheet @NvimTree
 [NvimTree] Open source tree explorer                                                                                  | <C-n>
 [NvimTree] Add new file                                                                                               | a
@@ -62,7 +76,7 @@
 [Telescope/Window] Send to quickfix list                                                                              | <C-a>
 [Telescope/Window] Select in the window                                                                               | <Tab>
 [Telescope/Diff] Compare current file with                                                                            | <Leader>sc
-[Telescope/Diff] Compare two files                                                                                    | <Leader>sC
+[Telescope/Diff] Compare two files                                                                                    | <Leader>ss
 
 ## cheatsheet @Search/Replace
 [Search/Reaplce] Replace word under the cursor with confirmation (W object)                                           | <Leader>F [NORMAL_MODE]
