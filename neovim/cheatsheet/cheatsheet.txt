@@ -26,7 +26,7 @@
 [@Oil] Close                                                                                                         | <C-c>, q
 [@Oil] Refresh                                                                                                       | <C-l>
 [@Oil] Go folder up                                                                                                  | <S-u>, -
-[@Oil] Open current working directory                                                                                | _
+[@Oil] Change current working directory to the current one                                                           | ~
 
 ## cheatsheet @NvimTree
 [NvimTree] Open source tree explorer                                                                                  | <C-n>
