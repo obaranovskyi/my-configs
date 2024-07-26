@@ -126,7 +126,7 @@ return {
 		-- Show with particular theme
 		--[[ keymap("n", "<leader>g", ":Telescope live_grep theme=dropdown<CR>", opts) ]]
 		keymap("n", "<leader>ff", ":Telescope live_grep theme=ivy<CR>", opts)
-		keymap("n", "<leader>fj", ":Telescope jumplist<CR>", opts)
+		-- keymap("n", "<leader>fj", ":Telescope jumplist<CR>", opts)
 
 		-- INFO: grep_string() fn helps to fin
 		-- INFO: Now using vim-grepper for this goal
