@@ -24,10 +24,15 @@ return {
 					toggle_or_open = "<CR>",
 				},
 			},
+			floaterm = {
+				width = 0.9,
+				height = 0.8,
+			},
 		})
 
 		vim.keymap.set("n", "<leader>fw", ":Lspsaga outline<CR>", { noremap = true, silent = true })
 		vim.keymap.set({ "n", "v" }, "<leader>tt", ":Lspsaga term_toggle<CR>", { noremap = true, silent = true })
+		vim.keymap.set({ "n", "v" }, "<leader>fj", ":Lspsaga term_toggle ranger<CR>", { noremap = true, silent = true })
 		vim.keymap.set("n", "<leader>fa", ":Lspsaga finder<CR>", { noremap = true, silent = true })
 		vim.keymap.set({ "n", "v" }, "<leader>fg", ":Lspsaga code_action<CR>", { noremap = true, silent = true })
 		vim.keymap.set({ "n", "v" }, "<leader>fi", ":Lspsaga peek_definition<CR>", { noremap = true, silent = true })

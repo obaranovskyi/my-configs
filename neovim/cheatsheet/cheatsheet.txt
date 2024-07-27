@@ -240,6 +240,8 @@
 [Lspsaga] Find usages                                                                                                 |  <leader>fa
 [Lspsaga] Peek definition                                                                                             |  <leader>fi [NORMAL_MODE], [VISUAL_MODE]
 [Lspsaga] Open terminal window                                                                                        |  <leader>tt [NORMAL_MODE], [VISUAL_MODE]
+[Lspsaga] Open terminal window                                                                                        |  <leader>tt [NORMAL_MODE], [VISUAL_MODE]
+[Lspsaga] Open terminal window and run `ranger` app                                                                   |  <leader>fj [NORMAL_MODE], [VISUAL_MODE]
 
 ## cheatsheet @Registers
 [Registers] Show registers a, s, d, f, g                                                                              | <Leader>re
