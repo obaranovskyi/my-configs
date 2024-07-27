@@ -19,6 +19,8 @@ return {
 				"sagaoutline",
 				"copilot-chat",
 				"markdown", -- this is needed to disable navigation in chatgpt markdown content
+				"oil",
+				"dashboard",
 			},
 		})
 	end,
