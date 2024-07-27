@@ -6,7 +6,7 @@ return {
 		oil.setup({
 			keymaps = {
 				["?"] = "actions.show_help",
-				["."] = "actions.toggle_hidden",
+				["H"] = "actions.toggle_hidden",
 				["q"] = "actions.close",
 				["<S-u>"] = "actions.parent",
 			},
@@ -15,7 +15,7 @@ return {
 		-- NOTE: You can create the files like this
 		-- my-component.component.{ts,html,scss}
 
-		vim.keymap.set("n", "<leader>oo", ":Oil --float<CR>", { desc = "Open 'oil' in current directory" })
+		vim.keymap.set("n", "<leader>o", ":Oil --float<CR>", { desc = "Open 'oil' in current directory" })
 
 		-- ["g?"] = "actions.show_help",
 		-- ["<CR>"] = "actions.select",

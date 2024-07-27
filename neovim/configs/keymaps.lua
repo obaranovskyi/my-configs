@@ -232,4 +232,4 @@ keymap("i", "<M-BS>", "<C-w>", opts)
 -- ------------------------------------------------
 -- AI related mappings
 -- ------------------------------------------------
-keymap("n", "<leader>op", ":e ~/my-configs/prompts/index.md<CR>", opts)
+keymap("n", "<leader>cp", ":e ~/my-configs/prompts/index.md<CR>", opts)

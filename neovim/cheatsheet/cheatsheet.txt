@@ -21,7 +21,7 @@
 [@Oil] Open the entry in a vertiacal split                                                                           | <C-s>
 [@Oil] Open the entry in a horizontal split                                                                          | <C-h>
 [@Oil] Open the entry in a new tab                                                                                   | <C-t>
-[@Oil] Toggle hidden                                                                                                 | g., .
+[@Oil] Toggle hidden                                                                                                 | g., H
 [@Oil] Preview                                                                                                       | <C-p>
 [@Oil] Close                                                                                                         | <C-c>, q
 [@Oil] Refresh                                                                                                       | <C-l>
@@ -365,4 +365,4 @@
 [ChatGPT] Navigate between the windows                                                                                | <Tab>
 
 ## cheatsheet @AI
-[AI] Show prewritten prompts                                                                                         | <leader>op [NORMAL_MODE] 
+[AI] Show prewritten prompts                                                                                         | <leader>cp [NORMAL_MODE] 
