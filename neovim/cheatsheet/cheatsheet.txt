@@ -290,6 +290,7 @@
 [Git(Gitsigns)] Blame                                                                                                 | <leader>gb
 [Git(Diffview) Show changes per file                                                                                  | <leader>gd
 [Git(Diffview) Close Diffview mode                                                                                    | <leader>ge
+[Git(Diffview) Show git history                                                                                       | <leader>gH
 [Git(Diffview) Show file history                                                                                      | <leader>gh
 [Git(Diffview) Show change history of the selected source                                                             | <leader>gh [VISUAL_MODE]
 [Git(Diffview) (treeview) Discard change                                                                              | x
