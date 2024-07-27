@@ -18,7 +18,7 @@
 [@Oil] Open oil                                                                                                      | <leader>oo
 [@Oil] Help                                                                                                          | g?, ?
 [@Oil] Select                                                                                                        | <CR>
-[@Oil] Open the entry in a vertiacal split                                                                           | <C-s>
+[@Oil] Open the entry in a vertical split                                                                            | <C-s>
 [@Oil] Open the entry in a horizontal split                                                                          | <C-h>
 [@Oil] Open the entry in a new tab                                                                                   | <C-t>
 [@Oil] Toggle hidden                                                                                                 | g., H
