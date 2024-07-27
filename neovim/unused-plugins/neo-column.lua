@@ -8,7 +8,7 @@ return {
 			NeoColumn = "120",
 			always_on = true,
 			custom_NeoColumn = {},
-			excluded_ft = {},
+			excluded_ft = { "text", "markdown", "dashboard" },
 		})
 	end,
 }

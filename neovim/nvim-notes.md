@@ -1,7 +1,7 @@
 ## Mappings
 
-
 ### Autocmd example
+
 ```lua
 local opts = { noremap = true, silent = true }
 local keymap = vim.api.nvim_set_keymap
@@ -41,6 +41,7 @@ vim.api.nvim_create_autocmd("BufWinEnter", {
 autocmd - https://www.youtube.com/watch?v=HR1dKKrOmDs
 
 ### Keymap
+
 ```lua
 local opts = { noremap = true, silent = true }
 local opt_nr = { noremap = true }
@@ -56,6 +57,7 @@ vim.keymap.set({"n","x"}, "p", "<Plug>(YankyPutAfter)")
 ```
 
 ### Spectre plugin regex examples
+
 ```
 SEARCH
 \[([FB]{1}E)\]
@@ -72,4 +74,10 @@ planning.tasks.md
 │  [is FE][Finance] Principal balances grid
 │  [is BE][Finance] Principal balances grid data
 └──────────────────────────────────────────────────────
+```
+
+# Print filetype on buffer change
+
+```lua
+vim.api.nvim_command("autocmd FileType * lua print(vim.bo.filetype)")
 ```
