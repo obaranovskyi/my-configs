@@ -923,5 +923,10 @@
         "command": "uname -p",
         "description": "Print processor/chip/cpu architecture",
         "id": 186
+    },
+    {
+        "command": "pip install cmdcheatsheet --break-system-packages",
+        "description": "Install package globally",
+        "id": 187
     }
 ]

@@ -335,7 +335,7 @@ return {
 
 		local opts = { noremap = true, silent = true }
 		-- local keymap = vim.api.nvim_set_keymap
-		vim.api.nvim_set_keymap("n", "<leader>o", ":NvimTreeToggle<CR>", opts)
+		-- vim.api.nvim_set_keymap("n", "<leader>n", ":NvimTreeToggle<CR>", opts)
 
 		local config_status_ok, nvim_tree_config = pcall(require, "nvim-tree.config")
 		if not config_status_ok then
