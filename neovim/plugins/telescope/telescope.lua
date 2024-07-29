@@ -45,6 +45,13 @@ return {
 						["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
 						["<C-l>"] = actions.complete_tag,
 						["<C-_>"] = actions.which_key, -- keys from pressing <C-/>
+						["<M-BS>"] = function()
+							vim.api.nvim_feedkeys(
+								vim.api.nvim_replace_termcodes("<C-o>ciw", true, true, true),
+								"n",
+								true
+							)
+						end,
 					},
 
 					n = {
@@ -75,7 +82,6 @@ return {
 
 						["<PageUp>"] = actions.results_scrolling_up,
 						["<PageDown>"] = actions.results_scrolling_down,
-
 						["?"] = actions.which_key,
 					},
 				},

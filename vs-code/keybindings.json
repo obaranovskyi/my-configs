@@ -94,6 +94,10 @@
     "command": "deleteWordLeft",
     "when": "textInputFocus"
   },
+  {
+    "key": "ctrl+shift+l",
+    "command": "editor.action.inlineSuggest.acceptNextWord"
+  },
   // tree actions
   {
     "key": "a",
