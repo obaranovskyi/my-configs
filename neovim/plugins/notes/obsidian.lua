@@ -29,9 +29,11 @@ return {
 					name = "work-notes",
 					path = "~/my-notes/vault/work",
 				},
+				-- INFO: This is still under construction
+				-- I'm still thinking whether to migrate to obsidian
 				-- {
-				-- 	name = "work",
-				-- 	path = "~/vaults/work",
+				-- 	name = "dev-notes",
+				-- 	path = "~/obaranovskyi/repositories/github/my-notes",
 				-- },
 			},
 		})
@@ -40,5 +42,6 @@ return {
 		-- After configuring Obsidian check if the plugin that lets you jump to another markdown file is needed
 		vim.keymap.set({ "n", "v" }, "<leader>no", ":ObsidianSearch<CR>", { noremap = true, silent = true })
 		vim.keymap.set({ "n", "v" }, "<leader>nn", ":ObsidianNew<CR>", { noremap = true, silent = true })
+		vim.keymap.set({ "n", "v" }, "<leader>nw", ":ObsidianWorkspace<CR>", { noremap = true, silent = true })
 	end,
 }
