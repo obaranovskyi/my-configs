@@ -19,17 +19,22 @@ return {
 					name = "work-notes",
 					path = "~/my-notes/vault/work",
 				},
-				-- INFO: This is still under construction
-				-- I'm still thinking whether to migrate to obsidian
+				-- INFO: I will migrate to obsidian
+				-- But I need to configure everything first, before going to my real notes
 				-- {
 				-- 	name = "dev-notes",
 				-- 	path = "~/obaranovskyi/repositories/github/my-notes",
 				-- },
 			},
+			-- No need in `wiki` links
+			preferred_link_style = "markdown",
+			-- No need in header props
+			disable_frontmatter = true,
 		})
 
 		vim.keymap.set({ "n", "v" }, "<leader>no", ":ObsidianSearch<CR>", { noremap = true, silent = true })
 		vim.keymap.set({ "n", "v" }, "<leader>nn", ":ObsidianNew<CR>", { noremap = true, silent = true })
 		vim.keymap.set({ "n", "v" }, "<leader>nw", ":ObsidianWorkspace<CR>", { noremap = true, silent = true })
+		vim.keymap.set({ "v" }, "<leader>nl", ":ObsidianLinkNew ", { noremap = true, silent = true })
 	end,
 }
