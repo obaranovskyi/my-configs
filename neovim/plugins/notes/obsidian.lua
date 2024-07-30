@@ -21,10 +21,10 @@ return {
 				},
 				-- INFO: I will migrate to obsidian
 				-- But I need to configure everything first, before going to my real notes
-				-- {
-				-- 	name = "dev-notes",
-				-- 	path = "~/obaranovskyi/repositories/github/my-notes",
-				-- },
+				{
+					name = "dev-notes",
+					path = "~/obaranovskyi/repositories/github/my-notes",
+				},
 			},
 			-- No need in `wiki` links
 			preferred_link_style = "markdown",

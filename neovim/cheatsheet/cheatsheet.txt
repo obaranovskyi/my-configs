@@ -1,369 +1,369 @@
 # cheatsheet @Cheatsheet        
-[Cheatsheet] Copy cheatsheet from the local repository                                                                | <Leader>>
-[Cheatsheet] Show cheatsheet list                                                                                     | <Leader>?
+[Cheatsheet] Copy cheatsheet from the local repository                      | <Leader>>
+[Cheatsheet] Show cheatsheet list                                           | <Leader>?
 
 ## cheatsheet @Spectre
-[@Spectre] Toggle spectre                                                                                             | <Leader>rr [INSERT_MODE], [VISUAL_MODE]
-[@Spectre] Open spectre with word config                                                                              | <Leader>rw
-[@Spectre] Search within the current file                                                                             | <Leader>rp
-[@Spectre] Change view                                                                                                | <leader>v
-[@Spectre] Replace all                                                                                                | <leader>R
-[@Spectre] Replace item with cursor on it                                                                             | <leader>rc
-[@Spectre] Remove from replace list                                                                                   | dd
+[@Spectre] Toggle spectre                                                   | <Leader>rr [INSERT_MODE], [VISUAL_MODE]
+[@Spectre] Open spectre with word config                                    | <Leader>rw
+[@Spectre] Search within the current file                                   | <Leader>rp
+[@Spectre] Change view                                                      | <leader>v
+[@Spectre] Replace all                                                      | <leader>R
+[@Spectre] Replace item with cursor on it                                   | <leader>rc
+[@Spectre] Remove from replace list                                         | dd
 
 ## cheatsheet @Conform
-[@Conform] format code                                                                                                | <leader>fd 
+[@Conform] format code                                                      | <leader>fd 
 
 ## cheatsheet @Oil
-[@Oil] Open oil                                                                                                      | <leader>oo
-[@Oil] Help                                                                                                          | g?, ?
-[@Oil] Select                                                                                                        | <CR>
-[@Oil] Open the entry in a vertical split                                                                            | <C-s>
-[@Oil] Open the entry in a horizontal split                                                                          | <C-h>
-[@Oil] Open the entry in a new tab                                                                                   | <C-t>
-[@Oil] Toggle hidden                                                                                                 | g., H
-[@Oil] Preview                                                                                                       | <C-p>
-[@Oil] Close                                                                                                         | <C-c>, q
-[@Oil] Refresh                                                                                                       | <C-l>
-[@Oil] Go folder up                                                                                                  | <S-u>, -
-[@Oil] Change current working directory to the current one                                                           | ~
+[@Oil] Open oil                                                             | <leader>oo
+[@Oil] Help                                                                 | g?, ?
+[@Oil] Select                                                               | <CR>
+[@Oil] Open the entry in a vertical split                                   | <C-s>
+[@Oil] Open the entry in a horizontal split                                 | <C-h>
+[@Oil] Open the entry in a new tab                                          | <C-t>
+[@Oil] Toggle hidden                                                        | g., H
+[@Oil] Preview                                                              | <C-p>
+[@Oil] Close                                                                | <C-c>, q
+[@Oil] Refresh                                                              | <C-l>
+[@Oil] Go folder up                                                         | <S-u>, -
+[@Oil] Change current working directory to the current one                  | ~
 
 ## cheatsheet @NvimTree
-[NvimTree] Open source tree explorer                                                                                  | <C-n>
-[NvimTree] Add new file                                                                                               | a
-[NvimTree] Rename the file                                                                                            | r
-[NvimTree] Delete the file                                                                                            | d
-[NvimTree] Cut the file                                                                                               | x
-[NvimTree] Copy the file                                                                                              | c
-[NvimTree] Paste the file                                                                                             | p
-[NvimTree] Turn on live filter                                                                                        | f
-[NvimTree] Open in vertical window                                                                                    | v
-[NvimTree] Turn off live filter                                                                                       | F
-[NvimTree] Refresh the source tree                                                                                    | R
-[NvimTree] Collapse all                                                                                               | W
-[NvimTree] Open folder in the file explorer                                                                           | <Right>
-[NvimTree] Close folder in the file explorer                                                                          | <Left>
-[NvimTree] Toggle hidden files, folders and git ignore files                                                          | H
-[NvimTree] Change root folder up                                                                                      | U
-[NvimTree] Change root folder down                                                                                    | .
-[NvimTree] Add files form the terminal (cursor should on the folder node)                                             | N
-[NvimTree] Add directories from the terminal (cursor should on the folder node)                                       | M
+[NvimTree] Open source tree explorer                                        | <C-n>
+[NvimTree] Add new file                                                     | a
+[NvimTree] Rename the file                                                  | r
+[NvimTree] Delete the file                                                  | d
+[NvimTree] Cut the file                                                     | x
+[NvimTree] Copy the file                                                    | c
+[NvimTree] Paste the file                                                   | p
+[NvimTree] Turn on live filter                                              | f
+[NvimTree] Open in vertical window                                          | v
+[NvimTree] Turn off live filter                                             | F
+[NvimTree] Refresh the source tree                                          | R
+[NvimTree] Collapse all                                                     | W
+[NvimTree] Open folder in the file explorer                                 | <Right>
+[NvimTree] Close folder in the file explorer                                | <Left>
+[NvimTree] Toggle hidden files, folders and git ignore files                | H
+[NvimTree] Change root folder up                                            | U
+[NvimTree] Change root folder down                                          | .
+[NvimTree] Add files form the terminal (cursor should on the folder node)   | N
+[NvimTree] Add dirs from the terminal (cursor should on the folder node)    | M
 
 ## cheatsheet @Window
-[Window] Resize                                                                                                       | <Leader>a {h,j,k,l}
-[Window] Split horizontally                                                                                           | <Leader>- 
-[Window] Split vertically                                                                                             | <Leader>'
-[Window] Jump to the left                                                                                             | <C-h>
-[Window] Jump to the right                                                                                            | <C-l>
-[Window] Jump to the top                                                                                              | <C-k>
-[Window] Jump to the bottom                                                                                           | <C-j>
-[Window] Close window                                                                                                 | <Leader>q
-[Window] Close all windows                                                                                            | <Leader>cz
+[Window] Resize                                                             | <Leader>a {h,j,k,l}
+[Window] Split horizontally                                                 | <Leader>- 
+[Window] Split vertically                                                   | <Leader>'
+[Window] Jump to the left                                                   | <C-h>
+[Window] Jump to the right                                                  | <C-l>
+[Window] Jump to the top                                                    | <C-k>
+[Window] Jump to the bottom                                                 | <C-j>
+[Window] Close window                                                       | <Leader>q
+[Window] Close all windows                                                  | <Leader>cz
 
 ## cheatsheet @Filetype
-[Filetype] Set nginx file type                                                                                        | :filetype nginx
+[Filetype] Set nginx file type                                              | :filetype nginx
 
 ## cheatsheet @Telescope
-[Telescope] Find file without showing the file content                                                                | <Leader>e
-[Telescope] Find file                                                                                                 | <C-p>
-[Telescope] Find text                                                                                                 | <Leader>ff
-[Telescope] Find bookmarks                                                                                            | <Leader>fb
-[Telescope] Show ctags (methods, functions, classes etc)                                                              | <Leader>fe
-[Telescope] Open jump list                                                                                            | <Leader>fj
-[Telescope] Change colorscheme                                                                                        | <Leader>tc
-[Telescope] Open new file                                                                                             | <Leader>cn
-[Telescope/Window] Send selected to quickfix list (by tab)                                                            | <C-q>
-[Telescope/Window] Send to quickfix list                                                                              | <C-a>
-[Telescope/Window] Select in the window                                                                               | <Tab>
-[Telescope/Diff] Compare current file with                                                                            | <Leader>sc
-[Telescope/Diff] Compare two files                                                                                    | <Leader>ss
+[Telescope] Find file without showing the file content                      | <Leader>e
+[Telescope] Find file                                                       | <C-p>
+[Telescope] Find text                                                       | <Leader>ff
+[Telescope] Find bookmarks                                                  | <Leader>fb
+[Telescope] Show ctags (methods, functions, classes etc)                    | <Leader>fe
+[Telescope] Open jump list                                                  | <Leader>fj
+[Telescope] Change colorscheme                                              | <Leader>tc
+[Telescope] Open new file                                                   | <Leader>cn
+[Telescope/Window] Send selected to quickfix list (by tab)                  | <C-q>
+[Telescope/Window] Send to quickfix list                                    | <C-a>
+[Telescope/Window] Select in the window                                     | <Tab>
+[Telescope/Diff] Compare current file with                                  | <Leader>sc
+[Telescope/Diff] Compare two files                                          | <Leader>ss
 
 ## cheatsheet @Search/Replace
-[Search/Reaplce] Replace word under the cursor with confirmation (W object)                                           | <Leader>F [NORMAL_MODE]
-[Search/Reaplce] Replace word under the cursor without confirmation (W object)                                        | <Leader>T [NORMAL_MODE]
-[Search/Reaplce] Replace word under the cursor with confirmation (w object)                                           | <Leader>f [NORMAL_MODE]
-[Search/Reaplce] Replace word under the cursor without confirmation (w object)                                        | <Leader>t [NORMAL_MODE]
-[Search/Reaplce] Replace selected occurrence with confirmation                                                        | <Leader>f [VISUAL_MODE]
-[Search/Reaplce] Replace selected occurrence without confirmation                                                     | <Leader>t [VISUAL_MODE]
-[Search/Replace] Substitute motion (Subversive plugin alternative)                                                    | x
-[Search/Replace] Magic substitute                                                                                     | <Leader>/ [VISUAL_MODE],[NORMAL_MODE]
+[Search/Replace] Substitute motion (Subversive plugin alternative)          | x
+[Search/Replace] Magic substitute                                           | <Leader>/ [VISUAL_MODE],[NORMAL_MODE]
 
 ## cheatsheet @Buffers
-[Buffers] Close current buffer                                                                                        | gq
-[Buffers] Close all but this                                                                                          | go
-[Buffers] Open next buffer                                                                                            | <S-l>
-[Buffers] Open previous buffer                                                                                        | <S-h>
+[Buffers] Close current buffer                                              | gq
+[Buffers] Close all but this                                                | go
+[Buffers] Open next buffer                                                  | <S-l>
+[Buffers] Open previous buffer                                              | <S-h>
 
 ## cheatsheet @QuickfixList
-[QuickfixList] Open quickfix window                                                                                   | gx
-[QuickfixList] Close quickfix window                                                                                  | gX
-[QuickfixList] Open previous item                                                                                     | gw
-[QuickfixList] Open next item                                                                                         | ge
-[QuickfixList] Open the first item                                                                                    | gW
-[QuickfixList] Open the last item                                                                                     | gE
-[QuickfixList] Replace each line in the quickfix list                                                                 | gl
-[QuickfixList] Replace each line in the quickfix list with confirmation                                               | gL
-[QuickfixList] Switch to the older quickfix list search                                                               | :colder
-[QuickfixList] Switch to the newer quickfix list search                                                               | :cnewer
+[QuickfixList] Open quickfix window                                         | gx
+[QuickfixList] Close quickfix window                                        | gX
+[QuickfixList] Open previous item                                           | gw
+[QuickfixList] Open next item                                               | ge
+[QuickfixList] Open the first item                                          | gW
+[QuickfixList] Open the last item                                           | gE
+[QuickfixList] Replace each line in the quickfix list                       | gl
+[QuickfixList] Replace each line in the quickfix list with confirmation     | gL
+[QuickfixList] Switch to the older quickfix list search                     | :colder
+[QuickfixList] Switch to the newer quickfix list search                     | :cnewer
 
 # cheatsheet @VimGrepper
-[VimGrepper] Search and put the results into quickfix list                                                            | g;<motion> [NORMAL_MODE], [VISUAL_MODE]
-[VimGrepper] Type and search (results will be put on quickfix list(results will be put on quickfix list)              | gh<motion> [NORMAL_MODE], [VISUAL_MODE]
+[VimGrepper] Search and put the results into quickfix list                  | g;<motion> [NORMAL_MODE], [VISUAL_MODE]
+[VimGrepper] Type and search (results will be put on quickfix list)         | gh<motion> [NORMAL_MODE], [VISUAL_MODE]
 
 #cheatsheet @VimQf
-[VimQf] Remove line in quickfix list                                                                                  | gs [NORMAL_MODE], [VISUAL_MODE]
-[VimQf] Remove by criteria, value, or range                                                                           | :Reject <value|range(before Reject)|regex>
-[VimQf] Keep by criteria, value, or range                                                                             | :Reject <value|range(before Reject)|regex>
+[VimQf] Remove line in quickfix list                                        | gs [NORMAL_MODE], [VISUAL_MODE]
+[VimQf] Remove by criteria, value, or range                                 | :Reject <value|range(before Reject)|regex>
+[VimQf] Keep by criteria, value, or range                                   | :Reject <value|range(before Reject)|regex>
 
 ## cheatsheet @Comments
-[Comments] One line comment                                                                                           | gcc [NORMAL_MODE]
-[Comments] Multi line comment                                                                                         | gbc [NORMAL_MODE]
-[Comments] One line comment                                                                                           | gc [VISUAL_MODE]
-[Comments] Multi line comment                                                                                         | gb [VISUAL_MODE]
+[Comments] One line comment                                                 | gcc [NORMAL_MODE]
+[Comments] Multi line comment                                               | gbc [NORMAL_MODE]
+[Comments] One line comment                                                 | gc [VISUAL_MODE]
+[Comments] Multi line comment                                               | gb [VISUAL_MODE]
 
 ## cheatsheet @Emmet 
-[Emmet] Expand shortcut                                                                                               | j/
+[Emmet] Expand shortcut                                                     | j/
 
 ## cheatsheet @RelativeActions
-[RelativeActions] Delete line n(5) - 5 is relative number above the cursor                                            | <Leader>d[5 <Leader>d[5 3
-[RelativeActions] Delete line n(3) - 3 is relative number below the cursor                                            | <Leader>d]5 <Leader>d]5 7
-[RelativeActions] Copy line n(5) - 5 is relative number above the cursor                                              | <Leader>c[5 <Leader>c[5 3
-[RelativeActions] Copy line n(3) - 3 is relative number below the cursor                                              | <Leader>c]5 <Leader>c]5 3
-[RelativeActions] Move line n(5) - 5 is relative number above the cursor                                              | <Leader>m[5 <Leader>m[5 3
-[RelativeActions] Move line n(3) - 3 is relative number below the cursor                                              | <Leader>m]5 <Leader>m]5 3
+[RelativeActions] Delete line n(5) - 5 is relative number above the cursor  | <Leader>d[5 <Leader>d[5 3
+[RelativeActions] Delete line n(3) - 3 is relative number below the cursor  | <Leader>d]5 <Leader>d]5 7
+[RelativeActions] Copy line n(5) - 5 is relative number above the cursor    | <Leader>c[5 <Leader>c[5 3
+[RelativeActions] Copy line n(3) - 3 is relative number below the cursor    | <Leader>c]5 <Leader>c]5 3
+[RelativeActions] Move line n(5) - 5 is relative number above the cursor    | <Leader>m[5 <Leader>m[5 3
+[RelativeActions] Move line n(3) - 3 is relative number below the cursor    | <Leader>m]5 <Leader>m]5 3
 
 ## cheatsheet @Surround
-[Surround] Surround in VISUAL_MODE                                                                                    | S{surround value}
-[Surround] Surround in NORMAL_MODE                                                                                    | ys{motion}
-[Surround] Surround in INSERT_MODE                                                                                    | <CTRL-s> or <CTRL-g>s
-[Surround] Surround in INSERT_MODE, add a new line + surround + indent                                                | <CTRL-s><CTRL-s> or <CTRL-g>S
-[Surround] Surround remove white space around the word (custom - need to be on word)                                  | <leader>dw
+[Surround] Surround in VISUAL_MODE                                          | S{surround value}
+[Surround] Surround in NORMAL_MODE                                          | ys{motion}
+[Surround] Surround in INSERT_MODE                                          | <CTRL-s> or <CTRL-g>s
+[Surround] Surround in INSERT_MODE, add a new line + surround + indent      | <CTRL-s><CTRL-s> or <CTRL-g>S
+[Surround] Surround remove white space around the word (need to be on word) | <leader>dw
 
 ## cheatsheet @UndoTree
-[UndoTree] Open undo tree                                                                                             | <Leader>u
-[UndoTree] Move to the next state                                                                                     | <Leader>J
-[UndoTree] Move to the previous state                                                                                 | <Leader>K
+[UndoTree] Open undo tree                                                   | <Leader>u
+[UndoTree] Move to the next state                                           | <Leader>J
+[UndoTree] Move to the previous state                                       | <Leader>K
 
 ## cheatsheet @VisualMulti
-[VisualMulti] Change multiple occurrences                                                                             | <C-t><C-t>... c
+[VisualMulti] Change multiple occurrences                                   | <C-t><C-t>... c
 
 ## cheatsheet @Spelunker
-[Spelunker] Correct all words in the buffer                                                                           | ZL
-[Spelunker] Correct word under cursor                                                                                 | Zl
-[Spelunker] Correct all words in buffer (by inserting a correction)                                                   | ZC
-[Spelunker] Correct word under cursor (by inserting a correction)                                                     | Zc
-[Spelunker] Correct all words in buffer (by picking first item on suggestion list)                                    | Zf
-[Spelunker] Correct word under cursor (by picking first item on suggestion list)                                      | Zf
-[Spelunker] Add selected word to "correct" spelfile                                                                   | Zg
-[Spelunker] Remove selected word from "correct" spelfile                                                              | Zug
-[Spelunker] Add selected word to "misspelled" list                                                                    | Zw
-[Spelunker] Remove selected word from "misspelled" list                                                               | Zuw
-[Spelunker] Add selected word to "correct" spellfile                                                                  | ZG
-[Spelunker] Remove selected word from "correct" list                                                                  | ZUG
-[Spelunker] Add selected word to "misspelled" list                                                                    | ZW
-[Spelunker] Remove selected word from "misspelled" list                                                               | ZUW
-[Spelunker] Jump cursor to next misspelled words                                                                      | ZN
-[Spelunker] Jump cursor to previous misspelled words                                                                  | ZP
-[Spelunker] Toggle to enable or disable                                                                               | ZT
-[Spelunker] Toggle to enable or disable only the current buffer                                                       | Zt
+[Spelunker] Correct all words in the buffer                                 | ZL
+[Spelunker] Correct word under cursor                                       | Zl
+[Spelunker] Correct all words in buffer (by inserting a correction)         | ZC
+[Spelunker] Correct word under cursor (by inserting a correction)           | Zc
+[Spelunker] Correct all words in buffer (by picking first from suggestions) | Zf
+[Spelunker] Correct word under cursor (by picking first from suggestions)   | Zf
+[Spelunker] Add selected word to "correct" spelfile                         | Zg
+[Spelunker] Remove selected word from "correct" spelfile                    | Zug
+[Spelunker] Add selected word to "misspelled" list                          | Zw
+[Spelunker] Remove selected word from "misspelled" list                     | Zuw
+[Spelunker] Add selected word to "correct" spellfile                        | ZG
+[Spelunker] Remove selected word from "correct" list                        | ZUG
+[Spelunker] Add selected word to "misspelled" list                          | ZW
+[Spelunker] Remove selected word from "misspelled" list                     | ZUW
+[Spelunker] Jump cursor to next misspelled words                            | ZN
+[Spelunker] Jump cursor to previous misspelled words                        | ZP
+[Spelunker] Toggle to enable or disable                                     | ZT
+[Spelunker] Toggle to enable or disable only the current buffer             | Zt
 
 ## cheatsheet @Autocomplete
-[Autocomplete] Line Autocomplete                                                                                      | <C-x><C-l> [INSERT_MODE]
-[Autocomplete] File Autocomplete                                                                                      | <C-x><C-f> [INSERT_MODE]
-[Autocomplete] Put first suggestion                                                                                   | <C-n><C-n> [INSERT_MODE]
+[Autocomplete] Line Autocomplete                                            | <C-x><C-l> [INSERT_MODE]
+[Autocomplete] File Autocomplete                                            | <C-x><C-f> [INSERT_MODE]
+[Autocomplete] Put first suggestion                                         | <C-n><C-n> [INSERT_MODE]
 
 ## cheatsheet @CommandKeyMappings
-[CommandKeyMappings] Move cursor left                                                                                 | <C-h>
-[CommandKeyMappings] Move cursor right                                                                                | <C-l>
-[CommandKeyMappings] Move cursor to the beginning                                                                     | <C-a>
-[CommandKeyMappings] Move cursor to the end                                                                           | <C-e>
+[CommandKeyMappings] Move cursor left                                       | <C-h>
+[CommandKeyMappings] Move cursor right                                      | <C-l>
+[CommandKeyMappings] Move cursor to the beginning                           | <C-a>
+[CommandKeyMappings] Move cursor to the end                                 | <C-e>
 
 ## cheatsheet @Clipboard
-[Clipboard] Copy to clipboard                                                                                         | <Leader>y [NORMAL_MODE],[VISUAL_MODE]
-[Clipboard] Paste using clipboard                                                                                     | <Leader>p [NORMAL_MODE],[VISUAL_MODE]
+[Clipboard] Copy to clipboard                                               | <Leader>y [NORMAL_MODE],[VISUAL_MODE]
+[Clipboard] Paste using clipboard                                           | <Leader>p [NORMAL_MODE],[VISUAL_MODE]
 
 ## cheatsheet @KeyMappings
-[KeyMappings] Go to file                                                                                              | <Leader>;
-[KeyMappings] Quit the window                                                                                         | <Leader>q
-[KeyMappings] Save changes in all files                                                                               | <Leader>w
-[KeyMappings] Copy the line                                                                                           | Y
-[KeyMappings] Save changes in the insert mode                                                                         | jk [INSERT_MODE]
-[KeyMappings] Move on one character right in the insert mode                                                          | jl [INSERT_MODE]
-[KeyMappings] Move to the end of the line in the insert mode                                                          | jL [INSERT_MODE]
-[KeyMappings] Move on one character left in the insert mode                                                           | jh [INSERT_MODE]
-[KeyMappings] Move to the beginning of the line in the insert mode                                                    | jH [INSERT_MODE]
-[KeyMappings] Clean the whole line in the insert mode                                                                 | jj [INSERT_MODE]
-[KeyMappings] Remove one character from the right in the insert mode                                                  | jx [INSERT_MODE]
-[KeyMappings] Remove one character from the left in the insert mode                                                   | jd, <C-h> [INSERT_MODE]
-[KeyMappings] Go to the next line in the insert mode                                                                  | jn [INSERT_MODE]
-[KeyMappings] Go to the above line in the insert mode                                                                 | jy [INSERT_MODE]
-[KeyMappings] Go to the last line in the insert mode                                                                  | jG [INSERT_MODE]
-[KeyMappings] Go to the first line in the insert mode                                                                 | jG [INSERT_MODE]
-[KeyMappings] Search right on the current line in the insert mode                                                     | jf [INSERT_MODE]
-[KeyMappings] Search left on the current line in the insert mode                                                      | jF [INSERT_MODE]
-[KeyMappings] Move line on one tab right in the insert mode                                                           | j> [INSERT_MODE]
-[KeyMappings] Move line on one tab left in the insert mode                                                            | j> [INSERT_MODE]
-[KeyMappings] Upper case the current word                                                                             | jU [INSERT_MODE]
-[KeyMappings] Go to end of the line                                                                                   | <C-e> [INSERT_MODE]
-[KeyMappings] Go to beginning of the line                                                                             | <C-a> [INSERT_MODE]
-[KeyMappings] Go one word forward                                                                                     | <C-l> [INSERT_MODE]
-[KeyMappings] Go one word back                                                                                        | <C-h> [INSERT_MODE]
-[KeyMappings] Remove one character from the right side                                                                | <C-d> [INSERT_MODE]
-[KeyMappings] Insert copied word in INSERT_MODE                                                                       | j0 [INSERT_MODE]
-[KeyMappings] Insert copied from clipboard word in INSERT_MODE                                                        | j8 [INSERT_MODE]
-[KeyMappings] New line on instead of current character                                                                | <Leader><CR>
-[KeyMappings] Select all lines                                                                                        | ga
-[KeyMappings] Clear the search highlight                                                                              | <Leader><Esc>
-[KeyMappings] Move visually selected lines above                                                                      | K
-[KeyMappings] Move visually selected lines below                                                                      | J
-[KeyMappings] Toggle relative numbers                                                                                 | <Leader>fn
-[KeyMappings] Indent right                                                                                            | >>
-[KeyMappings] Indent left                                                                                             | <<
+[KeyMappings] Go to file                                                    | <Leader>;
+[KeyMappings] Quit the window                                               | <Leader>q
+[KeyMappings] Save changes in all files                                     | <Leader>w
+[KeyMappings] Copy the line                                                 | Y
+[KeyMappings] Save changes in the insert mode                               | jk [INSERT_MODE]
+[KeyMappings] Move on one character right in the insert mode                | jl [INSERT_MODE]
+[KeyMappings] Move to the end of the line in the insert mode                | jL [INSERT_MODE]
+[KeyMappings] Move on one character left in the insert mode                 | jh [INSERT_MODE]
+[KeyMappings] Move to the beginning of the line in the insert mode          | jH [INSERT_MODE]
+[KeyMappings] Clean the whole line in the insert mode                       | jj [INSERT_MODE]
+[KeyMappings] Remove one character from the right in the insert mode        | jx [INSERT_MODE]
+[KeyMappings] Remove one character from the left in the insert mode         | jd, <C-h> [INSERT_MODE]
+[KeyMappings] Go to the next line in the insert mode                        | jn [INSERT_MODE]
+[KeyMappings] Go to the above line in the insert mode                       | jy [INSERT_MODE]
+[KeyMappings] Go to the last line in the insert mode                        | jG [INSERT_MODE]
+[KeyMappings] Go to the first line in the insert mode                       | jG [INSERT_MODE]
+[KeyMappings] Search right on the current line in the insert mode           | jf [INSERT_MODE]
+[KeyMappings] Search left on the current line in the insert mode            | jF [INSERT_MODE]
+[KeyMappings] Move line on one tab right in the insert mode                 | j> [INSERT_MODE]
+[KeyMappings] Move line on one tab left in the insert mode                  | j> [INSERT_MODE]
+[KeyMappings] Upper case the current word                                   | jU [INSERT_MODE]
+[KeyMappings] Go to end of the line                                         | <C-e> [INSERT_MODE]
+[KeyMappings] Go to beginning of the line                                   | <C-a> [INSERT_MODE]
+[KeyMappings] Go one word forward                                           | <C-l> [INSERT_MODE]
+[KeyMappings] Go one word back                                              | <C-h> [INSERT_MODE]
+[KeyMappings] Remove one character from the right side                      | <C-d> [INSERT_MODE]
+[KeyMappings] Insert copied word in INSERT_MODE                             | j0 [INSERT_MODE]
+[KeyMappings] Insert copied from clipboard word in INSERT_MODE              | j8 [INSERT_MODE]
+[KeyMappings] New line on instead of current character                      | <Leader><CR>
+[KeyMappings] Select all lines                                              | ga
+[KeyMappings] Clear the search highlight                                    | <Leader><Esc>
+[KeyMappings] Move visually selected lines above                            | K
+[KeyMappings] Move visually selected lines below                            | J
+[KeyMappings] Toggle relative numbers                                       | <Leader>fn
+[KeyMappings] Indent right                                                  | >>
+[KeyMappings] Indent left                                                   | <<
 
 ## cheatsheet @LSP
-[LSP] Rename symbol                                                                                                   | <Leader>rn
-[LSP] Go to declaration                                                                                               | gD
-[LSP] Go to definition                                                                                                | gd
-[LSP] Show information                                                                                                | K
-[LSP] Go go implementation                                                                                            | gi
-[LSP] Signature help                                                                                                  | <C-e>
-[LSP] Show all references                                                                                             | gr
-[LSP] Show diagnostics (goto prev)                                                                                    | [d
-[LSP] Show line diagnostics                                                                                           | gl
-[LSP] Show diagnostics (goto next)                                                                                    | ]d
-[LSP] Run code action (imports, fixes, etc.)                                                                          | <Leader>R
-[LSP] Show suggestion window                                                                                          | <Leader>+Space+Space
+[LSP] Rename symbol                                                         | <Leader>rn
+[LSP] Go to declaration                                                     | gD
+[LSP] Go to definition                                                      | gd
+[LSP] Show information                                                      | K
+[LSP] Go go implementation                                                  | gi
+[LSP] Signature help                                                        | <C-e>
+[LSP] Show all references                                                   | gr
+[LSP] Show diagnostics (goto prev)                                          | [d
+[LSP] Show line diagnostics                                                 | gl
+[LSP] Show diagnostics (goto next)                                          | ]d
+[LSP] Run code action (imports, fixes, etc.)                                | <Leader>R
+[LSP] Show suggestion window                                                | <Leader>+Space+Space
 
 ## cheatsheet @Lspsaga
-[Lspsaga] Toggle outline                                                                                              |  <leader>fw
-[Lspsaga] Code action                                                                                                 |  <leader>fg [NORMAL_MODE], [VISUAL_MODE]
-[Lspsaga] Find usages                                                                                                 |  <leader>fa
-[Lspsaga] Peek definition                                                                                             |  <leader>fi [NORMAL_MODE], [VISUAL_MODE]
-[Lspsaga] Open terminal window                                                                                        |  <leader>tt [NORMAL_MODE], [VISUAL_MODE]
-[Lspsaga] Open terminal window                                                                                        |  <leader>tt [NORMAL_MODE], [VISUAL_MODE]
-[Lspsaga] Open terminal window and run `ranger` app                                                                   |  <leader>fj [NORMAL_MODE], [VISUAL_MODE]
+[Lspsaga] Toggle outline                                                    |  <leader>fw
+[Lspsaga] Code action                                                       |  <leader>fg [NORMAL_MODE], [VISUAL_MODE]
+[Lspsaga] Find usages                                                       |  <leader>fa
+[Lspsaga] Peek definition                                                   |  <leader>fi [NORMAL_MODE], [VISUAL_MODE]
+[Lspsaga] Open terminal window                                              |  <leader>tt [NORMAL_MODE], [VISUAL_MODE]
+[Lspsaga] Open terminal window                                              |  <leader>tt [NORMAL_MODE], [VISUAL_MODE]
+[Lspsaga] Open terminal window and run `ranger` app                         |  <leader>fj [NORMAL_MODE], [VISUAL_MODE]
 
 ## cheatsheet @Registers
-[Registers] Show registers a, s, d, f, g                                                                              | <Leader>re
-[Registers] Clear registers                                                                                           | <Leader>rd
+[Registers] Show registers a, s, d, f, g                                    | <Leader>re
+[Registers] Clear registers                                                 | <Leader>rd
 
 ## cheatsheet @Tabs
-[Tabs] New tab                                                                                                        | <leader>ic
-[Tabs] Next tab                                                                                                       | <leader>in
-[Tabs] Previous tab                                                                                                   | <leader>ip
-[Tabs] Close tab                                                                                                      | <leader>id
+[Tabs] New tab                                                              | <leader>ic
+[Tabs] Next tab                                                             | <leader>in
+[Tabs] Previous tab                                                         | <leader>ip
+[Tabs] Close tab                                                            | <leader>id
 
 ## cheatsheet @ExCommands
-[ExCommands] Do ex command without jumping around                                                                     | <Leader>ta
-[ExCommands] Do 'norm!' ex command without jumping around                                                             | <Leader>te
+[ExCommands] Do ex command without jumping around                           | <Leader>ta
+[ExCommands] Do 'norm!' ex command without jumping around                   | <Leader>te
 
 ## cheatsheet @Marks
-[Marks] Navigate through files (only a s d f g)                                                                       | <Leader>g'a[s,d,f,g]
-[Marks] Put global marks (only a s d f g)                                                                             | <Leader>ma[s,d,f,g]
+[Marks] Navigate through files (only a s d f g)                             | <Leader>g'a[s,d,f,g]
+[Marks] Put global marks (only a s d f g)                                   | <Leader>ma[s,d,f,g]
 
 ## cheatsheet @VimIndentObject
-[VimIndentObject] select all lines at the same indentation level                                                      | vii, dii, yii
-[VimIndentObject] select all lines at the same indentation level plus line above and below                            | vaI, daI, yaI
-[VimIndentObject] select all lines at the same indentation level plus line above                                      | vai, dai, yai
+[VimIndentObject] all lines at the same indentation level                   | vii, dii, yii
+[VimIndentObject] all lines at the same level + line above and below        | vaI, daI, yaI
+[VimIndentObject] all lines at the same indentation level plus line above   | vai, dai, yai
 
 ## cheatsheet @NvimDap(Debugger)
-[NvimDap(Debugger)] Run debugger with dapui (helper windows)                                                          | <leader>dd
-[NvimDap(Debugger)] Run debugger                                                                                      | <leader>dr   
-[NvimDap(Debugger)] Open dapui (helper windows)                                                                       | <leader>dt
-[NvimDap(Debugger)] Step into                                                                                         | <leader>di
-[NvimDap(Debugger)] Step over                                                                                         | <leader>dn
-[NvimDap(Debugger)] Step out                                                                                          | <leader>do
-[NvimDap(Debugger)] Toggle breakpoint                                                                                 | <leader>db
-[NvimDap(Debugger)] Set breakpoint                                                                                    | <leader>dB
-[NvimDap(Debugger)] Evaluate expression                                                                               | <leader>da
-[NvimDap(Debugger)] Evaluate expression in the visual mode                                                            | <leader>da
-[NvimDap(Debugger)] Re-run the debugger (Run last)                                                                    | <leader>dl
-[NvimDap(Debugger)] Toggle repl window                                                                                | <leader>ds
+[NvimDap(Debugger)] Run debugger with dapui (helper windows)                | <leader>dd
+[NvimDap(Debugger)] Run debugger                                            | <leader>dr   
+[NvimDap(Debugger)] Open dapui (helper windows)                             | <leader>dt
+[NvimDap(Debugger)] Step into                                               | <leader>di
+[NvimDap(Debugger)] Step over                                               | <leader>dn
+[NvimDap(Debugger)] Step out                                                | <leader>do
+[NvimDap(Debugger)] Toggle breakpoint                                       | <leader>db
+[NvimDap(Debugger)] Set breakpoint                                          | <leader>dB
+[NvimDap(Debugger)] Evaluate expression                                     | <leader>da
+[NvimDap(Debugger)] Evaluate expression in the visual mode                  | <leader>da
+[NvimDap(Debugger)] Re-run the debugger (Run last)                          | <leader>dl
+[NvimDap(Debugger)] Toggle repl window                                      | <leader>ds
 
 ## cheatsheet @System
-[System] Open config(init.lua) in the current window                                                                  | <leader>to
-[System] Source main configuration                                                                                    | <leader>ts
+[System] Open config(init.lua) in the current window                        | <leader>to
+[System] Source main configuration                                          | <leader>ts
 
 ## cheatsheet @Git
-[Git(NeoGit)] Show changes                                                                                            | <leader>gg
-[Git(Gitsigns)] Show difference                                                                                       | <leader>gs
-[Git(Gitsigns)] Blame                                                                                                 | <leader>gb
-[Git(Diffview) Show changes per file                                                                                  | <leader>gd
-[Git(Diffview) Close Diffview mode                                                                                    | <leader>ge
-[Git(Diffview) Show git history                                                                                       | <leader>gH
-[Git(Diffview) Show file history                                                                                      | <leader>gh
-[Git(Diffview) Show change history of the selected source                                                             | <leader>gh [VISUAL_MODE]
-[Git(Diffview) (treeview) Discard change                                                                              | x
-[Git(Diffview) (treeview) Stage                                                                                       | s
-[Git(Diffview) (treeview) Close tree                                                                                  | <leader>b
-[Git(Diffview) (treeview) Next file with changes                                                                      | <Tab>
-[Git(Diffview) (treeview) Previous file with changes                                                                  | <S-Tab>
-[Git(Diffview) (on change) Undo change, if removed should be pressed below the removed                                | do
-[Git(Diffview) (on change) Unfold                                                                                     | zr
-[Git(Diffview) (on change) Fold                                                                                       | zm
+[Git(NeoGit)] Show changes                                                  | <leader>gg
+[Git(Gitsigns)] Show difference                                             | <leader>gs
+[Git(Gitsigns)] Blame                                                       | <leader>gb
+[Git(Diffview) Show changes per file                                        | <leader>gd
+[Git(Diffview) Close Diffview mode                                          | <leader>ge
+[Git(Diffview) Show git history                                             | <leader>gH
+[Git(Diffview) Show file history                                            | <leader>gh
+[Git(Diffview) Show change history of the selected source                   | <leader>gh [VISUAL_MODE]
+[Git(Diffview) (treeview) Discard change                                    | x
+[Git(Diffview) (treeview) Stage                                             | s
+[Git(Diffview) (treeview) Close tree                                        | <leader>b
+[Git(Diffview) (treeview) Next file with changes                            | <Tab>
+[Git(Diffview) (treeview) Previous file with changes                        | <S-Tab>
+[Git(Diffview) (on change) Undo change                                      | do
+[Git(Diffview) (on change) Unfold                                           | zr
+[Git(Diffview) (on change) Fold                                             | zm
 
 ## cheatsheet @Transparent
-[Transparent] Make vim background transparent                                                                         | <leader>t;
+[Transparent] Make vim background transparent                               | <leader>t;
 
 ## cheatsheet @Filetype
-[Filetype] Set current buffer file type to bash                                                                       | <leader>sb
+[Filetype] Set current buffer file type to bash                             | <leader>sb
 
 ## cheatsheet @Norm command
-[norm] box into text `` brackets                                                                                      | :norm ^i`jk^a`
-
-
-## cheatsheet @ZenMode
-[ZenMode] enter zen mode                                                                                              | <leader>zn
+[norm] box into text `` brackets                                            | :norm ^i`jk^a`
 
 ## cheatsheet @Yanky
-[Yanky] Next from copy list                                                                                           | gk
-[Yanky] Previous from copy list                                                                                       | gj
-[Yanky] Clear copy list                                                                                               | gm
-[Yanky] Open telescope with copy list                                                                                 | gf [VISUAL_MODE][NORMAL_MODE]
-[Yanky] Remove copy item in the telescope window                                                                      | d [NORMAL_MODE
+[Yanky] Next from copy list                                                 | gk
+[Yanky] Previous from copy list                                             | gj
+[Yanky] Clear copy list                                                     | gm
+[Yanky] Open telescope with copy list                                       | gf [VISUAL_MODE][NORMAL_MODE]
+[Yanky] Remove copy item in the telescope window                            | d [NORMAL_MODE
 
 ## cheatsheet @IndentObject
-[IndentObject] All in curly brackets                                                                                  | ii
-[IndentObject] All in curly brackets including brackets as well                                                       | aI
+[IndentObject] All in curly brackets                                        | ii
+[IndentObject] All in curly brackets including brackets as well             | aI
 
 ## cheatsheet @Hardtimes
-[Hardtimes] Enable hardtime plugin                                                                                    | :Hardtime enable
-[Hardtimes] Disable hardtime plugin                                                                                   | :Hardtime disable
+[Hardtimes] Enable hardtime plugin                                          | :Hardtime enable
+[Hardtimes] Disable hardtime plugin                                         | :Hardtime disable
 
 ## cheatsheet @Leap
-[Leap] Jump motion                                                                                                     | s
+[Leap] Jump motion                                                           | s
 
 ## cheatsheet @MarkdownPreview
-[MarkdownPreview] Open markdown preview                                                                               | <leader>sm
+[MarkdownPreview] Open markdown preview                                     | <leader>sm
 
 ## cheatsheet @MarkdownFollowMdLinks
-[MarkdownFollowMdLinks] Open link                                                                                     | <CR>
+[MarkdownFollowMdLinks] Open link                                           | <CR>
 
 ## cheatsheet @CodeRunner
-[CodeRunner] Run Code                                                                                                 | <leader>ra
-[CodeRunner] Close "Run Code" terminal windows                                                                        | <leader>rs
+[CodeRunner] Run Code                                                       | <leader>ra
+[CodeRunner] Close "Run Code" terminal windows                              | <leader>rs
 
 ## cheatsheet @Copilot (Chat)
-[Copilot] Previous suggestion                                                                                         | <C-p> [INSERT_MODE]
-[Copilot] Next suggestion                                                                                             | <C-n> [INSERT_MODE]
-[Copilot] Pick next word from the suggestion                                                                          | <C-l> [INSERT_MODE]
-[Copilot (Chat)] Open chat                                                                                            | <leader>cc [NORMAL_MODE], [VISUAL_MODE]
-[Copilot (Chat)] [CODE] Explain what this does?                                                                       | <leader>ca [VISUAL_MODE]
-[Copilot (Chat)] [CODE] Display copilot actions                                                                       | <leader>co [NORMAL_MODE], [VISUAL_MODE]
-[Copilot (Chat)] [CODE] Point out the best practices                                                                  | <leader>cb [VISUAL_MODE]
-[Copilot (Chat)] [CODE] Suggest how to fix this error                                                                 | <leader>cb [VISUAL_MODE]
-[Copilot (Chat)] [EN] Provide grammar check with explanations                                                         | <leader>cm [VISUAL_MODE]
-[Copilot (Chat)] [EN] Rephrase current selection                                                                      | <leader>cv [VISUAL_MODE]
-[Copilot (Chat)] [EN] Translate selection to Ukrainian                                                                | <leader>cu [VISUAL_MODE]
-[Copilot (Chat)] [EN] Suggest synonyms for the highlighted word                                                       | <leader>cs [VISUAL_MODE]
-[Copilot (Chat)] [EN] Provide a dialogue on [specific topic]                                                          | <leader>cd [VISUAL_MODE]
-[Copilot (Chat)] [EN] Provide a sentence improvement                                                                  | <leader>ci [VISUAL_MODE]
-[Copilot (Chat)] [Blog] Blog question                                                                                 | <leader>cx [NORMAL_MODE]
+[Copilot] Previous suggestion                                               | <C-p> [INSERT_MODE]
+[Copilot] Next suggestion                                                   | <C-n> [INSERT_MODE]
+[Copilot] Pick next word from the suggestion                                | <C-l> [INSERT_MODE]
+[Copilot (Chat)] Open chat                                                  | <leader>cc [NORMAL_MODE], [VISUAL_MODE]
+[Copilot (Chat)] [CODE] Explain what this does?                             | <leader>ca [VISUAL_MODE]
+[Copilot (Chat)] [CODE] Display copilot actions                             | <leader>co [NORMAL_MODE], [VISUAL_MODE]
+[Copilot (Chat)] [CODE] Point out the best practices                        | <leader>cb [VISUAL_MODE]
+[Copilot (Chat)] [CODE] Suggest how to fix this error                       | <leader>cb [VISUAL_MODE]
+[Copilot (Chat)] [EN] Provide grammar check with explanations               | <leader>cm [VISUAL_MODE]
+[Copilot (Chat)] [EN] Rephrase current selection                            | <leader>cv [VISUAL_MODE]
+[Copilot (Chat)] [EN] Translate selection to Ukrainian                      | <leader>cu [VISUAL_MODE]
+[Copilot (Chat)] [EN] Suggest synonyms for the highlighted word             | <leader>cs [VISUAL_MODE]
+[Copilot (Chat)] [EN] Provide a dialogue on [specific topic]                | <leader>cd [VISUAL_MODE]
+[Copilot (Chat)] [EN] Provide a sentence improvement                        | <leader>ci [VISUAL_MODE]
+[Copilot (Chat)] [Blog] Blog question                                       | <leader>cx [NORMAL_MODE]
 
 ## cheatsheet @ChatGPT
-[ChatGPT] Open chat                                                                                                   | <leader>cg
-[ChatGPT] Close ChatGPT window                                                                                        | <C-c>
-[ChatGPT] Navigate between the windows                                                                                | <Tab>
+[ChatGPT] Open chat                                                         | <leader>cg
+[ChatGPT] Close ChatGPT window                                              | <C-c>
+[ChatGPT] Navigate between the windows                                      | <Tab>
 
 ## cheatsheet @AI
-[AI] Show prewritten prompts                                                                                         | <leader>cp [NORMAL_MODE] 
+[AI] Show prewritten prompts                                                | <leader>cp [NORMAL_MODE] 
+
+## cheatsheet @CMP
+[CMP] Show completion menu                                                  | <C-h>, <C-space-space> [INSERT_MODE]
+[CMP] Select previous completion                                            | <C-p>, <C-k> [INSERT_MODE]
+[CMP] Select next completion                                                | <C-n>, <C-j> [INSERT_MODE]
+[CMP] Select next completion                                                | <C-n>, <C-j> [INSERT_MODE]
+[CMP] Close completion menu                                                 | <C-e>, <C-c> [INSERT_MODE]
+
+
+
