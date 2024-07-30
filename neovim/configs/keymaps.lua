@@ -1,3 +1,4 @@
+local util = require("configs.util")
 local opts = { noremap = true, silent = true }
 local opt_nr = { noremap = true }
 
@@ -237,46 +238,10 @@ keymap("n", "<leader>cp", ":e ~/my-configs/prompts/index.md<CR>", opts)
 -- ------------------------------------------------
 -- File mappings
 -- ------------------------------------------------
-function _G.get_visual_selection()
-	local _, csrow, cscol, _ = unpack(vim.fn.getpos("'<"))
-	local _, cerow, cecol, _ = unpack(vim.fn.getpos("'>"))
-	local lines = vim.fn.getline(csrow, cerow)
-	if #lines == 0 then
-		return ""
-	end
-	lines[1] = string.sub(lines[1], cscol)
-	lines[#lines] = string.sub(lines[#lines], 1, cecol)
-	return table.concat(lines, "\n"):gsub("%)$", "")
-end
-
-function _G.create_file_from_visual_selection()
-	local path = _G.get_visual_selection()
-
-	-- Get the directory of the current file
-	local current_dir = vim.fn.expand("%:p:h")
-
-	-- Append the current directory to the path
-	path = current_dir .. "/" .. path
-
-	local dir = path:match("(.*[/\\])")
-
-	-- Check if directory exists
-	if vim.fn.glob(dir) == "" then
-		-- Create directory if it doesn't exist
-		vim.fn.mkdir(dir, "p")
-	end
-
-	-- Check if file exists
-	if vim.fn.glob(path) == "" then
-		-- Create file if it doesn't exist
-		local file = io.open(path, "w")
-		file:close()
-	end
-end
-
+vim.api.nvim_set_keymap("v", "<leader>cf", ":lua require('configs.util').create_file_from_visual_selection()<CR>", opts)
 vim.api.nvim_set_keymap(
 	"v",
-	"<leader>cf",
-	":lua _G.create_file_from_visual_selection()<CR>",
-	{ noremap = true, silent = true }
+	"<leader>cl",
+	":lua require('configs.util').create_file_from_visual_selection_with_link()<CR>",
+	opts
 )

@@ -214,6 +214,7 @@
 [KeyMappings] Indent right                                                  | >>
 [KeyMappings] Indent left                                                   | <<
 [KeyMappings] Create new file and folders from the selection                | <Leader>cf [VISUAL_MODE]
+[KeyMappings] Create new file with link and folders from the selection      | <Leader>cl [VISUAL_MODE]
 
 ## cheatsheet @LSP
 [LSP] Rename symbol                                                         | <Leader>rn
