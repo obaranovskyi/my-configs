@@ -233,3 +233,46 @@ keymap("i", "<M-BS>", "<C-w>", opts)
 -- AI related mappings
 -- ------------------------------------------------
 keymap("n", "<leader>cp", ":e ~/my-configs/prompts/index.md<CR>", opts)
+
+-- ------------------------------------------------
+-- File mappings
+-- ------------------------------------------------
+function _G.get_visual_selection()
+	local _, csrow, cscol, _ = unpack(vim.fn.getpos("'<"))
+	local _, cerow, cecol, _ = unpack(vim.fn.getpos("'>"))
+	local lines = vim.fn.getline(csrow, cerow)
+	if #lines == 0 then
+		return ""
+	end
+	lines[1] = string.sub(lines[1], cscol)
+	lines[#lines] = string.sub(lines[#lines], 1, cecol)
+	return table.concat(lines, "\n")
+end
+
+function _G.create_file_from_visual_selection()
+	local path = _G.get_visual_selection()
+
+	-- Remove trailing parenthesis
+	path = path:gsub("%)$", "")
+
+	local dir = path:match("(.*[/\\])")
+
+	-- Check if directory exists
+	if vim.fn.glob(dir) == "" then
+		-- Create directory if it doesn't exist
+		vim.fn.mkdir(dir, "p")
+	end
+
+	-- Create file if it doesn't exist
+	if vim.fn.glob(path) == "" then
+		local file = io.open(path, "w")
+		file:close()
+	end
+end
+
+vim.api.nvim_set_keymap(
+	"v",
+	"<leader>cf",
+	":lua _G.create_file_from_visual_selection()<CR>",
+	{ noremap = true, silent = true }
+)

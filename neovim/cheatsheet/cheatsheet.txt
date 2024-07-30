@@ -213,6 +213,7 @@
 [KeyMappings] Toggle relative numbers                                       | <Leader>fn
 [KeyMappings] Indent right                                                  | >>
 [KeyMappings] Indent left                                                   | <<
+[KeyMappings] Create new file and folders from the selection                | <Leader>cf [VISUAL_MODE]
 
 ## cheatsheet @LSP
 [LSP] Rename symbol                                                         | <Leader>rn
@@ -368,5 +369,9 @@
 [CMP] Select next completion                                                | <C-n>, <C-j> [INSERT_MODE]
 [CMP] Close completion menu                                                 | <C-e>, <C-c> [INSERT_MODE]
 
-
+## cheatsheet @Obsidian
+[Obsidian] Open Obsidian                                                    | <leader>no [NORMAL_MODE], [VISUAL_MODE]
+[Obsidian] Create new note                                                  | <leader>nn [NORMAL_MODE], [VISUAL_MODE]
+[Obsidian] Set workspace                                                    | <leader>nw [NORMAL_MODE], [VISUAL_MODE]
+[Obsidian] Add link to the new note                                         | <leader>nl [VISUAL_MODE]
 
