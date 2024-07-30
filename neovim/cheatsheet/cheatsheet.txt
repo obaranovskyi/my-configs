@@ -293,8 +293,11 @@
 [Git(Diffview) (treeview) Next file with changes                            | <Tab>
 [Git(Diffview) (treeview) Previous file with changes                        | <S-Tab>
 [Git(Diffview) (on change) Undo change                                      | do
-[Git(Diffview) (on change) Unfold                                           | zr
-[Git(Diffview) (on change) Fold                                             | zm
+[Git(Diffview) (on change) Unfold                                           | zr, zo
+[Git(Diffview) (on change) Unfold all                                       | zR
+[Git(Diffview) (on change) Fold                                             | zm, zc
+[Git(Diffview) (on change) Fold all                                         | zM
+[Git(Diffview) (on change) Toggle current fold                              | za
 
 ## cheatsheet @Transparent
 [Transparent] Make vim background transparent                               | <leader>t;
