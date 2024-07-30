@@ -246,14 +246,17 @@ function _G.get_visual_selection()
 	end
 	lines[1] = string.sub(lines[1], cscol)
 	lines[#lines] = string.sub(lines[#lines], 1, cecol)
-	return table.concat(lines, "\n")
+	return table.concat(lines, "\n"):gsub("%)$", "")
 end
 
 function _G.create_file_from_visual_selection()
 	local path = _G.get_visual_selection()
 
-	-- Remove trailing parenthesis
-	path = path:gsub("%)$", "")
+	-- Get the directory of the current file
+	local current_dir = vim.fn.expand("%:p:h")
+
+	-- Append the current directory to the path
+	path = current_dir .. "/" .. path
 
 	local dir = path:match("(.*[/\\])")
 
@@ -263,8 +266,9 @@ function _G.create_file_from_visual_selection()
 		vim.fn.mkdir(dir, "p")
 	end
 
-	-- Create file if it doesn't exist
+	-- Check if file exists
 	if vim.fn.glob(path) == "" then
+		-- Create file if it doesn't exist
 		local file = io.open(path, "w")
 		file:close()
 	end
