@@ -236,7 +236,7 @@ keymap("i", "<M-BS>", "<C-w>", opts)
 keymap("n", "<leader>cp", ":e ~/my-configs/prompts/index.md<CR>", opts)
 
 -- ------------------------------------------------
--- File mappings
+-- File action mappings (from the file)
 -- ------------------------------------------------
 vim.api.nvim_set_keymap("v", "<leader>cf", ":lua require('configs.util').create_file_from_visual_selection()<CR>", opts)
 vim.api.nvim_set_keymap(
