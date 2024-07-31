@@ -1,3 +1,11 @@
+"""
+This script converts HTML content from a URL to Markdown and saves it to a file.
+
+Usage:
+```bash
+python link-to-markdown.py <url> <output-file>
+```
+"""
 import sys
 
 import html2text

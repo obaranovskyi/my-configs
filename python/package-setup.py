@@ -5,7 +5,9 @@ dependencies = [
     "html2text",
     "requests",
     # clipboard-tracker
-    # TODO: under construction
+    "clipboard==0.0.4",
+    "pillow==10.3.0",
+    "pyperclip==1.9.0",
     # nato-alphabet
     "rich"
 
