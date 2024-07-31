@@ -3,8 +3,6 @@ import sys
 import html2text
 import requests
 from rich import print
-from rich.console import Console
-from rich.text import Text
 
 BLUE = "turquoise2"
 RED = "deep_pink2"
