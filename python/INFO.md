@@ -16,3 +16,7 @@ If the script has dependencies, put it in `package-setup.py` and run it:
 ```bash
 py package-setup.py
 ```
+
+## Aliases
+
+Python aliases are setup in `~/my-configs/zsh/scripts/aliases.sh`.

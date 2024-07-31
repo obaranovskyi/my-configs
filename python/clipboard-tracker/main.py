@@ -11,10 +11,12 @@ import asyncio
 import sys
 
 from clipboard_tracker.__main__ import main, read_args
-from clipboard_tracker.text import create_file_if_not_exists, set_filename
+from clipboard_tracker.text import (create_file_if_not_exists, set_directory,
+                                    set_filename)
 
 if __name__ == "__main__":
     set_filename(read_args())
+    set_directory(read_args())
     create_file_if_not_exists()
 
     try:

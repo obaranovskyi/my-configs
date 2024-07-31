@@ -2,9 +2,13 @@ import os
 from typing import Optional
 
 from clipboard_tracker.date import get_date
+from clipboard_tracker.folder import create_path, remove_filename
 
 filename = None
 DEFAULT_FILENAME = "clipboard.md"
+
+directory = None
+DEFAULT_DIRECTORY = ""
 
 def get_filename() -> str:
     """
@@ -21,6 +25,19 @@ def set_filename(name: Optional[str]) -> None:
     global filename
     filename = name
 
+def get_directory() -> str:
+    """
+    Get the directory from the global variable, or return the default directory.
+    """
+    global directory
+    return directory or DEFAULT_DIRECTORY
+
+def set_directory(dir: Optional[str]) -> None:
+    """
+    Set the directory.
+    """
+    global directory
+    directory = remove_filename(dir)
 
 def add_to_file(content: str) -> None:
     """
@@ -36,6 +53,7 @@ def create_file_if_not_exists() -> None:
     """
     if not os.path.exists(get_filename()):
         file = get_filename()
+        create_path(file)
         print(f"Creating clipboard file: {file}")
         open(file, "w").close()
 

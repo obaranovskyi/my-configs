@@ -8,7 +8,7 @@ do
     dir_name=$(basename $dir)
 
     # Skip the current directory
-    if [ "$dir_name" = "." ] || [ "$dir_name" = "python" ]
+    if [ "$dir_name" = "." ] || [ "$dir_name" = "python" ] || [ "$dir_name" = "util" ]
     then
         continue
     fi

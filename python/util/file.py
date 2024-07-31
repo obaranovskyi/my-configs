@@ -1,22 +1,4 @@
-"""
-Create a file or directory at the given path.
-
-Usage:
-```bash
-python create_path.py <path>
-```
-
-Example:
-```bash
-structure /path/to/file.txt
-structure path/to/file.txt
-structure ./path/to/file.txt
-```
-
-If file exists, it will not be overwritten.
-"""
 import os
-import sys
 
 
 def create_path(path):
@@ -39,12 +21,3 @@ def create_path(path):
     else:
         # Create the directories
         os.makedirs(path, exist_ok=True)
-
-if __name__ == '__main__':
-    if len(sys.argv) < 2:
-        print('Usage: python create_path.py <path>')
-        sys.exit(1)
-
-    path = sys.argv[1]
-    create_path(path)
-

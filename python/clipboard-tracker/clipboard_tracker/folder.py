@@ -1,9 +1,24 @@
 import os
 
 
-def create_folder_if_not_exists(folder_name: str) -> None:
+def create_path(path, skip_file_creation=False):
     """
-    Create the folder if it doesn't exist.
+    Create the path if it doesn't exist.
     """
-    if not os.path.exists(folder_name):
-        os.makedirs(folder_name)
+    path = path.lstrip('/')
+    path = os.path.normpath(path)
+    components = path.split(os.sep)
+    if '.' in components[-1]:
+        dir_components = components[:-1]
+        if dir_components:  # Only call os.makedirs if there are directory components
+            os.makedirs(os.sep.join(dir_components), exist_ok=True)
+        if not skip_file_creation:
+            open(path, 'a').close()
+    else:
+        os.makedirs(path, exist_ok=True)
+
+def remove_filename(path):
+    """
+    Remove the filename from the path.
+    """
+    return os.path.dirname(path)
