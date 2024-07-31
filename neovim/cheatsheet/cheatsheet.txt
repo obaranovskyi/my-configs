@@ -13,6 +13,8 @@
 
 ## cheatsheet @Conform
 [@Conform] format code                                                      | <leader>fd 
+[@Conform] Toggle auto-format on save                                       | <leader>fT
+[@Conform] Print formatter status                                           | <leader>fS
 
 ## cheatsheet @Oil
 [@Oil] Open oil                                                             | <leader>oo
@@ -283,7 +285,8 @@
 ## cheatsheet @Git
 [Git(NeoGit)] Show changes                                                  | <leader>gg
 [Git(Gitsigns)] Show difference                                             | <leader>gs
-[Git(Gitsigns)] Blame                                                       | <leader>gb
+[Git(Gitsigns)] Blame                                                       | <leader>gB
+[Git(Diffview)] Compare current branch to ...                               | <leader>gb
 [Git(Diffview) Show changes per file                                        | <leader>gd
 [Git(Diffview) Close Diffview mode                                          | <leader>ge
 [Git(Diffview) Show git history                                             | <leader>gH
@@ -300,6 +303,7 @@
 [Git(Diffview) (on change) Fold                                             | zm, zc
 [Git(Diffview) (on change) Fold all                                         | zM
 [Git(Diffview) (on change) Toggle current fold                              | za
+[Git(Diffview) (on change) Change view                                      | g<C-x>
 
 ## cheatsheet @Transparent
 [Transparent] Make vim background transparent                               | <leader>t;

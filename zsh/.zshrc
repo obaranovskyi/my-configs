@@ -113,3 +113,7 @@ export PATH="${NVM_V18_PATH}:$PATH"
 
 # Images in kitty (This might be removed if images are still shown)
 # export DYLD_LIBRARY_PATH="$(brew --prefix)/lib:$DYLD_LIBRARY_PATH"
+
+
+# Source python scripts
+source "${HOME}/my-configs/zsh/scripts/python-scripts.sh"

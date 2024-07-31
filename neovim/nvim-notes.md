@@ -81,3 +81,14 @@ planning.tasks.md
 ```lua
 vim.api.nvim_command("autocmd FileType * lua print(vim.bo.filetype)")
 ```
+
+# Create own command
+
+```lua
+vim.api.nvim_create_user_command("FormatToggle", function()
+    vim.g.disable_autoformat = not vim.g.disable_autoformat
+end, {
+    desc = "Toggle autoformat-on-save",
+})
+vim.keymap.set("n", "<leader>fT", ":FormatToggle<CR>", { noremap = true, silent = true })
+```

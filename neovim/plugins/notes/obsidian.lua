@@ -12,6 +12,10 @@ return {
 			-- - this should work on web and on mobile
 			workspaces = {
 				{
+					name = "dev-notes",
+					path = "~/obaranovskyi/repositories/github/my-notes",
+				},
+				{
 					name = "personal-notes",
 					path = "~/my-notes/vault/personal",
 				},
@@ -19,13 +23,10 @@ return {
 					name = "work-notes",
 					path = "~/my-notes/vault/work",
 				},
-				-- INFO: I will migrate to obsidian
-				-- But I need to configure everything first, before going to my real notes
-				{
-					name = "dev-notes",
-					path = "~/obaranovskyi/repositories/github/my-notes",
-				},
 			},
+			-- ui = {
+			-- 	enabled = false,
+			-- },
 			-- No need in `wiki` links
 			preferred_link_style = "markdown",
 			-- No need in header props

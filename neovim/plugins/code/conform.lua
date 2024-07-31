@@ -51,6 +51,31 @@ return {
 			conform.format({ async = true, lsp_fallback = true, range = range })
 		end, { range = true })
 
+		local function print_formatter_status()
+			if vim.g.disable_autoformat then
+				print("Autoformat is disabled")
+			else
+				print("Autoformat is enabled")
+			end
+		end
+
+		-- INFO: toggle autoformat
+		vim.api.nvim_create_user_command("FormatToggle", function()
+			vim.g.disable_autoformat = not vim.g.disable_autoformat
+			print_formatter_status()
+		end, {
+			desc = "Toggle autoformat-on-save",
+		})
+		vim.keymap.set("n", "<leader>fT", ":FormatToggle<CR>", { noremap = true, silent = true })
+
+		-- INFO: Print formatter status
+		vim.api.nvim_create_user_command("FormatterStatus", function()
+			print_formatter_status()
+		end, {
+			desc = "Print formatter status",
+		})
+		vim.keymap.set("n", "<leader>fS", ":FormatterStatus<CR>", { noremap = true, silent = true })
+
 		vim.keymap.set("n", "<leader>fd", ":Format<CR>", { noremap = true, silent = true })
 
 		-- INFO: Disable format

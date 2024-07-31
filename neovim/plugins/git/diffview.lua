@@ -22,6 +22,7 @@ return {
 		keymap("n", "<leader>gh", ":DiffviewFileHistory %<CR>", opts)
 		keymap("v", "<leader>gh", ":DiffviewFileHistory<CR>", opts)
 		keymap("n", "<leader>gH", ":DiffviewFileHistory<CR>", opts)
+		keymap("n", "<leader>gb", ":DiffviewOpen ", opts)
 	end,
 }
 

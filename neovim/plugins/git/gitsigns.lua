@@ -47,6 +47,6 @@ return {
 		local keymap = vim.api.nvim_set_keymap
 
 		keymap("n", "<leader>gs", ":Gitsigns diffthis<CR>", opts)
-		keymap("n", "<leader>gb", ":Gitsigns blame_line<CR>", opts)
+		keymap("n", "<leader>gB", ":Gitsigns blame_line<CR>", opts)
 	end,
 }
