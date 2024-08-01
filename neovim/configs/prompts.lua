@@ -1,5 +1,3 @@
-local M = {}
-
 --- Blog ---
 
 local article_content_generation = [[

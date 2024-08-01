@@ -10,9 +10,8 @@ clipboard-tracker <filename>
 import asyncio
 import sys
 
-from clipboard_tracker.__main__ import main, read_args
-from clipboard_tracker.text import (create_file_if_not_exists, set_directory,
-                                    set_filename)
+from src.__main__ import main, read_args
+from src.text import create_file_if_not_exists, set_directory, set_filename
 
 if __name__ == "__main__":
     set_filename(read_args())

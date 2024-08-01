@@ -1,7 +1,7 @@
 import os
 
 
-def create_path(path, skip_file_creation=False):
+def create_structure(path, skip_file_creation=False):
     """
     Create the path if it doesn't exist.
     """
@@ -16,9 +16,3 @@ def create_path(path, skip_file_creation=False):
             open(path, 'a').close()
     else:
         os.makedirs(path, exist_ok=True)
-
-def remove_filename(path):
-    """
-    Remove the filename from the path.
-    """
-    return os.path.dirname(path)

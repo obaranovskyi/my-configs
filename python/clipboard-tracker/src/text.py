@@ -1,8 +1,9 @@
 import os
 from typing import Optional
 
-from clipboard_tracker.date import get_date
-from clipboard_tracker.folder import create_path, remove_filename
+from .date import get_date
+from .folder import remove_filename
+from .util.structure import create_structure
 
 filename = None
 DEFAULT_FILENAME = "clipboard.md"
@@ -53,7 +54,7 @@ def create_file_if_not_exists() -> None:
     """
     if not os.path.exists(get_filename()):
         file = get_filename()
-        create_path(file)
+        create_structure(file)
         print(f"Creating clipboard file: {file}")
         open(file, "w").close()
 

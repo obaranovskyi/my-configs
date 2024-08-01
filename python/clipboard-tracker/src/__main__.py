@@ -19,8 +19,8 @@ from typing import Optional
 
 import clipboard
 
-from clipboard_tracker.image import is_image_in_clipboard, save_image
-from clipboard_tracker.text import add_image_to_file, add_to_file
+from .image import is_image_in_clipboard, save_image
+from .text import add_image_to_file, add_to_file
 
 
 async def handle_clipboard_change() -> None:

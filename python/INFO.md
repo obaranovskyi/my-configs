@@ -14,9 +14,18 @@ Then you can run your app by typing `my-app` in the terminal.
 If the script has dependencies, put it in `package-setup.py` and run it:
 
 ```bash
-py package-setup.py
+package-setup
 ```
 
 ## Aliases
 
 Python aliases are setup in `~/my-configs/zsh/scripts/aliases.sh`.
+
+## Symlink
+
+To use `util` module in your python script, you need to create a symlink to it inside of the python command folder.
+Here is an example for the `structure` module:
+
+```bash
+ln -s ~/my-configs/python/util ~/my-configs/python/structure/util
+```
