@@ -32,6 +32,16 @@ dependencies = [
     "typing_extensions",
     "urllib3",
     "uuid",
-
+    "rich",
+    # english-assist
+    "googletrans==3.1.0a0",
+    "uuid",
+    "rich",
+    "reportlab",
+    "pydub",
+    "gtts",
+    "genanki",
+    "markdown",
 ]
+
 os.system(f"pip install {' '.join(dependencies)} --break-system-packages")
