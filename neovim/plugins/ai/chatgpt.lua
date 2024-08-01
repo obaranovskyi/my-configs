@@ -5,7 +5,7 @@ return {
 		require("chatgpt").setup()
 
 		-- Mappings
-		vim.keymap.set({ "n", "v" }, "<leader>cg", function()
+		vim.keymap.set({ "n", "v" }, "<leader>cG", function()
 			vim.cmd("ChatGPT")
 		end, { silent = true })
 	end,

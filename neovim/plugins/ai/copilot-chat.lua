@@ -7,12 +7,13 @@ return {
 	},
 	config = function()
 		local chat = require("CopilotChat")
+		local prompts = require("configs.prompts")
 		local config = {
 			debug = false,
 			window = {
-				layout = "float",
-				width = 0.8,
-				height = 0.8,
+				-- layout = "float",
+				-- width = 0.8,
+				-- height = 0.8,
 			},
 			show_help = false,
 			mappings = {
@@ -49,18 +50,76 @@ return {
 					normal = "gs",
 				},
 			},
-		}
-
-		function setKeymapWithPrompt(modes, keymap, prompt)
-			vim.keymap.set(modes, keymap, function()
-				chat.ask(prompt, {
+			prompts = {
+				--- Text ---
+				GrammarCheck = {
+					prompt = prompts.text.grammar_check,
+					mapping = "<leader>cg",
 					selection = require("CopilotChat.select").visual,
-					window = {
-						layout = "float",
-					},
-				})
-			end, { silent = true })
-		end
+				},
+				Rephrase = {
+					prompt = prompts.text.rephrase,
+					mapping = "<leader>cr",
+					selection = require("CopilotChat.select").visual,
+				},
+				Translate = {
+					prompt = prompts.text.translate,
+					mapping = "<leader>cu",
+					selection = require("CopilotChat.select").visual,
+				},
+				--- Code ---
+				Explain = {
+					prompt = prompts.code.explain,
+					mapping = "<leader>ca",
+					selection = require("CopilotChat.select").visual,
+				},
+				BestPractices = {
+					prompt = prompts.code.best_practices,
+					mapping = "<leader>cb",
+					selection = require("CopilotChat.select").visual,
+				},
+				Synonyms = {
+					prompt = prompts.text.synonyms,
+					mapping = "<leader>cs",
+					selection = require("CopilotChat.select").visual,
+				},
+				ImproveWritingStyle = {
+					prompt = prompts.text.improve_writing_style,
+					mapping = "<leader>ci",
+					selection = require("CopilotChat.select").visual,
+				},
+				ExplainTechnicalConcept = {
+					prompt = prompts.code.explain_technical_concept,
+					mapping = "<leader>ct",
+					selection = require("CopilotChat.select").visual,
+				},
+				ExplainErrorMessage = {
+					prompt = prompts.code.explain_error_message,
+					mapping = "<leader>ce",
+					selection = require("CopilotChat.select").visual,
+				},
+				Summarize = {
+					prompt = prompts.text.summarize,
+					mapping = "<leader>cS",
+					selection = require("CopilotChat.select").visual,
+				},
+				Wording = {
+					prompt = prompts.text.wording,
+					mapping = "<leader>cW",
+					selection = require("CopilotChat.select").visual,
+				},
+				Concise = {
+					prompt = prompts.text.concise,
+					mapping = "<leader>cX",
+					selection = require("CopilotChat.select").visual,
+				},
+				Usage = {
+					prompt = prompts.text.usage,
+					mapping = "<leader>cw",
+					selection = require("CopilotChat.select").visual,
+				},
+			},
+		}
 
 		vim.keymap.set({ "n", "v" }, "<leader>cc", function()
 			chat.toggle()
@@ -74,15 +133,9 @@ return {
 			}))
 		end, { silent = true })
 
-		vim.keymap.set({ "n", "v" }, "<leader>cx", function()
+		vim.keymap.set("n", "<leader>cx", function()
 			chat.toggle()
-			local article_prompt = [[
-      I have my own blog, and I'm writing a new article.
-      I need you to answer my question in a way that I can use it within my article.
-      It shouldn't be copied from somewhere and shouldn't violate someone's rights.
-      It should be new content that can be used in my article.
-      My question is:
-      ]]
+			local article_prompt = prompts.blog.article_content_generation
 			local lines = {}
 			for line in article_prompt:gmatch("([^\n]*)\n?") do
 				table.insert(lines, line)
@@ -93,57 +146,11 @@ return {
 			vim.cmd("startinsert")
 		end)
 
-		setKeymapWithPrompt({ "v" }, "<leader>ca", "Explain how it works.")
-
-		setKeymapWithPrompt(
-			{ "v" },
-			"<leader>cm",
-			[[
-      Please check if it's grammatically correct to say this way.
-      If it's incorrect, rephrase it and provide me with the grammatically correct version.
-      The correction version should be highlighted so it would be easier to find it immediately.
-      Also, include an explanation of where I made a mistake and how to fix this mistake.
-      ]]
-		)
-
-		setKeymapWithPrompt(
-			{ "v" },
-			"<leader>cv",
-			[[
-      Provide me with a few options for rephrasing.
-      If there are grammar mistakes, correct them with an explanation.
-      ]]
-		)
-
-		setKeymapWithPrompt({ "v" }, "<leader>cu", "Translate this to Ukrainian. Provide only the translation.")
-
-		setKeymapWithPrompt(
-			{ "v" },
-			"<leader>cb",
-			"Review this code and point out any best practices that I may have missed."
-		)
-
-		setKeymapWithPrompt(
-			{ "v" },
-			"<leader>cs",
-			"Suggest synonyms for the highlighted word and explain the differences in usage."
-		)
-
-		setKeymapWithPrompt({ "v" }, "<leader>ci", "Suggest ways to improve the writing style of this text.")
-
-		setKeymapWithPrompt(
-			{ "v" },
-			"<leader>ct",
-			"Explain this technical concept in simple English suitable for a beginner."
-		)
-
-		setKeymapWithPrompt(
-			{ "v" },
-			"<leader>ce",
-			"Translate this error message into plain English and suggest how to fix it."
-		)
-
 		chat.setup(config)
+
+		-- TODO: Under construction
+		-- I'm not sure about this line
+		require("CopilotChat.integrations.cmp").setup()
 
 		-- INFO: Customize the chat window
 		vim.api.nvim_create_autocmd("BufEnter", {

@@ -92,3 +92,10 @@ end, {
 })
 vim.keymap.set("n", "<leader>fT", ":FormatToggle<CR>", { noremap = true, silent = true })
 ```
+
+# Print table in lua
+
+```lua
+local t = { { name = "ArticleContentGeneration" } }
+print(vim.inspect(t))
+```

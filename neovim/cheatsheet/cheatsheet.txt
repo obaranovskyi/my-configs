@@ -346,21 +346,25 @@
 [Copilot] Previous suggestion                                               | <C-p> [INSERT_MODE]
 [Copilot] Next suggestion                                                   | <C-n> [INSERT_MODE]
 [Copilot] Pick next word from the suggestion                                | <C-l> [INSERT_MODE]
-[Copilot (Chat)] Open chat                                                  | <leader>cc [NORMAL_MODE], [VISUAL_MODE]
-[Copilot (Chat)] [CODE] Explain what this does?                             | <leader>ca [VISUAL_MODE]
-[Copilot (Chat)] [CODE] Display copilot actions                             | <leader>co [NORMAL_MODE], [VISUAL_MODE]
-[Copilot (Chat)] [CODE] Point out the best practices                        | <leader>cb [VISUAL_MODE]
-[Copilot (Chat)] [CODE] Suggest how to fix this error                       | <leader>cb [VISUAL_MODE]
-[Copilot (Chat)] [EN] Provide grammar check with explanations               | <leader>cm [VISUAL_MODE]
-[Copilot (Chat)] [EN] Rephrase current selection                            | <leader>cv [VISUAL_MODE]
-[Copilot (Chat)] [EN] Translate selection to Ukrainian                      | <leader>cu [VISUAL_MODE]
-[Copilot (Chat)] [EN] Suggest synonyms for the highlighted word             | <leader>cs [VISUAL_MODE]
-[Copilot (Chat)] [EN] Provide a dialogue on [specific topic]                | <leader>cd [VISUAL_MODE]
-[Copilot (Chat)] [EN] Provide a sentence improvement                        | <leader>ci [VISUAL_MODE]
-[Copilot (Chat)] [Blog] Blog question                                       | <leader>cx [NORMAL_MODE]
+[CopilotChat] Open chat                                                  | <leader>cc [NORMAL_MODE], [VISUAL_MODE]
+[CopilotChat] [Blog] Blog question                                       | <leader>cx [NORMAL_MODE]
+[CopilotChat] [EN] Provide grammar check with explanations               | <leader>cg [VISUAL_MODE]
+[CopilotChat] [EN] Rephrase current selection                            | <leader>cr [VISUAL_MODE]
+[CopilotChat] [EN] Explain the word provide examples, synonyms etc.      | <leader>cw [VISUAL_MODE]
+[CopilotChat] [EN] Translate selection to Ukrainian                      | <leader>cu [VISUAL_MODE]
+[CopilotChat] [EN] Suggest synonyms for the highlighted word             | <leader>cs [VISUAL_MODE]
+[CopilotChat] [EN] Provide a dialogue on [specific topic]                | <leader>cd [VISUAL_MODE]
+[CopilotChat] [EN] Provide a sentence improvement                        | <leader>ci [VISUAL_MODE]
+[CopilotChat] [EN] Summarize                                             | <leader>cS [VISUAL_MODE]
+[CopilotChat] [EN] Improve the grammar and wording                       | <leader>cW [VISUAL_MODE]
+[CopilotChat] [EN] Concise                                               | <leader>cX [VISUAL_MODE]
+[CopilotChat] [CODE] Explain what this does?                             | <leader>ca [VISUAL_MODE]
+[CopilotChat] [CODE] Display copilot actions                             | <leader>co [NORMAL_MODE], [VISUAL_MODE]
+[CopilotChat] [CODE] Point out the best practices                        | <leader>cb [VISUAL_MODE]
+[CopilotChat] [CODE] Suggest how to fix this error                       | <leader>cb [VISUAL_MODE]
 
 ## cheatsheet @ChatGPT
-[ChatGPT] Open chat                                                         | <leader>cg
+[ChatGPT] Open chat                                                         | <leader>cG
 [ChatGPT] Close ChatGPT window                                              | <C-c>
 [ChatGPT] Navigate between the windows                                      | <Tab>
 

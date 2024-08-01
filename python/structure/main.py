@@ -19,25 +19,20 @@ import os
 import sys
 
 
-def create_path(path):
-    # Replace leading '/' with '' 
+def create_path(path, skip_file_creation=False):
+    """
+    Create the path if it doesn't exist.
+    """
     path = path.lstrip('/')
-
-    # Normalize the path (remove './' if present)
     path = os.path.normpath(path)
-
-    # Split the path into components
     components = path.split(os.sep)
-
-    # If the last component has an extension, it's a file
     if '.' in components[-1]:
-        # Create the directories
-        os.makedirs(os.sep.join(components[:-1]), exist_ok=True)
-
-        # Create the file
-        open(path, 'a').close()
+        dir_components = components[:-1]
+        if dir_components:  # Only call os.makedirs if there are directory components
+            os.makedirs(os.sep.join(dir_components), exist_ok=True)
+        if not skip_file_creation:
+            open(path, 'a').close()
     else:
-        # Create the directories
         os.makedirs(path, exist_ok=True)
 
 if __name__ == '__main__':
