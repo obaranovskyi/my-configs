@@ -52,7 +52,7 @@ return {
 					-- cyan = "#92f3fc",
 					cyan = "#acfca4",
 					-- green = "#12ffd4",
-					green = "#d9fc92",
+					green = "#fff599",
 					-- blue = "#00bbff",
 					blue = "#92d4fc",
 					fg = "#dad4fc",

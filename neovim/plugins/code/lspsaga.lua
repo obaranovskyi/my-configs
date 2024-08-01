@@ -15,6 +15,7 @@ return {
 			outline = {
 				win_position = "right",
 				win_width = 30,
+				auto_preview = false,
 				keys = {
 					jump = "<CR>",
 				},
