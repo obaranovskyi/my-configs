@@ -2,7 +2,7 @@ from PIL import ImageGrab
 
 from .date import get_datetime
 from .text import get_directory
-from .util.file import create_structure
+from .util.structure import create_structure
 
 
 def is_image_in_clipboard() -> bool:
