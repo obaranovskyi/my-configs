@@ -3,7 +3,11 @@ vim.opt.syntax = "on"
 -- vim.cmd "colorscheme tokyonight"
 -- vim.cmd "colorscheme tokyonight-moon"
 -- vim.cmd "colorscheme catppuccin"
-vim.cmd("colorscheme catppuccin-macchiato")
+
+-- Favorite
+-- vim.cmd("colorscheme catppuccin-macchiato")
+
+vim.cmd("colorscheme cyberdream")
 
 -- vim.cmd "colorscheme sonokai"
 

@@ -24,7 +24,7 @@ Configurations can be sync with `rsync` if there is no include from another file
 - Add this to tutorial in bash:
 - Rust course (https://www.youtube.com/watch?v=BpPEoZW5IiY)
 
-```
+```bash
 if [[ $* == *--all* ]]; then
   echo build all
 fi

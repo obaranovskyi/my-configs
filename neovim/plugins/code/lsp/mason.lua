@@ -118,7 +118,8 @@ return {
 			"html",
 			"lua_ls",
 			"bashls",
-			"marksman", -- don't do TSInstall markdown no highlight
+			-- (probably it's not needed, it shows ambiguous link issues where are not)
+			-- "marksman", -- don't do TSInstall markdown no highlight
 			"angularls",
 			"typos_lsp",
 			"clangd",
