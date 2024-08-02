@@ -34,10 +34,19 @@ return {
 
 				-- Override a highlight group entirely using the color palette
 				overrides = function(colors) -- NOTE: This function nullifies the `highlights` option
-					-- Example:
 					return {
 						-- `:h highlight-groups` for a list of highlight groups
-						CursorLine = { fg = colors.transparent, bg = "#242213" },
+
+						-- DiffView overrides
+						DiffText = { fg = "NONE", bg = "#012c45" },
+						-- DiffChange = { fg = "NONE", bg = "#3b3a3a" },
+						DiffChange = { fg = "NONE", bg = "#232423" },
+						DiffDelete = { fg = "NONE", bg = "#3d0000" },
+						DiffAdd = { fg = "NONE", bg = "#002e0c" },
+
+						Search = { fg = "NONE", bg = "#174d52" },
+						WildMenu = { fg = "NONE", bg = "#695104" },
+						CursorLine = { fg = "NONE", bg = "#242213" },
 						Comment = { fg = colors.grey, bg = "NONE", italic = true },
 						["@property"] = { fg = colors.magenta, bold = true },
 					}

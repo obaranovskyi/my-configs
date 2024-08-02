@@ -21,6 +21,7 @@ return {
 				"markdown", -- this is needed to disable navigation in chatgpt markdown content
 				"oil",
 				"dashboard",
+				"help",
 			},
 		})
 	end,
