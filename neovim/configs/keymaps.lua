@@ -104,7 +104,7 @@ keymap("n", "N", "Nzzzv", opts)
 -- Buffers mappings
 -- ------------------------------------------------
 keymap("n", "gq", ":Bclose<CR>", opts)
-keymap("n", "go", ":BufOnly<CR>", opts)
+keymap("n", "go", ":silent! BufOnly<CR>", opts)
 keymap("n", "<S-l>", ":bn<CR>", opts)
 keymap("n", "<S-h>", ":bp<CR>", opts)
 
