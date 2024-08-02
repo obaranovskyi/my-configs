@@ -1,4 +1,3 @@
-local util = require("configs.util")
 local opts = { noremap = true, silent = true }
 local opt_nr = { noremap = true }
 
@@ -47,7 +46,10 @@ keymap("n", "<leader><Esc>", ':let @/ = ""<CR>', opts)
 -- ------------------------------------------------
 -- Saving, Writing, Jumping into file mappings
 -- ------------------------------------------------
-keymap("n", "<leader>w", ":wa!<CR>", opts)
+-- keymap("n", "<leader>w", ":wa!<CR>", opts)
+
+vim.keymap.set("n", "<leader>w", ":silent!wa!<CR>", { noremap = true, silent = true })
+
 keymap("n", "<leader>q", ":q<CR>", opts)
 keymap("n", "<leader>cz", ":qa!<CR>", opts)
 keymap("n", "<leader>;", "gf", opts)
@@ -101,7 +103,7 @@ keymap("n", "N", "Nzzzv", opts)
 -- Buffers mappings
 -- ------------------------------------------------
 keymap("n", "gq", ":Bclose<CR>", opts)
-keymap("n", "go", ":BufOnly<CR>", { noremap = true })
+keymap("n", "go", ":BufOnly<CR>", opt_nr)
 keymap("n", "<S-l>", ":bn<CR>", opts)
 keymap("n", "<S-h>", ":bp<CR>", opts)
 

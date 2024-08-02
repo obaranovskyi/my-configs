@@ -90,13 +90,13 @@ return {
 				local node = api.tree.get_node_under_cursor()
 				local curr_path = node.absolute_path
 				return ":!touch " .. curr_path .. "/"
-			end, { expr = true })
+			end, { expr = true, silent = true })
 			-- INFO: Add directories from the terminal
 			vim.keymap.set("n", "M", function()
 				local node = api.tree.get_node_under_cursor()
 				local curr_path = node.absolute_path
 				return ":!mkdir -p " .. curr_path .. "/"
-			end, { expr = true })
+			end, { expr = true, silent = true })
 
 			vim.keymap.set("n", "<2-LeftMouse>", api.node.open.edit, opts("Open"))
 			vim.keymap.set("n", "U", function()
@@ -119,16 +119,6 @@ return {
 			end, opts("CD"))
 			vim.keymap.set("n", "U", api.tree.change_root_to_parent, opts("CD"))
 
-			-- You might tidy things by removing these along with their default mapping.
-			vim.keymap.set("n", "O", "", { buffer = bufnr })
-			vim.keymap.del("n", "O", { buffer = bufnr })
-			vim.keymap.set("n", "<2-RightMouse>", "", { buffer = bufnr })
-			vim.keymap.del("n", "<2-RightMouse>", { buffer = bufnr })
-			vim.keymap.set("n", "D", "", { buffer = bufnr })
-			vim.keymap.del("n", "D", { buffer = bufnr })
-			vim.keymap.set("n", "E", "", { buffer = bufnr })
-			vim.keymap.del("n", "E", { buffer = bufnr })
-
 			-- You will need to insert "your code goes here" for any mappings with a custom action_cb
 			vim.keymap.set("n", "A", api.tree.expand_all, opts("Expand All"))
 			vim.keymap.set("n", "?", api.tree.toggle_help, opts("Help"))
@@ -142,6 +132,7 @@ return {
 		end
 
 		nvim_tree = require("nvim-tree")
+
 		nvim_tree.setup({
 			auto_reload_on_write = true,
 			create_in_closed_folder = false,
@@ -165,32 +156,6 @@ return {
 				number = false,
 				relativenumber = false,
 				signcolumn = "yes",
-				-- float = {
-				--   enable = true,
-				--   quit_on_focus_loss = true,
-				--   open_win_config = function()
-				--     local screen_w = vim.opt.columns:get()
-				--     local screen_h = vim.opt.lines:get() - vim.opt.cmdheight:get()
-				--     local window_w = screen_w * WIDTH_RATIO
-				--     local window_h = screen_h * HEIGHT_RATIO
-				--     local window_w_int = math.floor(window_w)
-				--     local window_h_int = math.floor(window_h)
-				--     local center_x = (screen_w - window_w) / 2
-				--     local center_y = ((vim.opt.lines:get() - window_h) / 2)
-				--         - vim.opt.cmdheight:get()
-				--     return {
-				--       border = 'rounded',
-				--       relative = 'editor',
-				--       row = center_y,
-				--       col = center_x,
-				--       width = window_w_int,
-				--       height = window_h_int,
-				--     }
-				--   end,
-				-- },
-				-- width = function()
-				--   return math.floor(vim.opt.columns:get() * WIDTH_RATIO)
-				-- end,
 			},
 			renderer = {
 				add_trailing = false,
@@ -284,6 +249,10 @@ return {
 				ignore = true,
 				timeout = 400,
 			},
+			notify = {
+				threshold = vim.log.levels.OFF, -- INFO: Disable notifications
+				absolute_path = true,
+			},
 			actions = {
 				use_system_clipboard = true,
 				change_dir = {
@@ -332,10 +301,6 @@ return {
 				},
 			},
 		})
-
-		local opts = { noremap = true, silent = true }
-		-- local keymap = vim.api.nvim_set_keymap
-		-- vim.api.nvim_set_keymap("n", "<leader>n", ":NvimTreeToggle<CR>", opts)
 
 		local config_status_ok, nvim_tree_config = pcall(require, "nvim-tree.config")
 		if not config_status_ok then

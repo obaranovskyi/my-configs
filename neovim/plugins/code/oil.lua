@@ -15,7 +15,12 @@ return {
 		-- NOTE: You can create the files like this
 		-- my-component.component.{ts,html,scss}
 
-		vim.keymap.set("n", "<leader>o", ":Oil --float<CR>", { desc = "Open 'oil' in current directory" })
+		vim.keymap.set(
+			"n",
+			"<leader>o",
+			":Oil --float<CR>",
+			{ silent = true, desc = "Open 'oil' in current directory" }
+		)
 
 		-- ["g?"] = "actions.show_help",
 		-- ["<CR>"] = "actions.select",

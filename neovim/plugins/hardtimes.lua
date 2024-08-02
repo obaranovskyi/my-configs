@@ -6,7 +6,9 @@ return {
 	},
 	config = function()
 		require("hardtime").setup({
-			enabled = true,
+			-- I disabled this because I some commands show noice popup because
+			-- hartimes overrides the some commands like `:NvimTreeToggle` (<C-n>)
+			enabled = false,
 
 			-- To find what should be disabled:
 			-- 1. Open a window that should be disabled
