@@ -38,8 +38,7 @@ return {
 						-- `:h highlight-groups` for a list of highlight groups
 
 						-- DiffView overrides
-						DiffText = { fg = "NONE", bg = "#026aba" },
-						-- DiffChange = { fg = "NONE", bg = "#3b3a3a" },
+						DiffText = { fg = "NONE", bg = "#524c10" },
 						DiffChange = { fg = "NONE", bg = "#232423" },
 						DiffDelete = { fg = "NONE", bg = "#3d0000" },
 						DiffAdd = { fg = "NONE", bg = "#002e0c" },
