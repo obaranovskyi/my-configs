@@ -16,6 +16,10 @@ vim.opt.wrap = false -- display lines as one long line
 vim.opt.updatetime = 300 -- faster completion (4000ms default)
 vim.opt.undofile = true -- enable persistent undo
 
+-- INFO: do not show the message when making changes to
+-- more than 9999 lines (required to not show everything in the noice plugin)
+vim.opt.report = 999999
+
 vim.opt.scrolloff = 8 -- is one of my fav
 vim.opt.sidescrolloff = 8
 vim.opt.swapfile = false -- creates a swapfile

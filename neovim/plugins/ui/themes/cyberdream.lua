@@ -45,7 +45,8 @@ return {
 						DiffAdd = { fg = "NONE", bg = "#002e0c" },
 
 						Search = { fg = "NONE", bg = "#174d52" },
-						WildMenu = { fg = "NONE", bg = "#695104" },
+						WildMenu = { fg = "NONE", bg = "#04693c" },
+
 						CursorLine = { fg = "NONE", bg = "#242213" },
 						Comment = { fg = colors.grey, bg = "NONE", italic = true },
 						["@property"] = { fg = colors.magenta, bold = true },

@@ -10,6 +10,7 @@ local keymap = vim.api.nvim_set_keymap
 keymap("n", "Y", "yy", opts)
 
 keymap("i", "jk", "<C-c>:w<cr>", opts)
+keymap("n", "u", ":silent! undo<cr>", opts) -- override to not show undo messages in noice
 
 keymap("i", "jl", "<Right>", opts)
 keymap("i", "jL", "<Esc>A", opts)
