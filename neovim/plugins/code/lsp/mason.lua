@@ -140,6 +140,24 @@ return {
 
 			server = vim.split(server, "@")[1]
 
+			-- INFO: "lua_ls" is a special case, it needs to be configured
+			-- in order to work properly with global `vim` variable
+			if server == "lua_ls" then
+				options.settings = {
+					Lua = {
+						diagnostics = {
+							globals = { "vim" },
+						},
+						workspace = {
+							library = {
+								[vim.fn.expand("$VIMRUNTIME/lua")] = true,
+								[vim.fn.expand("$VIMRUNTIME/lua/vim/lsp")] = true,
+							},
+						},
+					},
+				}
+			end
+
 			lspconfig[server].setup(options)
 		end
 	end,
