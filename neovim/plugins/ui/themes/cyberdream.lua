@@ -36,6 +36,8 @@ return {
 				overrides = function(colors) -- NOTE: This function nullifies the `highlights` option
 					-- Example:
 					return {
+						-- `:h highlight-groups` for a list of highlight groups
+						CursorLine = { fg = colors.transparent, bg = "#242213" },
 						Comment = { fg = colors.grey, bg = "NONE", italic = true },
 						["@property"] = { fg = colors.magenta, bold = true },
 					}
