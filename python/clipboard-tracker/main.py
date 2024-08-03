@@ -11,12 +11,12 @@ import asyncio
 import sys
 
 import src.text as text
-from src.__main__ import main, read_args
+from src.__main__ import main, read_path_and_file
 from src.util.logger import error
 from src.util.structure import get_directories_from_path
 
 if __name__ == "__main__":
-    path_with_file = read_args()
+    path_with_file = read_path_and_file()
 
     if path_with_file:
         text.filename = path_with_file

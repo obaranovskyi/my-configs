@@ -56,7 +56,7 @@ async def main() -> None:
         asyncio.create_task(handle_clipboard_change())
 
 
-def read_args() -> Optional[str]:
+def read_path_and_file() -> Optional[str]:
     """
     Read the filename from the command line arguments.
 
