@@ -10,18 +10,24 @@ clipboard-tracker <filename>
 import asyncio
 import sys
 
+import src.text as text
 from src.__main__ import main, read_args
-from src.text import create_file_if_not_exists, set_directory, set_filename
+from src.util.logger import error
+from src.util.structure import get_directories_from_path
 
 if __name__ == "__main__":
-    set_filename(read_args())
-    set_directory(read_args())
-    create_file_if_not_exists()
+    path_with_file = read_args()
+
+    if path_with_file:
+        text.filename = path_with_file
+        text.directory = get_directories_from_path(path_with_file)
+
+    text.create_file_if_not_exists()
 
     try:
         asyncio.run(main())
     except KeyboardInterrupt:
         sys.exit(0)
     except Exception as e:
-        print(f"An error occurred: {e}")
+        error(f"An error occurred: {e}")
         sys.exit(0)

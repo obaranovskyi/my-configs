@@ -1,66 +1,21 @@
 import os
-from typing import Optional
 
-from .date import get_date
-from .folder import remove_filename
+from .util.dt import get_date
+from .util.logger import info
 from .util.structure import create_structure
 
-filename = None
-DEFAULT_FILENAME = "clipboard.md"
-
-directory = None
-DEFAULT_DIRECTORY = ""
-
-def get_filename() -> str:
-    """
-    Get the filename from the environment variable, or return the default filename.
-    """
-    global filename
-    return filename or f"{get_date()}.{DEFAULT_FILENAME}"
-
-
-def set_filename(name: Optional[str]) -> None:
-    """
-    Set the filename.
-    """
-    global filename
-    filename = name
-
-def get_directory() -> str:
-    """
-    Get the directory from the global variable, or return the default directory.
-    """
-    global directory
-    return directory or DEFAULT_DIRECTORY
-
-def set_directory(dir: Optional[str]) -> None:
-    """
-    Set the directory.
-    """
-    global directory
-    directory = remove_filename(dir)
+filename = f"{get_date()}.clipboard.md"
+directory = ""
 
 def add_to_file(content: str) -> None:
-    """
-    Add the content to the file.
-    """
-    with open(get_filename(), "a") as file:
+    with open(filename, "a") as file:
         file.write(content + "\n\n")
 
-
 def create_file_if_not_exists() -> None:
-    """
-    Create the file if it doesn't exist.
-    """
-    if not os.path.exists(get_filename()):
-        file = get_filename()
-        create_structure(file)
-        print(f"Creating clipboard file: {file}")
-        open(file, "w").close()
+    if not os.path.exists(filename):
+        create_structure(filename)
+        info(f"Creating clipboard file: {filename}")
+        open(filename, "w").close()
 
-
-def add_image_to_file(image: str) -> None:
-    """
-    Add the link to the file.
-    """
-    add_to_file(f"![]({image})")
+def add_image_to_file(image_path: str) -> None:
+    add_to_file(f"![{image_path}]({image_path})")
