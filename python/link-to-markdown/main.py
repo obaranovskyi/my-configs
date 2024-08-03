@@ -10,21 +10,13 @@ import sys
 
 import html2text
 import requests
-from rich import print
+from util.logger import error, info
 
-BLUE = "turquoise2"
-RED = "deep_pink2"
-GREEN = "spring_green1"
-
-def display_info(message):
-    print(f"[{BLUE}]{message}")
-
-def display_error(message):
-    print(f"[{RED}]{message}")
 
 def convert_html_to_markdown(url):
     response = requests.get(url)
     response.raise_for_status()  # Check if the request was successful
+    response.encoding = 'utf-8'
     html_content = response.text
 
     # Convert HTML to Markdown
@@ -35,11 +27,10 @@ def convert_html_to_markdown(url):
     return markdown_content
 
 
-
 if __name__ == '__main__':
     if (len(sys.argv) < 3):
-        display_error('Run command in the following format:')
-        display_info('link-to-markdown <url> <output-file>')
+        error('Run command in the following format:')
+        info('link-to-markdown <url> <output-file>')
         sys.exit(1)
 
     url = sys.argv[1]
