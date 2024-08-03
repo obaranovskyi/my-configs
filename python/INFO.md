@@ -30,7 +30,7 @@ Here is an example for the `structure` module:
 ln -s ~/my-configs/python/util ~/my-configs/python/structure/util
 ```
 
-## Depenndencies
+## Dependencies
 
 If there program uses dependencies, you can install them by running `package-setup.py` script.
 But first you need to create a `requirements.txt` file with the dependencies listed.
