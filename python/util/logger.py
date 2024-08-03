@@ -2,7 +2,7 @@ from rich import print
 
 BLUE = "turquoise2"
 RED = "deep_pink2"
-GREEn = "spring_green1"
+GREEN = "spring_green1"
 YELLOW = "yellow"
 
 def info(message):
