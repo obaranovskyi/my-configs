@@ -48,6 +48,7 @@ return {
 
 						CursorLine = { fg = "NONE", bg = "#242213" },
 						Comment = { fg = colors.grey, bg = "NONE", italic = true },
+						NonText = { fg = "#04abcc", bg = "NONE", italic = true }, -- (gitsigns blame)
 						["@property"] = { fg = colors.magenta, bold = true },
 					}
 				end,
