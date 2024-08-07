@@ -96,6 +96,3 @@ map("i", "ц", "w", opts)
 map("c", "й", "q", opts)
 map("c", "ц", "w", opts)
 -- Add more mappings for command-line mode if necessary
-
--- test
-map("n", "dw", "вц", opts)
