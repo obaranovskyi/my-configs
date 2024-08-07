@@ -1,6 +1,7 @@
 require("configs.lazy")
 require("configs.leader")
 require("configs.keymaps")
+require("configs.cyrillic-keymaps")
 require("configs.options")
 require("configs.relative-actions.commands")
 require("configs.system.source")

@@ -33,7 +33,7 @@ return {
 			},
 			messages = {
 				-- I disabled this because I don't want to see the messages when I change, remove or update multiple lines
-				enabled = true,
+				enabled = false,
 			},
 			-- you can enable a preset for easier configuration
 			presets = {
