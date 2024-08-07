@@ -1,12 +1,3 @@
--- -- This should be used in places where I need it
--- return {
--- 	"rcarriga/nvim-notify",
--- 	config = function()
--- 		local notify = require("notify")
--- 		notify.setup()
--- 		notify("Hello world", "success")
--- 	end,
--- }
 return {
 	"folke/noice.nvim",
 	event = "VeryLazy",
