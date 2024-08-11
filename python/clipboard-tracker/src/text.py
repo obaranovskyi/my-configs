@@ -18,4 +18,4 @@ def create_file_if_not_exists() -> None:
         open(filename, "w").close()
 
 def add_image_to_file(image_path: str) -> None:
-    add_to_file(f"![{image_path}]({image_path})")
+    add_to_file(f"\n![{image_path}]({image_path})\n")
