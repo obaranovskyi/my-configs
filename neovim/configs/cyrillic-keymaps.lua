@@ -1,3 +1,5 @@
+--[[
+
 -- Function to set keymaps
 local map = vim.api.nvim_set_keymap
 
@@ -96,3 +98,5 @@ map("i", "ц", "w", opts)
 map("c", "й", "q", opts)
 map("c", "ц", "w", opts)
 -- Add more mappings for command-line mode if necessary
+
+--]]
