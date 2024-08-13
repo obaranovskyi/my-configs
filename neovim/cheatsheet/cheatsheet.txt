@@ -362,6 +362,7 @@
 [CopilotChat] [CODE] Display copilot actions                             | <leader>co [NORMAL_MODE], [VISUAL_MODE]
 [CopilotChat] [CODE] Point out the best practices                        | <leader>cb [VISUAL_MODE]
 [CopilotChat] [CODE] Suggest how to fix this error                       | <leader>cb [VISUAL_MODE]
+[CopilotChat] [CODE] Generate mock from the selected                     | <leader>cm [VISUAL_MODE]
 
 ## cheatsheet @ChatGPT
 [ChatGPT] Open chat                                                         | <leader>cG

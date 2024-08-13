@@ -103,6 +103,8 @@ local explain_technical_concept = "Explain this technical concept in simple Engl
 
 local explain_error_message = "Translate this error message into plain English and suggest how to fix it."
 
+local generate_mock_from_selection = "Generate mock from the selected."
+
 return {
 	blog = {
 		article_content_generation = article_content_generation,
@@ -123,5 +125,6 @@ return {
 		best_practices = best_practices,
 		explain_technical_concept = explain_technical_concept,
 		explain_error_message = explain_error_message,
+		generate_mock_from_selection = generate_mock_from_selection,
 	},
 }

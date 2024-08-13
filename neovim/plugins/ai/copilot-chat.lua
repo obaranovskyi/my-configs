@@ -98,6 +98,12 @@ return {
 					mapping = "<leader>ce",
 					selection = require("CopilotChat.select").visual,
 				},
+				GenerateMockFromSelection = {
+					prompt = prompts.code.generate_mock_from_selection,
+					mapping = "<leader>cm",
+					selection = require("CopilotChat.select").visual,
+				},
+				--- Text ---
 				Summarize = {
 					prompt = prompts.text.summarize,
 					mapping = "<leader>cS",
