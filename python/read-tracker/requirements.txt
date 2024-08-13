@@ -3,6 +3,7 @@ gTTS==2.5.2
 clipboard==0.0.4
 pillow==10.3.0
 pyperclip==1.9.0
+pydub==0.25.1
 pyobjc==10.3.1
 pyobjc-core==10.3.1
 pyobjc-framework-Accessibility==10.3.1

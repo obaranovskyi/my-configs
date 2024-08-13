@@ -1,10 +1,12 @@
 """
 This script monitors the clipboard for changes and reads aloud any new text using Google Text-to-Speech (gTTS).
-It uses the `playsound` library to play the audio without saving it to a permanent file.
+It uses the `playsound` library to play the audio without saving it to a permanent file. Additionally, it uses
+the `pydub` library to speed up the playback of the audio.
 
 Dependencies:
 - gtts: Google Text-to-Speech library
 - playsound: Simple library to play sounds
+- pydub: Library to manipulate audio files
 - clipboard: Library to interact with the clipboard
 - asyncio: Library to handle asynchronous operations
 
@@ -24,6 +26,7 @@ import tempfile
 import clipboard
 from gtts import gTTS
 from playsound import playsound
+from pydub import AudioSegment
 from util.logger import error
 
 lang = 'en'
@@ -35,14 +38,26 @@ async def handle_clipboard_change() -> None:
     text = clipboard.paste()
     if not text:
         return
-    tts = gTTS(text=text, lang=lang, slow=False)
+
+    tts = gTTS(text=text, lang=lang)
 
     # Create a temporary file to hold the audio data
     with tempfile.NamedTemporaryFile(delete=True, suffix=".mp3") as temp_audio_file:
         # Save the gTTS object to the temporary file
         tts.save(temp_audio_file.name)
-        # Play the audio
-        playsound(temp_audio_file.name)
+        
+        # Load the audio file with pydub
+        audio = AudioSegment.from_file(temp_audio_file.name)
+        
+        # Speed up the audio (e.g., by 1.3x)
+        speedup_audio = audio.speedup(playback_speed=1.3)
+        
+        # Save the sped-up audio to another temporary file
+        with tempfile.NamedTemporaryFile(delete=True, suffix=".mp3") as sped_up_audio_file:
+            speedup_audio.export(sped_up_audio_file.name, format="mp3")
+            
+            # Play the sped-up audio
+            playsound(sped_up_audio_file.name)
 
 
 
