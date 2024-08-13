@@ -22,7 +22,6 @@ async def handle_clipboard_change() -> None:
     with tempfile.NamedTemporaryFile(delete=True, suffix=".mp3") as temp_audio_file:
         # Save the gTTS object to the temporary file
         tts.save(temp_audio_file.name)
-        
         # Play the audio
         playsound(temp_audio_file.name)
 
