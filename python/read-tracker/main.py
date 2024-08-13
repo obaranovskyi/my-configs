@@ -1,3 +1,22 @@
+"""
+This script monitors the clipboard for changes and reads aloud any new text using Google Text-to-Speech (gTTS).
+It uses the `playsound` library to play the audio without saving it to a permanent file.
+
+Dependencies:
+- gtts: Google Text-to-Speech library
+- playsound: Simple library to play sounds
+- clipboard: Library to interact with the clipboard
+- asyncio: Library to handle asynchronous operations
+
+Usage:
+- Run the script and it will continuously monitor the clipboard.
+- When new text is copied to the clipboard, it will be read aloud.
+- Optionally, you can specify the language as a command-line argument (default is English).
+
+Example:
+python main.py en
+"""
+
 import asyncio
 import sys
 import tempfile
