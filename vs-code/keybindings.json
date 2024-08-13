@@ -97,7 +97,7 @@
   {
     "key": "ctrl+shift+l",
     "command": "editor.action.inlineSuggest.acceptNextWord"
-  },
+  }
   // tree actions
   {
     "key": "a",
@@ -111,7 +111,7 @@
   },
   {
     "key": "enter",
-    "command": "filesExplorer.openFilePreserveFocus",
+    "command": "multiCommand.openAndFocus",
     "when": "explorerViewletFocus"
   },
   {

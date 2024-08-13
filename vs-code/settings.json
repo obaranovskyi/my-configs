@@ -1,7 +1,7 @@
 {
   "javascript.preferences.importModuleSpecifier": "relative",
   "typescript.preferences.importModuleSpecifier": "relative",
-  "workbench.colorTheme": "Atom One Dark",
+  "workbench.colorTheme": "Cold Horizon",
   // "editor.renderWhitespace": "all",
   "editor.fontFamily": "Monaco",
   "editor.lineHeight": 1.3,
@@ -164,13 +164,22 @@
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.fontFamily": "Consolas",
   "workbench.colorCustomizations": {
-    "statusBar.background": "#ADD8E6",
-    "statusBar.noFolderBackground": "#ADD8E6",
-    "statusBar.debuggingBackground": "#ADD8E6",
+    "statusBar.background": "#98fb98",
+    "statusBar.noFolderBackground": "#98fb98",
+    "statusBar.debuggingBackground": "#98fb98",
     "statusBar.foreground": "#434C5E",
     "statusBar.debuggingForeground": "#434C5E",
     "editorCursor.foreground": "#00bfff",
     "editorCursor.background": "#fff",
     "editor.lineHighlightBackground": "#2d333e"
-  }
+  },
+  "multiCommand.commands": [
+    {
+      "command": "multiCommand.openAndFocus",
+      "sequence": [
+        "filesExplorer.openFilePreserveFocus",
+        "workbench.action.focusActiveEditorGroup"
+      ]
+    }
+  ]
 }
