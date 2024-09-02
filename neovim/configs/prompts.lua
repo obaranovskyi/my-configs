@@ -20,7 +20,7 @@ Here is the format:
 ```
 Original:
 
-- This **sentnece** has a mistake.
+- This **sentence** has a mistake.
 
 Correction:
 - This **sentence** has a mistake.
