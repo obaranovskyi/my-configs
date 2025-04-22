@@ -35,6 +35,9 @@ Improvements:
 2. ...
 ...
 
+At the end, provide improved text with all corrections applied.
+Improved text:
+...
 ```
 
 If there are spelling mistakes, don't mention them in the "Improvements" section.
