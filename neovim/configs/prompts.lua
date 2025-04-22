@@ -13,7 +13,7 @@ local grammar_check = [[
 Please check if it's grammatically correct to say this way.
 If it's incorrect, rephrase it and provide me with the grammatically correct version.
 
-Note: If no improvements are needed and there are no mistakes, just say "No improvements needed", nothing else only one sentence.
+Note: If no improvements are needed and there are no mistakes, just say "No improvements needed.", nothing else only one sentence.
 
 All corrections and mistakes should be highlighted to make them easier to find immediately.
 Also, include an explanation of where I made a mistake and how to fix this mistake.
