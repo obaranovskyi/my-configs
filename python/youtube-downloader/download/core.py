@@ -1,3 +1,5 @@
+import re
+
 import scrapetube
 from pytubefix import YouTube
 from rich import print
@@ -5,6 +7,20 @@ from shared.logger import blue, green, print_download_progress, yellow
 from shared.terminal import replace_terminal_encoding
 
 from .consts import youtube_url
+
+# def regex
+# ansi_escape = re.compile(r'''
+#     \x1B  # ESC
+#     (?:   # 7-bit C1 Fe (except CSI)
+#         [@-Z\\-_]
+#     |     # or [ for CSI, followed by a control sequence
+#         \[
+#         [0-?]*  # Parameter bytes
+#         [ -/]*  # Intermediate bytes
+#         [@-~]   # Final byte
+#     )
+# ''', re.VERBOSE)
+
 
 
 def download_channel(channel_id): 
@@ -38,10 +54,14 @@ def download_video_using_url(video_id):
 
 def temp_download_video_using_url(youtube_url, filename):
     yt = YouTube(replace_terminal_encoding(youtube_url), on_progress_callback=print_download_progress)
-    yt.streams.filter(progressive=True, file_extension='mp4') \
-              .order_by('resolution') \
-              .desc() \
-              .first() \
-              .download(filename=filename)
+
+    try:
+        yt.streams.filter(progressive=True, file_extension='mp4') \
+                  .order_by('resolution') \
+                  .desc() \
+                  .first() \
+                  .download(filename=filename)
+    except Exception as e:
+        print(e)
 
     return yt.streams[0].title

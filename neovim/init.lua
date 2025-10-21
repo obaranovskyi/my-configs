@@ -29,7 +29,7 @@ require("lazy").setup({
 	"marko-cerovac/material.nvim",
 
 	{ import = "plugins" },
-	{ import = "plugins.ai" },
+	-- { import = "plugins.ai" },
 	{ import = "plugins.ui" },
 	{ import = "plugins.ui.themes" },
 	{ import = "plugins.telescope" },
