@@ -181,8 +181,7 @@
       ]
     }
   ],
-  "maui.configuration.javaSdkPreferredPath": "/users/obaranovskyi/obaranovskyi/support/jdk-24.0.1",
   "git.suggestSmartCommit": false,
   "diffEditor.ignoreTrimWhitespace": false,
-  "markdown-preview-enhanced.liveUpdate": true
+  "workbench.colorTheme": "Bearded Theme Aquarelle Lilac"
 }
