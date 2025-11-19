@@ -97,7 +97,12 @@
   {
     "key": "ctrl+shift+l",
     "command": "editor.action.inlineSuggest.acceptNextWord"
-  }
+  },
+  {
+    "key": "ctrl+n",
+    "command": "workbench.action.toggleSidebarVisibility"
+  },
+
   // tree actions
   {
     "key": "a",
