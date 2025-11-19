@@ -115,6 +115,11 @@
     "when": "explorerViewletFocus"
   },
   {
+    "key": "l",
+    "command": "multiCommand.openAndFocus",
+    "when": "explorerViewletFocus"
+  },
+  {
     "key": "r",
     "command": "renameFile",
     "when": "explorerViewletFocus && !inputFocus"
