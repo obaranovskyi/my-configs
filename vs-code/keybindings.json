@@ -99,8 +99,12 @@
     "command": "editor.action.inlineSuggest.acceptNextWord"
   },
   {
-    "key": "ctrl+n",
+    "key": "ctrl+e",
     "command": "workbench.action.toggleSidebarVisibility"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "workbench.view.explorer"
   },
 
   // tree actions
