@@ -48,6 +48,12 @@
       "before": ["leader", "c", "c"],
       "commands": ["workbench.panel.chat.view.copilot.focus"]
     },
+    // This doesn't work `Ctrl+Cmnd+i` is used instead
+    {
+      "before": ["leader", "c", "o"],
+      "after": ["<C>", "<Cmd>", "i"]
+      // "commands": ["workbench.panel.chat.toggle"]
+    },
     {
       "before": ["leader", "p"],
       "commands": ["editor.action.clipboardPasteAction"]
@@ -129,7 +135,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "code-runner.executorMap": {
-    "csharp": "dotnet run ${file}"
+    "csharp": "dotnet build Basics/Basics.csproj && dotnet run --project Basics/Basics.csproj"
   },
   "editor.tokenColorCustomizations": {
     "comments": "#8e959b"
