@@ -76,6 +76,10 @@
       "commands": ["workbench.action.quickOpenPreviousEditor"]
     },
     {
+      "before": ["leader", "f", "k"],
+      "commands": ["editor.action.codeAction"]
+    },
+    {
       "before": ["leader", "c", "c"],
       "commands": ["workbench.panel.chat.view.copilot.focus"]
     }
@@ -91,6 +95,18 @@
     { "before": ["g", "f"], "commands": [":tabfirst"] },
     { "before": ["<Leader>", ";"], "after": ["g", "d"] },
     { "before": ["g", "a"], "after": ["g", "g", "V", "G", "$"] },
+
+    { "before": ["m", "a"], "after": ["m", "A"] },
+    { "before": ["m", "s"], "after": ["m", "S"] },
+    { "before": ["m", "d"], "after": ["m", "D"] },
+    { "before": ["m", "f"], "after": ["m", "F"] },
+    { "before": ["m", "g"], "after": ["m", "G"] },
+
+    { "before": ["'", "a"], "after": ["`", "A"] },
+    { "before": ["'", "s"], "after": ["`", "S"] },
+    { "before": ["'", "d"], "after": ["`", "D"] },
+    { "before": ["'", "f"], "after": ["`", "F"] },
+    { "before": ["'", "g"], "after": ["`", "G"] },
     {
       "before": ["leader", "f", "f"],
       "commands": ["workbench.action.terminal.searchWorkspace"]
@@ -135,7 +151,8 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "code-runner.executorMap": {
-    "csharp": "dotnet build Basics/Basics.csproj && dotnet run --project Basics/Basics.csproj"
+    // "csharp": "dotnet build Basics/Basics.csproj && dotnet run --project Basics/Basics.csproj"
+    "csharp": "dotnet build LinqTutorial/LinqTutorial.csproj && dotnet run --project LinqTutorial/LinqTutorial.csproj"
   },
   "editor.tokenColorCustomizations": {
     "comments": "#8e959b"
@@ -189,5 +206,7 @@
   ],
   "git.suggestSmartCommit": false,
   "diffEditor.ignoreTrimWhitespace": false,
-  "workbench.colorTheme": "Bearded Theme Aquarelle Lilac"
+  "workbench.colorTheme": "Bearded Theme Aquarelle Lilac",
+  "git.openRepositoryInParentFolders": "never",
+  "cSpell.userWords": ["Linq"]
 }

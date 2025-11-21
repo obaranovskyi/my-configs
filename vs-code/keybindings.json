@@ -142,5 +142,13 @@
     "key": "space e",
     "command": "workbench.action.quickOpen",
     "when": "!editorTextFocus && explorerViewletFocus && !inputFocus"
+  },
+  {
+    "key": "shift+cmd+r",
+    "command": "workbench.action.openRecent"
+  },
+  {
+    "key": "ctrl+r",
+    "command": "-workbench.action.openRecent"
   }
 ]
