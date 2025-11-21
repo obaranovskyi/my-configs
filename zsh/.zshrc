@@ -7,14 +7,14 @@ export ZSH="$HOME/.oh-my-zsh"
 # ZSH_THEME="robbyrussell"
 # ZSH_THEME="af-magic"
 # ZSH_THEME="half-life" # kitty main
-# ZSH_THEME="refined"
+ZSH_THEME="refined"
 # ZSH_THEME="nicoulaj"
 
 # Custom themes
 # zsh2000 - https://github.com/consolemaverick/zsh2000?tab=readme-ov-file
-export ZSH_2000_DISABLE_RIGHT_PROMPT='true'
-export ZSH_2000_DISABLE_RVM='true'
-ZSH_THEME="zsh2000"
+# export ZSH_2000_DISABLE_RIGHT_PROMPT='true'
+# export ZSH_2000_DISABLE_RVM='true'
+# ZSH_THEME="zsh2000"
 
 
 # Configure autosuggestion plugin
