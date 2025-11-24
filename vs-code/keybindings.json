@@ -150,5 +150,17 @@
   {
     "key": "ctrl+r",
     "command": "-workbench.action.openRecent"
+  },
+  // code
+  {
+    "key": "ctrl+shift+[",
+    "command": "editor.foldAll"
+  },
+  {
+    "key": "ctrl+shift+]",
+    "command": "editor.unfoldAll"
   }
+  // INFO: Single unfold
+  // Press Cmd+Option+[ to fold the current method/block.
+  // Press Cmd+Option+] to unfold the current method/block.
 ]
