@@ -93,55 +93,53 @@ return {
 		-- 2. added to the list below
 		-- 3. Sometimes you have to install the language server manually, for example: `npm install -g typescript-language-server`
 		-- or by using brew
-		local servers = {
-			"tsserver",
-			"cssmodules_ls",
-			"emmet_ls",
-			"pyright",
-			"html",
-			"lua_ls",
-			"bashls",
-			-- (probably it's not needed, it shows ambiguous link issues where are not)
-			-- "marksman", -- don't do TSInstall markdown no highlight
-			"angularls",
-			"typos_lsp",
-			"clangd",
+	local servers = {
+		"ts_ls",
+		"cssmodules_ls",
+		"emmet_ls",
+		"pyright",
+		"html",
+		"lua_ls",
+		"bashls",
+		-- (probably it's not needed, it shows ambiguous link issues where are not)
+		-- "marksman", -- don't do TSInstall markdown no highlight
+		"angularls",
+		"typos_lsp",
+		"clangd",
+	}
+
+	mason_lspconfig.setup({
+		ensure_installed = servers,
+		automatic_installation = true,
+	})
+
+	for _, server in pairs(servers) do
+		local options = {
+			on_attach = on_attach,
+			capabilities = capabilities,
 		}
 
-		mason_lspconfig.setup({
-			ensure_installed = servers,
-			automatic_installation = true,
-		})
+		server = vim.split(server, "@")[1]
 
-		local lspconfig = require("lspconfig")
-
-		for _, server in pairs(servers) do
-			local options = {
-				on_attach = on_attach,
-				capabilities = capabilities,
-			}
-
-			server = vim.split(server, "@")[1]
-
-			-- INFO: "lua_ls" is a special case, it needs to be configured
-			-- in order to work properly with global `vim` variable
-			if server == "lua_ls" then
-				options.settings = {
-					Lua = {
-						diagnostics = {
-							globals = { "vim" },
-						},
-						workspace = {
-							library = {
-								[vim.fn.expand("$VIMRUNTIME/lua")] = true,
-								[vim.fn.expand("$VIMRUNTIME/lua/vim/lsp")] = true,
-							},
+		-- INFO: "lua_ls" is a special case, it needs to be configured
+		-- in order to work properly with global `vim` variable
+		if server == "lua_ls" then
+			options.settings = {
+				Lua = {
+					diagnostics = {
+						globals = { "vim" },
+					},
+					workspace = {
+						library = {
+							[vim.fn.expand("$VIMRUNTIME/lua")] = true,
+							[vim.fn.expand("$VIMRUNTIME/lua/vim/lsp")] = true,
 						},
 					},
-				}
-			end
-
-			lspconfig[server].setup(options)
+				},
+			}
 		end
+
+		vim.lsp.config(server, options)
+	end
 	end,
 }
