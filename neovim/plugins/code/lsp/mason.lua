@@ -31,31 +31,21 @@ return {
 		}
 		capabilities = cmp_nvim_lsp.default_capabilities(capabilities)
 
-		local signs = {
-			{ name = "DiagnosticSignError", text = "" },
-			{ name = "DiagnosticSignWarn", text = "" },
-			{ name = "DiagnosticSignHint", text = "" },
-			{ name = "DiagnosticSignInfo", text = "" },
-		}
-
-		for _, sign in ipairs(signs) do
-			vim.fn.sign_define(sign.name, { texthl = sign.name, text = sign.text, numhl = "" })
-		end
-
-		local config = {
-			--[[ virtual_text = true, -- INFO: Display virtual text at the end of the line  ]]
+		vim.diagnostic.config({
 			virtual_text = false,
 			check_current_line = true,
-			--  end of virtual text configuration
 			signs = {
-				active = signs,
+				text = {
+					[vim.diagnostic.severity.ERROR] = "",
+					[vim.diagnostic.severity.WARN] = "",
+					[vim.diagnostic.severity.HINT] = "",
+					[vim.diagnostic.severity.INFO] = "",
+				},
 			},
 			update_in_insert = false,
 			underline = true,
 			severity_sort = true,
-		}
-
-		vim.diagnostic.config(config)
+		})
 
 		local on_attach = function(_, bufnr)
 			local opts = { noremap = true, silent = true }
