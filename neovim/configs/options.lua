@@ -60,7 +60,7 @@ vim.opt.fillchars:append({ diff = " " })
 
 -- color programming languages in the markdown
 vim.cmd([[
-  let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'javascript', 'typescript', 'vim', 'css', 'c', 'dockerfile', 'json']
+  let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'javascript', 'typescript', 'vim', 'css', 'c', 'dockerfile', 'json', 'csharp', 'sql']
 ]])
 
 -- float style (lsp)
