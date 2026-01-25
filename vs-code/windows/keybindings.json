@@ -148,5 +148,10 @@
     "key": "ctrl+shift+]",
     "command": "editor.unfoldAll",
     "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+enter",
+    "command": "mssql.runQuery",
+    "when": "editorTextFocus && editorLangId == 'sql'"
   }
 ]
