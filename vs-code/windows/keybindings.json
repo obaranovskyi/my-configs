@@ -100,11 +100,6 @@
     "command": "explorer.newFile",
     "when": "explorerViewletFocus && !inputFocus"
   },
-  // {
-  //   "key": "s",
-  //   "command": ["workbench.action.focusActiveEditorGroup"],
-  //   "when": "explorerViewletFocus && !inputFocus"
-  // },
   {
     "key": "ctrl+shift+l",
     "command": "editor.action.inlineSuggest.acceptNextWord",
@@ -153,5 +148,15 @@
     "key": "ctrl+enter",
     "command": "mssql.runQuery",
     "when": "editorTextFocus && editorLangId == 'sql'"
+  },
+  {
+    "key": "x",
+    "command": "filesExplorer.cut",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "p",
+    "command": "filesExplorer.paste",
+    "when": "filesExplorerFocus && !inputFocus"
   }
 ]
