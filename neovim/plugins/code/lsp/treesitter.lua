@@ -18,6 +18,8 @@ return {
 				"css",
 				"scss",
 				"tsx",
+				"c_sharp",
+				"sql",
 			},
 			sync_install = false,
 			indent = { enable = true },

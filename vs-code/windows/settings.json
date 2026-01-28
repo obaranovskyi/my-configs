@@ -38,30 +38,52 @@
     { "before": ["j", "H"], "after": ["<Esc>", "I"] },
     { "before": ["j", "k"], "after": ["<Esc>"] },
     { "before": ["j", "U"], "after": ["<Esc>", "g", "U", "i", "w", "e", "a"] },
-    { "before": ["j", "n"], "after": ["<Esc>", "o"] },
+    { "before": ["j", "n"], "after": ["<Esc>", "o"] }
   ],
   "vim.normalModeKeyBindings": [
     { "before": ["s"], "after": ["leader", "leader", "2", "s"] },
     { "before": ["leader", "w"], "commands": [":wa"] },
     { "before": ["leader", "="], "after": ["g", "a", "="] },
-    { "before": ["ctrl", "n"], "commands": ["workbench.view.explorer"]},
-    { "before": ["leader", "c", "c"], "commands": ["workbench.panel.chat.view.copilot.focus"]},
-    { "before": ["leader", "p"], "commands": ["editor.action.clipboardPasteAction"]},
-    { "before": ["leader", "q"], "commands": ["workbench.action.closeWindow"]},
-    { "before": ["leader", "f", "k"], "commands": ["editor.action.codeAction"]},
-    { "before": ["<S-k>"], "commands": ["editor.action.showHover"]},
-    { "before": ["leader", "f", "e"], "commands": ["workbench.action.gotoSymbol"]},
-    { "before": ["leader", "<CR>"], "after": ["a", "<CR>", "<ESC>"]},
-    { "before": ["leader", "f", "a"], "commands": ["editor.action.referenceSearch.trigger"], "when": "editorTextFocus && editorHasReferenceProvider"},
-    { "before": ["leader", "f", "f"], "commands": ["workbench.action.findInFiles"]},
-    { "before": ["leader", ";"], "commands": ["editor.action.openLink"]},
+    { "before": ["ctrl", "n"], "commands": ["workbench.view.explorer"] },
+    {
+      "before": ["leader", "c", "c"],
+      "commands": ["workbench.panel.chat.view.copilot.focus"]
+    },
+    {
+      "before": ["leader", "p"],
+      "commands": ["editor.action.clipboardPasteAction"]
+    },
+    { "before": ["leader", "q"], "commands": ["workbench.action.closeWindow"] },
+    {
+      "before": ["leader", "f", "k"],
+      "commands": ["editor.action.codeAction"]
+    },
+    { "before": ["<S-k>"], "commands": ["editor.action.showHover"] },
+    {
+      "before": ["leader", "f", "e"],
+      "commands": ["workbench.action.gotoSymbol"]
+    },
+    { "before": ["leader", "<CR>"], "after": ["a", "<CR>", "<ESC>"] },
+    {
+      "before": ["leader", "f", "a"],
+      "commands": ["editor.action.referenceSearch.trigger"],
+      "when": "editorTextFocus && editorHasReferenceProvider"
+    },
+    {
+      "before": ["leader", "f", "f"],
+      "commands": ["workbench.action.findInFiles"]
+    },
+    { "before": ["leader", ";"], "commands": ["editor.action.openLink"] }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     {
       "before": ["leader", "e"],
       "commands": ["workbench.action.quickOpenPreviousEditor"]
     },
-    { "before": ["leader", "c", "c"], "commands": ["workbench.panel.chat.view.copilot.focus"]},
+    {
+      "before": ["leader", "c", "c"],
+      "commands": ["workbench.panel.chat.view.copilot.focus"]
+    }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
     { "before": ["<S-l>"], "commands": [":tabn"] },
@@ -74,7 +96,10 @@
     { "before": ["g", "f"], "commands": [":tabfirst"] },
     { "before": ["<Leader>", ";"], "after": ["g", "d"] },
     { "before": ["g", "a"], "after": ["g", "g", "V", "G", "$"] },
-    { "before": ["leader", "f", "f"], "commands": ["workbench.action.terminal.searchWorkspace"]},
+    {
+      "before": ["leader", "f", "f"],
+      "commands": ["workbench.action.terminal.searchWorkspace"]
+    },
     // TODO: this keys doesn't work
     // { "before": ["<C-j>"], "commands": ["search.action.focusNextSearchResult"], "when": "hasSearchResult" },
     // { "before": ["<C-k>"], "commands": ["search.action.focusPreviousSearchResult"], "when": "inSearchView" },
@@ -98,7 +123,7 @@
     {
       "before": ["leader", "n"],
       "commands": ["revealInExplorer"]
-    },
+    }
   ],
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features"
@@ -203,6 +228,25 @@
       "profileSource": 0,
       "user": "",
       "password": ""
+    },
+    {
+      "server": "localhost,1433",
+      "database": "",
+      "user": "sa",
+      "password": "",
+      "authenticationType": "SqlLogin",
+      "encrypt": "Optional",
+      "trustServerCertificate": true,
+      "connectTimeout": 30,
+      "commandTimeout": 30,
+      "connectRetryCount": 1,
+      "connectRetryInterval": 10,
+      "applicationName": "vscode-mssql",
+      "profileName": "Docker connect",
+      "savePassword": true,
+      "groupId": "9F20CC2E-09DA-4331-B3B2-0A48AEEF000C",
+      "id": "2D7D24DF-311C-47EB-8203-8622CB4055D9",
+      "containerName": "easyfinances-mssql"
     }
-  ],
+  ]
 }
