@@ -73,7 +73,8 @@
       "before": ["leader", "f", "f"],
       "commands": ["workbench.action.findInFiles"]
     },
-    { "before": ["leader", ";"], "commands": ["editor.action.openLink"] }
+    { "before": ["leader", ";"], "commands": ["editor.action.openLink"] },
+    { "before": ["shift", "k"], "command": "editor.action.showHover" }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     {
@@ -206,29 +207,10 @@
   "mssql.connectionGroups": [
     {
       "name": "ROOT",
-      "id": "9F20CC2E-09DA-4331-B3B2-0A48AEEF000C"
+      "id": "ROOT"
     }
   ],
   "mssql.connections": [
-    {
-      "server": "(localdb)\\MSSQLLocalDB",
-      "database": "",
-      "authenticationType": "Integrated",
-      "encrypt": "true",
-      "trustServerCertificate": false,
-      "connectTimeout": 30,
-      "commandTimeout": 30,
-      "connectRetryCount": 1,
-      "connectRetryInterval": 10,
-      "applicationName": "vscode-mssql",
-      "pooling": false,
-      "profileName": "",
-      "groupId": "9F20CC2E-09DA-4331-B3B2-0A48AEEF000C",
-      "id": "F84C7C32-E4C6-4F84-BD39-6A10DD744036",
-      "profileSource": 0,
-      "user": "",
-      "password": ""
-    },
     {
       "server": "localhost,1433",
       "database": "",
@@ -244,9 +226,28 @@
       "applicationName": "vscode-mssql",
       "profileName": "Docker connect",
       "savePassword": true,
-      "groupId": "9F20CC2E-09DA-4331-B3B2-0A48AEEF000C",
+      "groupId": "ROOT",
       "id": "2D7D24DF-311C-47EB-8203-8622CB4055D9",
       "containerName": "easyfinances-mssql"
+    },
+    {
+      "server": "(localdb)\\MSSQLLocalDB",
+      "database": "",
+      "authenticationType": "Integrated",
+      "encrypt": "true",
+      "trustServerCertificate": false,
+      "connectTimeout": 30,
+      "commandTimeout": 30,
+      "connectRetryCount": 1,
+      "connectRetryInterval": 10,
+      "applicationName": "vscode-mssql",
+      "pooling": false,
+      "profileName": "",
+      "groupId": "ROOT",
+      "id": "F84C7C32-E4C6-4F84-BD39-6A10DD744036",
+      "profileSource": 0,
+      "user": "",
+      "password": ""
     }
   ]
 }

@@ -59,10 +59,6 @@
     "command": "github.copilot.ghpr.applySuggestion"
   },
   {
-    "key": "shift+k",
-    "command": "editor.action.showHover"
-  },
-  {
     "key": "ctrl+j",
     "command": "selectNextSuggestion"
   },
@@ -102,7 +98,7 @@
   },
   {
     "key": "ctrl+shift+l",
-    "command": "editor.action.inlineSuggest.acceptNextWord",
+    "command": "editor.action.inlineSuggest.acceptNextWord"
   },
   {
     "key": "d",
@@ -160,3 +156,11 @@
     "when": "filesExplorerFocus && !inputFocus"
   }
 ]
+
+/*
+Copilot:
+Open/Focus Chat view - 	Ctrl+Alt+I or Ctrl+Cmd+I
+Start inline chat	- Ctrl+I	Cmd+I
+Open Quick Chat	- Ctrl+Shift+Alt+L
+*/
+
