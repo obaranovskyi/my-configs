@@ -74,7 +74,11 @@
       "commands": ["workbench.action.findInFiles"]
     },
     { "before": ["leader", ";"], "commands": ["editor.action.openLink"] },
-    { "before": ["shift", "k"], "command": "editor.action.showHover" }
+    { "before": ["shift", "k"], "command": "editor.action.showHover" },
+    {
+      "before": ["leader", "a"],
+      "commands": ["workbench.action.quickchat.toggle"]
+    }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     {
@@ -84,6 +88,10 @@
     {
       "before": ["leader", "c", "c"],
       "commands": ["workbench.panel.chat.view.copilot.focus"]
+    },
+    {
+      "before": ["leader", "a"],
+      "commands": ["workbench.action.quickchat.toggle"]
     }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
