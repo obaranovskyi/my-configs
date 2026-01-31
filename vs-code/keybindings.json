@@ -59,10 +59,6 @@
     "command": "github.copilot.ghpr.applySuggestion"
   },
   {
-    "key": "shift+k",
-    "command": "editor.action.showHover"
-  },
-  {
     "key": "ctrl+j",
     "command": "selectNextSuggestion"
   },
@@ -94,24 +90,15 @@
     "command": "deleteWordLeft",
     "when": "textInputFocus"
   },
-  {
-    "key": "ctrl+shift+l",
-    "command": "editor.action.inlineSuggest.acceptNextWord"
-  },
-  {
-    "key": "ctrl+e",
-    "command": "workbench.action.toggleSidebarVisibility"
-  },
-  {
-    "key": "ctrl+n",
-    "command": "workbench.view.explorer"
-  },
-
   // tree actions
   {
     "key": "a",
     "command": "explorer.newFile",
     "when": "explorerViewletFocus && !inputFocus"
+  },
+  {
+    "key": "ctrl+shift+l",
+    "command": "editor.action.inlineSuggest.acceptNextWord",
   },
   {
     "key": "d",
@@ -124,16 +111,6 @@
     "when": "explorerViewletFocus"
   },
   {
-    "key": "l",
-    "command": "list.toggleExpand",
-    "when": "explorerViewletFocus && explorerResourceIsFolder && !inputFocus"
-  },
-  {
-    "key": "l",
-    "command": "list.select",
-    "when": "explorerViewletFocus && !explorerResourceIsFolder && !inputFocus"
-  },
-  {
     "key": "r",
     "command": "renameFile",
     "when": "explorerViewletFocus && !inputFocus"
@@ -144,23 +121,66 @@
     "when": "!editorTextFocus && explorerViewletFocus && !inputFocus"
   },
   {
-    "key": "shift+cmd+r",
-    "command": "workbench.action.openRecent"
+    "key": "ctrl+[",
+    "command": "editor.fold",
+    "when": "editorTextFocus"
   },
   {
-    "key": "ctrl+r",
-    "command": "-workbench.action.openRecent"
+    "key": "ctrl+]",
+    "command": "editor.unfold",
+    "when": "editorTextFocus"
   },
-  // code
   {
     "key": "ctrl+shift+[",
-    "command": "editor.foldAll"
+    "command": "editor.foldAll",
+    "when": "editorTextFocus"
   },
   {
     "key": "ctrl+shift+]",
-    "command": "editor.unfoldAll"
+    "command": "editor.unfoldAll",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+enter",
+    "command": "mssql.runQuery",
+    "when": "editorTextFocus && editorLangId == 'sql'"
+  },
+  // ------------
+  // File Explorer hotkeys
+  // ------------
+  {
+    "key": "x",
+    "command": "filesExplorer.cut",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "c",
+    "command": "filesExplorer.copy",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "p",
+    "command": "filesExplorer.paste",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  // ------------
+  // Task hotkeys
+  // ------------
+  {
+    "key": "alt+r",
+    "command": "workbench.action.tasks.runTask",
+    "args": "Build Solution"
+  },
+  {
+    "key": "alt+t",
+    "command": "workbench.action.tasks.runTask",
+    "args": "Integration Tests: Run All"
   }
-  // INFO: Single unfold
-  // Press Cmd+Option+[ to fold the current method/block.
-  // Press Cmd+Option+] to unfold the current method/block.
 ]
+
+/*
+Copilot:
+Open/Focus Chat view - 	Ctrl+Alt+I or Ctrl+Cmd+I
+Start inline chat	- Ctrl+I	Cmd+I
+Open Quick Chat	- Ctrl+Shift+Alt+L
+*/

@@ -4,7 +4,7 @@
   // "editor.renderWhitespace": "all",
   "editor.fontFamily": "Monaco",
   "editor.lineHeight": 1.3,
-  "editor.fontSize": 14,
+  "editor.fontSize": 14.5,
   "typescript.updateImportsOnFileMove.enabled": "never",
   "explorer.confirmDelete": false,
   "editor.rulers": [140],
@@ -16,7 +16,7 @@
   "gitlens.currentLine.enabled": false,
   "typescript.preferences.quoteStyle": "single",
   "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -27,9 +27,9 @@
   "[typescript]": {
     "editor.defaultFormatter": "vscode.typescript-language-features"
   },
-  "workbench.iconTheme": "vscode-icons",
+  "workbench.iconTheme": "bearded-icons",
   "vim.leader": "<Space>",
-  "vim.number": "relative",
+  "editor.lineNumbers": "relative",
   "vim.easymotion": true,
   "vim.insertModeKeyBindings": [
     { "before": ["j", "l"], "after": ["<Right>"] },
@@ -37,52 +37,35 @@
     { "before": ["j", "L"], "after": ["<Esc>", "A"] },
     { "before": ["j", "H"], "after": ["<Esc>", "I"] },
     { "before": ["j", "k"], "after": ["<Esc>"] },
-    { "before": ["j", "U"], "after": ["<Esc>", "g", "U", "i", "w", "e", "a"] }
+    { "before": ["j", "U"], "after": ["<Esc>", "g", "U", "i", "w", "e", "a"] },
+    { "before": ["j", "n"], "after": ["<Esc>", "o"] },
   ],
   "vim.normalModeKeyBindings": [
     { "before": ["s"], "after": ["leader", "leader", "2", "s"] },
     { "before": ["leader", "w"], "commands": [":wa"] },
     { "before": ["leader", "="], "after": ["g", "a", "="] },
-    { "before": ["ctrl", "n"], "commands": ["workbench.view.explorer"] },
-    {
-      "before": ["leader", "c", "c"],
-      "commands": ["workbench.panel.chat.view.copilot.focus"]
-    },
-    // This doesn't work `Ctrl+Cmnd+i` is used instead
-    {
-      "before": ["leader", "c", "o"],
-      "after": ["<C>", "<Cmd>", "i"]
-      // "commands": ["workbench.panel.chat.toggle"]
-    },
-    {
-      "before": ["leader", "p"],
-      "commands": ["editor.action.clipboardPasteAction"]
-    },
-    { "before": ["leader", "q"], "commands": ["workbench.action.closeWindow"] },
-    {
-      "before": ["leader", "f", "k"],
-      "commands": ["editor.action.codeAction"]
-    },
-    { "before": ["<S-k>"], "commands": ["editor.action.showHover"] },
-    {
-      "before": ["leader", "f", "e"],
-      "commands": ["workbench.action.gotoSymbol"]
-    },
-    { "before": ["leader", "<CR>"], "after": ["a", "<CR>", "<ESC>"] }
+    { "before": ["ctrl", "n"], "commands": ["workbench.view.explorer"]},
+    { "before": ["leader", "c", "c"], "commands": ["workbench.panel.chat.view.copilot.focus"]},
+    { "before": ["leader", "p"], "commands": ["editor.action.clipboardPasteAction"]},
+    { "before": ["leader", "q"], "commands": ["workbench.action.closeWindow"]},
+    { "before": ["leader", "f", "k"], "commands": ["editor.action.codeAction"]},
+    { "before": ["<S-k>"], "commands": ["editor.action.showHover"]},
+    { "before": ["leader", "f", "e"], "commands": ["workbench.action.gotoSymbol"]},
+    { "before": ["leader", "<CR>"], "after": ["a", "<CR>", "<ESC>"]},
+    { "before": ["leader", "f", "a"], "commands": ["editor.action.referenceSearch.trigger"], "when": "editorTextFocus && editorHasReferenceProvider"},
+    { "before": ["leader", "f", "f"], "commands": ["workbench.action.findInFiles"]},
+    { "before": ["leader", ";"], "commands": ["editor.action.openLink"]},
+    { "before": ["shift", "k"], "command": "editor.action.showHover" },
+    { "before": ["leader", "a"], "commands": ["workbench.action.quickchat.toggle"] },
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
     {
       "before": ["leader", "e"],
       "commands": ["workbench.action.quickOpenPreviousEditor"]
     },
-    {
-      "before": ["leader", "f", "k"],
-      "commands": ["editor.action.codeAction"]
-    },
-    {
-      "before": ["leader", "c", "c"],
-      "commands": ["workbench.panel.chat.view.copilot.focus"]
-    }
+    { "before": ["leader", "c", "c"], "commands": ["workbench.panel.chat.view.copilot.focus"]},
+    { "before": ["leader", "a"], "commands": ["workbench.action.quickchat.toggle"] },
+    { "before": ["leader", "f", "f"], "commands": ["workbench.action.findInFiles"]},
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
     { "before": ["<S-l>"], "commands": [":tabn"] },
@@ -95,22 +78,7 @@
     { "before": ["g", "f"], "commands": [":tabfirst"] },
     { "before": ["<Leader>", ";"], "after": ["g", "d"] },
     { "before": ["g", "a"], "after": ["g", "g", "V", "G", "$"] },
-
-    { "before": ["m", "a"], "after": ["m", "A"] },
-    { "before": ["m", "s"], "after": ["m", "S"] },
-    { "before": ["m", "d"], "after": ["m", "D"] },
-    { "before": ["m", "f"], "after": ["m", "F"] },
-    { "before": ["m", "g"], "after": ["m", "G"] },
-
-    { "before": ["'", "a"], "after": ["`", "A"] },
-    { "before": ["'", "s"], "after": ["`", "S"] },
-    { "before": ["'", "d"], "after": ["`", "D"] },
-    { "before": ["'", "f"], "after": ["`", "F"] },
-    { "before": ["'", "g"], "after": ["`", "G"] },
-    {
-      "before": ["leader", "f", "f"],
-      "commands": ["workbench.action.terminal.searchWorkspace"]
-    },
+    { "before": ["leader", "f", "f"], "commands": ["workbench.action.terminal.searchWorkspace"]},
     // TODO: this keys doesn't work
     // { "before": ["<C-j>"], "commands": ["search.action.focusNextSearchResult"], "when": "hasSearchResult" },
     // { "before": ["<C-k>"], "commands": ["search.action.focusPreviousSearchResult"], "when": "inSearchView" },
@@ -134,7 +102,7 @@
     {
       "before": ["leader", "n"],
       "commands": ["revealInExplorer"]
-    }
+    },
   ],
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features"
@@ -151,8 +119,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "code-runner.executorMap": {
-    // "csharp": "dotnet build Basics/Basics.csproj && dotnet run --project Basics/Basics.csproj"
-    "csharp": "dotnet build LinqTutorial/LinqTutorial.csproj && dotnet run --project LinqTutorial/LinqTutorial.csproj"
+    "cpp": "g++ $fullFileName && ./a.out"
   },
   "editor.tokenColorCustomizations": {
     "comments": "#8e959b"
@@ -163,7 +130,6 @@
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "debug.onTaskErrors": "debugAnyway",
   "gitlens.gitCommands.closeOnFocusOut": true,
-  "editor.lineNumbers": "relative",
   "vim.surround": true,
   "html.autoClosingTags": false,
   "vim.statusBarColorControl": true,
@@ -204,9 +170,65 @@
       ]
     }
   ],
-  "git.suggestSmartCommit": false,
-  "diffEditor.ignoreTrimWhitespace": false,
-  "workbench.colorTheme": "Bearded Theme Aquarelle Lilac",
   "git.openRepositoryInParentFolders": "never",
-  "cSpell.userWords": ["Linq"]
+  "workbench.colorTheme": "Bearded Theme Aquarelle Lilac",
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "editor.inlineSuggest.enabled": true,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": true,
+    "scminput": false,
+    "sql": false // during the learning phase
+  },
+  "chat.viewSessions.orientation": "stacked",
+  "mssql.connectionGroups": [
+    {
+      "name": "ROOT",
+      "id": "ROOT"
+    }
+  ],
+  "mssql.connections": [
+    {
+      "server": "localhost,1433",
+      "database": "",
+      "user": "sa",
+      "password": "",
+      "authenticationType": "SqlLogin",
+      "encrypt": "Optional",
+      "trustServerCertificate": true,
+      "connectTimeout": 30,
+      "commandTimeout": 30,
+      "connectRetryCount": 1,
+      "connectRetryInterval": 10,
+      "applicationName": "vscode-mssql",
+      "profileName": "Docker connect",
+      "savePassword": true,
+      "groupId": "ROOT",
+      "id": "2D7D24DF-311C-47EB-8203-8622CB4055D9",
+      "containerName": "easyfinances-mssql"
+    },
+    {
+      "server": "(localdb)\\MSSQLLocalDB",
+      "database": "",
+      "authenticationType": "Integrated",
+      "encrypt": "true",
+      "trustServerCertificate": false,
+      "connectTimeout": 30,
+      "commandTimeout": 30,
+      "connectRetryCount": 1,
+      "connectRetryInterval": 10,
+      "applicationName": "vscode-mssql",
+      "pooling": false,
+      "profileName": "",
+      "groupId": "ROOT",
+      "id": "F84C7C32-E4C6-4F84-BD39-6A10DD744036",
+      "profileSource": 0,
+      "user": "",
+      "password": ""
+    }
+  ],
+  "cSpell.userWords": [
+    "Mediat"
+  ],
 }
