@@ -90,31 +90,6 @@
     "command": "deleteWordLeft",
     "when": "textInputFocus"
   },
-  // tree actions
-  {
-    "key": "a",
-    "command": "explorer.newFile",
-    "when": "explorerViewletFocus && !inputFocus"
-  },
-  {
-    "key": "ctrl+shift+l",
-    "command": "editor.action.inlineSuggest.acceptNextWord",
-  },
-  {
-    "key": "d",
-    "command": "deleteFile",
-    "when": "explorerViewletFocus && !inputFocus"
-  },
-  {
-    "key": "enter",
-    "command": "multiCommand.openAndFocus",
-    "when": "explorerViewletFocus"
-  },
-  {
-    "key": "r",
-    "command": "renameFile",
-    "when": "explorerViewletFocus && !inputFocus"
-  },
   {
     "key": "space e",
     "command": "workbench.action.quickOpen",
@@ -149,6 +124,30 @@
   // File Explorer hotkeys
   // ------------
   {
+    "key": "a",
+    "command": "explorer.newFile",
+    "when": "explorerViewletFocus && !inputFocus"
+  },
+  {
+    "key": "ctrl+shift+l",
+    "command": "editor.action.inlineSuggest.acceptNextWord",
+  },
+  {
+    "key": "d",
+    "command": "deleteFile",
+    "when": "explorerViewletFocus && !inputFocus"
+  },
+  {
+    "key": "enter",
+    "command": "multiCommand.openAndFocus",
+    "when": "explorerViewletFocus"
+  },
+  {
+    "key": "r",
+    "command": "renameFile",
+    "when": "explorerViewletFocus && !inputFocus"
+  },
+  {
     "key": "x",
     "command": "filesExplorer.cut",
     "when": "filesExplorerFocus && !inputFocus"
@@ -162,6 +161,21 @@
     "key": "p",
     "command": "filesExplorer.paste",
     "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "cmd+alt+f",
+    "command": "multiCommand.focusExplorerAndFilter",
+    "when": "workspaceFolderCount > 0"
+  },
+  {
+    "key": "cmd+alt+t",
+    "command": "multiCommand.toggleFilterView",
+    "when": "workspaceFolderCount > 0"
+  },
+  {
+    "key": "cmd+alt+s",
+    "command": "multiCommand.pasteToFilter",
+    "when": "workspaceFolderCount > 0"
   },
   // ------------
   // Task hotkeys

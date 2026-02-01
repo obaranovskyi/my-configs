@@ -161,15 +161,6 @@
     "editorCursor.background": "#fff",
     "editor.lineHighlightBackground": "#2d333e"
   },
-  "multiCommand.commands": [
-    {
-      "command": "multiCommand.openAndFocus",
-      "sequence": [
-        "filesExplorer.openFilePreserveFocus",
-        "workbench.action.focusActiveEditorGroup"
-      ]
-    }
-  ],
   "git.openRepositoryInParentFolders": "never",
   "workbench.colorTheme": "Bearded Theme Aquarelle Lilac",
   "github.copilot.nextEditSuggestions.enabled": true,
@@ -231,4 +222,51 @@
   "cSpell.userWords": [
     "Mediat"
   ],
+  "gitlens.ai.model": "vscode",
+  "gitlens.ai.vscode.model": "copilot:gpt-4.1",
+
+  // Source tree filter 
+  // - Cmnd+Alt+F to focus
+  // - Enter to jump to source tree
+  "workbench.list.defaultFindMode": "filter",
+  // Exclude redundant Files
+  "files.exclude": {
+    "**/.git": true,
+    "**/.gitignore": false
+  },
+  "explorer.excludeGitIgnore": true,
+  // Install Multi Command extension
+  "editor.pasteAs.enabled": true, // enable as multi command needs paste
+  "multiCommand.commands": [
+    {
+      "command": "multiCommand.focusExplorerAndFilter",
+      "sequence": [
+        "workbench.view.explorer",
+        "list.find"
+      ]
+    },
+    {
+      "command": "multiCommand.toggleFilterView",
+      "sequence": [
+        "workbench.view.explorer",
+        "list.toggleFilterOnType"
+      ]
+    },
+    {
+      "command": "multiCommand.openAndFocus",
+      "sequence": [
+        "filesExplorer.openFilePreserveFocus",
+        "workbench.action.focusActiveEditorGroup"
+      ]
+    },
+    {
+      "command": "multiCommand.pasteToFilter",
+      "sequence": [
+        "editor.action.clipboardCopyAction",
+        "workbench.view.explorer",
+        "list.find",
+        "editor.action.clipboardPasteAction",
+      ]
+    }
+  ]
 }
