@@ -36,6 +36,9 @@ return {
 			end,
 		})
 
+    -- INFO: By default, autoformat is disabled. You can enable it by running :FormatToggle or :FormatEnable
+    vim.g.disable_autoformat = true
+
 		-- :LSPInstall on the file you want to add language server
 		-- For instance: json ("biome")
 
