@@ -1,195 +1,71 @@
 [
-  {
-    "key": "ctrl+shift+s",
-    "command": "workbench.action.files.saveAll"
-  },
-  {
-    "key": "ctrl+n",
-    "command": "workbench.view.explorer"
-  },
-  {
-    "key": "ctrl+h",
-    "command": "workbench.action.navigateLeft"
-  },
-  {
-    "key": "ctrl+l",
-    "command": "workbench.action.navigateRight"
-  },
-  {
-    "key": "ctrl+k",
-    "command": "workbench.action.navigateUp"
-  },
-  {
-    "key": "ctrl+j",
-    "command": "workbench.action.navigateDown"
-  },
-  {
-    "key": "f5",
-    "command": "workbench.action.debug.continue",
-    "when": "inDebugMode"
-  },
-  {
-    "key": "f5",
-    "command": "-workbench.action.debug.continue",
-    "when": "inDebugMode"
-  },
-  {
-    "key": "cmd+]",
-    "command": "-editor.action.indentLines",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "alt+j",
-    "command": "workbench.action.togglePanel"
-  },
-  {
-    "key": "cmd+j",
-    "command": "-workbench.action.togglePanel"
-  },
-  {
-    "key": "alt+b",
-    "command": "workbench.action.toggleSidebarVisibility"
-  },
-  {
-    "key": "ctrl+b",
-    "command": "workbench.action.toggleSidebarVisibility"
-  },
-  {
-    "key": "ctrl+g",
-    "command": "github.copilot.ghpr.applySuggestion"
-  },
-  {
-    "key": "ctrl+j",
-    "command": "selectNextSuggestion"
-  },
-  {
-    "key": "ctrl+k",
-    "command": "selectPrevSuggestion"
-  },
-  {
-    "key": "ctrl+j",
-    "command": "workbench.action.quickOpenNavigateNext",
-    "when": "inQuickOpen"
-  },
-  {
-    "key": "ctrl+k",
-    "command": "workbench.action.quickOpenNavigatePrevious",
-    "when": "inQuickOpen"
-  },
-  {
-    "key": "ctrl+shift+j",
-    "command": "workbench.action.terminal.focus"
-  },
-  {
-    "key": "ctrl+shift+k",
-    "command": "workbench.action.focusActiveEditorGroup",
-    "when": "terminalFocus"
-  },
-  {
-    "key": "alt+backspace",
-    "command": "deleteWordLeft",
-    "when": "textInputFocus"
-  },
-  {
-    "key": "space e",
-    "command": "workbench.action.quickOpen",
-    "when": "!editorTextFocus && explorerViewletFocus && !inputFocus"
-  },
-  {
-    "key": "ctrl+[",
-    "command": "editor.fold",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "ctrl+]",
-    "command": "editor.unfold",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "ctrl+shift+[",
-    "command": "editor.foldAll",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "ctrl+shift+]",
-    "command": "editor.unfoldAll",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "ctrl+enter",
-    "command": "mssql.runQuery",
-    "when": "editorTextFocus && editorLangId == 'sql'"
-  },
+  // Vim like navigation hotkeys
   // ------------
-  // File Explorer hotkeys
+
+  { "key": "ctrl+h", "command": "workbench.action.navigateLeft" },
+  { "key": "ctrl+l", "command": "workbench.action.navigateRight" },
+  { "key": "ctrl+k", "command": "workbench.action.navigateUp" },
+  { "key": "ctrl+j", "command": "workbench.action.navigateDown" },
+
+  // Quick Open
   // ------------
-  {
-    "key": "a",
-    "command": "explorer.newFile",
-    "when": "explorerViewletFocus && !inputFocus"
-  },
-  {
-    "key": "ctrl+shift+l",
-    "command": "editor.action.inlineSuggest.acceptNextWord",
-  },
-  {
-    "key": "d",
-    "command": "deleteFile",
-    "when": "explorerViewletFocus && !inputFocus"
-  },
-  {
-    "key": "enter",
-    "command": "multiCommand.openAndFocus",
-    "when": "explorerViewletFocus"
-  },
-  {
-    "key": "r",
-    "command": "renameFile",
-    "when": "explorerViewletFocus && !inputFocus"
-  },
-  {
-    "key": "x",
-    "command": "filesExplorer.cut",
-    "when": "filesExplorerFocus && !inputFocus"
-  },
-  {
-    "key": "c",
-    "command": "filesExplorer.copy",
-    "when": "filesExplorerFocus && !inputFocus"
-  },
-  {
-    "key": "p",
-    "command": "filesExplorer.paste",
-    "when": "filesExplorerFocus && !inputFocus"
-  },
-  {
-    "key": "cmd+alt+f",
-    "command": "multiCommand.focusExplorerAndFilter",
-    "when": "workspaceFolderCount > 0"
-  },
-  {
-    "key": "cmd+alt+t",
-    "command": "multiCommand.toggleFilterView",
-    "when": "workspaceFolderCount > 0"
-  },
-  {
-    "key": "cmd+alt+s",
-    "command": "multiCommand.pasteToFilter",
-    "when": "workspaceFolderCount > 0"
-  },
+  { "key": "ctrl+j", "command": "workbench.action.quickOpenNavigateNext", "when": "inQuickOpen" },
+  { "key": "ctrl+k", "command": "workbench.action.quickOpenNavigatePrevious", "when": "inQuickOpen" },
+
+  // File Explorer
   // ------------
-  // Task hotkeys
+  { "key": "ctrl+n", "command": "workbench.view.explorer" },
+  { "key": "alt+l", "command": "workbench.action.toggleSidebarVisibility" },
+  { "key": "a", "command": "explorer.newFile", "when": "explorerViewletFocus && !inputFocus" },
+  { "key": "d", "command": "deleteFile", "when": "explorerViewletFocus && !inputFocus" },
+  { "key": "enter", "command": "multiCommand.openAndFocus", "when": "explorerViewletFocus" },
+  { "key": "r", "command": "renameFile", "when": "explorerViewletFocus && !inputFocus" },
+  { "key": "x", "command": "filesExplorer.cut", "when": "filesExplorerFocus && !inputFocus" },
+  { "key": "c", "command": "filesExplorer.copy", "when": "filesExplorerFocus && !inputFocus" },
+  { "key": "p", "command": "filesExplorer.paste", "when": "filesExplorerFocus && !inputFocus" },
+
+  // Chat
   // ------------
-  {
-    "key": "alt+r",
-    "command": "workbench.action.tasks.runTask",
-    "args": "Build Solution"
-  },
-  {
-    "key": "alt+t",
-    "command": "workbench.action.tasks.runTask",
-    "args": "Integration Tests: Run All"
-  }
+  { "key": "alt+h", "command": "workbench.action.chat.toggle" },
+
+  // Terminal
+  // ------------
+  { "key": "ctrl+shift+j", "command": "workbench.action.terminal.focus" },
+  { "key": "ctrl+shift+k", "command": "workbench.action.focusActiveEditorGroup", "when": "terminalFocus" },
+
+  // Text editing
+  // ------------
+  { "key": "alt+backspace", "command": "deleteWordLeft", "when": "textInputFocus" },
+
+  // Code folding
+  // ------------
+  { "key": "ctrl+[", "command": "editor.fold", "when": "editorTextFocus" },
+  { "key": "ctrl+]", "command": "editor.unfold", "when": "editorTextFocus" },
+  { "key": "ctrl+shift+[", "command": "editor.foldAll", "when": "editorTextFocus" },
+  { "key": "ctrl+shift+]", "command": "editor.unfoldAll", "when": "editorTextFocus" },
+
+  // ------------------------
+  // Plugins ----------------
+  // ------------------------
+
+  // SQL Server
+  // ------------
+  { "key": "ctrl+enter", "command": "mssql.runQuery", "when": "editorTextFocus && editorLangId == 'sql'" },
+
+  // Suggestions
+  // ------------
+  { "key": "ctrl+shift+l", "command": "editor.action.inlineSuggest.acceptNextWord", },
+
+  // File Explorer filter hotkeys
+  // ------------
+  { "key": "cmd+alt+f", "command": "multiCommand.focusExplorerAndFilter", "when": "workspaceFolderCount > 0" },
+  { "key": "cmd+alt+t", "command": "multiCommand.toggleFilterView", "when": "workspaceFolderCount > 0" },
+  { "key": "cmd+alt+s", "command": "multiCommand.pasteToFilter", "when": "workspaceFolderCount > 0" },
+
+  // Tasks
+  // ------------
+  { "key": "alt+r", "command": "workbench.action.tasks.runTask", "args": "Build Solution" },
+  { "key": "alt+t", "command": "workbench.action.tasks.runTask", "args": "Integration Tests: Run All" }
 ]
 
 /*
@@ -198,3 +74,4 @@ Open/Focus Chat view - 	Ctrl+Alt+I or Ctrl+Cmd+I
 Start inline chat	- Ctrl+I	Cmd+I
 Open Quick Chat	- Ctrl+Shift+Alt+L
 */
+
