@@ -1,11 +1,10 @@
 {
   "javascript.preferences.importModuleSpecifier": "relative",
   "typescript.preferences.importModuleSpecifier": "relative",
-  // "editor.renderWhitespace": "all",
+  "typescript.updateImportsOnFileMove.enabled": "never",
   "editor.fontFamily": "Monaco",
   "editor.lineHeight": 1.3,
   "editor.fontSize": 14.5,
-  "typescript.updateImportsOnFileMove.enabled": "never",
   "explorer.confirmDelete": false,
   "editor.rulers": [140],
   "window.zoomLevel": 1,
@@ -28,6 +27,10 @@
     "editor.defaultFormatter": "vscode.typescript-language-features"
   },
   "workbench.iconTheme": "bearded-icons",
+
+  // -----------------
+  // Vim configuration
+  // -----------------
   "vim.leader": "<Space>",
   "editor.lineNumbers": "relative",
   "vim.easymotion": true,
@@ -39,6 +42,9 @@
     { "before": ["j", "k"], "after": ["<Esc>"] },
     { "before": ["j", "U"], "after": ["<Esc>", "g", "U", "i", "w", "e", "a"] },
     { "before": ["j", "n"], "after": ["<Esc>", "o"] },
+    { "before": ["<C-a>"], "after": ["<Esc>", "I"] },
+    { "before": ["<C-e>"], "after": ["<Esc>", "A"] },
+    { "before": ["<C-d>"], "after": ["<Esc>", "l", "d", "l", "i"] },
   ],
   "vim.normalModeKeyBindings": [
     { "before": ["s"], "after": ["leader", "leader", "2", "s"] },
@@ -57,15 +63,18 @@
     { "before": ["leader", ";"], "commands": ["editor.action.openLink"]},
     { "before": ["shift", "k"], "command": "editor.action.showHover" },
     { "before": ["leader", "a"], "commands": ["workbench.action.quickchat.toggle"] },
+    { "before": [">"], "commands": ["editor.action.indentLines"] },
+    { "before": ["<"], "commands": ["editor.action.outdentLines"] },
+    { "before": ["<leader>", "/"], "commands": ["editor.action.commentLine", "extension.vim_escape"] },
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
-    {
-      "before": ["leader", "e"],
-      "commands": ["workbench.action.quickOpenPreviousEditor"]
-    },
+    { "before": ["leader", "e"], "commands": ["workbench.action.quickOpenPreviousEditor"] },
     { "before": ["leader", "c", "c"], "commands": ["workbench.panel.chat.view.copilot.focus"]},
     { "before": ["leader", "a"], "commands": ["workbench.action.quickchat.toggle"] },
     { "before": ["leader", "f", "f"], "commands": ["workbench.action.findInFiles"]},
+    { "before": [">"], "commands": ["editor.action.indentLines"] },
+    { "before": ["<"], "commands": ["editor.action.outdentLines"] },
+    { "before": ["<leader>", "/"], "commands": ["editor.action.commentLine", "extension.vim_escape"] }
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
     { "before": ["<S-l>"], "commands": [":tabn"] },
@@ -79,31 +88,16 @@
     { "before": ["<Leader>", ";"], "after": ["g", "d"] },
     { "before": ["g", "a"], "after": ["g", "g", "V", "G", "$"] },
     { "before": ["leader", "f", "f"], "commands": ["workbench.action.terminal.searchWorkspace"]},
-    // TODO: this keys doesn't work
-    // { "before": ["<C-j>"], "commands": ["search.action.focusNextSearchResult"], "when": "hasSearchResult" },
-    // { "before": ["<C-k>"], "commands": ["search.action.focusPreviousSearchResult"], "when": "inSearchView" },
-    {
-      "before": ["leader", "r"],
-      "commands": ["editor.action.rename"],
-      "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
-    },
-    {
-      "before": ["leader", "w"],
-      "commands": ["workbench.action.files.save"]
-    },
-    {
-      "before": ["leader", "e"],
-      "commands": ["workbench.action.quickOpenPreviousEditor"]
-    },
-    {
-      "before": ["<leader>", "\\"],
-      "commands": ["workbench.action.splitEditor"]
-    },
-    {
-      "before": ["leader", "n"],
-      "commands": ["revealInExplorer"]
-    },
+    { "before": ["leader", "r"], "commands": ["editor.action.rename"], "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly" },
+    { "before": ["leader", "w"], "commands": ["workbench.action.files.save"] },
+    { "before": ["leader", "e"], "commands": ["workbench.action.quickOpenPreviousEditor"] },
+    { "before": ["<leader>", "\\"], "commands": ["workbench.action.splitEditor"] },
+    { "before": ["leader", "n"], "commands": ["revealInExplorer"] },
   ],
+  // improve performance by disabling vim extension on large files
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1
+  },
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features"
   },
@@ -112,8 +106,8 @@
     "FIXME": {}
   },
   "todo-tree.highlights.defaultHighlight": {
-    "foreground": "green",
-    "type": "none"
+    "foreground": "#de4c16",
+    "type": "text"
   },
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -132,18 +126,6 @@
   "gitlens.gitCommands.closeOnFocusOut": true,
   "vim.surround": true,
   "html.autoClosingTags": false,
-  "vim.statusBarColorControl": true,
-  "vim.statusBarColors.normal": ["#ADD8E6", "#434C5E"],
-  "vim.statusBarColors.insert": "#FFE4B5",
-  "vim.statusBarColors.visual": "#d8bfd8",
-  "vim.statusBarColors.visualline": "#98fb98",
-  "vim.statusBarColors.visualblock": "#98fb98",
-  "vim.statusBarColors.replace": "#D08770",
-  "vim.statusBarColors.commandlineinprogress": "#007ACC",
-  "vim.statusBarColors.searchinprogressmode": "#ADD8E6",
-  "vim.statusBarColors.easymotionmode": "#010ACC",
-  "vim.statusBarColors.easymotioninputmode": "#007ACC",
-  "vim.statusBarColors.surroundinputmode": "#007ACC",
   "javascript.updateImportsOnFileMove.enabled": "never",
   "editor.cursorStyle": "line",
   "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
@@ -152,19 +134,19 @@
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.fontFamily": "Consolas",
   "workbench.colorCustomizations": {
-    "statusBar.background": "#98fb98",
-    "statusBar.noFolderBackground": "#98fb98",
-    "statusBar.debuggingBackground": "#98fb98",
-    "statusBar.foreground": "#434C5E",
-    "statusBar.debuggingForeground": "#434C5E",
+    "statusBar.background": "#e0af68",
+    "statusBar.noFolderBackground": "#e0af68",
+    "statusBar.debuggingBackground": "#e0af68",
+    "statusBar.foreground": "#1a1b26",
+    "statusBar.debuggingForeground": "#1a1b26",
     "editorCursor.foreground": "#00bfff",
     "editorCursor.background": "#fff",
     "editor.lineHighlightBackground": "#2d333e"
   },
   "git.openRepositoryInParentFolders": "never",
   "workbench.colorTheme": "Bearded Theme Aquarelle Lilac",
-  "github.copilot.nextEditSuggestions.enabled": true,
   "editor.inlineSuggest.enabled": true,
+  "github.copilot.nextEditSuggestions.enabled": true,
   "github.copilot.enable": {
     "*": true,
     "plaintext": false,
@@ -224,7 +206,6 @@
   ],
   "gitlens.ai.model": "vscode",
   "gitlens.ai.vscode.model": "copilot:gpt-4.1",
-
   // Source tree filter 
   // - Cmnd+Alt+F to focus
   // - Enter to jump to source tree
@@ -268,5 +249,22 @@
         "editor.action.clipboardPasteAction",
       ]
     }
-  ]
+  ],
+  "vim.statusBarColorControl": true,
+  "vim.statusBarColors.normal": ["#7aa2f7", "#1a1b26"],
+  "vim.statusBarColors.insert": "#9ece6a",
+  "vim.statusBarColors.visual": "#e0af68",
+  "vim.statusBarColors.visualline": "#e0af68",
+  "vim.statusBarColors.visualblock": "#bb9af7",
+  "vim.statusBarColors.replace": "#f7768e",
+  "vim.statusBarColors.commandlineinprogress": "#2ac3de",
+  "vim.statusBarColors.searchinprogressmode": "#ff9e64",
+  "vim.statusBarColors.easymotionmode": "#7dcfff",
+  "vim.statusBarColors.easymotioninputmode": "#7dcfff",
+  "vim.statusBarColors.surroundinputmode": "#7aa2f7"
 }
+
+// Important plugins
+// - Vim 
+// - multi-command
+// - VSCode VIM Marks
