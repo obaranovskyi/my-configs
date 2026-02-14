@@ -74,7 +74,8 @@
     { "before": ["leader", "f", "f"], "commands": ["workbench.action.findInFiles"]},
     { "before": [">"], "commands": ["editor.action.indentLines"] },
     { "before": ["<"], "commands": ["editor.action.outdentLines"] },
-    { "before": ["<leader>", "/"], "commands": ["editor.action.commentLine", "extension.vim_escape"] }
+    { "before": ["<leader>", "/"], "commands": ["editor.action.commentLine", "extension.vim_escape"] },
+    { "before": ["leader", "f", "f"], "commands": ["workbench.action.terminal.searchWorkspace"]},
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
     { "before": ["<S-l>"], "commands": [":tabn"] },
