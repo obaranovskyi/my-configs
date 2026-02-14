@@ -52,5 +52,9 @@
   // --------------------------------------------------------------
   { "key": "alt+j", "command": "search.action.focusNextSearchResult", "when": "hasSearchResult" },
   { "key": "alt+k", "command": "search.action.focusPreviousSearchResult", "when": "hasSearchResult" },
+
+  // Pin
+  { "key": "alt+p", "command": "workbench.action.pinEditor", "when": "!activeEditorIsPinned" },
+  { "key": "alt+p", "command": "workbench.action.unpinEditor", "when": "activeEditorIsPinned" }
 ]
 

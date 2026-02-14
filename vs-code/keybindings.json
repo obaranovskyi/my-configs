@@ -65,12 +65,16 @@
   // Tasks
   // ------------
   { "key": "alt+r", "command": "workbench.action.tasks.runTask", "args": "Build Solution" },
-  { "key": "alt+t", "command": "workbench.action.tasks.runTask", "args": "Integration Tests: Run All" }
+  { "key": "alt+t", "command": "workbench.action.tasks.runTask", "args": "Integration Tests: Run All" },
 
   // Search actions
   // --------------------------------------------------------------
   { "key": "alt+j", "command": "search.action.focusNextSearchResult", "when": "hasSearchResult" },
   { "key": "alt+k", "command": "search.action.focusPreviousSearchResult", "when": "hasSearchResult" },
+
+  // Pin
+  { "key": "alt+p", "command": "workbench.action.pinEditor", "when": "!activeEditorIsPinned" },
+  { "key": "alt+p", "command": "workbench.action.unpinEditor", "when": "activeEditorIsPinned" }
 ]
 
 /*
