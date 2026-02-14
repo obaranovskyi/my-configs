@@ -25,7 +25,7 @@
   { "key": "alt+j", "command": "workbench.action.togglePanel" },
   { "key": "alt+l", "command": "workbench.action.toggleSidebarVisibility" },
   { "key": "alt+h", "command": "aichat.newchataction" },
-  { "key": "alt+e", "command": "workbench.action.maximizeChatSize" }
+  { "key": "alt+e", "command": "workbench.action.maximizeChatSize" },
 
   // --------------------------------------------------------------
 

@@ -149,10 +149,6 @@
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "code-runner.executorMap": {
-    // "csharp": "dotnet build Basics/Basics.csproj && dotnet run --project Basics/Basics.csproj"
-    "csharp": "dotnet build LinqTutorial/LinqTutorial.csproj && dotnet run --project LinqTutorial/LinqTutorial.csproj"
-  },
   "editor.tokenColorCustomizations": {
     "comments": "#8e959b"
   },
