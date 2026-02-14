@@ -1,0 +1,220 @@
+{
+  "javascript.preferences.importModuleSpecifier": "relative",
+  "typescript.preferences.importModuleSpecifier": "relative",
+  // "editor.renderWhitespace": "all",
+  "editor.fontFamily": "Monaco",
+  "editor.lineHeight": 1.3,
+  "editor.fontSize": 14,
+  "typescript.updateImportsOnFileMove.enabled": "never",
+  "explorer.confirmDelete": false,
+  "editor.rulers": [140],
+  "window.zoomLevel": 1,
+  "editor.tabSize": 4,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": true,
+  "gitlens.currentLine.enabled": false,
+  "typescript.preferences.quoteStyle": "single",
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "workbench.iconTheme": "bearded-icons",
+  "vim.leader": "<Space>",
+  "vim.number": "relative",
+  "vim.easymotion": true,
+  "vim.insertModeKeyBindings": [
+    { "before": ["j", "l"], "after": ["<Right>"] },
+    { "before": ["j", "h"], "after": ["<Left>"] },
+    { "before": ["j", "L"], "after": ["<Esc>", "A"] },
+    { "before": ["j", "H"], "after": ["<Esc>", "I"] },
+    { "before": ["j", "k"], "after": ["<Esc>"] },
+    { "before": ["j", "n"], "after": ["<Esc>", "o"] },
+    { "before": ["j", "U"], "after": ["<Esc>", "g", "U", "i", "w", "e", "a"] }
+  ],
+  "vim.normalModeKeyBindings": [
+    { "before": ["s"], "after": ["leader", "leader", "2", "s"] },
+    { "before": ["m", "a"], "after": ["m", "A"] },
+    { "before": ["m", "s"], "after": ["m", "S"] },
+    { "before": ["m", "d"], "after": ["m", "D"] },
+    { "before": ["m", "f"], "after": ["m", "F"] },
+    { "before": ["m", "g"], "after": ["m", "G"] },
+
+    { "before": ["'", "a"], "after": ["`", "A"] },
+    { "before": ["'", "s"], "after": ["`", "S"] },
+    { "before": ["'", "d"], "after": ["`", "D"] },
+    { "before": ["'", "f"], "after": ["`", "F"] },
+    { "before": ["'", "g"], "after": ["`", "G"] },
+    {
+      "before": ["leader", "c", "c"],
+      "commands": ["aichat.newchataction"]
+    },
+    { "before": ["leader", "f", "a"], "commands": ["editor.action.referenceSearch.trigger"], "when": "editorTextFocus && editorHasReferenceProvider"},
+    {
+      "before": ["leader", "c", "o"],
+      "after": ["<C>", "<Cmd>", "i"],
+      // "commands": ["workbench.panel.chat.toggle"]
+    },
+    {
+      "before": ["leader", "p"],
+      "commands": ["editor.action.clipboardPasteAction"]
+    },
+    { "before": ["leader", "q"], "commands": ["workbench.action.closeWindow"] },
+    {
+      "before": ["leader", "f", "k"],
+      "commands": ["editor.action.codeAction"]
+    },
+    { "before": ["<S-k>"], "commands": ["editor.action.showHover"] },
+    {
+      "before": ["leader", "f", "e"],
+      "commands": ["workbench.action.gotoSymbol"]
+    },
+    { "before": ["leader", "<CR>"], "after": ["a", "<CR>", "<ESC>"] },
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["leader", "f", "k"],
+      "commands": ["editor.action.codeAction"]
+    },
+    {
+      "before": ["leader", "e"],
+      "commands": ["workbench.action.quickOpenPreviousEditor"]
+    },
+    {
+      "before": ["leader", "c", "c"],
+      "commands": ["aichat.newchataction"]
+    },
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    { "before": ["<S-l>"], "commands": [":tabn"] },
+    { "before": ["<S-h>"], "commands": [":tabp"] },
+    { "before": ["g", "n"], "commands": [":tabn"] },
+    { "before": ["g", "p"], "commands": [":tabp"] },
+    { "before": ["g", "q"], "commands": [":tabclose"] },
+    { "before": ["g", "o"], "commands": [":tabonly"] },
+    { "before": ["g", "l"], "commands": [":tablast"] },
+    { "before": ["g", "f"], "commands": [":tabfirst"] },
+    { "before": ["<Leader>", ";"], "after": ["g", "d"] },
+    { "before": ["g", "a"], "after": ["g", "g", "V", "G", "$"] },
+    {
+      "before": ["leader", "f", "f"],
+      "commands": ["workbench.action.terminal.searchWorkspace"]
+    },
+    // TODO: this keys doesn't work
+    // { "before": ["<C-j>"], "commands": ["search.action.focusNextSearchResult"], "when": "hasSearchResult" },
+    // { "before": ["<C-k>"], "commands": ["search.action.focusPreviousSearchResult"], "when": "inSearchView" },
+    {
+      "before": ["leader", "r"],
+      "commands": ["editor.action.rename"],
+      "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+    },
+    {
+      "before": ["leader", "w"],
+      "commands": ["workbench.action.files.save"]
+    },
+    {
+      "before": ["leader", "e"],
+      "commands": ["workbench.action.quickOpenPreviousEditor"]
+    },
+    {
+      "before": ["<leader>", "\\"],
+      "commands": ["workbench.action.splitEditor"]
+    },
+    {
+      "before": ["leader", "n"],
+      "commands": ["revealInExplorer"]
+    },
+    { "before": [">"], "commands": ["editor.action.indentLines"] },
+    { "before": ["<"], "commands": ["editor.action.outdentLines"] },
+    { "before": ["<leader>", "/"], "commands": ["editor.action.commentLine", "extension.vim_escape"] }
+  ],
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "todo-tree.highlights.customHighlight": {
+    "TODO": {},
+    "FIXME": {}
+  },
+  "todo-tree.highlights.defaultHighlight": {
+    "foreground": "green",
+    "type": "none"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "code-runner.executorMap": {
+    // "csharp": "dotnet build Basics/Basics.csproj && dotnet run --project Basics/Basics.csproj"
+    "csharp": "dotnet build LinqTutorial/LinqTutorial.csproj && dotnet run --project LinqTutorial/LinqTutorial.csproj"
+  },
+  "editor.tokenColorCustomizations": {
+    "comments": "#8e959b"
+  },
+  "workbench.editor.tabSizing": "shrink",
+  "todo-tree.tree.showScanModeButton": false,
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "debug.onTaskErrors": "debugAnyway",
+  "gitlens.gitCommands.closeOnFocusOut": true,
+  "editor.lineNumbers": "relative",
+  "vim.surround": true,
+  "html.autoClosingTags": false,
+  "javascript.updateImportsOnFileMove.enabled": "never",
+  "editor.cursorStyle": "line",
+  "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+  "editor.wordWrap": "off",
+  "editor.stickyScroll.enabled": false,
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.fontFamily": "Consolas",
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#e0af68",
+    "statusBar.noFolderBackground": "#e0af68",
+    "statusBar.debuggingBackground": "#e0af68",
+    "statusBar.foreground": "#1a1b26",
+    "statusBar.debuggingForeground": "#1a1b26",
+    "editorCursor.foreground": "#00bfff",
+    "editorCursor.background": "#fff",
+    "editor.lineHighlightBackground": "#2d333e"
+  },
+  "multiCommand.commands": [
+    {
+      "command": "multiCommand.openAndFocus",
+      "sequence": [
+        "filesExplorer.openFilePreserveFocus",
+        "workbench.action.focusActiveEditorGroup"
+      ]
+    }
+  ],
+  "git.suggestSmartCommit": false,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "workbench.colorTheme": "Bearded Theme Aquarelle Lilac",
+  "git.openRepositoryInParentFolders": "never",
+  "cursor.general.disableHttp2": true,
+  "git.timeline.showAuthor": false,
+  "vim.statusBarColorControl": true,
+  "vim.statusBarColors.normal": ["#7aa2f7", "#1a1b26"],
+  "vim.statusBarColors.insert": "#9ece6a",
+  "vim.statusBarColors.visual": "#e0af68",
+  "vim.statusBarColors.visualline": "#e0af68",
+  "vim.statusBarColors.visualblock": "#bb9af7",
+  "vim.statusBarColors.replace": "#f7768e",
+  "vim.statusBarColors.commandlineinprogress": "#2ac3de",
+  "vim.statusBarColors.searchinprogressmode": "#ff9e64",
+  "vim.statusBarColors.easymotionmode": "#7dcfff",
+  "vim.statusBarColors.easymotioninputmode": "#7dcfff",
+  "vim.statusBarColors.surroundinputmode": "#7aa2f7",
+  "workbench.sideBar.location": "right",
+  "workbench.activityBar.orientation": "vertical",
+    // improve performance by disabling vim extension on large files
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1
+  },
+  "cursorBlame.editorDecoration.enabled": false,
+  "window.openFilesInNewWindow": "on"
+}

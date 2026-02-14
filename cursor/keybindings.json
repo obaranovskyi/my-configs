@@ -1,0 +1,51 @@
+[
+  // Editor actions
+  // --------------------------------------------------------------
+  { "key": "alt+r", "command": "workbench.action.openRecent" }, // to open in new window hold ctrl and click enter
+  { "key": "alt+backspace", "command": "deleteWordLeft", "when": "textInputFocus" },
+
+  // Vim like navigation actions
+  // --------------------------------------------------------------
+  { "key": "ctrl+h", "command": "workbench.action.openNextRecentlyUsedEditorInGroup", "when": "explorerViewletFocus" }, 
+  { "key": "ctrl+l", "command": "workbench.view.explorer" },
+  { "key": "ctrl+h", "command": "workbench.action.navigateLeft", "when": "editorTextFocus" },
+  { "key": "ctrl+l", "command": "workbench.action.navigateRight" },
+  { "key": "ctrl+k", "command": "workbench.action.navigateUp" },
+  { "key": "ctrl+j", "command": "workbench.action.navigateDown" },
+  { "key": "ctrl+shift+l", "command": "workbench.action.navigateRight" },
+  { "key": "ctrl+shift+h", "command": "workbench.action.navigateLeft" },
+  { "key": "ctrl+j", "command": "selectNextSuggestion" },
+  { "key": "ctrl+k", "command": "selectPrevSuggestion" },
+  { "key": "ctrl+j", "command": "workbench.action.quickOpenNavigateNext", "when": "inQuickOpen" },
+  { "key": "ctrl+k", "command": "workbench.action.quickOpenNavigatePrevious", "when": "inQuickOpen"},
+  { "key": "ctrl+shift+j", "command": "workbench.action.terminal.focus" },
+  { "key": "ctrl+shift+k", "command": "workbench.action.focusActiveEditorGroup", "when": "terminalFocus" },
+
+  // Panel actions
+  { "key": "alt+j", "command": "workbench.action.togglePanel" },
+  { "key": "alt+l", "command": "workbench.action.toggleSidebarVisibility" },
+  { "key": "alt+h", "command": "aichat.newchataction" },
+  { "key": "alt+e", "command": "workbench.action.maximizeChatSize" }
+
+  // --------------------------------------------------------------
+
+  // Explorer actions
+  { "key": "ctrl+n", "command": "workbench.view.explorer" },
+  { "key": "alt+l", "command": "workbench.action.toggleSidebarVisibility" },
+  { "key": "a", "command": "explorer.newFile", "when": "explorerViewletFocus && !inputFocus" },
+  { "key": "d", "command": "deleteFile", "when": "explorerViewletFocus && !inputFocus" },
+  { "key": "enter", "command": "multiCommand.openAndFocus", "when": "explorerViewletFocus" },
+  { "key": "r", "command": "renameFile", "when": "explorerViewletFocus && !inputFocus" },
+  { "key": "x", "command": "filesExplorer.cut", "when": "filesExplorerFocus && !inputFocus" },
+  { "key": "c", "command": "filesExplorer.copy", "when": "filesExplorerFocus && !inputFocus" },
+  { "key": "p", "command": "filesExplorer.paste", "when": "filesExplorerFocus && !inputFocus" },
+
+  // Quick Open actions
+  // --------------------------------------------------------------
+  { "key": "space e", "command": "workbench.action.quickOpen", "when": "!editorTextFocus && explorerViewletFocus && !inputFocus" },
+
+  // Reset default keybindings
+  // --------------------------------------------------------------
+  { "key": "ctrl+i", "command": "-composer.startComposerPrompt" },
+]
+
