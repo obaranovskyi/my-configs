@@ -66,6 +66,11 @@
   // ------------
   { "key": "alt+r", "command": "workbench.action.tasks.runTask", "args": "Build Solution" },
   { "key": "alt+t", "command": "workbench.action.tasks.runTask", "args": "Integration Tests: Run All" }
+
+  // Search actions
+  // --------------------------------------------------------------
+  { "key": "alt+j", "command": "search.action.focusNextSearchResult", "when": "hasSearchResult" },
+  { "key": "alt+k", "command": "search.action.focusPreviousSearchResult", "when": "hasSearchResult" },
 ]
 
 /*

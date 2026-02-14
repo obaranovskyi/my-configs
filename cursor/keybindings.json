@@ -47,5 +47,10 @@
   // Reset default keybindings
   // --------------------------------------------------------------
   { "key": "ctrl+i", "command": "-composer.startComposerPrompt" },
+
+  // Search actions
+  // --------------------------------------------------------------
+  { "key": "alt+j", "command": "search.action.focusNextSearchResult", "when": "hasSearchResult" },
+  { "key": "alt+k", "command": "search.action.focusPreviousSearchResult", "when": "hasSearchResult" },
 ]
 
