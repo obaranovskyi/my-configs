@@ -1,5 +1,4 @@
 {
-
   "editor.minimap.scale": 2,
   "editor.cursorBlinking": "solid", 
   "javascript.preferences.importModuleSpecifier": "relative",
@@ -116,16 +115,11 @@
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "code-runner.executorMap": {
-    "cpp": "g++ $fullFileName && ./a.out"
-  },
   "editor.tokenColorCustomizations": {
     "comments": "#8e959b"
   },
   "workbench.editor.tabSizing": "shrink",
-  "todo-tree.tree.showScanModeButton": false,
   "editor.suggestSelection": "first",
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "debug.onTaskErrors": "debugAnyway",
   "gitlens.gitCommands.closeOnFocusOut": true,
   "vim.surround": true,
@@ -138,9 +132,9 @@
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.fontFamily": "Consolas",
   "workbench.colorCustomizations": {
-    "statusBar.background": "#e0af68",
-    "statusBar.noFolderBackground": "#e0af68",
-    "statusBar.debuggingBackground": "#e0af68",
+    "statusBar.background": "#7aa2f7",
+    "statusBar.noFolderBackground": "#7aa2f7",
+    "statusBar.debuggingBackground": "#7aa2f7",
     "statusBar.foreground": "#1a1b26",
     "statusBar.debuggingForeground": "#1a1b26",
     "editorCursor.foreground": "#00bfff",
