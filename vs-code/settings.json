@@ -60,7 +60,6 @@
     { "before": ["<S-k>"], "commands": ["editor.action.showHover"]},
     { "before": ["leader", "f", "e"], "commands": ["workbench.action.gotoSymbol"]},
     { "before": ["leader", "<CR>"], "after": ["a", "<CR>", "<ESC>"]},
-    { "before": ["leader", "f", "a"], "commands": ["editor.action.referenceSearch.trigger"], "when": "editorTextFocus && editorHasReferenceProvider"},
     { "before": ["leader", "f", "f"], "commands": ["workbench.action.findInFiles"]},
     { "before": ["leader", ";"], "commands": ["editor.action.openLink"]},
     { "before": ["shift", "k"], "command": "editor.action.showHover" },
@@ -78,6 +77,7 @@
     { "before": ["<"], "commands": ["editor.action.outdentLines"] },
     { "before": ["<leader>", "/"], "commands": ["editor.action.commentLine", "extension.vim_escape"] },
     { "before": ["leader", "f", "f"], "commands": ["workbench.action.terminal.searchWorkspace"]},
+
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
     { "before": ["<S-l>"], "commands": [":tabn"] },
@@ -246,7 +246,7 @@
         "list.find",
         "editor.action.clipboardPasteAction",
       ]
-    }
+    },
   ],
   "vim.statusBarColorControl": true,
   "vim.statusBarColors.normal": ["#7aa2f7", "#1a1b26"],
@@ -263,6 +263,10 @@
 }
 
 // Important plugins
+// ------------------
 // - Vim 
 // - multi-command
+// - macrosRe
+// - Fast Compare
 // - VSCode VIM Marks
+// - Find and Transform
