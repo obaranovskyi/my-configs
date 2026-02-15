@@ -1,7 +1,10 @@
 [
+  // Editor actions
+  // --------------------------------------------------------------
+  { "key": "alt+r", "command": "workbench.action.openRecent" }, // to open in new window hold ctrl and click enter
+
   // Vim like navigation hotkeys
   // ------------
-
   { "key": "ctrl+h", "command": "workbench.action.navigateLeft" },
   { "key": "ctrl+l", "command": "workbench.action.navigateRight" },
   { "key": "ctrl+k", "command": "workbench.action.navigateUp" },
@@ -64,8 +67,9 @@
 
   // Tasks
   // ------------
-  { "key": "alt+r", "command": "workbench.action.tasks.runTask", "args": "Build Solution" },
+  { "key": "alt+b", "command": "workbench.action.tasks.runTask", "args": "Build Solution" },
   { "key": "alt+t", "command": "workbench.action.tasks.runTask", "args": "Integration Tests: Run All" },
+  { "key": "alt+m", "command": "workbench.action.tasks.runTask", "args": "Init and Apply Migrations" },
 
   // Search actions
   // --------------------------------------------------------------
@@ -75,6 +79,7 @@
   // Pin
   { "key": "alt+p", "command": "workbench.action.pinEditor", "when": "!activeEditorIsPinned" },
   { "key": "alt+p", "command": "workbench.action.unpinEditor", "when": "activeEditorIsPinned" }
+
 ]
 
 /*
@@ -83,4 +88,3 @@ Open/Focus Chat view - 	Ctrl+Alt+I or Ctrl+Cmd+I
 Start inline chat	- Ctrl+I	Cmd+I
 Open Quick Chat	- Ctrl+Shift+Alt+L
 */
-

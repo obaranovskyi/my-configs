@@ -1,4 +1,7 @@
 {
+
+  "editor.minimap.scale": 2,
+  "editor.cursorBlinking": "solid", 
   "javascript.preferences.importModuleSpecifier": "relative",
   "typescript.preferences.importModuleSpecifier": "relative",
   "typescript.updateImportsOnFileMove.enabled": "never",
