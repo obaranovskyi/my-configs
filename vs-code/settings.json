@@ -36,6 +36,7 @@
   "vim.leader": "<Space>",
   "editor.lineNumbers": "relative",
   "vim.easymotion": true,
+  "vim.surround": true,
   "vim.insertModeKeyBindings": [
     { "before": ["j", "l"], "after": ["<Right>"] },
     { "before": ["j", "h"], "after": ["<Left>"] },
@@ -122,7 +123,6 @@
   "editor.suggestSelection": "first",
   "debug.onTaskErrors": "debugAnyway",
   "gitlens.gitCommands.closeOnFocusOut": true,
-  "vim.surround": true,
   "html.autoClosingTags": false,
   "javascript.updateImportsOnFileMove.enabled": "never",
   "editor.cursorStyle": "line",
@@ -132,9 +132,9 @@
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.fontFamily": "Consolas",
   "workbench.colorCustomizations": {
-    "statusBar.background": "#7aa2f7",
-    "statusBar.noFolderBackground": "#7aa2f7",
-    "statusBar.debuggingBackground": "#7aa2f7",
+    "statusBar.background": "#9ece6a",
+    "statusBar.noFolderBackground": "#9ece6a",
+    "statusBar.debuggingBackground": "#9ece6a",
     "statusBar.foreground": "#1a1b26",
     "statusBar.debuggingForeground": "#1a1b26",
     "editorCursor.foreground": "#00bfff",
