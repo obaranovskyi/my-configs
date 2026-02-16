@@ -78,8 +78,10 @@
 
   // Pin
   { "key": "alt+p", "command": "workbench.action.pinEditor", "when": "!activeEditorIsPinned" },
-  { "key": "alt+p", "command": "workbench.action.unpinEditor", "when": "activeEditorIsPinned" }
+  { "key": "alt+p", "command": "workbench.action.unpinEditor", "when": "activeEditorIsPinned" },
 
+  // Todo tree actions
+  { "key": "alt+t", "command": "todo-tree-view.open" },
 ]
 
 /*
