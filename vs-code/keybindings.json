@@ -27,9 +27,12 @@
   { "key": "c", "command": "filesExplorer.copy", "when": "filesExplorerFocus && !inputFocus" },
   { "key": "p", "command": "filesExplorer.paste", "when": "filesExplorerFocus && !inputFocus" },
 
-  // Chat
+  // AI
   // ------------
   { "key": "alt+h", "command": "workbench.action.chat.toggle" },
+  { "key": "ctrl+l", "command": "editor.action.inlineSuggest.acceptNextWord", "when": "inlineSuggestionVisible && !editorReadonly" },
+  { "key": "ctrl+h", "command": "editor.action.inlineSuggest.showNext", "when": "inlineSuggestionVisible && !editorReadonly" },
+  
 
   // Terminal
   // ------------

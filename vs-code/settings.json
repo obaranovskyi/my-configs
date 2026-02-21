@@ -1,5 +1,5 @@
 {
-  "editor.minimap.scale": 2,
+  "editor.minimap.scale": 1,
   "editor.cursorBlinking": "solid", 
   "javascript.preferences.importModuleSpecifier": "relative",
   "typescript.preferences.importModuleSpecifier": "relative",
@@ -99,6 +99,7 @@
     { "before": ["leader", "e"], "commands": ["workbench.action.quickOpenPreviousEditor"] },
     { "before": ["<leader>", "\\"], "commands": ["workbench.action.splitEditor"] },
     { "before": ["leader", "n"], "commands": ["revealInExplorer"] },
+    { "before": ["leader", "g", "d"], "commands": ["editor.action.goToImplementation"] },
   ],
   // improve performance by disabling vim extension on large files
   "extensions.experimental.affinity": {
