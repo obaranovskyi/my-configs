@@ -1,5 +1,6 @@
 {
   "editor.minimap.scale": 1,
+  "breadcrumbs.enabled": false,
   "editor.cursorBlinking": "solid", 
   "javascript.preferences.importModuleSpecifier": "relative",
   "typescript.preferences.importModuleSpecifier": "relative",
@@ -79,6 +80,8 @@
     { "before": ["<"], "commands": ["editor.action.outdentLines"] },
     { "before": ["<leader>", "/"], "commands": ["editor.action.commentLine", "extension.vim_escape"] },
     { "before": ["leader", "f", "f"], "commands": ["workbench.action.terminal.searchWorkspace"]},
+    { "before": ["leader", "f", "k"], "commands": ["editor.action.codeAction"] },
+    { "before": ["leader", "f", "w"], "commands": ["github.copilot.chat.explain"]},
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
     { "before": ["<S-l>"], "commands": [":tabn"] },
@@ -100,6 +103,7 @@
     { "before": ["<leader>", "\\"], "commands": ["workbench.action.splitEditor"] },
     { "before": ["leader", "n"], "commands": ["revealInExplorer"] },
     { "before": ["leader", "g", "d"], "commands": ["editor.action.goToImplementation"] },
+    { "before": ["leader", "f", "r"], "commands": ["github.copilot.chat.review.stagedChanges"] },
   ],
   // improve performance by disabling vim extension on large files
   "extensions.experimental.affinity": {
