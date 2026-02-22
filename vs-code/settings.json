@@ -1,6 +1,8 @@
 {
   "editor.minimap.scale": 1,
   "breadcrumbs.enabled": false,
+  "window.density.editorTabHeight": "compact",
+  "explorer.compactFolders": false,
   "editor.cursorBlinking": "solid", 
   "javascript.preferences.importModuleSpecifier": "relative",
   "typescript.preferences.importModuleSpecifier": "relative",
@@ -100,10 +102,14 @@
     { "before": ["leader", "r"], "commands": ["editor.action.rename"], "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly" },
     { "before": ["leader", "w"], "commands": ["workbench.action.files.save"] },
     { "before": ["leader", "e"], "commands": ["workbench.action.quickOpenPreviousEditor"] },
-    { "before": ["<leader>", "\\"], "commands": ["workbench.action.splitEditor"] },
     { "before": ["leader", "n"], "commands": ["revealInExplorer"] },
     { "before": ["leader", "g", "d"], "commands": ["editor.action.goToImplementation"] },
     { "before": ["leader", "f", "r"], "commands": ["github.copilot.chat.review.stagedChanges"] },
+
+    // Split and close current
+    { "before": ["<leader>", "\\"], "commands": ["workbench.action.splitEditor", "workbench.action.focusLeftGroup", "workbench.action.closeActiveEditor"] },
+    { "before": ["<leader>", "-"], "commands": ["workbench.action.splitEditorDown", "workbench.action.focusAboveGroup", "workbench.action.closeActiveEditor"] },
+     { "before": ["<leader>", "_"], "commands": ["workbench.action.joinAllGroups"] },
   ],
   // improve performance by disabling vim extension on large files
   "extensions.experimental.affinity": {
@@ -139,9 +145,9 @@
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.fontFamily": "Consolas",
   "workbench.colorCustomizations": {
-    "statusBar.background": "#7aa2f7",
-    "statusBar.noFolderBackground": "#7aa2f7",
-    "statusBar.debuggingBackground": "#7aa2f7",
+    "statusBar.background": "#9ece6a",
+    "statusBar.noFolderBackground": "#9ece6a",
+    "statusBar.debuggingBackground": "#9ece6a",
     "statusBar.foreground": "#1a1b26",
     "statusBar.debuggingForeground": "#1a1b26",
     "editorCursor.foreground": "#00bfff",
