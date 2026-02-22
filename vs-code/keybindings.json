@@ -83,13 +83,12 @@
   { "key": "alt+p", "command": "workbench.action.pinEditor", "when": "!activeEditorIsPinned" },
   { "key": "alt+p", "command": "workbench.action.unpinEditor", "when": "activeEditorIsPinned" },
 
-  // Todo tree actions
-  { "key": "alt+t", "command": "todo-tree-view.open" },
-
   // Open view
   { "key": "alt+g", "command": "workbench.view.scm" },
   { "key": "alt+s", "command": "workbench.view.explorer" },
   { "key": "alt+f", "command": "workbench.view.search" },
+  { "key": "alt+j", "command": "workbench.action.terminal.focus" },
+  { "key": "alt+k", "command": "workbench.action.focusActiveEditorGroup", "when": "terminalFocus" },
 ]
 
 /*
