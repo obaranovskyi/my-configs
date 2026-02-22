@@ -85,6 +85,11 @@
 
   // Todo tree actions
   { "key": "alt+t", "command": "todo-tree-view.open" },
+
+  // Open view
+  { "key": "alt+g", "command": "workbench.view.scm" },
+  { "key": "alt+s", "command": "workbench.view.explorer" },
+  { "key": "alt+f", "command": "workbench.view.search" },
 ]
 
 /*
