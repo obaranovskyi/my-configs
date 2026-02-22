@@ -110,6 +110,12 @@
     { "before": ["<leader>", "\\"], "commands": ["workbench.action.splitEditor", "workbench.action.focusLeftGroup", "workbench.action.closeActiveEditor"] },
     { "before": ["<leader>", "-"], "commands": ["workbench.action.splitEditorDown", "workbench.action.focusAboveGroup", "workbench.action.closeActiveEditor"] },
      { "before": ["<leader>", "_"], "commands": ["workbench.action.joinAllGroups"] },
+    // move current tab to the right or left
+    { "before": ["<leader>", "]"], "commands": ["workbench.action.moveEditorToRightGroup"] },
+    { "before": ["<leader>", "["], "commands": ["workbench.action.moveEditorToLeftGroup"] },
+    // move current tab to the above or below group
+    { "before": ["<leader>", "{"], "commands": ["workbench.action.moveEditorToAboveGroup"] },
+    { "before": ["<leader>", "}"], "commands": ["workbench.action.moveEditorToBelowGroup"] },
   ],
   // improve performance by disabling vim extension on large files
   "extensions.experimental.affinity": {
