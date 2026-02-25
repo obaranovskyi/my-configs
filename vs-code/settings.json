@@ -116,6 +116,11 @@
     // move current tab to the above or below group
     { "before": ["<leader>", "{"], "commands": ["workbench.action.moveEditorToAboveGroup"] },
     { "before": ["<leader>", "}"], "commands": ["workbench.action.moveEditorToBelowGroup"] },
+    // resize window size
+    { "before": ["<leader>", "h"], "commands": ["workbench.action.decreaseViewWidth"] },
+    { "before": ["<leader>", "l"], "commands": ["workbench.action.increaseViewWidth"] },
+    { "before": ["<leader>", "j"], "commands": ["workbench.action.increaseViewHeight"] },
+    { "before": ["<leader>", "k"], "commands": ["workbench.action.decreaseViewHeight"] },
   ],
   // improve performance by disabling vim extension on large files
   "extensions.experimental.affinity": {
