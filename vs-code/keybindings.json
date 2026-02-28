@@ -87,6 +87,14 @@
   { "key": "alt+g", "command": "workbench.view.scm" },
   { "key": "alt+s", "command": "workbench.view.explorer" },
   { "key": "alt+f", "command": "workbench.view.search" },
+
+  // Shift+Ctrl+m to open problems
+
+  // Toggle maximize copilot/chat area
+  { "key": "alt+;", "command": "workbench.action.maximizeAuxiliaryBar", "when": "!auxiliaryBarMaximized" },
+  { "key": "alt+;", "command": "workbench.action.restoreAuxiliaryBar", "when": "auxiliaryBarMaximized"},
+  
+
 ]
 
 /*
