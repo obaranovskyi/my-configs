@@ -29,16 +29,9 @@
 
   // AI
   // ------------
-  { "key": "alt+h", "command": "workbench.action.chat.toggle" },
   { "key": "ctrl+l", "command": "editor.action.inlineSuggest.acceptNextWord", "when": "inlineSuggestionVisible && !editorReadonly" },
   { "key": "ctrl+h", "command": "editor.action.inlineSuggest.showNext", "when": "inlineSuggestionVisible && !editorReadonly" },
   
-
-  // Terminal
-  // ------------
-  { "key": "ctrl+shift+j", "command": "workbench.action.terminal.focus" },
-  { "key": "ctrl+shift+k", "command": "workbench.action.focusActiveEditorGroup", "when": "terminalFocus" },
-
   // Text editing
   // ------------
   { "key": "alt+backspace", "command": "deleteWordLeft", "when": "textInputFocus" },
@@ -88,12 +81,59 @@
   { "key": "alt+s", "command": "workbench.view.explorer" },
   { "key": "alt+f", "command": "workbench.view.search" },
 
-  // Shift+Ctrl+m to open problems
-
-  // Toggle maximize copilot/chat area
+  // Window group commands
+  { // Close all panels and focus editor with alt+o, if panels are open. If no panels are open, open chat, toggle sidebar and focus terminal
+    "key": "alt+o",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        "workbench.action.closeSidebar",
+        "workbench.action.closeAuxiliaryBar",
+        "workbench.action.closePanel",
+        "workbench.action.focusActiveEditorGroup"
+      ]
+    },
+    "when": "panelVisible || sideBarVisible || auxiliaryBarVisible"
+  },
+  { // If no panels are open, open chat, toggle sidebar and focus terminal
+    "key": "alt+o",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        "workbench.action.chat.toggle",
+        "workbench.action.toggleSidebarVisibility",
+        "workbench.action.terminal.focus",
+        "workbench.action.focusActiveEditorGroup"
+      ]
+    },
+    "when": "!panelVisible && !sideBarVisible && !auxiliaryBarVisible"
+  },
+  { // Toggle maximize terminal panel with alt+enter. If panel is not focused, focus terminal and maximize panel. If panel is focused, restore panel and focus editor
+    "key": "alt+enter",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        "workbench.action.terminal.focus",
+        "workbench.action.toggleMaximizedPanel",
+        "workbench.action.closeSidebar",
+        "workbench.action.closeAuxiliaryBar"
+      ]
+    }
+  },
+  // Toggle maximize copilot/chat area with alt+;
   { "key": "alt+;", "command": "workbench.action.maximizeAuxiliaryBar", "when": "!auxiliaryBarMaximized" },
   { "key": "alt+;", "command": "workbench.action.restoreAuxiliaryBar", "when": "auxiliaryBarMaximized"},
-  
+  // Move between terminals with alt+j/k
+  { "key": "alt+j", "command": "workbench.action.terminal.focusNext", "when": "terminalFocus" },
+  { "key": "alt+k", "command": "workbench.action.terminal.focusPrevious", "when": "terminalFocus" },
+  // Open new terminal with alt+n and close terminal with alt+c
+  { "key": "alt+n", "command": "workbench.action.terminal.new", "when": "terminalFocus" },
+  { "key": "alt+c", "command": "workbench.action.terminal.kill", "when": "terminalFocus" },
+  // Toggle chat with alt+h
+  { "key": "alt+h", "command": "workbench.action.chat.toggle" },
+  // Focus terminal with ctrl+shift+j and focus editor with ctrl+shift+k
+  { "key": "ctrl+shift+j", "command": "workbench.action.terminal.focus" },
+  { "key": "ctrl+shift+k", "command": "workbench.action.focusActiveEditorGroup", "when": "terminalFocus" },
 
 ]
 
