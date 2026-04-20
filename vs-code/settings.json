@@ -1,0 +1,297 @@
+{
+  "editor.minimap.scale": 1,
+  "breadcrumbs.enabled": false,
+  "window.density.editorTabHeight": "compact",
+  "explorer.compactFolders": false,
+  "editor.cursorBlinking": "solid", 
+  "javascript.preferences.importModuleSpecifier": "relative",
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "typescript.updateImportsOnFileMove.enabled": "never",
+  "editor.fontFamily": "Monaco",
+  "editor.lineHeight": 1.3,
+  "editor.fontSize": 14.5,
+  "explorer.confirmDelete": false,
+  "editor.rulers": [140],
+  "window.zoomLevel": 1,
+  "editor.tabSize": 4,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": true,
+  "workbench.sideBar.location": "right",
+  "gitlens.currentLine.enabled": false,
+  "typescript.preferences.quoteStyle": "single",
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "dotnet.automaticallySyncWithActiveItem": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "workbench.iconTheme": "bearded-icons",
+
+  // -----------------
+  // Vim configuration
+  // -----------------
+  "vim.leader": "<Space>",
+  "editor.lineNumbers": "relative",
+  "vim.easymotion": true,
+  "vim.surround": true,
+  "vim.insertModeKeyBindings": [
+    { "before": ["j", "l"], "after": ["<Right>"] },
+    { "before": ["j", "h"], "after": ["<Left>"] },
+    { "before": ["j", "L"], "after": ["<Esc>", "A"] },
+    { "before": ["j", "H"], "after": ["<Esc>", "I"] },
+    { "before": ["j", "k"], "after": ["<Esc>"] },
+    { "before": ["j", "U"], "after": ["<Esc>", "g", "U", "i", "w", "e", "a"] },
+    { "before": ["j", "n"], "after": ["<Esc>", "o"] },
+    { "before": ["<C-a>"], "after": ["<Esc>", "I"] },
+    { "before": ["<C-e>"], "after": ["<Esc>", "A"] },
+    { "before": ["<C-d>"], "after": ["<Esc>", "l", "d", "l", "i"] },
+  ],
+  "vim.normalModeKeyBindings": [
+    { "before": ["s"], "after": ["leader", "leader", "2", "s"] },
+    { "before": ["leader", "w"], "commands": [":wa"] },
+    { "before": ["leader", "="], "after": ["g", "a", "="] },
+    { "before": ["ctrl", "n"], "commands": ["workbench.view.explorer"]},
+    { "before": ["leader", "c", "c"], "commands": ["workbench.panel.chat.view.copilot.focus"]},
+    { "before": ["leader", "p"], "commands": ["editor.action.clipboardPasteAction"]},
+    { "before": ["leader", "q"], "commands": ["workbench.action.closeWindow"]},
+    { "before": ["leader", "f", "k"], "commands": ["editor.action.codeAction"]},
+    { "before": ["<S-k>"], "commands": ["editor.action.showHover"]},
+    { "before": ["leader", "f", "e"], "commands": ["workbench.action.gotoSymbol"]},
+    { "before": ["leader", "<CR>"], "after": ["a", "<CR>", "<ESC>"]},
+    { "before": ["leader", "f", "f"], "commands": ["workbench.action.findInFiles"]},
+    { "before": ["leader", ";"], "commands": ["editor.action.openLink"]},
+    { "before": ["shift", "k"], "command": "editor.action.showHover" },
+    { "before": ["leader", "a"], "commands": ["workbench.action.quickchat.toggle"] },
+    { "before": [">"], "commands": ["editor.action.indentLines"] },
+    { "before": ["<"], "commands": ["editor.action.outdentLines"] },
+    { "before": ["<leader>", "/"], "commands": ["editor.action.commentLine", "extension.vim_escape"] },
+    { "before": ["leader", "f", "a"], "commands": ["editor.action.referenceSearch.trigger"]},
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    { "before": ["leader", "e"], "commands": ["workbench.action.quickOpenPreviousEditor"] },
+    { "before": ["leader", "c", "c"], "commands": ["workbench.panel.chat.view.copilot.focus"]},
+    { "before": ["leader", "a"], "commands": ["workbench.action.quickchat.toggle"] },
+    { "before": ["leader", "f", "f"], "commands": ["workbench.action.findInFiles"]},
+    { "before": [">"], "commands": ["editor.action.indentLines"] },
+    { "before": ["<"], "commands": ["editor.action.outdentLines"] },
+    { "before": ["<leader>", "/"], "commands": ["editor.action.commentLine", "extension.vim_escape"] },
+    { "before": ["leader", "f", "f"], "commands": ["workbench.action.terminal.searchWorkspace"]},
+    { "before": ["leader", "f", "k"], "commands": ["editor.action.codeAction"] },
+    { "before": ["leader", "f", "w"], "commands": ["github.copilot.chat.explain"]},
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    { "before": ["<S-l>"], "commands": [":tabn"] },
+    { "before": ["<S-h>"], "commands": [":tabp"] },
+    { "before": ["g", "n"], "commands": [":tabn"] },
+    { "before": ["g", "p"], "commands": [":tabp"] },
+    { "before": ["g", "q"], "commands": [":tabclose"] },
+    { "before": ["g", "o"], "commands": [":tabonly"] },
+    { "before": ["g", "l"], "commands": [":tablast"] },
+    { "before": ["g", "f"], "commands": [":tabfirst"] },
+    { "before": ["g", ">"], "commands": ["workbench.action.moveEditorRightInGroup"] },
+    { "before": ["g", "<"], "commands": ["workbench.action.moveEditorLeftInGroup"] },
+    { "before": ["<Leader>", ";"], "after": ["g", "d"] },
+    { "before": ["g", "a"], "after": ["g", "g", "V", "G", "$"] },
+    { "before": ["leader", "f", "f"], "commands": ["workbench.action.terminal.searchWorkspace"]},
+    { "before": ["leader", "r"], "commands": ["editor.action.rename"], "when": "editorHasRenameProvider && editorTextFocus && !editorReadonly" },
+    { "before": ["leader", "w"], "commands": ["workbench.action.files.save"] },
+    { "before": ["leader", "e"], "commands": ["workbench.action.quickOpenPreviousEditor"] },
+    { "before": ["leader", "n"], "commands": ["revealInExplorer"] },
+    { "before": ["leader", "g", "d"], "commands": ["editor.action.goToImplementation"] },
+    { "before": ["leader", "f", "r"], "commands": ["github.copilot.chat.review.stagedChanges"] },
+
+    // Split and close current
+    { "before": ["<leader>", "\\"], "commands": ["workbench.action.splitEditor", "workbench.action.focusLeftGroup", "workbench.action.closeActiveEditor"] },
+    { "before": ["<leader>", "-"], "commands": ["workbench.action.splitEditorDown", "workbench.action.focusAboveGroup", "workbench.action.closeActiveEditor"] },
+     { "before": ["<leader>", "_"], "commands": ["workbench.action.joinAllGroups"] },
+    // move current tab to the right or left
+    { "before": ["<leader>", "]"], "commands": ["workbench.action.moveEditorToRightGroup"] },
+    { "before": ["<leader>", "["], "commands": ["workbench.action.moveEditorToLeftGroup"] },
+    // move current tab to the above or below group
+    { "before": ["<leader>", "{"], "commands": ["workbench.action.moveEditorToAboveGroup"] },
+    { "before": ["<leader>", "}"], "commands": ["workbench.action.moveEditorToBelowGroup"] },
+    // resize window size
+    { "before": ["<leader>", "h"], "commands": ["workbench.action.decreaseViewWidth"] },
+    { "before": ["<leader>", "l"], "commands": ["workbench.action.increaseViewWidth"] },
+    { "before": ["<leader>", "j"], "commands": ["workbench.action.increaseViewHeight"] },
+    { "before": ["<leader>", "k"], "commands": ["workbench.action.decreaseViewHeight"] },
+  ],
+  // improve performance by disabling vim extension on large files
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "todo-tree.highlights.customHighlight": {
+    "TODO": {},
+    "FIXME": {}
+  },
+  "todo-tree.highlights.defaultHighlight": {
+    "foreground": "#de4c16",
+    "type": "text"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.tokenColorCustomizations": {
+    "comments": "#8e959b"
+  },
+  "workbench.editor.tabSizing": "shrink",
+  "editor.suggestSelection": "first",
+  "debug.onTaskErrors": "debugAnyway",
+  "gitlens.gitCommands.closeOnFocusOut": true,
+  "html.autoClosingTags": false,
+  "javascript.updateImportsOnFileMove.enabled": "never",
+  "editor.cursorStyle": "line",
+  "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+  "editor.wordWrap": "off",
+  "editor.stickyScroll.enabled": false,
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.fontFamily": "Consolas",
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#7aa2f7",
+    "statusBar.noFolderBackground": "#7aa2f7",
+    "statusBar.debuggingBackground": "#7aa2f7",
+    "statusBar.foreground": "#1a1b26",
+    "statusBar.debuggingForeground": "#1a1b26",
+    "editorCursor.foreground": "#00bfff",
+    "editorCursor.background": "#fff",
+    "editor.lineHighlightBackground": "#2d333e"
+  },
+  "git.openRepositoryInParentFolders": "never",
+  "workbench.colorTheme": "Bearded Theme Aquarelle Lilac",
+  "editor.inlineSuggest.enabled": true,
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": true,
+    "scminput": false,
+    "sql": false // during the learning phase
+  },
+  "chat.viewSessions.orientation": "stacked",
+  "mssql.connectionGroups": [
+    {
+      "name": "ROOT",
+      "id": "ROOT"
+    }
+  ],
+  "mssql.connections": [
+    {
+      "server": "localhost,1433",
+      "database": "",
+      "user": "sa",
+      "password": "",
+      "authenticationType": "SqlLogin",
+      "encrypt": "Optional",
+      "trustServerCertificate": true,
+      "connectTimeout": 30,
+      "commandTimeout": 30,
+      "connectRetryCount": 1,
+      "connectRetryInterval": 10,
+      "applicationName": "vscode-mssql",
+      "profileName": "Docker connect",
+      "savePassword": true,
+      "groupId": "ROOT",
+      "id": "2D7D24DF-311C-47EB-8203-8622CB4055D9",
+      "containerName": "easyfinances-mssql"
+    },
+    {
+      "server": "(localdb)\\MSSQLLocalDB",
+      "database": "",
+      "authenticationType": "Integrated",
+      "encrypt": "true",
+      "trustServerCertificate": false,
+      "connectTimeout": 30,
+      "commandTimeout": 30,
+      "connectRetryCount": 1,
+      "connectRetryInterval": 10,
+      "applicationName": "vscode-mssql",
+      "pooling": false,
+      "profileName": "",
+      "groupId": "ROOT",
+      "id": "F84C7C32-E4C6-4F84-BD39-6A10DD744036",
+      "profileSource": 0,
+      "user": "",
+      "password": ""
+    }
+  ],
+  "cSpell.userWords": [
+    "Mediat"
+  ],
+  "gitlens.ai.model": "vscode",
+  "gitlens.ai.vscode.model": "copilot:gpt-4.1",
+  // Source tree filter 
+  // - Cmnd+Alt+F to focus
+  // - Enter to jump to source tree
+  "workbench.list.defaultFindMode": "filter",
+  // Exclude redundant Files
+  "files.exclude": {
+    "**/.git": true,
+    "**/.gitignore": false
+  },
+  "explorer.excludeGitIgnore": true,
+  // Install Multi Command extension
+  "editor.pasteAs.enabled": true, // enable as multi command needs paste
+  "multiCommand.commands": [
+    {
+      "command": "multiCommand.focusExplorerAndFilter",
+      "sequence": [
+        "workbench.view.explorer",
+        "list.find"
+      ]
+    },
+    {
+      "command": "multiCommand.toggleFilterView",
+      "sequence": [
+        "workbench.view.explorer",
+        "list.toggleFilterOnType"
+      ]
+    },
+    {
+      "command": "multiCommand.openAndFocus",
+      "sequence": [
+        "filesExplorer.openFilePreserveFocus",
+        "workbench.action.focusActiveEditorGroup"
+      ]
+    },
+    {
+      "command": "multiCommand.pasteToFilter",
+      "sequence": [
+        "editor.action.clipboardCopyAction",
+        "workbench.view.explorer",
+        "list.find",
+        "editor.action.clipboardPasteAction",
+      ]
+    },
+  ],
+  "vim.statusBarColorControl": true,
+  "vim.statusBarColors.normal": ["#7aa2f7", "#1a1b26"],
+  "vim.statusBarColors.insert": "#9ece6a",
+  "vim.statusBarColors.visual": "#e0af68",
+  "vim.statusBarColors.visualline": "#e0af68",
+  "vim.statusBarColors.visualblock": "#bb9af7",
+  "vim.statusBarColors.replace": "#f7768e",
+  "vim.statusBarColors.commandlineinprogress": "#2ac3de",
+  "vim.statusBarColors.searchinprogressmode": "#ff9e64",
+  "vim.statusBarColors.easymotionmode": "#7dcfff",
+  "vim.statusBarColors.easymotioninputmode": "#7dcfff",
+  "vim.statusBarColors.surroundinputmode": "#7aa2f7"
+}
+
+// Important plugins
+// ------------------
+// - Vim 
+// - multi-command
+// - macrosRe
+// - Fast Compare
+// - VSCode VIM Marks
+// - Find and Transform

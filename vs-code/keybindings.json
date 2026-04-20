@@ -1,0 +1,228 @@
+[
+  // Editor actions
+  // --------------------------------------------------------------
+  { "key": "alt+r", "command": "workbench.action.openRecent" }, // to open in new window hold ctrl and click enter
+
+  // Vim like navigation hotkeys
+  // ------------
+  { "key": "ctrl+h", "command": "workbench.action.navigateLeft" },
+  { "key": "ctrl+l", "command": "workbench.action.navigateRight" },
+  { "key": "ctrl+k", "command": "workbench.action.navigateUp" },
+  { "key": "ctrl+j", "command": "workbench.action.navigateDown" },
+
+  // Quick Open
+  // ------------
+  { "key": "ctrl+j", "command": "workbench.action.quickOpenNavigateNext", "when": "inQuickOpen" },
+  { "key": "ctrl+k", "command": "workbench.action.quickOpenNavigatePrevious", "when": "inQuickOpen" },
+
+  // File Explorer
+  // ------------
+  { "key": "ctrl+n", "command": "workbench.view.explorer" },
+  { "key": "alt+l", "command": "workbench.action.toggleSidebarVisibility" },
+  { "key": "a", "command": "explorer.newFile", "when": "explorerViewletFocus && !inputFocus" },
+  { "key": "d", "command": "deleteFile", "when": "explorerViewletFocus && !inputFocus" },
+  { "key": "enter", "command": "multiCommand.openAndFocus", "when": "explorerViewletFocus" },
+  { "key": "r", "command": "renameFile", "when": "explorerViewletFocus && !inputFocus" },
+  { "key": "x", "command": "filesExplorer.cut", "when": "filesExplorerFocus && !inputFocus" },
+  { "key": "c", "command": "filesExplorer.copy", "when": "filesExplorerFocus && !inputFocus" },
+  { "key": "p", "command": "filesExplorer.paste", "when": "filesExplorerFocus && !inputFocus" },
+
+  // AI
+  // ------------
+  { "key": "ctrl+l", "command": "editor.action.inlineSuggest.acceptNextWord", "when": "inlineSuggestionVisible && !editorReadonly" },
+  { "key": "ctrl+h", "command": "editor.action.inlineSuggest.showNext", "when": "inlineSuggestionVisible && !editorReadonly" },
+  
+  // Text editing
+  // ------------
+  { "key": "alt+backspace", "command": "deleteWordLeft", "when": "textInputFocus" },
+
+  // Code folding
+  // ------------
+  { "key": "ctrl+[", "command": "editor.fold", "when": "editorTextFocus" },
+  { "key": "ctrl+]", "command": "editor.unfold", "when": "editorTextFocus" },
+  { "key": "ctrl+shift+[", "command": "editor.foldAll", "when": "editorTextFocus" },
+  { "key": "ctrl+shift+]", "command": "editor.unfoldAll", "when": "editorTextFocus" },
+
+  // ------------------------
+  // Plugins ----------------
+  // ------------------------
+
+  // SQL Server
+  // ------------
+  { "key": "ctrl+enter", "command": "mssql.runQuery", "when": "editorTextFocus && editorLangId == 'sql'" },
+
+  // Suggestions
+  // ------------
+  { "key": "ctrl+shift+l", "command": "editor.action.inlineSuggest.acceptNextWord", },
+
+  // File Explorer filter hotkeys
+  // ------------
+  { "key": "cmd+alt+f", "command": "multiCommand.focusExplorerAndFilter", "when": "workspaceFolderCount > 0" },
+  { "key": "cmd+alt+t", "command": "multiCommand.toggleFilterView", "when": "workspaceFolderCount > 0" },
+  { "key": "cmd+alt+s", "command": "multiCommand.pasteToFilter", "when": "workspaceFolderCount > 0" },
+
+  // Tasks
+  // ------------
+  { "key": "alt+b", "command": "workbench.action.tasks.runTask", "args": "Build Solution" },
+  { "key": "alt+t", "command": "workbench.action.tasks.runTask", "args": "Integration Tests: Run All" },
+  { "key": "alt+m", "command": "workbench.action.tasks.runTask", "args": "Init and Apply Migrations" },
+
+  // Search actions
+  // --------------------------------------------------------------
+  { "key": "alt+j", "command": "search.action.focusNextSearchResult", "when": "hasSearchResult" },
+  { "key": "alt+k", "command": "search.action.focusPreviousSearchResult", "when": "hasSearchResult" },
+
+  // Pin
+  { "key": "alt+p", "command": "workbench.action.pinEditor", "when": "!activeEditorIsPinned" },
+  { "key": "alt+p", "command": "workbench.action.unpinEditor", "when": "activeEditorIsPinned" },
+
+  // Open view
+  { "key": "alt+g", "command": "workbench.view.scm" },
+  { "key": "alt+s", "command": "workbench.view.explorer" },
+  { "key": "alt+f", "command": "workbench.view.search" },
+
+  // Window group commands
+  { // Close all panels and focus editor with alt+o, if panels are open. If no panels are open, open chat, toggle sidebar and focus terminal
+    "key": "alt+o",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        "workbench.action.closeSidebar",
+        "workbench.action.closeAuxiliaryBar",
+        "workbench.action.closePanel",
+        "workbench.action.focusActiveEditorGroup"
+      ]
+    },
+    "when": "panelVisible || sideBarVisible || auxiliaryBarVisible"
+  },
+  { // If no panels are open, open chat, toggle sidebar and focus terminal
+    "key": "alt+o",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        "workbench.action.chat.toggle",
+        "workbench.action.toggleSidebarVisibility",
+        "workbench.action.terminal.focus",
+        "workbench.action.focusActiveEditorGroup"
+      ]
+    },
+    "when": "!panelVisible && !sideBarVisible && !auxiliaryBarVisible"
+  },
+  { // Toggle maximize terminal panel with alt+enter. If panel is not focused, focus terminal and maximize panel. If panel is focused, restore panel and focus editor
+    "key": "alt+enter",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        "workbench.action.terminal.focus",
+        "workbench.action.toggleMaximizedPanel",
+        "workbench.action.closeSidebar",
+        "workbench.action.closeAuxiliaryBar"
+      ]
+    }
+  },
+  // Toggle maximize copilot/chat area with alt+;
+  { "key": "alt+;", "command": "workbench.action.maximizeAuxiliaryBar", "when": "!auxiliaryBarMaximized" },
+  { "key": "alt+;", "command": "workbench.action.restoreAuxiliaryBar", "when": "auxiliaryBarMaximized"},
+  // Move between terminals with alt+j/k
+  { "key": "alt+j", "command": "workbench.action.terminal.focusNext", "when": "terminalFocus" },
+  { "key": "alt+k", "command": "workbench.action.terminal.focusPrevious", "when": "terminalFocus" },
+  // Open new terminal with alt+n and close terminal with alt+c
+  { "key": "alt+n", "command": "workbench.action.terminal.new", "when": "terminalFocus" },
+  { "key": "alt+c", "command": "workbench.action.terminal.kill", "when": "terminalFocus" },
+  // Toggle chat with alt+h
+  { "key": "alt+h", "command": "workbench.action.chat.toggle" },
+  // Focus terminal with ctrl+shift+j and focus editor with ctrl+shift+k
+  { "key": "ctrl+shift+j", "command": "workbench.action.terminal.focus" },
+  { "key": "ctrl+shift+k", "command": "workbench.action.focusActiveEditorGroup", "when": "terminalFocus" },
+  // Review and improve text with alt+g.
+  {
+    "key": "alt+g",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        {
+          "command": "editor.action.clipboardCopyAction",
+          "when": "editorTextFocus && !editorHasSelection"
+        },
+        "workbench.action.quickchat.toggle",
+        {
+          "command": "editor.action.selectAll",
+          "when": "quickChatInputFocus"
+        },
+        {
+          "command": "editor.action.deleteLines",
+          "when": "quickChatInputFocus"
+        },
+        {
+          "command": "editor.action.clipboardPasteAction",
+          "when": "quickChatInputFocus && editorHasSelection"
+        },
+        {
+          "command": "editor.action.insertSnippet",
+          "when": "quickChatInputFocus",
+          "args":{
+            "snippet": "\n\nReview whether there are no grammatical mistakes and if there is a way to sound more natural provide an example. Also copy to clipboard your suggestion."
+          }
+        },
+        {
+          "command": "editor.action.clipboardPasteAction",
+          "when": "quickChatInputFocus && editorHasSelection"
+        },
+        {
+          "command": "workbench.action.chat.submit",
+          "when": "quickChatInputFocus"
+        }
+      ]
+    }
+  },
+  // --- Opencode ---
+  {
+    "key": "alt+,",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        "workbench.action.terminal.focus",
+        "workbench.action.closeSidebar",
+        "workbench.action.closeAuxiliaryBar",
+        {
+          "command": "workbench.action.terminal.sendSequence",
+          "args": { "text": "opencode\u000D" }
+        },
+        "workbench.action.toggleMaximizedPanel",
+      ]
+    }
+  },
+  {
+    "key": "alt+.",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        "workbench.action.terminal.focus",
+        "workbench.action.closeSidebar",
+        "workbench.action.closeAuxiliaryBar",
+        {
+          "command": "workbench.action.terminal.sendSequence",
+          // "args": { "text": "gemini\u000D" }
+          "args": { "text": "claude\u000D" }
+        },
+        "workbench.action.toggleMaximizedPanel",
+      ]
+    }
+  }
+]
+
+/*
+Copilot:
+---
+
+Chat Keybindings Reference
+--------------------------
+- Open/Focus Chat view:         Ctrl+Alt+I or Ctrl+Cmd+I
+- Open new chat:                Cmnd+n
+- Start inline chat:            Ctrl+I or Cmd+I
+- Add chat context:             Cmd+/
+- Open Agent selection dropdown: Cmd+.
+- Open Quick Chat:              Ctrl+Shift+Alt+L
+- Accept next word:             Ctrl+L
+- Show next suggestion:         Ctrl+H
+*/

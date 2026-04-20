@@ -1,0 +1,42 @@
+[
+  {
+    "keyword": ";;air",
+    "text": "Look back at this entire conversation. Based on the corrections I made and the output I accepted in the final turn, write a single self-contained prompt that would have produced that output on the first try. Use labeled blocks: PERSONA, TASK, CONTEXT, FORMAT, CONSTRAINTS. Include only instructions that are load-bearing — leave out anything I never enforced.",
+    "name": "AI: Reverse Prompt"
+  },
+  {
+    "keyword": ";;aisr",
+    "text": "Build a prompt in the way I should have given it to you in the beginning to get the current result.",
+    "name": "AI: Simplified Reverse Prompt"
+  },
+  {
+    "keyword": ";;eni",
+    "text": "Review the mistakes and suggest a more natural phrasing if possible:\n\"{clipboard}\"\n\nExplain the changes. Point out relevant grammar topics to prevent these mistakes.\n\nIf no mistakes are found and it's already sounding natural, just say \"No mistakes found. It is already natural.\"",
+    "name": "English: Review & provide a more natural way to say it"
+  },
+  {
+    "keyword": ";;eno",
+    "text": "Give me 10 natural alternatives for: \n\"{clipboard}\"",
+    "name": "English: 10 natural alternatives"
+  },
+  {
+    "keyword": ";;eng",
+    "text": "Fix grammar mistakes and explain the changes: \n\"{clipboard}\"\n\nIf no mistakes are found, just say \"No mistakes found.\"",
+    "name": "English: Grammar check"
+  },
+  {
+    "keyword": ";;em",
+    "text": "oleh.baranovskyi.dev.acc@gmail.com",
+    "name": "My: Email address"
+  },
+  {
+    "keyword": ";;gp",
+    "text": "git add . && git commit -m \"{argument name=\\\"message\\\"}\" && git push && exit",
+    "name": "Git: Push All Changes"
+  },
+  {
+    "keyword": ";;aigp",
+    "text": "claude -p \"/gacp\"",
+    "name": "Git: Ai Push All Changes"
+  }
+]

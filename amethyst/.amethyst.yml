@@ -1,0 +1,67 @@
+layouts:
+  - tall
+  - fullscreen
+  # - tall-right
+  - wide
+  # - two-pane
+  # - middle-wide
+  # - 3column-left
+  # - 3column-middle
+  # - 3column-right
+  # - 4column-left
+  # - 4column-right
+  - column
+  - row
+  # - floating
+  # - widescreen-tall
+  # - widescreen-tall-right
+  # - bsp.
+  
+# Focus the next window in the list going counter-clockwiselayouts:
+focus-ccw:
+  mod: mod1
+  key: k
+
+# Focus the next window in the list going clockwise.
+focus-cw:
+  mod: mod1
+  key: j
+
+# Swap the position of the currently focused window with the next window in the list going counter-clockwise.
+swap-ccw:
+  mod: mod2
+  key: k
+
+# Swap the position of the currently focused window with the next window in the list going clockwise.
+swap-cw:
+  mod: mod2
+  key: j
+
+smart-window-margins: false
+window-margins: true
+window-margin-size: 15
+
+# true if the windows underneath the mouse should become focused as the mouse moves (default false). Note that this is largely incompatible with mouse-follows-focus
+focus-follows-mouse: false
+# true if dragging and dropping windows on to each other should swap their positions (default false).
+mouse-swaps-windows: true
+# true if changing the frame of a window with the mouse should update the layout to accommodate the change (default false). Note that not all layouts will be able to respond to the change.
+mouse-resizes-windows: true
+# true if windows smaller than a 500px square should be floating by default (default true)
+float-small-windows: false
+
+#----------------#
+# Hotkeys I use: |
+#----------------#
+ 
+# mod1+j - focus next window
+# mod1+k - focus previous window
+# mod2+j - switch current window to the next one
+# mod2+k - switch current window to the previous one
+# mo1+d - Full mode screen
+# mod2+n	Throw focused window to space n
+# mod1+, - Increase main pane count
+# mod1+. - Decrease main pane count
+
+# mod1+z - Force windows to be reevaluated
+# mod2+z - Relaunch Amethyst
