@@ -248,3 +248,11 @@ vim.api.nvim_set_keymap(
 	":lua require('configs.util').create_file_from_visual_selection_with_link()<CR>",
 	opts
 )
+
+-- ------------------------------------------------
+-- Audio related mappings
+-- ------------------------------------------------
+keymap("v", "<leader>sa", ":w !say >/dev/null 2>&1 &<CR><CR>", { silent = true, desc = "Say selected text" })
+
+keymap("n", "<leader>st", ":!killall say<CR>", { silent = true, desc = "Stop speech" })
+keymap("v", "<leader>st", ":!killall say<CR>", { silent = true, desc = "Stop speech" })

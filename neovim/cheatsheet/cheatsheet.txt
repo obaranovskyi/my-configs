@@ -417,6 +417,10 @@
 [Obsidian] Set workspace                                                    | <leader>nw [NORMAL_MODE], [VISUAL_MODE]
 [Obsidian] Add link to the new note                                         | <leader>nl [VISUAL_MODE]
 
+## cheatsheet @Audio
+[Audio] Say selected text                                                    | <leader>sa [VISUAL_MODE]
+[Audio] Stop speech                                                          | <leader>st [NORMAL_MODE], [VISUAL_MODE]
+
 ## cheatsheet @LuaSnip
 [LuaSnip] Expand snippet                                                    | <C-k> [INSERT_MODE]
 [LuaSnip] Jump to next snippet node                                         | <C-l> [INSERT_MODE], [SELECT_MODE]
