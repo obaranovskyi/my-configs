@@ -336,6 +336,7 @@
 [Git(Diffview) (on change) Fold all                                         | zM
 [Git(Diffview) (on change) Toggle current fold                              | za
 [Git(Diffview) (on change) Change view                                      | g<C-x>
+[Git(Claude)] Git push (runs /gacp skill)                                   | <leader>gp [NORMAL_MODE], [VISUAL_MODE
 
 ## cheatsheet @Transparent
 [Transparent] Make vim background transparent                               | <leader>t;

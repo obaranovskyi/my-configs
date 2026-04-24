@@ -256,3 +256,11 @@ keymap("v", "<leader>sa", ":w !say >/dev/null 2>&1 &<CR><CR>", { silent = true, 
 
 keymap("n", "<leader>st", ":!killall say<CR>", { silent = true, desc = "Stop speech" })
 keymap("v", "<leader>st", ":!killall say<CR>", { silent = true, desc = "Stop speech" })
+
+
+
+-- ------------------------------------------------
+-- Git/Claude related mappings
+-- ------------------------------------------------
+keymap("n", "<leader>gp", ":!claude -p \"/gacp\"<CR>", { silent = true, desc = "Git push" })
+keymap("v", "<leader>gp", ":!claude -p \"/gacp\"<CR>", { silent = true, desc = "Git push" })
