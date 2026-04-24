@@ -4,6 +4,9 @@ return {
 	config = function()
 		local oil = require("oil")
 		oil.setup({
+			float = {
+				border = "rounded",
+			},
 			keymaps = {
 				["?"] = "actions.show_help",
 				["H"] = "actions.toggle_hidden",
