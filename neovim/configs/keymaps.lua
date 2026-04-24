@@ -262,5 +262,5 @@ keymap("v", "<leader>st", ":!killall say<CR>", { silent = true, desc = "Stop spe
 -- ------------------------------------------------
 -- Git/Claude related mappings
 -- ------------------------------------------------
-keymap("n", "<leader>gp", ":!claude -p \"/gacp\"<CR>", { silent = true, desc = "Git push" })
-keymap("v", "<leader>gp", ":!claude -p \"/gacp\"<CR>", { silent = true, desc = "Git push" })
+keymap("n", "<leader>gp", ":!claude -p \"/gacp\" >/dev/null 2>&1 &<CR>", { silent = true, desc = "Git push" })
+keymap("v", "<leader>gp", ":!claude -p \"/gacp\" >/dev/null 2>&1 &<CR>", { silent = true, desc = "Git push" })
