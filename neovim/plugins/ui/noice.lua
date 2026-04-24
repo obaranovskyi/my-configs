@@ -14,6 +14,15 @@ return {
 	},
 	config = function()
 		require("noice").setup({
+			routes = {
+				{
+					filter = {
+						event = "notify",
+						find = "quit with exit code",
+					},
+					opts = { skip = true },
+				},
+			},
 			-- override markdown rendering so that **cmp** and other plugins use **Treesitter**
 			lsp = {
 
