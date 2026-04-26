@@ -264,3 +264,7 @@ keymap("v", "<leader>st", ":!killall say<CR>", { silent = true, desc = "Stop spe
 -- ------------------------------------------------
 keymap("n", "<leader>gp", ":!claude -p \"/gacp\" >/dev/null 2>&1 &<CR>", { silent = true, desc = "Git push" })
 keymap("v", "<leader>gp", ":!claude -p \"/gacp\" >/dev/null 2>&1 &<CR>", { silent = true, desc = "Git push" })
+
+-- ------------------------------------------------
+-- Copy global prompts mappings
+-- ------------------------------------------------
