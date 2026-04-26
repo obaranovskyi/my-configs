@@ -68,6 +68,7 @@
 [tmux] `<prefix> {` - Swap current pane with the previous one
 [tmux] `<prefix> <window_number>` - Go to window by the number
 [tmux] `:move-window -t 4` - Update window number to `4`
+[tumx] `<prefix> i` - Open claude code
 
 [htop] `Ctrl+n` - Move down
 [htop] `Ctrl+p` - Move up
