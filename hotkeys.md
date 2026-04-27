@@ -84,44 +84,64 @@
 [ranger] `?k` - Show keybindings
 [ranger]
 [ranger] ---------- Working with files
-[ranger] `cw` - Rename current file/directory
-[ranger] `:mkdir test_dir` - create directory with name `test_dir`
-[ranger] `:touch test.txt` - create directory with name `test.txt`
-[ranger] `:delete` - delete selected or file/directory under cursor
-[ranger] `yy` - Yank (copy) file
-[ranger] `dd` - Mark file for cut operation
+[ranger] `:mkdir test_dir`, `;ad` - Create directory
+[ranger] `:touch test.txt`, `;af` - Create file
 [ranger] `l` or `E` - Open file (opens file in default file-handler)
 [ranger] `i` - Display file (useful if you'd like to view a text file in a pager instead of editing it)
 [ranger] `r` - Open file with… (allows you to choose program to use)
+[ranger] `;o` - Open current directory in Finder
+[ranger] `yy` - Yank (copy) file
+[ranger] `ya` - Mark files for copying
+[ranger] `yp` - Copy full path to clipboard
+[ranger] `dd` - Mark file for cut operation
+[ranger] `da` - Mark files for cutting
+[ranger] `pp` - Paste files
+[ranger] `cw`, `;r` - Rename file or directory
+[ranger] `;az` - Archive/compress to zip
+[ranger] `;au` - Extract/unzip archive
+[ranger] `;ax` - Grant script permissions (chmod 755)
+[ranger] `t` - Tag file (you can perform actions on tagged files)
+[ranger] `zh` - View hidden files
+[ranger] `;.` - Toggle display of hidden files
 [ranger] `o` - Change sort order (follow by character in menu selection)
 [ranger] `z` - Change settings (commonly used toggle settings)
-[ranger] `zh` - View hidden files
-[ranger] `t` - Tag file (you can perform actions on tagged files)
-[ranger] 
+[ranger] `:delete`, `;dd` - Delete file or directory
+[ranger]
 [ranger] ---------- Selection
-[ranger] `Shift+v` - select mode, to escape press `escape`
-[ranger] `<space>` - Select current file
+[ranger] `V` - Toggle visual mode selection, to escape press `escape`
+[ranger] `<space>` - Select/mark current file
 [ranger] `:unmark`, `uv` - Unselect all
+[ranger] `uy` - Unselect copied items
+[ranger] `;c` - Clear all selections/filters
 [ranger]
 [ranger] ---------- Search
 [ranger] `/` - Search for files
 [ranger] `n` - Jump to next match
 [ranger] `N` - Jump to previous match
+[ranger] `zf` - Filter files
+[ranger] `uf` - Reset filter
+[ranger] `;ff` - FZF file selection
+[ranger] `;fl` - FZF locate search
 [ranger]
 [ranger] ---------- Commands
-[ranger] `:` - Command mode 
+[ranger] `:` - Command mode
 [ranger] `!` - Execute shell command
+[ranger] `;ss` - Execute shell command
+[ranger] `;sw` - Run shell command and display output
+[ranger] `;n` - Launch Neovim in current directory
+[ranger] `;u` - Launch GDU disk usage analyzer
 [ranger]
 [ranger] ---------- Markers
-[ranger] `m + <letter>` - Create Marker
-[ranger] `um + <letter>` - Delete Marker
-[ranger] `' + <letter>` - Delete Marker
+[ranger] `m + <letter>` - Create named mark
+[ranger] `um + <letter>` - Delete marker
+[ranger] `' + <letter>` - Jump to named mark
+[ranger] `''` - Jump to previous mark
 [ranger]
 [ranger] ---------- Using tabs
 [ranger] `Ctrl+n` - open new tab
 [ranger] `Tab` - go to next tab
 [ranger] `Shift+Tab` - go to previous tab
-[ranger] `Alt+n` - to to tab `n`, where `n` is a number of tab
+[ranger] `Alt+n` - go to tab `n`, where `n` is a number of tab
 [ranger] `Ctrl+w` - delete that tab
 [ranger]
 [ranger] ---------- Navigation
@@ -136,11 +156,14 @@
 [ranger] `gs` - `cd /srv`
 [ranger] `gr` - `cd /`
 [ranger] `gR` - `cd` to ranger's global configuration directory
+[ranger] `;z` - Z jumper navigation
 [ranger]
 [ranger] ---------- Configs
 [ranger] `:set column_ratios 0` - Make two columns (remove the left one)
+[ranger] `;mu` - Switch to multipane view
+[ranger] `;mi` - Switch to miller view
 
-[kitty] `Ctrl+n` - New window
+[kitty] `Cmnd+t` - New window
 
 [mac] `Command+Shift+.` Show hidden files in the finder
 [mac] `Command+M` - Minimize program window
