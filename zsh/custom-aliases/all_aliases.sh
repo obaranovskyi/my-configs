@@ -10,6 +10,7 @@ source $CUSTOM_ALIASES_DIR/navigation.sh;
 source $CUSTOM_ALIASES_DIR/create-project.sh;
 source $CUSTOM_ALIASES_DIR/cs.sh;
 source $CUSTOM_ALIASES_DIR/browser.sh;
+source $CUSTOM_ALIASES_DIR/hk.sh;
 
 syshelp() {
     common-help
@@ -22,4 +23,5 @@ syshelp() {
     create-project-help
     cs-help
     browser-help
+    hk-help
 }

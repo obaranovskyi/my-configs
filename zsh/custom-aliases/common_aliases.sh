@@ -44,10 +44,6 @@ function source-all() {
 	echo " ----------------------- "
 }
 
-function hk() {
-  grep -wi --color $1 ~/my-configs/hotkeys.md
-}
-
 # translate-shell
 if [[ -x "$(command -v trans)" ]];
 then
@@ -93,7 +89,6 @@ common-help() {
     echo "${COLOR_BLUE}  cgrep <test_to_search> ${COLOR_GREEN}- search for the text using the colored grep";
     echo "${COLOR_BLUE}  give-rights f.sh ${COLOR_GREEN}- give rights to shell script";
     echo "${COLOR_BLUE}  source-all ${COLOR_GREEN}- source tmux, zsh";
-    echo "${COLOR_BLUE}  hk <command/app_name> ${COLOR_GREEN}- search for command/app hotkeys";
     # echo "${COLOR_BLUE}  battery-percentage ${COLOR_GREEN}- Show battery percentage";
     echo "${COLOR_BLUE}  eq ${COLOR_GREEN}- exit terminal"
     echo "${COLOR_BLUE}  v ${COLOR_GREEN}- open neovim"
