@@ -87,7 +87,7 @@
 [ranger] `:mkdir test_dir`, `;ad` - Create directory
 [ranger] `:touch test.txt`, `;af` - Create file
 [ranger] `l` or `E` - Open file (opens file in default file-handler)
-[ranger] `i` - Display file (useful if you'd like to view a text file in a pager instead of editing it)
+[ranger] `i` - Display file in zen mode
 [ranger] `r` - Open file with… (allows you to choose program to use)
 [ranger] `;o` - Open current directory in Finder
 [ranger] `yy` - Yank (copy) file
