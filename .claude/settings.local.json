@@ -6,7 +6,11 @@
       "Bash(git push:*)",
       "Bash(git commit:*)",
       "Bash(git:*)",
-      "WebFetch(domain:obaranovskyi.com)"
+      "WebFetch(domain:obaranovskyi.com)",
+      "Skill(update-config)",
+      "Bash(cd *)",
+      "Bash(mv *)",
+      "Bash(cp *)"
     ]
   }
 }
