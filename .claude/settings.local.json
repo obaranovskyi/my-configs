@@ -10,7 +10,9 @@
       "Skill(update-config)",
       "Bash(cd *)",
       "Bash(mv *)",
-      "Bash(cp *)"
+      "Bash(cp *)",
+      "Read(//Users/Users/obaranovskyi/.claude/**)",
+      "Read(//Users/obaranovskyi/.claude/**)"
     ]
   }
 }
