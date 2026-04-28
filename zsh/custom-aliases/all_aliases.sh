@@ -9,7 +9,6 @@ source $CUSTOM_ALIASES_DIR/wifi_aliases.sh;
 source $CUSTOM_ALIASES_DIR/navigation.sh;
 source $CUSTOM_ALIASES_DIR/create-project.sh;
 source $CUSTOM_ALIASES_DIR/cs.sh;
-source $CUSTOM_ALIASES_DIR/browser.sh;
 source $CUSTOM_ALIASES_DIR/hk.sh;
 
 syshelp() {
@@ -22,6 +21,5 @@ syshelp() {
     navigation-help
     create-project-help
     cs-help
-    browser-help
     hk-help
 }
