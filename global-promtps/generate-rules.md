@@ -42,3 +42,5 @@ At the end, ask me:
 - "Are there any project-specific concerns I'm missing?"
 
 **Output format:** Numbered list with clear sections.
+
+**Also:** Based on this prompt you also need to create a skill to update the rules when there is such a need. If this skill already exists don't add anything.
