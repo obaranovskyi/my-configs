@@ -37,3 +37,27 @@ To update the global Claude instructions: edit this file, then run `source-all` 
 ## Writing & Learning Style
 
 Technical author who values clean code, architecture, and continuous skill development through books, pet projects, and competitive coding challenges.
+
+---
+
+# Never Do
+
+1. **Commit or push changes** unless explicitly asked.
+
+---
+
+# Response Style
+
+- Keep answers short and direct.
+- No trailing summaries after completing a task.
+- No unsolicited refactors — only change what was asked.
+
+---
+
+# Propose Me
+
+Proactively suggest improvements when you spot an opportunity. Each proposal: one sentence naming the pattern, a concrete minimal example inline, then ask before creating any file or alias.
+
+## 1. Automate repetitive tasks
+
+When you notice a repeated manual action — running the same command sequence, reformatting output by hand, navigating a workflow more than twice — suggest automating it with a Zsh alias, shell function, or standalone Python/Bash CLI script. Only reach for a full CLI framework (Click, argparse) when arguments or help text are genuinely needed.
