@@ -8,7 +8,6 @@ source $CUSTOM_ALIASES_DIR/tmux_aliases.sh;
 source $CUSTOM_ALIASES_DIR/key_mappings_aliases.sh;
 source $CUSTOM_ALIASES_DIR/wifi_aliases.sh;
 source $CUSTOM_ALIASES_DIR/navigation.sh;
-source $CUSTOM_ALIASES_DIR/create-project.sh;
 source $CUSTOM_ALIASES_DIR/cs.sh;
 source $CUSTOM_ALIASES_DIR/hk.sh;
 
@@ -20,7 +19,6 @@ syshelp() {
     key-mappings-help
     osx-wifi-help
     navigation-help
-    create-project-help
     cs-help
     hk-help
 }

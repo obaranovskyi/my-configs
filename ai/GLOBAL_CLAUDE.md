@@ -1,3 +1,10 @@
+# Maintenance
+
+This file lives at `~/my-configs/ai/GLOBAL_CLAUDE.md`.  
+To update the global Claude instructions: edit this file, then run `source-all` — it copies this file to `~/.claude/CLAUDE.md`.
+
+---
+
 # About the User
 
 **Name:** Oleh Baranovskyi  
