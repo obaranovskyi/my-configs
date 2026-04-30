@@ -24,3 +24,5 @@ syshelp() {
     cs-help
     hk-help
 }
+
+alias help=syshelp
