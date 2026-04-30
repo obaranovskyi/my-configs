@@ -27,7 +27,8 @@ function source-all() {
     echo -e "  ${CHECK}  ${WHITE}amethyst${RESET}"
   fi
 
-  cat ~/my-configs/ai/GLOBAL_CLAUDE.md > ~/.claude/CLAUDE.md
+  cat ~/my-configs/ai/claude/GLOBAL_CLAUDE.md > ~/.claude/CLAUDE.md
+  cp -r ~/my-configs/ai/claude/skills/. ~/.claude/skills/
   echo -e "  ${CHECK}  ${WHITE}claude${RESET}"
 
   tmux source $HOME/.tmux.conf

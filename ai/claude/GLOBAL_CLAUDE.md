@@ -1,7 +1,19 @@
+# Table of Contents
+
+- [Maintenance](#maintenance)
+- [About the User](#about-the-user)
+- [Always Do](#always-do)
+- [Never Do](#never-do)
+- [Response Style](#response-style)
+- [Propose Me](#propose-me)
+
+---
+
 # Maintenance
 
-This file lives at `~/my-configs/ai/GLOBAL_CLAUDE.md`.  
-To update the global Claude instructions: edit this file, then run `source-all` — it copies this file to `~/.claude/CLAUDE.md`.
+This file lives at `~/my-configs/ai/claude/GLOBAL_CLAUDE.md`.  
+To update the global Claude instructions: edit this file, then run `source-all` — it copies this file to `~/.claude/CLAUDE.md`.  
+To add a skill: create `~/my-configs/ai/claude/skills/<name>/SKILL.md`, then run `source-all` — it merges skills into `~/.claude/skills/` without removing existing ones.
 
 ---
 
@@ -30,13 +42,20 @@ To update the global Claude instructions: edit this file, then run `source-all` 
 
 ## Current Interests
 
-- AI fundamentals: LLMs, prompt engineering, RAG, AI agents, Model Context Protocol
-- Workflow automation with n8n
-- Competitive programming (PicoCTF, CodeWars, TypeRacer)
+- AI: LLMs, prompt engineering, RAG, AI agents, Model Context Protocol
+- Software Architecture: design principles, patterns, refactoring, ADRs
+- System Design: distributed systems, scalability, service boundaries
 
 ## Writing & Learning Style
 
 Technical author who values clean code, architecture, and continuous skill development through books, pet projects, and competitive coding challenges.
+
+---
+
+# Always Do
+
+1. **Place CLI scripts inside the relevant skill's `scripts/` folder** (`ai/claude/skills/<skill-name>/scripts/`), not in `python/`.
+2. **Generate unique content and examples** — never copy or reproduce content from existing sources to avoid copyright issues.
 
 ---
 
@@ -49,8 +68,6 @@ Technical author who values clean code, architecture, and continuous skill devel
 # Response Style
 
 - Keep answers short and direct.
-- No trailing summaries after completing a task.
-- No unsolicited refactors — only change what was asked.
 
 ---
 

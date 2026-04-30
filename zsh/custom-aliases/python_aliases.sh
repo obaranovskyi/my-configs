@@ -5,6 +5,7 @@ alias tm="cmdtaskmanager"
 alias ea="cmdenglishassist"
 alias ytd="cmdytd"
 alias na="py ${PYTHON_SCRIPTS_PATH}/nato-alphabet/main.py"
+alias claude-skills="py ${HOME}/my-configs/ai/claude/skills/claude-skills/scripts/main.py"
 
 alias socket-chat-server="python3 ${PYTHON_SCRIPTS_PATH}/socket-chat/server.py"
 alias socket-chat-client="python3 ${PYTHON_SCRIPTS_PATH}/socket-chat/client.py"
