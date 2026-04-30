@@ -14,7 +14,7 @@ hidutil property --set '{"UserKeyMapping":
 }'
 
 # Setup borders 
-/usr/local/bin/borders active_color=0xFFB30458 inactive_color=0xff494d64 width=10.0
+/opt/homebrew/bin/borders active_color=0xFFB30458 inactive_color=0xff494d64 width=10.0 &
 
 # New way to start jankyborders
 # brew services start borders
