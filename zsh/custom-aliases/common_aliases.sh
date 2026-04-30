@@ -29,25 +29,6 @@ if [[ $(uname -s) == "Darwin" ]]; then
   # alias find="gfind"
 fi
 
-function source-all() {
-	source $HOME/.zshrc;
-	echo " ------------------------- "
-	echo "| - source zsh: done      |"
-
-  # setup ranger configs
-  mkdir -p ~/.config/ranger
-  cat ~/my-configs/ranger/rc.conf > ~/.config/ranger/rc.conf
-	echo "| - source ranger: done   |"
-
-  if [[ $(uname -s) == "Darwin" ]]; then
-    cat ~/my-configs/amethyst/.amethyst.yml > ~/.amethyst.yml
-    echo "| - source amethyst: done |"
-
-  fi
-	tmux source $HOME/.tmux.conf;
-	echo "| - source tmux: done     |"
-	echo " ------------------------- "
-}
 
 # translate-shell
 if [[ -x "$(command -v trans)" ]];

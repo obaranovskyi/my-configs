@@ -1,6 +1,7 @@
 export CUSTOM_ALIASES_DIR="${CUSTOM_CONFIG_DIR}/custom-aliases"
 
 source $CUSTOM_ALIASES_DIR/common_aliases.sh;
+source $CUSTOM_ALIASES_DIR/source-all.sh;
 source $CUSTOM_ALIASES_DIR/git_aliases.sh;
 source $CUSTOM_ALIASES_DIR/python_aliases.sh;
 source $CUSTOM_ALIASES_DIR/tmux_aliases.sh;
