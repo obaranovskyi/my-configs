@@ -17,7 +17,8 @@
       "mcp__chrome-devtools__new_page",
       "mcp__chrome-devtools__take_screenshot",
       "WebFetch(domain:github.com)",
-      "Bash(python3 *)"
+      "Bash(python3 *)",
+      "Bash(python3.13 *)"
     ]
   }
 }
