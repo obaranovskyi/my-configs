@@ -14,9 +14,9 @@ Pygments==2.18.0
 pytube==15.0.0
 requests==2.32.3
 rich==13.7.1
-scrapetube==2.5.1
+yt-dlp>=2026.3.17
 tqdm==4.66.4
 typing_extensions==4.12.2
 urllib3==2.2.2
 uuid==1.30
-pytubefix==6.8.1
+pytubefix==10.6.1
