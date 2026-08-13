@@ -4,6 +4,9 @@ alias cmd="cmdcheatsheet"
 alias tm="cmdtaskmanager"
 alias ea="cmdenglishassist"
 alias ytd="youtube-downloader"
+function download() {
+    yt-dlp -f "bestvideo+bestaudio/best" "$1"
+}
 alias na="py ${PYTHON_SCRIPTS_PATH}/nato-alphabet/main.py"
 alias claude-skills="py ${HOME}/my-configs/ai/claude/skills/claude-skills/scripts/main.py"
 alias tell="${PYTHON_SCRIPTS_PATH}/tell/scripts/tell"
@@ -20,6 +23,7 @@ function python-help() {
     echo "${COLOR_BLUE}  tm -h ${COLOR_GREEN}- show a list of commands that might be used with 'cmdtaskmanger' program"
     echo "${COLOR_BLUE}  ea -h ${COLOR_GREEN}- show a list of commands that might be used with 'cmdenglishassist' program"
     echo "${COLOR_BLUE}  ytd -h ${COLOR_GREEN}- Show download youtube program help"
+    echo "${COLOR_BLUE}  download <url> ${COLOR_GREEN}- Download video in best quality with yt-dlp"
     echo "${COLOR_BLUE}  socket-chat-server[scs] 192.168.0.103:5050 ${COLOR_GREEN}- Start tcp socket server at pc with ip 192.168.0.103"
     echo "${COLOR_BLUE}  socket-chat-client[scc] 192.168.0.103:5050 ${COLOR_GREEN}- Connect to server which started on PC with ip 192.168.0.103"
 }
